@@ -1,0 +1,17 @@
+config.yaml
+.env
+*.key
+data/raw_pdf/*
+!data/raw_pdf/.gitkeep
+data/db/*
+!data/db/.gitkeep
+eval/results/*
+!eval/results/.gitkeep
+cache/
+llm_cache/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.DS_Store
+

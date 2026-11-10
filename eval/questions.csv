@@ -1,0 +1,7 @@
+id,level,question,expected_answer,reference_articles,date,out_of_scope
+1,1,Quel est le jour de repos hebdomadaire légal ?,,,,false
+2,1,Un contrat de travail peut-il être conclu à l’oral ?,,,,false
+3,2,Dans quels cas un CDD est-il autorisé ?,,,,false
+4,2,Quelles sont les obligations de l’employeur en matière d’hygiène et de sécurité ?,,,,false
+5,,Quelle est la durée du préavis en France ?,Le système refuse.,,,true
+

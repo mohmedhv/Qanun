@@ -1,0 +1,13 @@
+gemini:
+  api_key: "PUT_YOUR_KEY_HERE"
+  model: "[MODEL NAME ANNOUNCED BY TEACHER]"
+paths:
+  raw_pdf: data/raw_pdf
+  processed: data/processed
+  db: data/db/qanun.sqlite3
+  cache: cache/llm
+scraping:
+  delay_seconds: 3
+search:
+  top_k: 5
+
