@@ -5,6 +5,7 @@ Logs the number of real API calls.
 """
 
 import os
+import time
 import requests
 from dotenv import load_dotenv
 
@@ -19,9 +20,7 @@ API_KEY = os.getenv("GROQ_API_KEY")
 if not API_KEY:
     raise ValueError("GROQ_API_KEY not found in .env")
 
-# Counter for real API calls made (excluding cache hits)
 API_CALL_COUNT = 0
-
 
 def ask(prompt: str, system_prompt: str = None) -> str:
     """
@@ -51,6 +50,11 @@ def ask(prompt: str, system_prompt: str = None) -> str:
         timeout=60,
     )
 
+    if response.status_code == 429:
+        print("   ⚠️ Rate limit hit, waiting 20 seconds to retry...")
+        time.sleep(20)
+        return ask(prompt, system_prompt)
+
     if response.status_code != 200:
         raise RuntimeError(
             f"Groq API error {response.status_code}: {response.text[:300]}"
@@ -62,7 +66,6 @@ def ask(prompt: str, system_prompt: str = None) -> str:
     # 3. Save to cache
     save(MODEL, full_prompt, answer)
     return answer
-
 
 def get_api_call_count() -> int:
     """How many real API calls were made in this session (excludes cache hits)."""
