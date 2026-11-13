@@ -1,3 +1,8 @@
+<<<<<<< p2/week1-structuring
+.venv/
+.env
+__pycache__/
+=======
 <<<<<<< HEAD
 config.yaml
 .env
@@ -33,3 +38,4 @@ cache/
 .DS_Store
 Thumbs.db
 >>>>>>> 8e703434160b9611ddccdb64590175c5221d4d9a
+
