@@ -1,0 +1,15 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+
+# Cache folder (for LLM responses)
+cache/
+
+# OS files
+.DS_Store
+Thumbs.db
