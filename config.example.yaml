@@ -1,0 +1,14 @@
+llm:
+  provider: groq
+  api_key: "PUT_YOUR_KEY_HERE"
+  model: "openai/gpt-oss-120b"   # confirm the exact name with the teacher
+  delay_seconds: 5
+paths:
+  raw_pdf: data/raw_pdf
+  processed: data/processed
+  db: data/db/qanun.sqlite3
+  cache: cache/llm
+scraping:
+  delay_seconds: 3
+search:
+  top_k: 5
