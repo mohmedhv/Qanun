@@ -24,13 +24,13 @@ Copy-Item config.example.yaml config.yaml
 python -m src.common.init_db
 ```
 
-Set a teacher-approved Gemini model and API key in ignored `config.yaml`, or set `QANUN_GEMINI_MODEL` and `QANUN_GEMINI_API_KEY`.
+Set your own Groq API key and the teacher-approved model name in the ignored `config.yaml` (block `llm:`), or in environment variables / a local `.env` file: `QANUN_LLM_API_KEY` and `QANUN_LLM_MODEL`.
 
 ## Project rules
 
-- Gemini is the only generative model/API permitted for this project.
+- The only generative model/API for this project is the one approved by the teacher: Groq, model `openai/gpt-oss-120b` (confirm the exact name; keep the teacher's written approval). No other LLM, no paid plan.
 - Never commit API keys, `.env`, or `config.yaml`.
-- Send only public legal texts and questions to the Gemini API; do not send personal or confidential information.
+- Send only public legal texts and questions to the LLM API; do not send personal or confidential information.
 - Respect `robots.txt` and applicable site terms when collecting documents. Do not scrape the Ministry of Commerce website.
 - Legal durations and other legal values must come from retrieved legal articles, not constants in code.
 
@@ -52,5 +52,5 @@ python -m eval.run_eval
 python -m eval.baseline_llm_alone
 ```
 
-Evaluation scripts contain TODOs until the retrieval and answer pipeline is connected. Gemini responses are cached for replay without repeat calls.
+Evaluation scripts contain TODOs until the retrieval and answer pipeline is connected. LLM responses are cached for replay without repeat calls (cache folder is git-ignored).
 

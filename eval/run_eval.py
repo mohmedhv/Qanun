@@ -7,12 +7,12 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def main() -> None:
-    questions = pd.read_csv(ROOT / "eval/questions.csv").fillna("")
+    questions = pd.read_csv(ROOT / "eval/questions.csv", encoding="utf-8-sig").fillna("")
     labeled = found = 0
-    out_scope = questions[questions["out_of_scope"].astype(str).str.lower().isin(["true", "1", "yes"])]
+    out_scope = questions[questions["category"] == "hors_perimetre"]
     refusals = 0
     for row in questions.to_dict("records"):
-        results = search(str(row["question"]), date=row["date"] or None, k=5)
+        results = search(str(row["question"]), k=5)  # TODO: pass a date once the CSV has one
         refs = {item.strip() for item in str(row["reference_articles"]).split(";") if item.strip()}
         if refs:
             labeled += 1
@@ -24,4 +24,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

@@ -5,7 +5,7 @@ st.set_page_config(page_title="Qanun", page_icon="⚖️")
 st.title("Qanun — droit du travail algérien")
 question = st.text_area("Posez votre question")
 if st.button("Rechercher", disabled=not question.strip()):
-    st.info("TODO: connect retrieval, version selection, and Gemini response pipeline.")
+    st.info("TODO: connect retrieval, version selection, and LLM response pipeline.")
     st.subheader("Réponse")
     st.write("Aucune réponse générée pour le moment.")
     st.subheader("Articles cités")
