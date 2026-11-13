@@ -1,7 +1,11 @@
-id,level,question,expected_answer,reference_articles,date,out_of_scope
-1,1,Quel est le jour de repos hebdomadaire légal ?,,,,false
-2,1,Un contrat de travail peut-il être conclu à l’oral ?,,,,false
-3,2,Dans quels cas un CDD est-il autorisé ?,,,,false
-4,2,Quelles sont les obligations de l’employeur en matière d’hygiène et de sécurité ?,,,,false
-5,,Quelle est la durée du préavis en France ?,Le système refuse.,,,true
-
+question_id,question,category,reference_articles,verified,notes
+Q01,Un contrat de travail peut-il être oral ?,directe,8;9,oui,Loi 90-11 de 1990
+Q02,Dans quels cas peut-on utiliser un CDD ?,directe,12;13,oui,Loi 90-11 de 1990
+Q03,Quelles sont les règles de la période d’essai ?,directe,18,oui,Loi 90-11 de 1990
+Q04,Quelle est la durée légale du travail par semaine ?,directe,22;24,oui,À vérifier pour la version actuelle
+Q05,Comment sont calculés les congés annuels ?,directe,39;40;41;42,oui,Loi 90-11 de 1990
+Q06,Comment sont payées les heures supplémentaires ?,combinee,31;32,oui,Loi 90-11 de 1990
+Q07,Quelles règles faut-il respecter pour licencier un salarié ?,combinee,73;74,oui,Loi 90-11 de 1990
+Q08,Un salarié licencié sans raison peut-il contester ?,cas_pratique,73;74;75,a_verifier,Autres textes possibles
+Q09,Quelles étaient les règles du CDD en 1997 ?,datee,12;13,a_verifier,
+Q10,Quel est le préavis de démission en France ?,hors_perimetre,,non_concerne,Droit français

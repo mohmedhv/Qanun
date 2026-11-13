@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 config.yaml
 .env
 *.key
@@ -15,3 +16,20 @@ __pycache__/
 venv/
 .DS_Store
 
+=======
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+
+# Cache folder (for LLM responses)
+cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+>>>>>>> 8e703434160b9611ddccdb64590175c5221d4d9a
