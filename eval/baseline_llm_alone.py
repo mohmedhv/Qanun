@@ -52,4 +52,4 @@ def main():
     print(f"   Real API calls (excluding cache): {get_api_call_count()}")
 
 if __name__ == "__main__":
-    main()
+    main(
