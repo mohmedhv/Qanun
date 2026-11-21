@@ -1,0 +1,12 @@
+﻿question_id,split,question,expected_cite_id,method,target_rank,top5,failure_type
+Q001,dev,Quels travailleurs sont concernés par la définition de la relation salariée dans cette loi ?,loi-90-11-art-2,bm25,36,loi-90-11-art-144;loi-90-11-art-72;loi-90-11-art-146;loi-90-11-art-145;loi-90-11-art-143,missed_top5
+Q001,dev,Quels travailleurs sont concernés par la définition de la relation salariée dans cette loi ?,loi-90-11-art-2,e5,25,loi-90-11-art-1;loi-90-11-art-6;loi-90-11-art-4;loi-90-11-art-65;loi-90-11-art-8,missed_top5
+Q001,dev,Quels travailleurs sont concernés par la définition de la relation salariée dans cette loi ?,loi-90-11-art-2,hybrid,24,loi-90-11-art-62;loi-90-11-art-65;loi-90-11-art-74;loi-90-11-art-6;loi-90-11-art-1,missed_top5
+Q003,dev,Quelles obligations essentielles un salarié doit-il respecter dans l’exercice de son poste ?,loi-90-11-art-7,bm25,2,loi-90-11-art-112;loi-90-11-art-7;loi-90-11-art-64;loi-90-11-art-5;loi-90-11-art-26,ranked_below_first
+Q003,dev,Quelles obligations essentielles un salarié doit-il respecter dans l’exercice de son poste ?,loi-90-11-art-7,e5,2,loi-90-11-art-6;loi-90-11-art-7;loi-90-11-art-16;loi-90-11-art-5;loi-90-11-art-19,ranked_below_first
+Q004,dev,Comment une relation de travail peut-elle être établie et à partir de quel fait existe-t-elle ?,loi-90-11-art-8,bm25,3,loi-90-11-art-11;loi-90-11-art-15;loi-90-11-art-8;loi-90-11-art-10;loi-90-11-art-92,ranked_below_first
+Q005,dev,Par quels moyens peut-on prouver l’existence d’un contrat ou d’une relation de travail ?,loi-90-11-art-10,bm25,2,loi-90-11-art-67;loi-90-11-art-10;loi-90-11-art-66;loi-90-11-art-11;loi-90-11-art-71,ranked_below_first
+Q006,dev,Quelle est la règle par défaut concernant la durée du contrat lorsqu’aucun écrit ne prévoit une durée déterminée ?,loi-90-11-art-11,e5,2,loi-90-11-art-12;loi-90-11-art-11;loi-90-11-art-14;loi-90-11-art-117;loi-90-11-art-13,ranked_below_first
+Q008,dev,Quelle est la durée légale hebdomadaire normale du travail ?,loi-90-11-art-22,bm25,5,loi-90-11-art-143;loi-90-11-art-31;loi-90-11-art-13;loi-90-11-art-24;loi-90-11-art-22,ranked_below_first
+Q008,dev,Quelle est la durée légale hebdomadaire normale du travail ?,loi-90-11-art-22,e5,2,loi-90-11-art-23;loi-90-11-art-22;loi-90-11-art-33;loi-90-11-art-35;loi-90-11-art-37,ranked_below_first
+Q013,test,Quel repos hebdomadaire est garanti au travailleur et quel jour est normalement retenu ?,loi-90-11-art-33,bm25,2,loi-90-11-art-37;loi-90-11-art-33;loi-90-11-art-35;loi-90-11-art-38;loi-90-11-art-36,ranked_below_first
