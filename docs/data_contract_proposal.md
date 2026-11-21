@@ -51,6 +51,25 @@ Unique constraint: (`text_id`, `number`).
 | target_id | TEXT | text_id or article_id |
 | type | TEXT | modifies / repeals / applies / cites |
 
+## Table `chunks` (P2 -> P4), added in week 2
+| column | type | meaning |
+|---|---|---|
+| chunk_id | TEXT PK | `loi-90-11-art-33`, or `loi-90-11-art-94#2` for a split article |
+| article_id | TEXT FK -> articles | always the article, even for a part |
+| part, n_parts | INTEGER | 1/1 for most articles |
+| text | TEXT | text shown to the user and the LLM |
+| text_for_embedding | TEXT | context line + text, what P4 embeds |
+| n_chars | INTEGER | |
+| source_url | TEXT | |
+Built by `src/structuring/chunks.py`. See `docs/chunking.md`.
+
+## Amendments (P2 -> P3), added in week 2
+File `data/interim/amendments.json` / `.csv` (see `docs/amendments_handoff.md`). Not yet a DB table: P3 decides how versions are stored.
+New articles created by amendments keep their own number as TEXT: `12 bis`, `52 ter`, `73-1`. `sort_key` = the integer part.
+
+## Language (to decide)
+If Arabic articles are added: same table with a `lang` column (`fr`/`ar`), `article_id` suffixed `-ar`, linked to the French one by the same `number`.
+
 ## Versions (P3)
 A `versions` table is NOT defined here yet. P3 proposes it (article_id, version_no, content, valid_from, valid_to, modifying_text_id).
 
