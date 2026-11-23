@@ -28,7 +28,7 @@ Set your own Groq API key and the teacher-approved model name in the ignored `co
 
 ## Project rules
 
-- The only generative model/API for this project is the one approved by the teacher: Groq, model `openai/gpt-oss-120b` (confirm the exact name; keep the teacher's written approval). No other LLM, no paid plan.
+- The only generative model/API for this project is the teacher-approved Groq model `openai/gpt-oss-120b`. Do not use Gemini or another LLM. Keep the teacher's written approval with the project records.
 - Never commit API keys, `.env`, or `config.yaml`.
 - Send only public legal texts and questions to the LLM API; do not send personal or confidential information.
 - Respect `robots.txt` and applicable site terms when collecting documents. Do not scrape the Ministry of Commerce website.

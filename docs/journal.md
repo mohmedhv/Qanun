@@ -1,14 +1,6 @@
-<<<<<<< p2/week1-structuring
-## Week 1
-- P2: Split law 90-11 into 158 articles with a regex splitter, loaded them in SQLite, validated count and sequence, checked 10 articles by hand.
-- P2 learned: amendment blocks contain fake Art. N lines, so an article start is accepted only if it is the next expected number.
-=======
-# Weekly team journal
+# Journal d'équipe
 
-Add two lines per member per week.
-
-| week | member | what I did | what I learned |
+| Semaine | Membre/équipe | Travail réalisé | Apprentissage |
 |---|---|---|---|
-| YYYY-W## |  |  |  |
-
->>>>>>> main
+| Semaine 1 | P2 | Découpage de la loi 90-11 en 158 fiches, contrôle de la séquence 1–158 et vérification manuelle de 10 articles. | Les blocs d'évolution répètent des références « Art. N » qui ne sont pas de nouveaux articles. Le séparateur accepte le prochain numéro attendu. |
+| Semaine 2 |  |  |  |

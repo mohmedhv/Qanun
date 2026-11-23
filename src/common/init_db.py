@@ -6,7 +6,7 @@ from src.common.config import ROOT, resolve_path
 
 
 def init_db(db_path: str | Path | None = None) -> Path:
-    """Create the configured database without requiring Gemini credentials."""
+    """Create the configured database without requiring LLM credentials."""
     config_db = None
     config_file = ROOT / "config.yaml"
     if db_path is None and config_file.exists():

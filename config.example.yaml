@@ -1,7 +1,7 @@
 llm:
   provider: groq
   api_key: "PUT_YOUR_KEY_HERE"
-  model: "openai/gpt-oss-120b"   # confirm the exact name with the teacher
+  model: "openai/gpt-oss-120b"   # teacher-approved model for every team
   delay_seconds: 5
 paths:
   raw_pdf: data/raw_pdf
