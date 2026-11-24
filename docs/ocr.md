@@ -6,12 +6,12 @@
 |---|---|---|
 | Fiches d'articles | `data/interim/articles.json` contient 158 fiches numérotées de 1 à 158; aucun numéro entier de cette séquence n'est absent ou dupliqué. | Contrôle de structure effectué |
 | Échantillon d'articles | `docs/manual_check.md` consigne 10 articles avec texte, titre et paragraphes marqués OK, soit 0 divergence signalée sur 10 fiches dans cette feuille. | Contrôle manuel déclaré; les pages sources ne sont pas consignées |
-| Concordance OCR sur 3 pages | Aucun OCR paginé et aucune transcription de référence page par page ne sont présents dans le dépôt. `data/raw/loi_90_11.txt` n'est pas aligné sur les pages du PDF original. | À faire; taux non calculable |
+| Concordance OCR sur 3 pages | Le texte OCR brut `F1990017.txt` et son relevé de qualité existent localement; le texte OCR complet n'est pas versionné. Aucune transcription humaine alignée page par page n'est disponible. | À faire; CER non calculé faute de transcription humaine de référence |
 | Version arabe | Le rapport PDF indique une édition arabe scannée de 16 pages et 0 page avec texte extractible. | OCR arabe et validation humaine à faire; la collecte arabe n'est pas garantie |
 
 ## Rectification du chiffre « 152/158 »
 
-Le chiffre « 152 articles sur 158 repérés » et la phrase « aucun article n'est perdu » ne sont pas étayés par les fichiers actuellement présents. Le JSON de la base possède les identifiants 1 à 158 sans trou numérique; il ne permet pas de prouver que chaque mot du PDF original a été reconnu correctement. La liste des six articles prétendument manquants n'est donc pas déductible du dépôt. Ne pas inventer ces six numéros : remplacer cette ancienne affirmation par le constat limité ci-dessus, puis faire la comparaison visuelle/OCR avant de conclure sur les pertes textuelles.
+Le contrôle reproductible de `src/collect/check_ocr_articles.py` trouve 152 en-têtes stricts sur les 158 articles du JSON. Les six numéros sans en-tête strict sont 1, 30, 54, 82, 144 et 146. Ils sont tous présents dans le texte OCR sous des formes mal reconnues : « Article 1er », « Ârt. 30 », « Art. 54; », « Art. 82:+- », « Art ra » et « Art. 148 » lu pour 146 (le véritable article 148 apparaît plus loin). La passe tolérante, qui signale explicitement les deux interprétations contextuelles, retrouve 158 numéros sur 158 : 6 en-têtes mal détectés, 0 article perdu dans le texte OCR. Le détail des lignes brutes se trouve dans `docs/ocr_evidence/ocr_header_check.txt`.
 
 ## Taux à calculer après transcription de référence
 
