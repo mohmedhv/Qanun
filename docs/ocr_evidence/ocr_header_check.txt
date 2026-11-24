@@ -1,0 +1,27 @@
+Contrôle des en-têtes d’articles — F1990017.txt
+Inventaire JSON: 158 articles (1 à 158).
+
+Passe stricte (Art\.? + numéro + ponctuation de fin):
+Trouvés: 152 articles distincts.
+Manquants: 1, 30, 54, 82, 144, 146.
+
+Passe tolérante (accents/symboles, Article 1er et contexte des en-têtes):
+Trouvés: 158 articles distincts.
+Manquants: aucun.
+Interprétations contextuelles:
+- Ligne 1696: « Art ra — Tout employeur qui contrevient aux » lue comme l’article 144 entre 143 et 145.
+- Ligne 1707: « Art. 148. — Quiconque procède à une compression » lue comme l’article 146; le véritable article 148 apparaît ensuite.
+
+Lignes OCR brutes dans l’intervalle entre les en-têtes stricts voisins:
+Article 1 (entre début du fichier et 2):
+  ligne 141: Article 1er. — La présente loi a pour objet de régir les
+Article 30 (entre 29 et 31):
+  ligne 487: Ârt. 30. — Lorsque les besoins de la production ou di
+Article 54 (entre 53 et 55):
+  ligne 663: Art. 54; — Outre les cas d’absences pour des causes
+Article 82 (entre 81 et 83):
+  ligne 1012: Art. 82:+- Par revenu proportionnel aux résultats du
+Article 144 (entre 143 et 145):
+  ligne 1696: Art ra — Tout employeur qui contrevient aux
+Article 146 (entre 145 et 147):
+  ligne 1707: Art. 148. — Quiconque procède à une compression
