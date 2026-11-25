@@ -43,7 +43,7 @@ def test_split_issue_synthetic(tmp_path, monkeypatch):
     )
     records = split_issue.write_issue("SYNTH")
     assert [record["type"] for record in records] == ["loi", "decret_executif", "arrete", "autre"]
-    assert records[0]["text_id"] == "LOI-90-11"
+    assert records[0]["text_id"] == "loi-90-11"
     assert records[0]["date_signed"] == "1990-04-21"
     assert records[0]["jo_number"] == "17"
     assert records[0]["source_url"] == "https://example.test"

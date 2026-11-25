@@ -62,8 +62,8 @@ def test_search_uses_historical_version_text(monkeypatch):
     monkeypatch.setenv('JURIDEAZOR_SEARCH_METHOD', 'bm25')
     old = svc.search('licenciement faute grave', date='1991-01-01', k=20)
     new = svc.search('licenciement faute grave', date='2020-01-01', k=20)
-    old73 = next(r for r in old if r['article_number'] == '73')
-    new73 = next(r for r in new if r['article_number'] == '73')
+    old73 = next(r for r in old if r['number'] == '73')
+    new73 = next(r for r in new if r['number'] == '73')
     assert old73['version_id'] != new73['version_id']
     assert old73['text'] != new73['text']
     assert old73['version_record_available'] is True
@@ -73,9 +73,9 @@ def test_search_uses_historical_version_text(monkeypatch):
 def test_search_never_returns_repealed_articles_after_repeal(monkeypatch):
     monkeypatch.setenv('JURIDEAZOR_SEARCH_METHOD', 'bm25')
     results = svc.search('salaire indemnité', date='2020-01-01', k=50)
-    article_numbers = {r['article_number'] for r in results}
-    assert '72' not in article_numbers
-    assert '87 bis' not in article_numbers
+    numbers = {r['number'] for r in results}
+    assert '72' not in numbers
+    assert '87 bis' not in numbers
 
 
 def test_search_rejects_bad_inputs(monkeypatch):
@@ -92,7 +92,7 @@ def test_search_handoff_contract(monkeypatch):
     monkeypatch.setenv('JURIDEAZOR_SEARCH_METHOD','bm25')
     result=svc.search('Quelle est la durée légale hebdomadaire du travail ?', k=5)
     assert result
-    assert {'cite_id','score','article_number','text','source_url','version_id','valid_from','valid_to','version_verified','method'} <= result[0].keys()
+    assert {'cite_id','score','number','text','source_url','version_id','valid_from','valid_to','version_verified','method'} <= result[0].keys()
     assert result[0]['version_id'] is None
     assert result[0]['version_verified'] is False
 
@@ -119,7 +119,7 @@ def test_hybrid_search_uses_temporal_version_corpus(monkeypatch):
     monkeypatch.setattr(svc, 'E5Index', FakeE5)
     svc._E5_INDEXES.clear()
     results = svc.search('licenciement faute grave', date='1991-01-01', k=20)
-    article73 = next(r for r in results if r['article_number'] == '73')
+    article73 = next(r for r in results if r['number'] == '73')
     assert article73['version_id'] == 1
     assert article73['valid_from'] == '1990-04-27'
     assert article73['valid_to'] == '1991-12-26'

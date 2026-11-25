@@ -21,12 +21,12 @@ def main():
     os.environ['JURIDEAZOR_SEARCH_METHOD'] = 'bm25'
     old = search('licenciement faute grave', date='1991-01-01', k=20)
     new = search('licenciement faute grave', date='2020-01-01', k=20)
-    old73 = next((r for r in old if r['article_number'] == '73'), None)
-    new73 = next((r for r in new if r['article_number'] == '73'), None)
+    old73 = next((r for r in old if r['number'] == '73'), None)
+    new73 = next((r for r in new if r['number'] == '73'), None)
     assert old73 and new73 and old73['version_id'] != new73['version_id']
     assert old73['text'] != new73['text']
     post_repeal = search('salaire indemnité', date='2020-01-01', k=50)
-    assert all(r['article_number'] not in {'72','87 bis'} for r in post_repeal)
+    assert all(r['number'] not in {'72','87 bis'} for r in post_repeal)
     print('[P3 historical] version switch and repeal exclusion PASSED')
     print('P4/P3-to-P5 API smoke test PASSED')
 

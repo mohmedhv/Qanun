@@ -149,6 +149,7 @@ def split_text(stem: str) -> list[dict]:
             chunk_lines.pop()
         header = match.group(1)
         kind, rank, code = classify(header)
+        code = code.lower()
         chunk = "\n".join(chunk_lines).strip()
         # Exclude all-caps section labels without a date or identifying number.
         if header.upper() in {"DECRETS", "DECISIONS", "AVIS", "COMMUNICATIONS"}:

@@ -21,8 +21,8 @@ def test_date_filter_uses_p3_version_rows():
     docs=load_documents()
     historical=_versioned_documents(docs, '1994-06-01')
     current=_versioned_documents(docs, '2026-11-20')
-    hist_articles={d['article_number'] for d in historical}
-    current_articles={d['article_number'] for d in current}
+    hist_articles={d['number'] for d in historical}
+    current_articles={d['number'] for d in current}
     assert {'72','73','87','87 bis'} <= hist_articles  # all four have a version on 1994-06-01
     assert {'73','87'} <= current_articles
     assert '72' not in current_articles and '87 bis' not in current_articles
@@ -32,7 +32,7 @@ def test_search_public_api_returns_cite_id_and_score(monkeypatch):
     monkeypatch.setenv('JURIDEAZOR_SEARCH_METHOD','bm25')
     svc._DOCS = svc._BM25 = None
     results=svc.search('duree legale hebdomadaire travail',k=5)
-    assert results and {'cite_id','score','article_number','text'} <= set(results[0])
+    assert results and {'cite_id','score','number','text'} <= set(results[0])
     assert 'loi-90-11-art-22' in [r['cite_id'] for r in results]
 
 def test_p3_version_valid_to_boundary_is_inclusive():

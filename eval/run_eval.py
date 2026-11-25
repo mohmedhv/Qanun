@@ -1,7 +1,7 @@
 """Starter retrieval evaluation with TODO for the complete pipeline."""
 from pathlib import Path
 import pandas as pd
-from src.search.bm25_baseline import search
+from src.search.search_service import search
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -16,7 +16,7 @@ def main() -> None:
         refs = {item.strip() for item in str(row["reference_articles"]).split(";") if item.strip()}
         if refs:
             labeled += 1
-            found += any(hit["article_number"] in refs for hit in results)
+            found += any(str(hit["number"]) in refs for hit in results)
         # TODO: run full pipeline and count actual out-of-scope refusals.
     print(f"correct article in top-5: {found}/{labeled} labeled questions")
     print(f"refusal rate on out-of-scope questions: {refusals}/{len(out_scope)} (TODO: full pipeline)")

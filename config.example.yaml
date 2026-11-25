@@ -6,7 +6,7 @@ llm:
 paths:
   raw_pdf: data/raw_pdf
   processed: data/processed
-  db: data/db/qanun.sqlite3
+  db: data/db/qanun.db
   cache: cache/llm
 scraping:
   delay_seconds: 3

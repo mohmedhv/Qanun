@@ -29,6 +29,21 @@ _E5_INDEXES = {}
 _BM25_INDEXES = {}
 
 
+def _numbers_by_article_id():
+    if not DB.exists():
+        return {}
+    with sqlite3.connect(DB) as connection:
+        return dict(connection.execute("SELECT article_id, number FROM articles"))
+
+
+def _number_from_id(article_id):
+    value = str(article_id).rsplit('-art-', 1)[-1]
+    for suffix in ('bis', 'ter', 'quater'):
+        if value.endswith(f'-{suffix}'):
+            return f"{value[:-(len(suffix) + 1)]} {suffix}"
+    return value
+
+
 def load_documents():
     if CHUNKS_JSONL.exists():
         chunks = [json.loads(line) for line in CHUNKS_JSONL.read_text(encoding='utf-8').splitlines() if line.strip()]
@@ -37,14 +52,16 @@ def load_documents():
     else:
         raise FileNotFoundError('P2 chunks not found; expected data/processed/chunks.jsonl')
     docs = []
+    numbers_by_article_id = _numbers_by_article_id()
     for c in chunks:
         cite = c.get('cite_id') or c.get('article_id')
         if not cite:
             raise ValueError('Chunk missing cite_id/article_id')
+        article_id = c.get('article_id') or cite
         docs.append({
             'cite_id': cite,
-            'article_id': c.get('article_id') or cite,
-            'article_number': str(c.get('article_number') or cite.rsplit('-art-', 1)[-1]),
+            'article_id': article_id,
+            'number': str(c.get('number') or numbers_by_article_id.get(article_id) or _number_from_id(article_id)),
             'text_id': c.get('text_id') or 'loi-90-11',
             'chunk_id': c.get('chunk_id') or cite,
             'text': c.get('content') or c.get('text') or '',
@@ -77,11 +94,16 @@ def _version_module():
     return get_version, list_versions
 
 
-def _tracked_article_numbers(text_id='loi-90-11'):
+def _tracked_numbers(text_id='loi-90-11'):
     if not DB.exists():
         return set()
     with sqlite3.connect(DB) as conn:
-        rows = conn.execute('SELECT DISTINCT article_number FROM versions WHERE text_id=?', (text_id,)).fetchall()
+        rows = conn.execute(
+            'SELECT DISTINCT articles.number FROM versions '
+            'JOIN articles ON articles.article_id=versions.article_id '
+            'WHERE articles.text_id=?',
+            (text_id,),
+        ).fetchall()
     return {str(r[0]) for r in rows}
 
 
@@ -101,36 +123,36 @@ def _paragraphs(content, raw_paragraphs):
 def _versioned_documents(base_docs, date=None):
     get_version, _ = _version_module()
     requested_date = _iso_date(date)
-    tracked = _tracked_article_numbers()
+    tracked = _tracked_numbers()
     base_by_article = {}
     for doc in base_docs:
-        base_by_article.setdefault(doc['article_number'], []).append(doc)
+        base_by_article.setdefault(doc['number'], []).append(doc)
 
     output = []
     # Preserve the P2 provisional corpus for undated queries, except that
     # articles tracked by P3 are replaced by their latest/current P3 wording.
     if requested_date is None:
-        output.extend(d for d in base_docs if d['article_number'] not in tracked)
+        output.extend(d for d in base_docs if d['number'] not in tracked)
 
-    for article_number in sorted(tracked, key=lambda x: (int(''.join(ch for ch in x if ch.isdigit()) or 0), x)):
-        version = get_version('loi-90-11', article_number, requested_date)
+    for number in sorted(tracked, key=lambda x: (int(''.join(ch for ch in x if ch.isdigit()) or 0), x)):
+        version = get_version('loi-90-11', number, requested_date)
         if version is None:
             continue
-        base = base_by_article.get(article_number, [{}])[0]
+        base = base_by_article.get(number, [{}])[0]
         content = str(version.get('content') or '').strip()
         if not content:
             # Never index empty/fictitious version text.
             continue
         parts = _paragraphs(content, version.get('paragraphs'))
-        article_id = version.get('article_id') or base.get('article_id') or f'loi-90-11-art-{article_number.replace(" ", "-")}'
+        article_id = version.get('article_id') or base.get('article_id') or f'loi-90-11-art-{number.replace(" ", "-")}'
         cite_id = base.get('cite_id') or article_id
         for i, part in enumerate(parts, 1):
             chunk_id = f"p3-version-{version['version_id']}" + (f"-p{i}" if len(parts) > 1 else '')
             output.append({
                 'cite_id': cite_id, 'article_id': article_id,
-                'article_number': article_number, 'text_id': version.get('text_id') or 'loi-90-11',
+                'number': number, 'text_id': version.get('text_id') or 'loi-90-11',
                 'chunk_id': chunk_id, 'text': part,
-                'embedding_text': f"Loi n° 90-11, article {article_number}. {part}",
+                'embedding_text': f"Loi n° 90-11, article {number}. {part}",
                 'context': base.get('context', ''), 'source_url': version.get('source_url') or base.get('source_url'),
                 'version_id': version.get('version_id'), 'valid_from': version.get('valid_from'),
                 'valid_to': version.get('valid_to'), 'version_status': version.get('status'),
@@ -217,7 +239,7 @@ def search(question: str, date=None, k: int = 5):
     for doc, score in _dedupe(ranked, k):
         results.append({
             'cite_id': doc['cite_id'], 'article_id': doc['article_id'],
-            'article_number': doc['article_number'], 'text_id': doc['text_id'],
+            'number': doc['number'], 'text_id': doc['text_id'],
             'chunk_id': doc['chunk_id'], 'score': float(score), 'text': doc['text'],
             'source_url': doc.get('source_url'), 'version_id': doc.get('version_id'),
             'valid_from': doc.get('valid_from'), 'valid_to': doc.get('valid_to'),

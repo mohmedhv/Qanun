@@ -23,7 +23,7 @@
 
 Each result includes:
 
-`cite_id`, `article_id`, `article_number`, `text_id`, `chunk_id`, `text`, `source_url`, `score`, `version_id`, `valid_from`, `valid_to`, `version_status`, `version_record_available`, `version_verified`, `modifying_text_id`, `repealing_text_id`, `method`.
+`cite_id`, `article_id`, `number`, `text_id`, `chunk_id`, `text`, `source_url`, `score`, `version_id`, `valid_from`, `valid_to`, `version_status`, `version_record_available`, `version_verified`, `modifying_text_id`, `repealing_text_id`, `method`.
 
 `score` is method-specific (BM25, cosine similarity or RRF), not a calibrated confidence probability. P5 must validate every citation against the retrieved set and ensure any quoted passage appears in the returned `text`. P5 should not treat `version_verified=False` as legally certified wording.
 

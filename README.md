@@ -21,7 +21,7 @@ py -3.11 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
 Copy-Item config.example.yaml config.yaml
-python -m src.common.init_db
+python -m src.common.build_all
 ```
 
 Set your own Groq API key and the teacher-approved model name in the ignored `config.yaml` (block `llm:`), or in environment variables / a local `.env` file: `QANUN_LLM_API_KEY` and `QANUN_LLM_MODEL`.
@@ -45,6 +45,10 @@ Set your own Groq API key and the teacher-approved model name in the ignored `co
 |  |  |
 
 ## Run
+
+### Construction de la base
+
+Depuis la racine du dépôt, exécuter `python -m src.common.build_all`. La commande suit l'ordre du contrat et sauvegarde d'abord une base existante dans `data/db/qanun.db.bak`. Le chargeur de versions P3 n'est pas encore présent dans ce dépôt; jusqu'à sa livraison, cette étape sera signalée `FAILED` (voir `docs/contract_open_questions.md`).
 
 ```powershell
 streamlit run src/ui/app.py

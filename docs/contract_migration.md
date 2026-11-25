@@ -14,8 +14,9 @@ Inventaire établi le 25 novembre 2026 après fusion de `origin/main` dans la br
 | `config.example.yaml` | `paths.db: data/db/qanun.sqlite3`. |
 | `docs/data_contract.md` | Décrit `article_number` et `modified_by_text_id`; ne documente que trois tables et présente l'ancien schéma comme source. |
 | `docs/data_contract_proposal.md` | Proposition P2 déjà alignée sur `number`, `sort_key`, `article_id`, `source_id`, `target_id`, `type`; sa section provisoire P3 cite encore `version_no`. |
-| `src/search/search_service.py` | L'API P4 et ses traitements emploient `article_number`; la requête SQL des versions lit `versions.article_number`. Cette requête devra être alignée sur le schéma P3 réel. |
-| `src/search/smoke_test.py`, `tests/test_search_p4.py`, `tests/test_search_p4_integration.py`, `eval/run_eval.py`, `docs/P4_HANDOFF_P3_P5.md` | Le contrat de sortie P4 et ses tests/évaluation utilisent `article_number`. C'est un nom d'API/documentation, pas une colonne de `articles`; à vérifier avec P4/P5 lors du raccordement. |
+| `src/search/search_service.py` | À l'inventaire, l'API P4 et sa requête SQL employaient `article_number`. Étape 4 : la requête joint `versions.article_id` à `articles.article_id` et l'API expose maintenant `number`. |
+| `src/search/smoke_test.py`, `tests/test_search_p4.py`, `tests/test_search_p4_integration.py`, `eval/run_eval.py`, `docs/P4_HANDOFF_P3_P5.md` | À l'inventaire, les tests et le relais P4/P5 exposaient `article_number`. Étape 4 : les tests, l'évaluation et le relais ont été alignés sur la clé de sortie `number`. |
+| `src/rag/prompts.py` | `article_number` reste un champ du JSON de réponse destiné à l'utilisateur; ce n'est pas une colonne SQLite. |
 | `src/versions/timeline.py` | Le paramètre de recherche est nommé `article_number`; le fichier ne contient qu'une interface provisoire. |
 | `src/collect/split_issue.py`, `tests/test_collect.py` | Le producteur et son test attendent des `text_id` en majuscules (`LOI-90-11`) au lieu de l'identifiant canonique minuscule. |
 
