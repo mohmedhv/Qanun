@@ -11,13 +11,13 @@
 
 ## Rectification du chiffre « 152/158 »
 
-Le contrôle reproductible de `src/collect/check_ocr_articles.py` trouve 152 en-têtes stricts sur les 158 articles du JSON. Les six numéros sans en-tête strict sont 1, 30, 54, 82, 144 et 146. Ils sont tous présents dans le texte OCR sous des formes mal reconnues : « Article 1er », « Ârt. 30 », « Art. 54; », « Art. 82:+- », « Art ra » et « Art. 148 » lu pour 146 (le véritable article 148 apparaît plus loin). La passe tolérante, qui signale explicitement les deux interprétations contextuelles, retrouve 158 numéros sur 158 : 6 en-têtes mal détectés, 0 article perdu dans le texte OCR. Le détail des lignes brutes se trouve dans `docs/ocr_evidence/ocr_header_check.txt`.
+Le contrôle reproductible de `src/collect/check_ocr_articles.py` trouve 152 en-têtes stricts sur les 158 articles du JSON. Les six numéros sans en-tête strict sont 1, 30, 54, 82, 144 et 146. L'article 1 est imprimé correctement sous la forme « Article 1er » : il manque au résultat parce que la règle stricte ne reconnaît que `Art.`. Les cinq autres en-têtes sont mal reconnus par l'OCR : « Ârt. 30 », « Art. 54; », « Art. 82:+- », « Art ra » et « Art. 148 » lu pour 146 (le véritable article 148 apparaît plus loin). La passe tolérante, qui signale explicitement les deux interprétations contextuelles, retrouve 158 numéros sur 158; ce résultat ne signifie pas que les six cas sont des erreurs OCR ni que le texte complet des articles a été vérifié. Le détail des lignes brutes se trouve dans `docs/ocr_evidence/ocr_header_check.txt`.
 
 | Mesure de détection des en-têtes stricts | TP | FP | FN | Précision | Rappel |
 |---|---:|---:|---:|---:|---:|
 | Occurrences comparées à la séquence d'articles 1–158 | 152 | 1 | 6 | 99,35 % | 96,20 % |
 
-Le TP compte les numéros attendus détectés; le FP compte l'occurrence surnuméraire d'un en-tête détecté (ici, le premier « Art. 148 », lu à la place de l'article 146); le FN compte les numéros attendus non détectés strictement. Ce calcul mesure la détection des en-têtes par rapport à l'inventaire JSON, qui n'est pas une référence indépendante relue sur le JO. La passe tolérante utilise les numéros voisins pour proposer des récupérations; ses 158/158 ne sont donc pas une mesure indépendante de précision/rappel.
+Le TP compte les numéros attendus détectés; le FP compte l'occurrence surnuméraire d'un en-tête détecté (ici, « Art. 148 » lu à la place de l'article 146); le FN compte les numéros attendus non détectés par la règle stricte. L'article 1 contribue à ce FN parce que la règle ne reconnaît que `Art.`, bien que le scan imprime correctement « Article 1er ». Ce calcul mesure le détecteur par rapport à l'inventaire JSON, qui n'est pas une référence indépendante relue sur le JO. La passe tolérante utilise les numéros voisins pour proposer des récupérations; ses 158/158 ne sont donc pas une mesure indépendante de précision/rappel.
 
 ## Échantillon OCR : transcription de référence et résultats
 

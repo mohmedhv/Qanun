@@ -19,3 +19,18 @@ Page numbers below are the pages of the 29-page PDF above (not the page numbers 
 | 158 | 29 | OK | OK | OK | |
 
 Error rate on the sample: 0/10
+
+## Six en-têtes manqués par la règle stricte — repères dans le JO officiel
+
+Le numéro de page du Journal officiel correspond à la page PDF + 486. Ces lectures consignent les repères du scan; une relecture humaine indépendante reste nécessaire avant de les traiter comme référence OCR validée.
+
+| Article | Lecture OCR | En-tête lu sur le scan | Page PDF | Page JO | Colonne |
+|---:|---|---|---:|---:|---|
+| 1 | `Article 1er.` (non reconnu par la règle stricte limitée à `Art.`) | `Article 1er. —` | 2 | 488 | droite |
+| 30 | `Ârt. 30.` | `Art. 30.` | 5 | 491 | gauche |
+| 54 | `Art. 54;` | `Art. 54.` | 6 | 492 | gauche |
+| 82 | `Art. 82:+-` | `Art. 82.` | 9 | 495 | gauche |
+| 144 | `Art ra —` | `Art. 144. —` | 14 | 500 | gauche |
+| 146 | `Art. 148.` | `Art. 146.` | 14 | 500 | gauche |
+
+L'article 1 est correctement imprimé « Article 1er »; il s'agit d'une limite du motif du vérificateur, pas d'une erreur OCR. À la page PDF 14, l'OCR lit 148 à la place de 146, tandis que le véritable article 148 apparaît plus loin. Ce tableau d'en-têtes ne vérifie pas le texte intégral des 158 articles par rapport au Journal officiel.
