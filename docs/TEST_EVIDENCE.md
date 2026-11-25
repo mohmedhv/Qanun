@@ -1,5 +1,7 @@
 # Integrated P2/P3/P4 test evidence
 
+> Note du 25 novembre 2026 : ce document décrit une distribution antérieure. Le dépôt courant ne contient pas la base P3, `src/versions/versions.py` ni le validateur P3; ces résultats historiques ne remplacent pas les vérifications courantes consignées dans le relais et les questions ouvertes.
+
 ## Checks executed in the integration workspace
 
 The P3 database and version module supplied in `Qanun (1).zip` were merged with the reviewed P4 search package. The following checks were executed after integration:

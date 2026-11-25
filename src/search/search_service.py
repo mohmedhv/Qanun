@@ -97,14 +97,10 @@ def _version_module():
 def _tracked_numbers(text_id='loi-90-11'):
     if not DB.exists():
         return set()
-    with sqlite3.connect(DB) as conn:
-        rows = conn.execute(
-            'SELECT DISTINCT articles.number FROM versions '
-            'JOIN articles ON articles.article_id=versions.article_id '
-            'WHERE articles.text_id=?',
-            (text_id,),
-        ).fetchall()
-    return {str(r[0]) for r in rows}
+    raise RuntimeError(
+        "P3 versions lookup cannot query the database until its actual schema/API is supplied; "
+        "see docs/contract_open_questions.md."
+    )
 
 
 def _paragraphs(content, raw_paragraphs):
