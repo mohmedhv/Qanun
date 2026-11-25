@@ -34,3 +34,7 @@ Le numéro de page du Journal officiel correspond à la page PDF + 486. Ces lect
 | 146 | `Art. 148.` | `Art. 146.` | 14 | 500 | gauche |
 
 L'article 1 est correctement imprimé « Article 1er »; il s'agit d'une limite du motif du vérificateur, pas d'une erreur OCR. À la page PDF 14, l'OCR lit 148 à la place de 146, tandis que le véritable article 148 apparaît plus loin. Ce tableau d'en-têtes ne vérifie pas le texte intégral des 158 articles par rapport au Journal officiel.
+
+| 12 | portal copy: "prestations" | official JO (PDF p.3 / JO 489, right column): "prestation" | one-letter difference, base kept unchanged, to decide with P1/P3 |
+
+| 2 | portal copy: dénommée » employeur « . | official JO (PDF p.2 / JO 488, right column): dénommée “ employeur ”. | quote marks only, words identical, base kept unchanged |
