@@ -27,3 +27,18 @@ Fill the blanks after reading the sources yourself. Do not copy from memory.
 | Year | Number | Edition | Pages | Text or scan | Why this issue |
 |---|---|---|---|---|---|
 |  |  |  |  |  |  |
+
+## Source of data/raw/loi_90_11.txt (added by P2)
+
+- Law: Loi n° 90-11 du 21 avril 1990 relative aux relations de travail (JORA n° 17, 25/04/1990)
+- Page given by the person who retrieved the file (P2's friend): https://www.mtess.gov.dz/fr/loi-n-90-11-du-21-avril-1990-relative-aux-relations-de-travail-page-488-rectificatif/
+  (site of the Ministry of Labour, MTESS; URL reported by the friend, not opened by the team)
+- Retrieved by: P2's friend, manually (no scraping). Date of retrieval: 2026-11-08
+- File used: loi_90-11_relations_de_travail.pdf (29 pages, annotated portal copy, French)
+- Licence / terms of use: not checked (TO CONFIRM). It is a public legal text; the MTESS terms were not read.
+- The friend said he "translated" it into French. Our check shows it is not a free translation:
+  compared with the official French JO scan (F1990017_1.pdf, read by OCR), 45 of the 97 articles
+  we could compare are word-for-word identical, median difference 1.2% (the rest is OCR noise).
+  61 articles were not compared because the OCR splitting failed on them.
+- Limits: the copy is a consolidated version with "Évolution" notes, so some articles may differ
+  from the 1990 original. Not yet checked article by article against the official scan.
