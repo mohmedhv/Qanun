@@ -1,4 +1,21 @@
+"""Split the raw text of law 90-11 into articles (French clean text, French/Arabic OCR text).
 
+KEY RULE: a line "Art. N.-" is accepted as a real article start ONLY if N is the expected next
+number. This rejects the "Art. 2.-", "Art. 45.-" ... that belong to the amending laws quoted in the
+"Evolution" blocks, and references such as "Art. 8. Toutes dispositions...".
+
+WEEK 2: the same code also works on NOISY text (OCR of a scanned PDF) and on Arabic:
+  --max-gap N   noisy mode: accept a number up to N ahead of the expected one, so that an OCR miss
+                no longer blocks everything after it. The skipped numbers are reported as MISSING.
+                Default 0 = strict mode (clean text) = exactly the Week 1 behaviour.
+  --lang fr|ar  French (default) or Arabic patterns.
+
+Usage (French, clean):  python src/structuring/splitter.py
+Usage (Arabic, OCR):    python src/structuring/splitter.py --lang ar --max-gap 3 \
+                            --input data/raw/loi_90_11_ar_ocr.txt --out data/interim/articles_ar.json
+Default reads data/raw/loi_90_11.txt and writes:
+    data/interim/articles.json          (the clean articles)
+    data/interim/evolution_blocks.json  (amendment commentary, for P3; French only)
 """
 import argparse
 import json
