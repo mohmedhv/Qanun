@@ -1,177 +1,168 @@
+"""Compare BM25 and E5 retrieval on the 10 teacher questions and P2 chunks."""
 from __future__ import annotations
 
-import argparse
 import csv
-import json
-import math
-import re
-import unicodedata
-from collections import Counter
 from datetime import date
 from pathlib import Path
 
+from src.search.bm25_search import BM25Index
+from src.search.search_service import load_documents
+from src.search.semantic_search import E5Index
+
 ROOT = Path(__file__).resolve().parents[1]
-ARTICLES_PATH = ROOT / "data" / "interim" / "articles.json"
 QUESTIONS_PATH = ROOT / "eval" / "questions.csv"
 REPORT_PATH = ROOT / "docs" / "retrieval_comparison.md"
-DEFAULT_EMBEDDING_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
-TOKEN_RE = re.compile(r"[a-z0-9]+")
+TOP_K = 3
 
 
-def tokenize(text: str) -> list[str]:
-    folded = unicodedata.normalize("NFKD", text.casefold())
-    plain = "".join(char for char in folded if not unicodedata.combining(char))
-    return TOKEN_RE.findall(plain)
+def top_articles(ranked, k: int = TOP_K) -> list[dict]:
+    """Return the first k distinct article citations from a passage ranking."""
+    result = []
+    seen = set()
+    for document, _score in ranked:
+        citation = document["cite_id"]
+        if citation in seen:
+            continue
+        seen.add(citation)
+        result.append(document)
+        if len(result) == k:
+            break
+    return result
 
 
-def bm25_rank(articles: list[dict], query: str, k: int = 3) -> list[dict]:
-    corpus = [tokenize(item["content"]) for item in articles]
-    n_docs = len(corpus)
-    average_length = sum(map(len, corpus)) / n_docs if n_docs else 0.0
-    frequencies = [Counter(doc) for doc in corpus]
-    document_frequency = Counter(term for doc in frequencies for term in doc)
-    query_terms = tokenize(query)
-    scored = []
-    k1, b = 1.5, 0.75
-    for item, terms, counts in zip(articles, corpus, frequencies):
-        score = 0.0
-        for term in query_terms:
-            tf = counts.get(term, 0)
-            if not tf:
-                continue
-            df = document_frequency[term]
-            idf = math.log(1.0 + (n_docs - df + 0.5) / (df + 0.5))
-            denom = tf + k1 * (1.0 - b + b * len(terms) / average_length)
-            score += idf * tf * (k1 + 1.0) / denom
-        scored.append((score, item))
-    scored.sort(key=lambda pair: (-pair[0], int(pair[1]["sort_key"])))
-    return [item for _, item in scored[:k]]
-
-
-def embedding_rank(articles: list[dict], questions: list[dict], model_name: str, k: int = 3):
-    try:
-        from sentence_transformers import SentenceTransformer
-    except ImportError:
-        return None, "sentence-transformers is not installed in this environment."
-    try:
-        model = SentenceTransformer(model_name, local_files_only=True)
-        article_vectors = model.encode(
-            [item["content"] for item in articles],
-            normalize_embeddings=True,
-            show_progress_bar=False,
-        )
-        query_vectors = model.encode(
-            [row["question"] for row in questions],
-            normalize_embeddings=True,
-            show_progress_bar=False,
-        )
-    except Exception as exc:
-        return None, f"Model unavailable locally ({type(exc).__name__}: {exc})."
-
-    rankings = {}
-    for row, query_vector in zip(questions, query_vectors):
-        scores = []
-        for article, article_vector in zip(articles, article_vectors):
-            score = sum(float(left) * float(right) for left, right in zip(query_vector, article_vector))
-            scores.append((score, article))
-        scores.sort(key=lambda pair: (-pair[0], int(pair[1]["sort_key"])))
-        rankings[row["question_id"]] = [item for _, item in scores[:k]]
-    return rankings, f"Local SentenceTransformer model: {model_name}."
-
-
-def metric_values(top: list[dict] | None, references: set[str]) -> tuple[str, str, str]:
+def score_top(top: list[dict] | None, references: set[str]) -> tuple[str, str, str]:
     if top is None or not references:
         return "n/a", "n/a", "n/a"
-    found = {str(item["number"]) for item in top} & references
-    return ("yes" if found else "no", f"{len(found)}/3", f"{len(found)}/{len(references)}")
-
-
-def fmt_top(top: list[dict] | None) -> str:
-    if top is None:
-        return "pending"
-    return ", ".join(str(item["number"]) for item in top)
+    found = {str(document["number"]) for document in top} & references
+    hit = "oui" if found else "non"
+    return hit, f"{len(found)}/{TOP_K}", f"{len(found)}/{len(references)}"
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Compare BM25 and local dense embeddings on the 158-article corpus.")
-    parser.add_argument("--embedding-model", default=DEFAULT_EMBEDDING_MODEL)
-    args = parser.parse_args()
-
-    articles = json.loads(ARTICLES_PATH.read_text(encoding="utf-8"))
+    questions = []
     with QUESTIONS_PATH.open(encoding="utf-8-sig", newline="") as handle:
         questions = list(csv.DictReader(handle))
-    if len(articles) != 158:
-        raise ValueError(f"Expected 158 article chunks, found {len(articles)}")
+    if len(questions) != 10:
+        raise ValueError(f"Expected the teacher's 10 questions; found {len(questions)}")
+    if len({row["question_id"] for row in questions}) != len(questions):
+        raise ValueError("Question IDs must be unique")
 
-    bm25 = {row["question_id"]: bm25_rank(articles, row["question"]) for row in questions}
-    dense, dense_note = embedding_rank(articles, questions, args.embedding_model)
+    documents = load_documents()
+    article_ids = {document["cite_id"] for document in documents}
+    if not documents or len(article_ids) != 158:
+        raise ValueError(f"Expected passages for 158 articles; found {len(article_ids)} article IDs")
+    article_numbers = {str(document["number"]) for document in documents}
+    for row in questions:
+        references = {value.strip() for value in row["reference_articles"].split(";") if value.strip()}
+        missing = references - article_numbers
+        if missing:
+            raise ValueError(f"{row['question_id']} refers to missing article(s): {sorted(missing)}")
+
+    bm25 = BM25Index(documents)
+    try:
+        e5 = E5Index(documents)
+        e5_rankings = {
+            row["question_id"]: top_articles(e5.search(row["question"], k=len(documents)))
+            for row in questions
+        }
+        e5_note = f"Disponible : modèle `{e5.model_name}`, {len(e5.vectors)} vecteurs de passages en cache; les 10 questions ont été encodées."
+    except Exception as exc:
+        e5 = None
+        e5_rankings = {}
+        e5_note = f"Indisponible ({type(exc).__name__} : {exc})."
+
+    rows = []
+    for question in questions:
+        references = {value.strip() for value in question["reference_articles"].split(";") if value.strip()}
+        bm_top = top_articles(bm25.search(question["question"], k=len(documents)))
+        e5_top = e5_rankings.get(question["question_id"]) if e5 else None
+        bm_hit, bm_precision, bm_recall = score_top(bm_top, references)
+        e5_hit, e5_precision, e5_recall = score_top(e5_top, references)
+        rows.append({
+            "question": question,
+            "references": references,
+            "bm_top": bm_top,
+            "e5_top": e5_top,
+            "bm_hit": bm_hit,
+            "bm_precision": bm_precision,
+            "bm_recall": bm_recall,
+            "e5_hit": e5_hit,
+            "e5_precision": e5_precision,
+            "e5_recall": e5_recall,
+        })
+
+    verified = [
+        row for row in rows
+        if row["question"]["verified"].strip().casefold() == "oui"
+        and row["question"]["category"].strip().casefold() != "hors_perimetre"
+        and row["references"]
+    ]
+
     lines = [
-        "# Retrieval comparison: Law 90-11",
+        "# Comparaison de la recherche — loi 90-11",
         "",
-        f"Generated: {date.today().isoformat()}",
+        f"Date d'exécution : {date.today().isoformat()}.",
         "",
-        "## Corpus and method",
+        "## Corpus et protocole",
         "",
-        f"- Corpus: {len(articles)} chunks, one per article in data/interim/articles.json; article numbers {articles[0]['number']}–{articles[-1]['number']}, with no number gaps.",
-        "- The workspace has no built SQLite database in data/db; this run uses the current JSON article base. Confirm it matches Ikram's latest shared database before submission.",
-        "- Questions: all 10 rows in eval/questions.csv. The relevance references are the article numbers supplied in that file.",
-        "- BM25: standard Okapi BM25 (k1=1.5, b=0.75), Unicode accent normalization and word tokens, top 3.",
-        f"- Dense retrieval: {dense_note}",
-        "- Hit@3 is yes if at least one reference article appears in the top 3. P@3 divides the relevant hits by 3; R@3 divides by the number of reference articles.",
-        "- Aggregate metrics include only the 7 in-scope questions whose reference labels are marked verified=oui. Q08 and Q09 remain visible but are excluded because their labels are unverified; Q10 is out of scope.",
+        f"- Corpus P2 : {len(documents)} passages pour {len(article_ids)} articles distincts, chargés par `src.search.search_service.load_documents()` depuis les chunks du dépôt.",
+        "- Les articles 7 et 94 sont découpés en deux passages chacun; la métrique déduplique les résultats par citation d'article avant le top 3.",
+        "- Questions : les 10 lignes de `eval/questions.csv`; les références sont les numéros d'articles inscrits dans ce fichier.",
+        "- BM25 : l'index partagé `src.search.bm25_search.BM25Index`, `k1=1.5`, `b=0.75`.",
+        f"- E5 : {e5_note}",
+        "- Hit@3 vaut oui si au moins un article de référence apparaît dans les trois premiers articles distincts. P@3 divise les références trouvées par 3; R@3 les divise par le nombre de références attendues.",
+        "- Le résultat agrégé n'inclut que les questions `verified=oui` et dans le périmètre; Q08–Q09 restent visibles mais non vérifiées, Q10 est hors périmètre.",
+        "- Cette comparaison porte sur le corpus français original de 1990. Elle ne valide pas les versions historiques ni les références juridiques; Q09 (1997) est donc affichée, mais exclue de l'agrégat.",
+        "- Le calcul des embeddings est local et n'appelle aucun LLM ni API générative.",
         "",
-        "## Per-question results",
+        "## Résultats par question",
         "",
-        "| ID | Refs | Label | BM25 top 3 | Hit@3 | P@3 | R@3 | Embedding top 3 | Hit@3 | P@3 | R@3 |",
+        "| ID | Références | Validation | BM25 top 3 | Hit@3 | P@3 | R@3 | E5 top 3 | Hit@3 | P@3 | R@3 |",
         "|---|---|---|---|---:|---:|---:|---|---:|---:|---:|",
     ]
-    verified_hits: dict[str, list[bool]] = {"bm25": [], "embedding": []}
-    verified_precision: dict[str, list[float]] = {"bm25": [], "embedding": []}
-    verified_recall: dict[str, list[float]] = {"bm25": [], "embedding": []}
-    for row in questions:
-        refs = {value.strip() for value in row["reference_articles"].split(";") if value.strip()}
-        label = row["verified"] or "non renseigné"
-        btop = bm25[row["question_id"]]
-        bhit, bp, br = metric_values(btop, refs)
-        etop = dense.get(row["question_id"]) if dense is not None else None
-        ehit, ep, er = metric_values(etop, refs)
-        ref_text = ", ".join(sorted(refs, key=lambda value: int(value) if value.isdigit() else 0))
+    for row in rows:
+        question = row["question"]
+        refs = ", ".join(sorted(row["references"], key=int))
+        bm_numbers = ", ".join(str(document["number"]) for document in row["bm_top"])
+        e5_numbers = ", ".join(str(document["number"]) for document in row["e5_top"]) if row["e5_top"] else "en attente"
         lines.append(
-            f"| {row['question_id']} | {ref_text} | {label} | {fmt_top(btop)} | {bhit} | {bp} | {br} | {fmt_top(etop)} | {ehit} | {ep} | {er} |"
+            f"| {question['question_id']} | {refs or '—'} | {question['verified']} | {bm_numbers} | {row['bm_hit']} | {row['bm_precision']} | {row['bm_recall']} | {e5_numbers} | {row['e5_hit']} | {row['e5_precision']} | {row['e5_recall']} |"
         )
-        if row["verified"].casefold() == "oui" and row["category"] != "hors_perimetre" and refs:
-            for name, top, hit, precision, recall in (
-                ("bm25", btop, bhit, bp, br),
-                ("embedding", etop, ehit, ep, er),
-            ):
-                verified_hits[name].append(hit == "yes")
-                if top is not None:
-                    precision_value = len({str(item["number"]) for item in top} & refs) / 3
-                    recall_value = len({str(item["number"]) for item in top} & refs) / len(refs)
-                    verified_precision[name].append(precision_value)
-                    verified_recall[name].append(recall_value)
 
-    lines.extend(["", "## Aggregate on verified, in-scope questions", "", "| Method | Hit@3 | Mean P@3 | Mean R@3 |", "|---|---:|---:|---:|"])
-    for name, display in (("bm25", "BM25"), ("embedding", "Embeddings")):
-        hits = verified_hits[name]
-        if not hits or (name == "embedding" and dense is None):
-            lines.append(f"| {display} | n/a | n/a | n/a |")
-        else:
-            hit_count = sum(hits)
-            precision = sum(verified_precision[name]) / len(verified_precision[name])
-            recall = sum(verified_recall[name]) / len(verified_recall[name])
-            lines.append(f"| {display} | {hit_count}/{len(hits)} ({hit_count / len(hits):.1%}) | {precision:.3f} | {recall:.3f} |")
     lines.extend([
         "",
-        "## Status and next step",
+        "## Résultats agrégés — questions vérifiées et dans le périmètre",
         "",
-        "A pending embedding result is not a zero score. Install the pinned sentence-transformers dependency and cache the model approved for the project, then rerun this script. It uses local model files only and does not download weights or call an LLM.",
+        "| Méthode | Questions évaluées | Hit@3 | P@3 moyen | R@3 moyen |",
+        "|---|---:|---:|---:|---:|",
+    ])
+    for name, display in (("bm", "BM25"), ("e5", "E5")):
+        evaluated = [row for row in verified if row[f"{name}_top"] is not None]
+        if not evaluated:
+            lines.append(f"| {display} | 0/{len(verified)} | n/a | n/a | n/a |")
+            continue
+        hits = sum(row[f"{name}_hit"] == "oui" for row in evaluated)
+        precisions = [int(row[f"{name}_precision"].split("/")[0]) / TOP_K for row in evaluated]
+        recalls = [
+            int(row[f"{name}_recall"].split("/")[0]) / len(row["references"])
+            for row in evaluated
+        ]
+        lines.append(
+            f"| {display} | {len(evaluated)}/{len(verified)} | {hits}/{len(evaluated)} ({hits / len(evaluated):.1%}) | {sum(precisions) / len(precisions):.3f} | {sum(recalls) / len(recalls):.3f} |"
+        )
+
+    lines.extend([
         "",
-        "This is article retrieval evaluation, separate from the UpGrowth issue-filter evaluation. The 30 rows in eval/filter_labels.csv currently have no relevance labels, so precision and recall for the issue filter cannot yet be calculated.",
+        "## Limites et reproduction",
+        "",
+        "Les étiquettes `oui` viennent du fichier de questions et n'ont pas été revues par une seconde personne pendant ce calcul. Les références Q08 et Q09 restent à vérifier; Q10 sert de contrôle hors périmètre. Les scores mesurent le classement des références fournies, pas la justesse juridique.",
+        "",
+        "Reproduction : exécuter `python -m eval.retrieval_comparison` depuis la racine. Le cache E5 des passages doit correspondre aux chunks chargés; `E5Index` le valide par identifiants et empreinte SHA-256 du corpus. Installer les dépendances de `requirements.txt` et disposer localement des poids `intfloat/multilingual-e5-small`.",
         "",
     ])
     REPORT_PATH.write_text("\n".join(lines), encoding="utf-8")
-    print("\n".join(lines))
+    report = "\n".join(lines)
+    print(report)
     return 0
 
 

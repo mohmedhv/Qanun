@@ -1,10 +1,12 @@
 # P4 — Search comparison, week 2 (Law 90-11)
 
+> Archive note (25 November 2026): the results below describe P4's earlier 20-question Windows run. The current `eval/questions.csv` is a different, 10-question teacher set; its chunk-level BM25/E5 comparison is in `docs/retrieval_comparison.md`. The earlier 20-question file is not archived here, so those metrics cannot be regenerated from the current question CSV.
+
 ## Data and contract
 
 Uses **160 article-level/paragraph-level chunks** from P2 in `data/processed/chunks.jsonl`, belonging to 158 distinct article citations. A long article may have two chunks; each chunk keeps the parent `cite_id`. P2's legal source recorded in the dataset is https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf. The source's legal content and 20 expected references still require independent human verification against the official journal; see `eval/reference_review.md`.
 
-`eval/questions.csv`: 20 French questions, 10 `dev`, 10 held-out `test`. Each currently has one expected citation. Article-level metrics deduplicate paragraph chunks; on questions with multiple relevant citations, this single-reference protocol must be extended. We never tune parameters on the test set. The test set is small, so percentages have wide uncertainty and do not establish production legal reliability.
+The earlier run used 20 French questions, 10 `dev` and 10 held-out `test`. Each had one expected citation. Article-level metrics deduplicated paragraph chunks; on questions with multiple relevant citations, this single-reference protocol must be extended. The original 20-question CSV is not in the current checkout. The test set was small, so percentages have wide uncertainty and do not establish production legal reliability.
 
 ## Methods and reproducibility
 
@@ -49,7 +51,7 @@ This final archive includes the full Windows-generated `search_results.csv`, `se
 
 **Provisional choice**: Hybrid, because its revised full-depth run achieved Dev Recall@1 = 0.90 and MRR@5 = 0.90, while matching E5 on the ten held-out test questions. The code has now been run on Windows; independent second-person sign-off, integration with P3 versioned data, and out-of-scope tests are still pending. E5 has larger resource requirements; BM25 remains an important offline baseline.
 
-- P3 version data is now integrated from `data/db/qanun.db`. The search API uses `get_version()` and the historical wording stored in `versions.content` for four tracked articles (72, 73, 87, 87 bis). Dated searches deliberately include only articles with an explicit version valid on the requested date; untracked articles are excluded rather than assumed historically valid. Undated searches keep untracked P2 articles provisional, substitute current P3 wording for tracked articles, and omit articles repealed by today. `version_verified` remains false until independent legal source review is complete.
+- **Current checkout status:** P3 version integration is not available here. `src/versions/versions.py` is absent; `data/db/qanun.db` is ignored by Git, and the local file has no `versions` table. The current search service does not provide verified historical wording. Treat any earlier P3 integration run described in inherited notes as historical evidence only; see `docs/TEST_EVIDENCE.md` and `docs/P4_HANDOFF_P3_P5.md`.
 - The E5 vector file is a generated artifact and is not included in the ZIP (rebuild locally). First run downloads model weights and requires network access. `sentence-transformers` is needed to encode *new queries* even when passage embeddings are cached.
 - RRF and BM25 scores have different scales; P5 **must not** interpret raw scores as calibrated probabilities or set a common refusal threshold without calibration on an independent dev set.
 - True out-of-scope rejection, legal version reconstruction, validation of source articles, and the full P5 generation/citation checks are separate tasks; this delivery does not claim to complete them.
@@ -77,8 +79,6 @@ All 20 question-to-article labels were checked against the **original** French l
 This ZIP contains the three Windows-generated result files. To produce a new ZIP after any changes, rerun `python -m src.search.evaluate` and `python scripts/package_submission.py` in the tested Windows project. See `docs/P4_FINAL_SUBMISSION.md`.
 
 
-## P3 version integration addendum
+## Historical P3 integration notes
 
-The P3 database and `src/versions/` API are now included in this integrated package. The search service retrieves historical article wording from P3's `versions` table rather than merely filtering original P2 chunks. Automated tests cover Article 73's version boundary (1991-12-26 / 1991-12-27), Article 72's repeal boundary (1994-06-02 / 1994-06-03), and Article 87 bis's repeal boundary (2015-01-01 / 2015-01-02). Current date-aware coverage is limited to four P3-tracked articles; it is not a complete historical index of all 158 articles.
-
-The P3 amendment inventory contains 79 entries; 19 remain marked `needs_review`. The independent second-person review of the 20 P4 question references also remains pending. These are explicit legal-data limitations, not failures of the search-code tests.
+Some earlier Windows notes described P3 date-aware integration and its tests. Those results are not reproducible from this checkout because the P3 module and version table are absent. The current amendment CSV has 79 rows: 36 `VERIFIED_OFFICIAL_JO`, 15 `VERIFIED_PUBLISHED_JO_COPY`, and 28 `A_VERIFIER_SOURCE_OFFICIELLE`; the 28 source checks remain pending. Do not treat the historical integration notes as a current implementation claim.

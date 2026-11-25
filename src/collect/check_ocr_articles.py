@@ -103,6 +103,11 @@ def build_report() -> str:
 
     strict_missing = sorted(expected - strict_found)
     tolerant_missing = sorted(expected - tolerant_found)
+    strict_tp = len(strict_found)
+    strict_fp = len(strict_headers) - strict_tp
+    strict_fn = len(strict_missing)
+    strict_precision = strict_tp / (strict_tp + strict_fp) if strict_tp + strict_fp else 0.0
+    strict_recall = strict_tp / (strict_tp + strict_fn) if strict_tp + strict_fn else 0.0
     output = [
         "Contrôle des en-têtes d’articles — F1990017.txt",
         f"Inventaire JSON: {len(expected)} articles ({min(expected)} à {max(expected)}).",
@@ -110,6 +115,7 @@ def build_report() -> str:
         "Passe stricte (Art\\.? + numéro + ponctuation de fin):",
         f"Trouvés: {len(strict_found)} articles distincts.",
         f"Manquants: {', '.join(map(str, strict_missing)) if strict_missing else 'aucun'}.",
+        f"Précision/rappel par occurrence (TP={strict_tp}, FP={strict_fp}, FN={strict_fn}): {strict_precision:.4%} / {strict_recall:.4%}.",
         "",
         "Passe tolérante (accents/symboles, Article 1er et contexte des en-têtes):",
         f"Trouvés: {len(tolerant_found)} articles distincts.",

@@ -22,15 +22,25 @@ def test_bm25_identical_in_all_environments():
     assert BM25Index(docs).search('durée légale du travail')[0][0]['cite_id'] == 'a1'
 
 
-def test_full_corpus_has_20_distinct_verified_ids_pending():
+def test_teacher_question_set_has_ten_valid_article_references():
     docs=load_documents()
     assert len(docs) == 160
     with open('eval/questions.csv', encoding='utf-8-sig') as f:
         questions=list(csv.DictReader(f))
-    assert len(questions) >= 20
-    assert len([q for q in questions if q['split']=='test']) >= 10
-    assert all(q['expected_cite_id'] in {d['cite_id'] for d in docs} for q in questions)
-    assert all(q['independent_second_check']=='PENDING' for q in questions)
+    assert len(questions) == 10
+    assert len({q['question_id'] for q in questions}) == 10
+    article_numbers={str(d['number']) for d in docs}
+    assert all(
+        article.strip() in article_numbers
+        for q in questions
+        for article in q['reference_articles'].split(';')
+        if article.strip()
+    )
+    assert {q['question_id'] for q in questions if q['verified']=='oui'} == {
+        'Q01', 'Q02', 'Q03', 'Q04', 'Q05', 'Q06', 'Q07'
+    }
+    assert {q['question_id'] for q in questions if q['verified']=='a_verifier'} == {'Q08', 'Q09'}
+    assert next(q for q in questions if q['question_id']=='Q10')['verified'] == 'non_concerne'
 
 
 def test_rrf_duplicate_chunks_only_one_vote():

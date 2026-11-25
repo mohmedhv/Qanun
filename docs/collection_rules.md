@@ -1,20 +1,20 @@
 # Règles de collecte et provenance
 
-Date de mise à jour de cette note : 2026-11-23.
+Date de mise à jour de cette note : 2026-11-25.
 
 ## Sources et conditions consultées
 
 | Source | Usage | Licence / conditions observées | Vérifié le |
 |---|---|---|---|
-| [UpGrowth — Index du Journal officiel](https://www.upgrowth.dz/datasets/journal-officiel-1962-2026) | Index CSV des numéros et liens directs vers les PDF de JORADP | CC BY 4.0 pour l'index seulement. Citer UpGrowth, lier la licence et signaler les modifications. Cette licence ne couvre pas les PDF du Journal officiel. | 2026-11-23 |
-| [JORADP / Secrétariat général du Gouvernement](https://www.joradp.dz/HFR/Accueil.htm) | Source primaire des numéros et PDF officiels | La page d'accueil présente l'accès aux numéros et la recherche thématique. La page d'aide décrit la consultation, la recherche et l'impression; aucune autorisation générale de réutilisation automatisée n'y est formulée. Les conditions de collecte restent à confirmer. | 2026-11-23 |
+| [UpGrowth — Index du Journal officiel](https://www.upgrowth.dz/datasets/journal-officiel-1962-2026) | Index CSV des numéros et liens directs vers les PDF de JORADP | CC BY 4.0 pour l'index seulement. Citer UpGrowth, lier la licence et signaler les modifications. Cette licence ne couvre pas les PDF du Journal officiel. | 2026-11-25 |
+| [JORADP / Secrétariat général du Gouvernement](https://www.joradp.dz/HFR/Accueil.htm) | Source primaire des numéros et PDF officiels | La page d'accueil présente l'accès aux numéros et la recherche thématique. La page d'aide décrit la consultation, la recherche et l'impression; aucune autorisation générale de réutilisation automatisée n'y est formulée. Les conditions de collecte restent à confirmer. | 2026-11-25 |
 
-Pages JORADP consultées : [accueil](https://www.joradp.dz/HFR/Accueil.htm) et [aide](https://www.joradp.dz/hfr/help.htm). L'aide explique comment consulter un numéro et rechercher/imprimer un texte. Aucune page de conditions générales couvrant l'extraction automatisée n'a été trouvée dans ces pages.
+Pages JORADP consultées le 25/11/2026 : [accueil](https://www.joradp.dz/HFR/Accueil.htm) et [aide](https://www.joradp.dz/hfr/help.htm). Elles décrivent l'accès aux numéros, la recherche, la consultation et l'impression. Aucune de ces pages ne formule d'autorisation générale d'extraction automatisée; cela ne permet pas de conclure que l'extraction est autorisée ou interdite.
 
 ## robots.txt de joradp.dz
 
 - URL : https://www.joradp.dz/robots.txt
-- Résultat : le retour de l'enseignant du 21/11/2026 indique que le fichier est absent (HTTP 404). L'outil de consultation utilisé pour cette note n'a pas pu relire cette URL le 23/11/2026; le 404 est donc attribué au contrôle rapporté par l'enseignant.
+- Résultat : une requête HTTP GET directe le 25/11/2026 a reçu **HTTP 404** (réponse HTML, 1 259 octets); le contrôle rapporté par l'enseignant le 21/11/2026 est ainsi reproduit à cette date.
 - Contenu : aucun fichier robots.txt à citer selon ce contrôle.
 - Téléchargement automatique de `/FTP/` : **à confirmer**. Un 404 ne donne pas de règle robots et les pages consultées ne précisent pas les droits d'extraction automatisée. Demander l'accord de l'enseignant avant toute nouvelle collecte en volume.
 
@@ -32,7 +32,7 @@ La chaîne suivie est : index UpGrowth → lien direct vers le domaine officiel 
 
 | Année | JO | Fichier du registre | Pages | État texte déclaré dans le registre | Vérification de provenance |
 |---:|---:|---|---:|---|---|
-| 1990 | 17 | `F1990017.pdf` | 15 | scan (0 caractère extractible sur les 3 premières pages) | SHA-256 local identique au registre; numéro imprimé sur la couverture à confirmer visuellement |
+| 1990 | 17 | `F1990017.pdf` | 15 | scan (0 caractère extractible sur les 3 premières pages) | SHA-256 local identique au registre; l'en-tête imprimé de la page JO 488 confirme le n° 17 et la date du 25/04/1990 |
 | 2026 | 52 | `F2026052.pdf` | 24 | texte | Couverture locale « N° 52 »; SHA-256 local identique au registre |
 | 2026 | 53 | `F2026053.pdf` | 24 | texte | Couverture locale « N° 53 »; SHA-256 local identique au registre |
 | 2026 | 54 | `F2026054.pdf` | 31 | texte | Couverture locale « N° 54 »; SHA-256 local identique au registre |
@@ -40,7 +40,7 @@ La chaîne suivie est : index UpGrowth → lien direct vers le domaine officiel 
 | 2026 | 56 | `F2026056.pdf` | 28 | texte | Couverture locale « N° 56 »; SHA-256 local identique au registre |
 | 2026 | 57 | `F2026057.pdf` | 24 | texte | Couverture locale « N° 57 »; SHA-256 local identique au registre |
 
-Les numéros 52–57 et le nombre de pages ont été relus sur les fichiers locaux avec pypdf 7.1.1; le SHA-256 a été recalculé sur chaque PDF et correspond à celui du registre pour les 7 fichiers. Pour le n° 17, le PDF est une image scannée : le chemin officiel et le nom donnent le n° 17, mais le numéro imprimé sur la couverture doit encore être confirmé à l'œil. Le registre a été corrigé pour indiquer les 15 pages/scannées du n° 17 et les 24 pages/texte du n° 57.
+Les numéros 52–57 et le nombre de pages ont été relus sur les fichiers locaux avec pypdf 7.1.1; le SHA-256 a été recalculé sur chaque PDF et correspond à celui du registre pour les 7 fichiers (contrôle local du 23/11/2026). Pour le n° 17, la page imprimée 488 du scan porte l'en-tête « Journal officiel de la République algérienne n° 17 — 25 avril 1990 », ce qui confirme l'identification de l'édition. Le registre a été corrigé pour indiquer les 15 pages/scannées du n° 17 et les 24 pages/texte du n° 57.
 
 ## Limites du corpus
 

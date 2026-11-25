@@ -1,40 +1,35 @@
-# Rapport corrigé — état avant la semaine 3
+# Rapport corrigé — suivi avant la semaine 3
 
-Date : 23/11/2026. Échéance communiquée : vendredi 27/11/2026.
+Date de mise à jour : 25/11/2026. Échéance communiquée : vendredi 27/11/2026.
 
-## Résumé des résultats vérifiables
+## Résultats vérifiés
 
 | Élément | Résultat | Statut / limite |
 |---|---|---|
-| Base Loi 90-11 | 158 fiches structurées, numéros 1–158 sans trou numérique. | Fait pour le contrôle de séquence. La concordance intégrale avec le scan n'est pas démontrée. |
-| Source utilisée pour l'évaluation | Le dossier ne contient pas de base SQLite construite; l'évaluation utilise les 158 fiches de `data/interim/articles.json`. | Confirmer que ce JSON correspond à la dernière base partagée par Ikram. |
-| Échantillon manuel des articles | 10 articles marqués OK dans la feuille de contrôle; 0 divergence déclarée sur ces 10 fiches. | Fait selon `docs/manual_check.md`; ce n'est pas un taux OCR par page. |
-| Chiffre « 152/158 » et liste des six absents | La passe stricte trouve 152 en-têtes sur 158; les six en-têtes mal détectés (1, 30, 54, 82, 144, 146) sont présents sous des formes OCR altérées. La passe tolérante retrouve 158/158; aucune perte de texte OCR n'est constatée. | Vérifié par `src/collect/check_ocr_articles.py`; voir aussi `docs/ocr.md` et `docs/ocr_evidence/ocr_header_check.txt`. |
-| Cas de modification | 79 lignes au total : 36 vérifiées sur un JO officiel, 15 vérifiées sur une reproduction publiée, 28 à vérifier sur une source officielle. | Statut conservé par ligne dans `P3_Modified_Articles.csv`; ne pas présenter les 79 comme toutes vérifiées. |
-| Références officiellement vérifiées | 51 lignes dans `P3_Officially_Checked_Examples.csv` : les 36 références JO 1996 et les 15 copies publiées de JO 1991/2022. | Fait dans ce périmètre; les 28 autres restent visibles à vérifier. |
-| Recherche BM25 | Top 3 sur les 10 questions : 4/7 questions vérifiées et dans le périmètre ont au moins une référence attendue (Hit@3 = 57,1 %). | Fait; résultats par question, précision@3 et rappel@3 dans `docs/retrieval_comparison.md`. Q08–Q09 restent non vérifiées; Q10 hors périmètre. |
-| Recherche par embeddings | Pas de score calculable dans cet environnement : `sentence-transformers` et les poids du modèle ne sont pas installés/localisés. | À exécuter avec un modèle d'embeddings autorisé et des poids locaux; le script n'effectue aucun téléchargement ni appel LLM. |
-| Précision/rappel du filtre UpGrowth | 0 des 30 lignes de `eval/filter_labels.csv` ont une étiquette de pertinence. | À faire manuellement avant de calculer ces métriques; état documenté dans `docs/filter_evaluation.md`. |
-| Collecte et provenance | 7 entrées au registre; les 7 empreintes locales correspondent au SHA-256 enregistré. Les couvertures des JO 2026 n° 52–57 confirment les numéros. | Le JO 1990 n° 17 est scanné : numéro imprimé à confirmer visuellement. robots/conditions restent à confirmer; voir `docs/collection_rules.md`. |
-| Modèle génératif | Modèle imposé : `openai/gpt-oss-120b` via Groq, pour toutes les équipes. | README et exemple de configuration corrigés. Gemini ne sert pas de comparaison. |
-| Corpus arabe | Pas de corpus arabe OCR validé; la version arabe repérée est scannée. | Collecte à la source et OCR/validation humaine restent à planifier; disponibilité du corpus non garantie. |
+| Loi 90-11 et en-têtes OCR | 158 fiches, numéros 1–158 sans trou. La passe stricte trouve 152 en-têtes; les six en-têtes mal lus sont 1, 30, 54, 82, 144 et 146. La passe contextuelle retrouve les 158 numéros. | Les six en-têtes ne sont pas six articles absents du texte OCR. Les lignes sources sont dans `docs/ocr_evidence/header_check_rerun.txt`. |
+| Précision/rappel des en-têtes | TP=152, FP=1, FN=6; précision = 99,35 %, rappel = 96,20 %. | Comparaison occurrence par occurrence à la séquence JSON; le faux positif est le premier « Art. 148 », qui correspond à l'article 146. L'inventaire n'est pas une référence indépendante. Voir `docs/ocr.md`. |
+| OCR sur trois pages du JO | PDF 2 / JO 488, PDF 3 / JO 489 et PDF 15 / JO 501 ont des transcriptions de référence et des copies OCR brutes séparées. CER : 4,413 %, 4,871 %, 8,120 %; WER : 11,597 %, 16,789 %, 14,458 %. | Brouillons visuels de l'assistant; pas encore relus par une deuxième personne. Les taux ne sont pas présentés comme une validation humaine. Détails dans `docs/ocr.md`. |
+| Échantillon de 10 articles | 10 fiches sont marquées OK dans `docs/manual_check.md`. | Cette feuille compare le parseur à un PDF secondaire de 29 pages; elle ne vérifie pas ce PDF contre le JO officiel. |
+| Passages P2 | `data/interim/chunks.json` contient 160 passages pour 158 articles; les articles 7 et 94 ont chacun deux passages. | La comparaison ci-dessous charge ces passages via le service de recherche P4. |
+| BM25 sur les 10 questions | Sur les 7 questions marquées vérifiées et dans le périmètre : Hit@3 = 3/7 (42,9 %), P@3 moyen = 0,190, R@3 moyen = 0,357. | Résultats BM25 et par-question dans `docs/retrieval_comparison.md`. Les références des questions doivent encore être relues indépendamment. |
+| E5 sur les 10 questions | Même corpus de 160 passages : Hit@3 = 5/7 (71,4 %), P@3 moyen = 0,381, R@3 moyen = 0,571. | Calcul local avec `intfloat/multilingual-e5-small`; aucun appel à une API LLM. Q08–Q09 restent non vérifiées et Q10 est hors périmètre. |
+| Base SQLite locale | `data/db/qanun.db` existe localement, mais est ignorée par Git. Elle contient 158 articles et 160 passages; aucune table `versions` n'est présente. | Ce fichier n'est pas la source de la comparaison et n'est pas confirmé comme dernière base d'Ikram. Le benchmark utilise le JSON des passages. Ne pas le reconstruire par-dessus sans sauvegarde et accord P3. |
+| Modifications de la loi | `P3_Modified_Articles.csv` contient 79 lignes : 36 `VERIFIED_OFFICIAL_JO`, 15 `VERIFIED_PUBLISHED_JO_COPY` et 28 `A_VERIFIER_SOURCE_OFFICIELLE`. | Les 28 lignes non vérifiées restent à vérifier; elles ne sont pas présentées comme des sources officielles confirmées. |
+| Filtre des numéros UpGrowth | `eval/filter_labels.csv` contient 30 textes sans étiquette de pertinence. | Précision/rappel de ce filtre non calculables; état et tableau `n/a` dans `docs/filter_evaluation.md`. |
+| Collecte et provenance | `docs/collection_rules.md` décrit l'index UpGrowth, les liens directs JORADP, les empreintes SHA-256, le délai de 3 secondes et le résultat robots.txt HTTP 404 relevé le 25/11/2026. | Les pages JORADP consultées ne précisent pas l'autorisation d'extraction automatisée; la note demande l'accord de l'enseignant avant une collecte en volume. |
+| Modèle génératif | `openai/gpt-oss-120b` via Groq est indiqué dans le README et `config.example.yaml`. | Gemini n'est pas utilisé comme comparaison. |
+| Corpus arabe | La version arabe repérée est scannée; aucun OCR arabe validé n'est présent. | Couverture arabe non garantie; collecte et validation restent à planifier. |
 
-## Corrections apportées au dépôt
+## Résultats de recherche par question
 
-- Suppression des formulations de rapport non étayées par un résultat vérifiable.
-- Ajout du rapport OCR avec distinction entre contrôle des 10 articles et taux d'erreur caractère sur trois pages.
-- Ajout d'une comparaison BM25 reproductible sur les 158 articles et les 10 questions, avec Hit@3, P@3 et R@3 par question.
-- Ajout des conditions d'utilisation observées, de la note robots.txt et de la chaîne de provenance depuis l'index UpGrowth jusqu'au PDF JORADP.
-- Correction de la consigne du modèle Groq et résolution des marqueurs de conflit dans le journal et `.gitignore`.
+La table complète, avec les classements BM25/E5 et Hit@3, P@3 et R@3 pour chacune des 10 questions, est dans `docs/retrieval_comparison.md`. Reproduction : `python -m eval.retrieval_comparison` depuis la racine du dépôt. Les agrégats excluent explicitement les deux questions `a_verifier` et la question hors périmètre; ces exclusions ne sont pas des résultats à zéro.
 
-## À terminer manuellement avant la semaine 3
+## Travail restant avant remise
 
-1. Vérifier trois pages du PDF 1990 avec transcription indépendante et remplir le CER, les numéros d'articles trouvés/manquants et les corrections humaines dans `docs/ocr.md`.
-2. Vérifier les 28 cas `A_VERIFIER_SOURCE_OFFICIELLE` sur les éditions officielles et maintenir leur statut individuel jusqu'à vérification.
-3. Étiqueter la pertinence des 30 textes dans `eval/filter_labels.csv`; les métriques du filtre ne sont pas calculables avant cette étape.
-4. Confirmer que `data/interim/articles.json` correspond à la dernière base partagée par Ikram; exporter les corrections récentes si nécessaire et relancer la comparaison.
-5. Choisir/faire confirmer un modèle d'embeddings compatible avec la consigne de cours, installer ses dépendances et conserver les poids localement; relancer `python eval/retrieval_comparison.py`.
-6. Confirmer avec l'enseignant si l'absence de robots.txt (404 rapporté le 21/11/2026) et l'absence de conditions explicites dans les pages JORADP consultées permettent les prochains téléchargements automatiques.
-7. Décider si le corpus arabe est accessible; s'il ne l'est pas, documenter clairement cette limite au lieu de promettre une couverture arabe.
-
-Les 28 cas non vérifiés doivent rester affichés comme « à vérifier » dans la base et les fichiers de rapport jusqu'à la vérification d'une source officielle.
+1. Faire relire par une deuxième personne les trois transcriptions OCR et confirmer les corrections proposées; elles sont encore des brouillons visuels.
+2. Faire relire les références juridiques des 10 questions, en particulier Q08 et Q09, et conserver leur statut `a_verifier` jusqu'à confirmation.
+3. Confirmer avec l'enseignant l'autorisation de toute collecte automatisée en volume. Le robots.txt répond actuellement 404; cela ne constitue pas une autorisation.
+4. Confirmer avec Ikram la provenance de la base utilisée et faire fournir le dépôt/code P3 avec sa table `versions`; le fichier SQLite local ignoré n'est pas intégré à Git.
+5. Vérifier les 28 lignes `A_VERIFIER_SOURCE_OFFICIELLE` sans modifier les CSV P3 avant validation par leur responsable.
+6. Étiqueter les 30 textes du filtre UpGrowth avant d'en calculer précision et rappel.
+7. Décider si le corpus arabe est accessible; sinon, conserver explicitement cette limite.

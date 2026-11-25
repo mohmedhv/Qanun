@@ -13,6 +13,12 @@
 
 Le contrôle reproductible de `src/collect/check_ocr_articles.py` trouve 152 en-têtes stricts sur les 158 articles du JSON. Les six numéros sans en-tête strict sont 1, 30, 54, 82, 144 et 146. Ils sont tous présents dans le texte OCR sous des formes mal reconnues : « Article 1er », « Ârt. 30 », « Art. 54; », « Art. 82:+- », « Art ra » et « Art. 148 » lu pour 146 (le véritable article 148 apparaît plus loin). La passe tolérante, qui signale explicitement les deux interprétations contextuelles, retrouve 158 numéros sur 158 : 6 en-têtes mal détectés, 0 article perdu dans le texte OCR. Le détail des lignes brutes se trouve dans `docs/ocr_evidence/ocr_header_check.txt`.
 
+| Mesure de détection des en-têtes stricts | TP | FP | FN | Précision | Rappel |
+|---|---:|---:|---:|---:|---:|
+| Occurrences comparées à la séquence d'articles 1–158 | 152 | 1 | 6 | 99,35 % | 96,20 % |
+
+Le TP compte les numéros attendus détectés; le FP compte l'occurrence surnuméraire d'un en-tête détecté (ici, le premier « Art. 148 », lu à la place de l'article 146); le FN compte les numéros attendus non détectés strictement. Ce calcul mesure la détection des en-têtes par rapport à l'inventaire JSON, qui n'est pas une référence indépendante relue sur le JO. La passe tolérante utilise les numéros voisins pour proposer des récupérations; ses 158/158 ne sont donc pas une mesure indépendante de précision/rappel.
+
 ## Échantillon OCR : transcription de référence et résultats
 
 Les pages ont été choisies pour couvrir le début, le corps et la fin de la loi : PDF 2 / JO 488 (articles 1 à 5), PDF 3 / JO 489 (articles 6 à 13; l'article 13 continue sur la page suivante) et PDF 15 / JO 501 (articles 155 à 158). Les transcriptions ont été rédigées en lisant les scans de `data/raw_pdf/F1990017.pdf`, puis comparées aux fichiers OCR bruts. Elles constituent un brouillon visuel préparé par l'assistant, pas une transcription humaine indépendante ni une référence relue à l'aveugle. Les taux sont donc indicatifs jusqu'à validation par une autre personne.

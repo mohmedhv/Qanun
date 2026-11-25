@@ -4,6 +4,7 @@ Inventaire JSON: 158 articles (1 à 158).
 Passe stricte (Art\.? + numéro + ponctuation de fin):
 Trouvés: 152 articles distincts.
 Manquants: 1, 30, 54, 82, 144, 146.
+Précision/rappel par occurrence (TP=152, FP=1, FN=6): 99.3464% / 96.2025%.
 
 Passe tolérante (accents/symboles, Article 1er et contexte des en-têtes):
 Trouvés: 158 articles distincts.
