@@ -1,82 +1,94 @@
-# Data contract - PROPOSAL from P2 (to be confirmed by P1, P3, P4, P5)
+# Accepté par l'équipe le 25 novembre 2026 : le contrat d'Ikram (P2) est la référence.
 
-Status: draft, written from the working code in `src/structuring/build_db.py`.
-Database file: `data/db/qanun.db` (SQLite). Rebuilt from scratch by `python src/structuring/build_db.py`.
-If this file differs from an existing `data_contract.md`, the existing one wins and P2 renames columns.
+# Proposition de contrat de données P2
+
+**État : accepté.** Base SQLite : `data/db/qanun.db`, reconstruite par la commande commune `python -m src.common.build_all`.
 
 ## Conventions
-- Dates: ISO text `YYYY-MM-DD`. `valid_from` is the ENTRY INTO FORCE date, not the signature date. P3 fills it.
-- IDs: `article_id = <text_id>-art-<number>`, number with spaces replaced by `-`. Example: `loi-90-11-art-33`, `loi-90-11-art-12-bis`.
-- Article numbers are TEXT (`"33"`, `"12 bis"`). `sort_key` is the integer part, used for ordering.
-- Modified or repealed articles keep their number. Never delete a row: use `status`.
-- `status` values: `in_force`, `repealed`.
+
+- Les dates sont des textes ISO `YYYY-MM-DD`. `valid_from` est la date d'entrée en vigueur, pas la date de signature.
+- `article_id = <text_id>-art-<number>`; remplacer les espaces du numéro par des tirets. Exemples : `loi-90-11-art-33`, `loi-90-11-art-12-bis`.
+- Les numéros d'article sont conservés comme TEXT (`33`, `12 bis`, `73-1`). `sort_key` est la partie entière initiale utilisée pour le tri.
+- Un article modifié ou abrogé conserve son identité et son historique. Les statuts d'article sont `in_force` et `repealed`.
 
 ## Table `texts`
-| column | type | meaning |
+
+| Colonne | Type | Sens |
 |---|---|---|
-| text_id | TEXT PK | `loi-90-11` |
-| type | TEXT | loi / ordonnance / decret / arrete / circulaire |
-| number | TEXT | `90-11` |
-| title | TEXT | full title |
-| date_signed | TEXT | signature date |
-| jo_number | TEXT | Journal officiel issue, e.g. `JO n°17` |
-| jo_date | TEXT | JO publication date |
-| source_url | TEXT | official URL (JORADP) |
+| `text_id` | TEXT, clé primaire | `loi-90-11` |
+| `type` | TEXT | loi, ordonnance, décret, arrêté, circulaire, etc. |
+| `number` | TEXT | `90-11` |
+| `title` | TEXT | Titre complet |
+| `date_signed` | TEXT | Date de signature |
+| `jo_number` | TEXT | Numéro du Journal officiel, par exemple `JO n°17` |
+| `jo_date` | TEXT | Date de publication au Journal officiel |
+| `source_url` | TEXT | URL de la source |
+| `rank_level` | INTEGER | Rang 1–5; loi et ordonnance = 2 |
+| `language` | TEXT | Langue, défaut `fr` |
+| `pdf_path` | TEXT | Chemin local du PDF, nullable |
 
 ## Table `articles`
-| column | type | meaning |
-|---|---|---|
-| article_id | TEXT PK | see conventions |
-| text_id | TEXT FK -> texts | parent text |
-| number | TEXT | `"33"` or `"12 bis"` |
-| sort_key | INTEGER | 33 |
-| suffix | TEXT | NULL / bis / ter |
-| parent_title | TEXT | e.g. `TITRE III : RELATIONS INDIVIDUELLES DE TRAVAIL` |
-| parent_chapter | TEXT | e.g. `Chapitre IV : ...` (may be NULL) |
-| parent_section | TEXT | e.g. `Section 1 : ...` (may be NULL) |
-| content | TEXT | full article text (paragraphs joined by newline) |
-| paragraphs | TEXT | JSON list of alineas |
-| status | TEXT | default `in_force` |
-| valid_from | TEXT | filled by P3 |
-| valid_to | TEXT | NULL for the current version |
-| source_url | TEXT | provenance link |
 
-Unique constraint: (`text_id`, `number`).
+| Colonne | Type | Sens |
+|---|---|---|
+| `article_id` | TEXT, clé primaire | Identifiant stable selon la convention ci-dessus |
+| `text_id` | TEXT, clé étrangère | Texte parent |
+| `number` | TEXT | `33` ou `12 bis` |
+| `sort_key` | INTEGER | Partie entière du numéro |
+| `suffix` | TEXT | NULL, `bis`, `ter`, etc. |
+| `parent_title` | TEXT | Titre parent |
+| `parent_chapter` | TEXT | Chapitre parent, nullable |
+| `parent_section` | TEXT | Section parente, nullable |
+| `content` | TEXT | Texte intégral de l'article |
+| `paragraphs` | TEXT | Liste JSON des alinéas |
+| `status` | TEXT | `in_force` par défaut; sinon `repealed` |
+| `valid_from` | TEXT | Début de validité; renseigné par P3 |
+| `valid_to` | TEXT | Fin de validité; NULL si la période n'est pas bornée |
+| `source_url` | TEXT | URL de provenance |
+
+Contrainte unique : (`text_id`, `number`).
 
 ## Table `relations`
-| column | type | meaning |
+
+| Colonne | Type | Sens |
 |---|---|---|
-| relation_id | INTEGER PK | auto |
-| source_id | TEXT | text_id or article_id |
-| target_id | TEXT | text_id or article_id |
-| type | TEXT | modifies / repeals / applies / cites |
+| `relation_id` | INTEGER, clé primaire | Générée automatiquement |
+| `source_id` | TEXT | `text_id` ou `article_id` |
+| `target_id` | TEXT | `text_id` ou `article_id` |
+| `type` | TEXT | `modifies`, `repeals`, `applies`, `adds` ou `cites` |
 
-## Table `chunks` (P2 -> P4), added in week 2
-| column | type | meaning |
+## Table `chunks` (P2 vers P4)
+
+| Colonne | Type | Sens |
 |---|---|---|
-| chunk_id | TEXT PK | `loi-90-11-art-33`, or `loi-90-11-art-94#2` for a split article |
-| article_id | TEXT FK -> articles | always the article, even for a part |
-| part, n_parts | INTEGER | 1/1 for most articles |
-| text | TEXT | text shown to the user and the LLM |
-| text_for_embedding | TEXT | context line + text, what P4 embeds |
-| n_chars | INTEGER | |
-| source_url | TEXT | |
-Built by `src/structuring/chunks.py`. See `docs/chunking.md`.
+| `chunk_id` | TEXT, clé primaire | `loi-90-11-art-33` ou `loi-90-11-art-94#2` |
+| `article_id` | TEXT, clé étrangère | Article parent, y compris pour une partie |
+| `part`, `n_parts` | INTEGER | Numéro de partie et nombre total |
+| `text` | TEXT | Texte fourni à la recherche et au lecteur |
+| `text_for_embedding` | TEXT | Contexte et texte indexés par P4 |
+| `n_chars` | INTEGER | Longueur du texte |
+| `source_url` | TEXT | URL de provenance |
 
-## Amendments (P2 -> P3), added in week 2
-File `data/interim/amendments.json` / `.csv` (see `docs/amendments_handoff.md`). Not yet a DB table: P3 decides how versions are stored.
-New articles created by amendments keep their own number as TEXT: `12 bis`, `52 ter`, `73-1`. `sort_key` = the integer part.
+La table est construite par `src/structuring/chunks.py`. Les fichiers JSON d'équipe dans `data/interim/` ne sont pas remplacés par la construction.
 
-## Language (to decide)
-If Arabic articles are added: same table with a `lang` column (`fr`/`ar`), `article_id` suffixed `-ar`, linked to the French one by the same `number`.
+## Amendements (P2 vers P3)
+
+Les données de transfert sont dans `data/interim/amendments.json` et `.csv` (voir `docs/amendments_handoff.md`). Les nouveaux articles issus d'un amendement gardent leur numéro TEXT, par exemple `12 bis`, `52 ter`, `73-1`; `sort_key` reste la partie entière initiale.
+
+## Langue
+
+`texts.language` vaut `fr` par défaut. Si des articles arabes sont ajoutés, conserver leur langue explicitement et utiliser des identifiants stables.
 
 ## Versions (P3)
-A `versions` table is NOT defined here yet. P3 proposes it (article_id, version_no, content, valid_from, valid_to, modifying_text_id).
 
-## Chunking (P4)
-One article = one chunk, identified by `article_id`. Very long articles may be split by paragraph but keep `article_id`. Longest article is #94 (about 2200 characters).
+La table `versions` fait partie du contrat à cinq tables. Son DDL réel et les noms/types de ses colonnes doivent être repris du code ou de la base P3; ils ne sont pas présents dans ce dépôt. Ne pas les déduire de cette proposition. Voir `docs/contract_open_questions.md`.
 
-## Questions to confirm
-1. P1: is there an existing `data_contract.md` with different names?
-2. P3: do you want `versions` as a separate table or as extra rows in `articles`?
-3. P4/P5: are `article_id` and the column names above fine for your code?
+`verification_status` est nullable et accepte `verifie_jo_officiel`, `verifie_copie_publiee` ou `a_verifier`. Ne pas modifier les valeurs des lignes P3 existantes.
+
+## Découpage P4
+
+Un article forme généralement un chunk. Les articles longs peuvent être découpés par paragraphe, mais chaque partie conserve `article_id` pour permettre la citation de l'article parent. Voir `docs/chunking.md`.
+
+## Suivi
+
+La définition DDL P3 et la correspondance de ses statuts de vérification CSV sont consignées dans `docs/contract_open_questions.md`.
