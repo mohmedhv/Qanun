@@ -1,0 +1,55 @@
+{
+  "dataset": "eval/questions.csv",
+  "article_level": true,
+  "mrr_definition": "MRR@5 (reciprocal rank is 0 if the target is beyond top 5)",
+  "reference_review": "PENDING independent second-person verification",
+  "model": "intfloat/multilingual-e5-small",
+  "metrics": {
+    "dev": {
+      "bm25": {
+        "n": 10,
+        "recall@1": 0.5,
+        "recall@3": 0.8,
+        "recall@5": 0.9,
+        "mrr": 0.6533333333333333
+      },
+      "e5": {
+        "n": 10,
+        "recall@1": 0.6,
+        "recall@3": 0.9,
+        "recall@5": 0.9,
+        "mrr": 0.75
+      },
+      "hybrid": {
+        "n": 10,
+        "recall@1": 0.9,
+        "recall@3": 0.9,
+        "recall@5": 0.9,
+        "mrr": 0.9
+      }
+    },
+    "test": {
+      "bm25": {
+        "n": 10,
+        "recall@1": 0.9,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "mrr": 0.95
+      },
+      "e5": {
+        "n": 10,
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "mrr": 1.0
+      },
+      "hybrid": {
+        "n": 10,
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "mrr": 1.0
+      }
+    }
+  }
+}
