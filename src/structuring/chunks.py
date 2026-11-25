@@ -3,16 +3,15 @@
 RULE: one article = one chunk.  Only an article longer than MAX_CHARS is split BY PARAGRAPH,
 and every part keeps the article_id, so a citation always points to the right article.
 
-Usage:  python src/structuring/chunks.py        (run AFTER build_db.py)
+Usage:  python -m src.structuring.chunks        (run AFTER build_db.py)
 Reads:  data/db/qanun.db (table articles)
-Writes: table `chunks` in the same DB  +  data/interim/chunks.json
+Writes: table `chunks` in the same DB
 """
 import json
 import sqlite3
 from pathlib import Path
 
 DB = Path("data/db/qanun.db")
-OUT = Path("data/interim/chunks.json")
 MAX_CHARS = 1500      # about 400 tokens in French: safe under the 512-token limit of E5 / BGE (with prefixes)
 
 
@@ -53,13 +52,15 @@ def main():
                 "n_chars": len(text),
                 "source_url": url,
             })
-    con.executescript("DROP TABLE IF EXISTS chunks; CREATE TABLE chunks ("
-                      "chunk_id TEXT PRIMARY KEY, article_id TEXT NOT NULL REFERENCES articles(article_id), "
-                      "part INTEGER NOT NULL, n_parts INTEGER NOT NULL, text TEXT NOT NULL, "
-                      "text_for_embedding TEXT NOT NULL, n_chars INTEGER NOT NULL, source_url TEXT);")
-    con.executemany("INSERT INTO chunks VALUES (:chunk_id,:article_id,:part,:n_parts,:text,:text_for_embedding,:n_chars,:source_url)", chunks)
+    # Keep the shared schema as the only DDL source and preserve the team's JSON artifacts.
+    con.execute("DELETE FROM chunks")
+    con.executemany(
+        "INSERT INTO chunks "
+        "(chunk_id,article_id,part,n_parts,text,text_for_embedding,n_chars,source_url) "
+        "VALUES (:chunk_id,:article_id,:part,:n_parts,:text,:text_for_embedding,:n_chars,:source_url)",
+        chunks,
+    )
     con.commit(); con.close()
-    OUT.write_text(json.dumps(chunks, ensure_ascii=False, indent=2), encoding="utf-8")
     split = sorted({c["article_id"] for c in chunks if c["n_parts"] > 1})
     print(f"{len(chunks)} chunks for {len(rows)} articles; split articles: {split}; longest chunk = {max(c['n_chars'] for c in chunks)} chars")
 

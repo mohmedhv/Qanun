@@ -24,7 +24,7 @@ Inventaire établi le 25 novembre 2026 après fusion de `origin/main` dans la br
 | Fichier | Éléments présents |
 |---|---|
 | `src/structuring/build_db.py` | Base `data/db/qanun.db`; `articles.article_id` textuel, `number`, `sort_key`; relations `source_id`, `target_id`, `type`. Le schéma est encore codé en chaîne dans ce module. |
-| `src/structuring/chunks.py` | Utilise `article_id`, `number`, `sort_key` et définit les colonnes de `chunks`; écrit aussi `data/interim/chunks.json`, fichier de données protégé à ne pas réécrire pendant cette migration. |
+| `src/structuring/chunks.py` | Utilise `article_id`, `number`, `sort_key` et les colonnes de `chunks`. L'ancien comportement réécrivait aussi `data/interim/chunks.json`; il a été retiré pour préserver les données d'équipe. |
 | `src/structuring/validate.py` | Vérifie `number` et `sort_key` dans `articles`. |
 | `docs/data_contract_proposal.md` | Définit les tables P2 et le format d'identifiants comme `loi-90-11-art-33`. |
 | `data/interim/articles.json`, `data/interim/articles_ar.json`, `data/interim/chunks.json` | Données P2 contenant des numéros et clés de tri. Ces fichiers ne seront ni supprimés ni réécrits. |
