@@ -1,4 +1,5 @@
 import json
+import re
 
 import pytest
 
@@ -42,7 +43,10 @@ def test_split_issue_synthetic(tmp_path, monkeypatch):
         "url,file,year,number\nhttps://example.test,SYNTH.pdf,1990,017\n", encoding="utf-8"
     )
     records = split_issue.write_issue("SYNTH")
-    assert [record["type"] for record in records] == ["loi", "decret_executif", "arrete", "autre"]
+    assert [record["type"] for record in records] == ["loi", "decret", "arrete", "autre"]
+    assert [record["text_id"] for record in records] == [
+        "loi-90-11", "decret-executif-26-10", "arrete-1990-04-21-1", "autre-3",
+    ]
     assert records[0]["text_id"] == "loi-90-11"
     assert records[0]["date_signed"] == "1990-04-21"
     assert records[0]["jo_number"] == "17"
@@ -62,6 +66,11 @@ def test_split_issue_synthetic(tmp_path, monkeypatch):
     split_issue.write_issue("SYNTH")
     after = {p.name: p.read_bytes() for p in text_dir.glob("*.json")}
     assert before == after
+    # Contract: text_id is lowercase and starts with a full-word prefix.
+    allowed = ("loi", "ordonnance", "decret-presidentiel", "decret-executif", "arrete", "circulaire", "autre")
+    for record in records:
+        assert re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", record["text_id"])
+        assert record["text_id"].startswith(tuple(p + "-" for p in allowed))
 
 
 def test_scoring_and_exclusions():
@@ -76,3 +85,26 @@ def test_scoring_and_exclusions():
 
 def test_confusion_counts():
     assert confusion([(True, True), (False, True), (True, False), (False, False)]) == (1, 1, 1, 1)
+
+
+def test_mixed_case_headers_are_detected():
+    # Real Journal officiel lines are capitalised ("Décret présidentiel n° ..."), not all upper case.
+    assert split_issue.is_header("Décret présidentiel n° 26-239 du 14 Moharram 1448 correspondant au 29 juin 2026 portant transfert", 2)
+    assert split_issue.is_header("Loi n° 90-11 du 21 avril 1990 relative aux relations de travail.", 2)
+    # A lowercase "décret" inside a sentence is a reference, not a header.
+    assert split_issue.is_header("décret exécutif n° 91-306 du 24 août 1991 fixant la liste des communes", 2) is None
+
+
+def test_number_with_punctuation_gives_clean_slug(tmp_path, monkeypatch):
+    ocr_dir, text_dir = tmp_path / "ocr", tmp_path / "texts"
+    ocr_dir.mkdir()
+    (ocr_dir / "S2.txt").write_text(
+        "=== page 2 (text-layer) ===\n"
+        "Décision n° 04/D.C.C/CC/26 du 11 Safar 1448 correspondant au 26 juillet 2026 relative au contrôle\n"
+        "Le Conseil constitutionnel décide.\n", encoding="utf-8")
+    monkeypatch.setattr(split_issue, "OCR_DIR", ocr_dir)
+    monkeypatch.setattr(split_issue, "TEXT_DIR", text_dir)
+    monkeypatch.setattr(split_issue, "REGISTRY", tmp_path / "registry.csv")
+    split_issue.REGISTRY.write_text("url,file,year,number\nhttps://example.test,S2.pdf,2026,054\n", encoding="utf-8")
+    records = split_issue.write_issue("S2")
+    assert [r["text_id"] for r in records] == ["autre-04-d-c-c-cc-26"]

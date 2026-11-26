@@ -27,10 +27,10 @@ MONTHS = {
     "juillet": 7, "aout": 8, "septembre": 9, "octobre": 10, "novembre": 11, "decembre": 12,
 }
 PREFIXES = {
-    "loi": ("loi", 2, "LOI"), "ordonnance": ("ordonnance", 2, "ORD"),
-    "decret presidentiel": ("decret_presidentiel", 3, "DEC-PRES"),
-    "decret executif": ("decret_executif", 3, "DEC-EXE"),
-    "arrete": ("arrete", 4, "ARR"), "circulaire": ("circulaire", 5, "CIRC"),
+    "loi": ("loi", 2, "loi"), "ordonnance": ("ordonnance", 2, "ordonnance"),
+    "decret presidentiel": ("decret", 3, "decret-presidentiel"),
+    "decret executif": ("decret", 3, "decret-executif"),
+    "arrete": ("arrete", 4, "arrete"), "circulaire": ("circulaire", 5, "circulaire"),
 }
 
 
@@ -55,7 +55,11 @@ def is_header(line: str, page_number: int) -> re.Match[str] | None:
     match = HEADER_RE.match(normalized)
     if not match:
         return None
-    if not match.group(1).isupper():
+    # A header is capitalised ("Décret", "DECRET"); a lowercase "décret" is a reference inside a sentence.
+    if not match.group(1)[0].isupper():
+        return None
+    # Real headers are often in capitals-and-lowercase ("Décret exécutif n° 26-253 du 30 ..."): then they must carry a date.
+    if not match.group(1).isupper() and not re.search(r"\bdu\s+\d", norm(normalized[match.end():])):
         return None
     if re.match(r"^art(?:icle)?\b", normalized, re.I):
         return None
@@ -82,7 +86,7 @@ def classify(header: str) -> tuple[str, int, str]:
     for prefix, values in PREFIXES.items():
         if normalized.startswith(prefix):
             return values
-    return "autre", 5, "AUTRE"
+    return "autre", 5, "autre"
 
 
 def parse_date(text: str) -> str | None:
@@ -170,7 +174,7 @@ def split_text(stem: str) -> list[dict]:
         key = (code, date or jo_number)
         counters[key] += 1
         if number:
-            safe_number = number.replace("/", "-").replace("\\", "-")
+            safe_number = re.sub(r"[^a-z0-9]+", "-", number.lower()).strip("-")  # contract: lowercase slug
             text_id = f"{code}-{safe_number}"
         else:
             text_id = f"{code}-{date or jo_number}-{counters[key]}"
