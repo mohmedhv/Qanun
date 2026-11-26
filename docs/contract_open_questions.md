@@ -1,5 +1,5 @@
 # Questions ouvertes sur le contrat
 
-1. **Schéma et chargeur P3 manquants.** `data/db/` ne contenait pas `qanun.db` au début de la migration; `src/versions/versions.py`, le chargeur P3 et `src/versions/validate_versions.py` sont absents du dépôt et des branches P3/P5 inspectées. Fournir le schéma/DDL réellement utilisé, les colonnes existantes, le module de chargement et sa commande. Ne pas créer ni migrer `versions` avant cette confirmation, afin de préserver les lignes P3 et leurs noms de colonnes. `src.common.build_all` signale le chargeur comme échoué tant que son module n'est pas fourni; il lira ensuite le nom du module depuis `QANUN_P3_VERSIONS_LOADER`. La recherche P4 suspend aussi sa requête SQL P3 jusqu'à réception du contrat réel.
-2. **Valeurs de vérification P3.** Les CSV P3 existants utilisent `VERIFIED_OFFICIAL_JO`, `VERIFIED_PUBLISHED_JO_COPY` et `A_VERIFIER_SOURCE_OFFICIELLE`, tandis que le nouveau contrat demande `verifie_jo_officiel`, `verifie_copie_publiee` et `a_verifier`. Confirmer si ces valeurs sont déjà stockées en base et la correspondance à appliquer aux nouvelles lignes; aucune valeur de ligne existante ne doit être modifiée.
+Les points P3 relatifs au schéma, au chargeur et aux statuts sont résolus dans [P3_WEEK2_DELIVERY.md](P3_WEEK2_DELIVERY.md).
+
 3. **Raccordement P5.** La recherche P4 expose maintenant `number`; le schéma de réponse de `src/rag/prompts.py` demande encore `article_number`. Confirmer avec P5 si l'adaptateur transforme `number` en `article_number` pour la réponse JSON, ou si le schéma de réponse change.

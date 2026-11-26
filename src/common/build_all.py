@@ -47,12 +47,7 @@ def _build_db() -> tuple[bool, str]:
 
 def _run_p3_loader() -> tuple[bool, str]:
     module = os.getenv("QANUN_P3_VERSIONS_LOADER", "").strip()
-    if not module:
-        return False, (
-            "P3 versions loader is not present/configured. Set QANUN_P3_VERSIONS_LOADER "
-            "to the module supplied by P3; see docs/contract_open_questions.md."
-        )
-    return _run_module(module)
+    return _run_module(module or "src.versions.load_versions")
 
 
 def main() -> int:
@@ -63,7 +58,6 @@ def main() -> int:
         ("src.structuring.validate", lambda: _run_module("src.structuring.validate")),
         ("src.versions.validate_versions", lambda: _run_module("src.versions.validate_versions")),
     ]
-    failed = False
     for label, action in steps:
         try:
             succeeded, output = action()
@@ -73,8 +67,9 @@ def main() -> int:
         print(f"[{status}] {label}")
         if output:
             print(output)
-        failed |= not succeeded
-    return 1 if failed else 0
+        if not succeeded:
+            return 1
+    return 0
 
 
 if __name__ == "__main__":

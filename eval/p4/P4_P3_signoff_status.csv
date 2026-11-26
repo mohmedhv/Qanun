@@ -1,0 +1,21 @@
+﻿question_id,expected_cite_id,independent_reviewer,independent_review_date,independent_review_status,review_notes,documentary_check,checked_by,check_date,evidence_url,printed_page,p3_owner
+Q001,loi-90-11-art-2,Codex — revue assistée pour FOUGHALI HOUSSEINE,2026-11-25,CONFIRMED,Définition du travailleur salarié et de l’employeur. Revue assistée des références au texte original de 1990.,ORIGINAL_MATCH,Codex (revue documentaire),2026-11-25,https://www.joradp.dz/FTP/Jo-Francais/1990/F1990017.pdf#page=3,488,FOUGHALI HOUSSEINE
+Q002,loi-90-11-art-5,,,PENDING,,,,,,,FOUGHALI HOUSSEINE
+Q003,loi-90-11-art-7,,,PENDING,,,,,,,FOUGHALI HOUSSEINE
+Q004,loi-90-11-art-8,,,PENDING,,,,,,,FOUGHALI HOUSSEINE
+Q005,loi-90-11-art-10,Codex — revue assistée pour FOUGHALI HOUSSEINE,2026-11-25,CONFIRMED,La relation ou le contrat peut être prouvé par tout moyen. Revue assistée des références au texte original de 1990.,ORIGINAL_MATCH,Codex (revue documentaire),2026-11-25,https://www.joradp.dz/FTP/Jo-Francais/1990/F1990017.pdf#page=4,489,FOUGHALI HOUSSEINE
+Q006,loi-90-11-art-11,,,PENDING,,,,,,,FOUGHALI HOUSSEINE
+Q007,loi-90-11-art-15,,,PENDING,,,,,,,FOUGHALI HOUSSEINE
+Q008,loi-90-11-art-22,Codex — revue assistée pour FOUGHALI HOUSSEINE,2026-11-25,CORRECTION_REQUIRED,"Le texte initial donne 44 heures. Ord. 97-03, art. 8, abroge les art. 22–26; art. 2 traite de la durée hebdomadaire. https://www.joradp.dz/FTP/Jo-Francais/1997/F1997003.pdf#page=7 Revue assistée des références au texte original de 1990.",HISTORICAL_ONLY,Codex (revue documentaire),2026-11-25,https://www.joradp.dz/FTP/Jo-Francais/1990/F1990017.pdf#page=5,490,FOUGHALI HOUSSEINE
+Q009,loi-90-11-art-27,Codex — revue assistée pour FOUGHALI HOUSSEINE,2026-11-25,CONFIRMED,La plage horaire du travail de nuit est donnée dans cet article. Revue assistée des références au texte original de 1990.,ORIGINAL_MATCH,Codex (revue documentaire),2026-11-25,https://www.joradp.dz/FTP/Jo-Francais/1990/F1990017.pdf#page=5,490,FOUGHALI HOUSSEINE
+Q010,loi-90-11-art-32,Codex — revue assistée pour FOUGHALI HOUSSEINE,2026-11-25,CONFIRMED,La majoration figure en page imprimée 490. Le tableau transmis indiquait 491. Revue assistée des références au texte original de 1990. Confirmation après correction de la page.,PAGE_CORRECTED,Codex (revue documentaire),2026-11-25,https://www.joradp.dz/FTP/Jo-Francais/1990/F1990017.pdf#page=5,490,FOUGHALI HOUSSEINE
+Q011,loi-90-11-art-20,,,PENDING,,,,,,,FOUGHALI HOUSSEINE
+Q012,loi-90-11-art-26,,,PENDING,,,,,,,FOUGHALI HOUSSEINE
+Q013,loi-90-11-art-33,,,PENDING,,,,,,,FOUGHALI HOUSSEINE
+Q014,loi-90-11-art-41,,,PENDING,,,,,,,FOUGHALI HOUSSEINE
+Q015,loi-90-11-art-39,,,PENDING,,,,,,,FOUGHALI HOUSSEINE
+Q016,loi-90-11-art-13,,,PENDING,,,,,,,FOUGHALI HOUSSEINE
+Q017,loi-90-11-art-6,,,PENDING,,,,,,,FOUGHALI HOUSSEINE
+Q018,loi-90-11-art-14,,,PENDING,,,,,,,FOUGHALI HOUSSEINE
+Q019,loi-90-11-art-36,,,PENDING,,,,,,,FOUGHALI HOUSSEINE
+Q020,loi-90-11-art-25,,,PENDING,,,,,,,FOUGHALI HOUSSEINE

@@ -29,8 +29,8 @@ def pack(paragraphs: list[str]) -> list[list[str]]:
     return parts
 
 
-def main():
-    con = sqlite3.connect(DB)
+def main(db_path=DB):
+    con = sqlite3.connect(db_path)
     rows = con.execute(
         "SELECT article_id, number, parent_title, parent_chapter, parent_section, paragraphs, source_url "
         "FROM articles ORDER BY sort_key").fetchall()

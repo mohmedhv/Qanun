@@ -1,3 +1,5 @@
+État P3 Week 2 au 26 novembre 2026: module, base et chargeur intégrés. Résultats courants dans docs/P3_WEEK2_DELIVERY.md. Les observations antérieures ci-dessous sont historiques.
+
 P3 - Semaine 1 - Dossier corrigé
 
 Fichiers :
