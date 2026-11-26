@@ -1,3 +1,5 @@
+État P3 Week 2 au 26 novembre 2026: module, base et chargeur intégrés. Résultats courants dans docs/P3_WEEK2_DELIVERY.md. Les observations antérieures ci-dessous sont historiques.
+
 # Integrated P2/P3/P4 test evidence
 
 > Note du 25 novembre 2026 : ce document décrit une distribution antérieure. Le dépôt courant ne contient pas la base P3, `src/versions/versions.py` ni le validateur P3; ces résultats historiques ne remplacent pas les vérifications courantes consignées dans le relais et les questions ouvertes.

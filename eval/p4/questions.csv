@@ -1,0 +1,21 @@
+﻿question_id,question,language,expected_article_number,expected_cite_id,split,source_url,independent_second_check,p3_owner
+Q001,Quels travailleurs sont concernés par la définition de la relation salariée dans cette loi ?,fr,2,loi-90-11-art-2,dev,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,CONFIRMED,FOUGHALI HOUSSEINE
+Q002,"Quels droits fondamentaux la loi reconnaît-elle aux travailleurs, notamment en matière syndicale et de sécurité sociale ?",fr,5,loi-90-11-art-5,dev,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,PENDING,FOUGHALI HOUSSEINE
+Q003,Quelles obligations essentielles un salarié doit-il respecter dans l’exercice de son poste ?,fr,7,loi-90-11-art-7,dev,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,PENDING,FOUGHALI HOUSSEINE
+Q004,Comment une relation de travail peut-elle être établie et à partir de quel fait existe-t-elle ?,fr,8,loi-90-11-art-8,dev,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,PENDING,FOUGHALI HOUSSEINE
+Q005,Par quels moyens peut-on prouver l’existence d’un contrat ou d’une relation de travail ?,fr,10,loi-90-11-art-10,dev,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,CONFIRMED,FOUGHALI HOUSSEINE
+Q006,Quelle est la règle par défaut concernant la durée du contrat lorsqu’aucun écrit ne prévoit une durée déterminée ?,fr,11,loi-90-11-art-11,dev,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,PENDING,FOUGHALI HOUSSEINE
+Q007,"Quel est l’âge minimum légal pour recruter un travailleur, sous réserve de l’apprentissage ?",fr,15,loi-90-11-art-15,dev,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,PENDING,FOUGHALI HOUSSEINE
+Q008,Quelle est la durée légale hebdomadaire normale du travail ?,fr,22,loi-90-11-art-22,dev,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,CORRECTION_REQUIRED,FOUGHALI HOUSSEINE
+Q009,À partir de quelles heures un travail est-il considéré comme travail de nuit ?,fr,27,loi-90-11-art-27,dev,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,CONFIRMED,FOUGHALI HOUSSEINE
+Q010,Quelle majoration minimale doit être payée pour les heures supplémentaires ?,fr,32,loi-90-11-art-32,dev,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,CONFIRMED,FOUGHALI HOUSSEINE
+Q011,Un employeur peut-il mettre fin à la relation de travail pendant la période d’essai sans préavis ni indemnité ?,fr,20,loi-90-11-art-20,test,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,PENDING,FOUGHALI HOUSSEINE
+Q012,Quelle est la durée maximale de l’amplitude journalière de travail ?,fr,26,loi-90-11-art-26,test,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,PENDING,FOUGHALI HOUSSEINE
+Q013,Quel repos hebdomadaire est garanti au travailleur et quel jour est normalement retenu ?,fr,33,loi-90-11-art-33,test,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,PENDING,FOUGHALI HOUSSEINE
+Q014,Comment le congé annuel rémunéré est-il calculé chaque mois de travail ?,fr,41,loi-90-11-art-41,test,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,PENDING,FOUGHALI HOUSSEINE
+Q015,Un salarié peut-il renoncer à tout ou partie de son congé annuel payé ?,fr,39,loi-90-11-art-39,test,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,PENDING,FOUGHALI HOUSSEINE
+Q016,Dans quelles conditions le travail à temps partiel peut-il être conclu pour une durée indéterminée ?,fr,13,loi-90-11-art-13,test,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,PENDING,FOUGHALI HOUSSEINE
+Q017,Quel droit le salarié possède-t-il concernant le respect de son intégrité physique et morale et de sa dignité ?,fr,6,loi-90-11-art-6,test,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,PENDING,FOUGHALI HOUSSEINE
+Q018,Quel est le principe applicable à un contrat à durée déterminée conclu en violation des conditions légales ?,fr,14,loi-90-11-art-14,test,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,PENDING,FOUGHALI HOUSSEINE
+Q019,Quel repos compensateur est dû lorsqu’un travailleur travaille pendant un jour de repos légal ?,fr,36,loi-90-11-art-36,test,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,PENDING,FOUGHALI HOUSSEINE
+Q020,Quel temps de pause l’employeur doit-il aménager en cas de séance continue ?,fr,25,loi-90-11-art-25,test,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,PENDING,FOUGHALI HOUSSEINE

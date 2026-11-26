@@ -7,7 +7,7 @@ from .bm25_search import BM25Index
 from .semantic_search import E5Index
 from .hybrid_search import reciprocal_rank_fusion
 
-QUESTIONS = Path('eval/questions.csv')
+QUESTIONS = Path('eval/p4/questions.csv')
 OUT = Path('data/processed/search_results.csv')
 SUMMARY = Path('data/processed/search_metrics.json')
 FAILURES = Path('data/processed/failure_analysis.csv')
@@ -91,7 +91,7 @@ def main():
                                 'missed_top5' if rank is None or rank > 5 else 'ranked_below_first'])
     summary = {split:{m:metrics(rows,split,m) for m in methods} for split in ['dev','test']}
     SUMMARY.write_text(json.dumps({
-        'dataset':'eval/questions.csv',
+        'dataset':'eval/p4/questions.csv',
         'article_level':True,
         'mrr_definition':'MRR@5 (reciprocal rank is 0 if the target is beyond top 5)',
         'reference_review':'PENDING independent second-person verification',
