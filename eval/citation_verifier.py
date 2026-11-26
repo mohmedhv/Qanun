@@ -17,7 +17,8 @@ def verify_citations(llm_answer: str, retrieved_articles: list) -> bool:
         return False
         
     # 2. Extract the numbers of the articles P4 actually provided
-    valid_numbers = [str(art.get('article_number', '')) for art in retrieved_articles]
+    # P4 returns "number" (data contract); "article_number" kept for older data.
+    valid_numbers = [str(art.get('number', art.get('article_number', ''))) for art in retrieved_articles]
     
     # 3. Check if the LLM's citations are in the valid list
     hallucinated = []
