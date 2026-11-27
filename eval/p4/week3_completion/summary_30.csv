@@ -1,0 +1,6 @@
+﻿group,count,human_review_pending_count,hybrid_hit3,hybrid_recall5,hybrid_graph_hit3,hybrid_graph_recall5,article_graph_hit3,article_graph_recall5,hit3_improved_count,hit3_worsened_count,hit3_unchanged_count,recall5_improved_count,recall5_worsened_count,recall5_unchanged_count
+dev_original,10,10,0.9,0.9,0.9,0.9,0.9,0.9,0,0,10,0,0,10
+test_original,10,10,1.0,1.0,1.0,1.0,1.0,1.0,0,0,10,0,0,10
+all_original,20,20,0.95,0.95,0.95,0.95,0.95,0.95,0,0,20,0,0,20
+graph_generated_pending,10,10,0.0,0.0,0.2,0.2,1.0,1.0,2,0,8,2,0,8
+all_30_mixed_descriptive_only,30,30,0.6333,0.6333,0.7,0.7,0.9667,0.9667,2,0,28,2,0,28

@@ -1,0 +1,11 @@
+﻿question_id,expected_node_id,hybrid_top3,graph_top3,hybrid_hit3,graph_hit3,hybrid_recall5,graph_recall5,outcome
+Q001,article:loi-90-11-art-2,article:loi-90-11-art-65;article:loi-90-11-art-1;article:loi-90-11-art-6,article:loi-90-11-art-65;article:loi-90-11-art-64;article:loi-90-11-art-1,0,0,0,0,unchanged
+Q002,article:loi-90-11-art-5,article:loi-90-11-art-5;article:loi-90-11-art-54;article:loi-90-11-art-157,article:loi-90-11-art-5;article:loi-90-11-art-54;text:ordonnance-96-21,1,1,1,1,unchanged
+Q003,article:loi-90-11-art-7,article:loi-90-11-art-7;article:loi-90-11-art-112;article:loi-90-11-art-30,article:loi-90-11-art-7;article:loi-90-11-art-112;article:loi-90-11-art-30,1,1,1,1,unchanged
+Q004,article:loi-90-11-art-8,article:loi-90-11-art-10;article:loi-90-11-art-11;article:loi-90-11-art-8,article:loi-90-11-art-10;article:loi-90-11-art-11;article:loi-90-11-art-8,1,1,1,1,unchanged
+Q005,article:loi-90-11-art-10,article:loi-90-11-art-10;article:loi-90-11-art-8;article:loi-90-11-art-11,article:loi-90-11-art-10;article:loi-90-11-art-8;article:loi-90-11-art-11,1,1,1,1,unchanged
+Q006,article:loi-90-11-art-11,article:loi-90-11-art-11;article:loi-90-11-art-12;article:loi-90-11-art-117,article:loi-90-11-art-11;article:loi-90-11-art-12;text:ordonnance-96-21,1,1,1,1,unchanged
+Q007,article:loi-90-11-art-15,article:loi-90-11-art-15;article:loi-90-11-art-140;article:loi-90-11-art-54,article:loi-90-11-art-15;article:loi-90-11-art-140;text:ordonnance-15-01,1,1,1,1,unchanged
+Q008,article:loi-90-11-art-22,article:loi-90-11-art-22;article:loi-90-11-art-23;article:loi-90-11-art-24,article:loi-90-11-art-22;article:loi-90-11-art-23;text:ordonnance-97-03,1,1,1,1,unchanged
+Q009,article:loi-90-11-art-27,article:loi-90-11-art-27;article:loi-90-11-art-28;article:loi-90-11-art-81,article:loi-90-11-art-27;article:loi-90-11-art-28;article:loi-90-11-art-81,1,1,1,1,unchanged
+Q010,article:loi-90-11-art-32,article:loi-90-11-art-32;article:loi-90-11-art-31;article:loi-90-11-art-36,article:loi-90-11-art-32;article:loi-90-11-art-31;article:loi-90-11-art-26,1,1,1,1,unchanged

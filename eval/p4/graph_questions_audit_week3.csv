@@ -1,0 +1,11 @@
+﻿question_id,expected_article_id,expected_text_id,relation,possible_answers_count,possible_text_ids,expected_present,date_disambiguation,graph_relation_status,independent_review_status,independent_reviewer,independent_review_date
+G001,loi-90-11-art-87,loi-14-10,modifies,1,text:loi-14-10,True,False,verifie_jo_officiel,PENDING,,
+G002,loi-90-11-art-141,loi-17-11,modifies,1,text:loi-17-11,True,False,verifie_jo_officiel,PENDING,,
+G003,loi-90-11-art-142,loi-17-11,modifies,1,text:loi-17-11,True,True,verifie_jo_officiel,PENDING,,
+G004,loi-90-11-art-87-bis,decret-legislatif-94-03,adds,1,text:decret-legislatif-94-03,True,False,verifie_jo_officiel,PENDING,,
+G005,loi-90-11-art-56-bis,loi-22-16,adds,1,text:loi-22-16,True,False,verifie_jo_officiel,PENDING,,
+G006,loi-90-11-art-56-bis-1,loi-22-16,adds,1,text:loi-22-16,True,True,verifie_jo_officiel,PENDING,,
+G007,loi-90-11-art-72,decret-legislatif-94-09,repeals,1,text:decret-legislatif-94-09,True,False,verifie_jo_officiel,PENDING,,
+G008,loi-90-11-art-87-bis,loi-14-10,repeals,1,text:loi-14-10,True,False,verifie_jo_officiel,PENDING,,
+G009,loi-90-11-art-4,decret-executif-05-102,applies,6,text:decret-executif-05-102;text:decret-executif-08-140;text:decret-executif-15-213;text:decret-executif-90-290;text:decret-executif-91-481;text:decret-executif-97-474,True,True,portal_listed_unverified,PENDING,,
+G010,loi-90-11-art-4,decret-executif-08-140,applies,6,text:decret-executif-05-102;text:decret-executif-08-140;text:decret-executif-15-213;text:decret-executif-90-290;text:decret-executif-91-481;text:decret-executif-97-474,True,True,portal_listed_unverified,PENDING,,
