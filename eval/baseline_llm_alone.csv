@@ -63,7 +63,7 @@ Q01,directe,Un contrat de travail peut-il être oral ?,"En droit algérien, un c
 - **Toutefois**, la plupart des catégories de contrat (CDI, CDD, temps partiel, emploi domestique, etc.) **exigent un écrit** pour être conformes aux exigences légales et pour garantir la preuve des droits et obligations.  
 - En l’absence d’écrit, le contrat reste valable mais **difficile à prouver** et expose l’employeur à des risques de sanctions et de requalification.  
 
-**Conclusion :** il est fortement conseillé à toutes les parties d’établir un contrat de travail **écrit**, même si l’accord initial a été conclu oralement, afin de sécuriser leurs intérêts et de respecter les exigences du Code du travail algérien.",,,,
+**Conclusion :** il est fortement conseillé à toutes les parties d’établir un contrat de travail **écrit**, même si l’accord initial a été conclu oralement, afin de sécuriser leurs intérêts et de respecter les exigences du Code du travail algérien.",partial,invented_article,"Art. 11 (as ""Loi 90-11""), 12, 13, 26, 27, 69, 98; décret 13-59; 3 invented rulings","Says yes, oral contract valid (matches art. 8-9), but grounds it on art. 11 with invented content; claims CDI/part-time must be written; invents rulings."
 Q02,directe,Dans quels cas peut-on utiliser un CDD ?,"En droit algérien, dans quels cas peut-on utiliser un CDD ?",openai/gpt-oss-120b,12;13,"## Le CDD dans le droit du travail algérien  
 *(Code du Travail algérien – Décret n° 85‑11 du 19 janvier 1985, tel que modifié et complété)*  
 
@@ -160,7 +160,7 @@ Le respect strict des **conditions de forme, de durée et de justification** est
 
 ---  
 
-**Besoin d’un modèle de contrat ou d’une assistance pour la mise en conformité ?** N’hésitez pas à préciser votre secteur d’activité ou le type de besoin temporaire afin que je puisse vous fournir un exemple adapté.",,,,
+**Besoin d’un modèle de contrat ou d’une assistance pour la mise en conformité ?** N’hésitez pas à préciser votre secteur d’activité ou le type de besoin temporaire afin que je puisse vous fournir un exemple adapté.",partial,invented_article,"Art. 12-16; ""Décret 85-11 du 19/01/1985""; décret exécutif 87-16","Some cases match art. 12 (replacement, seasonal, extra workload, project); adds 12-month max, 2 renewals, end-of-contract indemnity not in 90-11; invented decrees. Ref 13 is about part-time, not CDD."
 Q03,directe,Quelles sont les règles de la période d’essai ?,"En droit algérien, quelles sont les règles de la période d’essai ?",openai/gpt-oss-120b,18,"### La période d’essai en droit du travail algérien  
 *(Code du travail algérien – texte consolidé à la date de rédaction – et jurisprudence associée)*  
 
@@ -240,7 +240,7 @@ Q03,directe,Quelles sont les règles de la période d’essai ?,"En droit algér
 ### Conclusion
 En Algérie, la période d’essai est strictement encadrée par le Code du travail : elle doit être prévue par écrit, respecter des durées maximales (3 mois pour les salariés non‑cadres, 6 mois pour les cadres), peut être renouvelée une seule fois si le contrat le prévoit, et toute rupture pendant la période doit être précédée d’un préavis (24 h ou 48 h selon la durée). Le non‑respect de ces règles expose l’employeur à des sanctions financières et à la requalification du contrat.  
 
-N’hésitez pas à vous référer aux conventions collectives applicables à votre secteur, qui peuvent améliorer les dispositions légales, et à consulter un juriste spécialisé en droit du travail pour valider les clauses contractuelles avant signature.",,,,
+N’hésitez pas à vous référer aux conventions collectives applicables à votre secteur, qui peuvent améliorer les dispositions légales, et à consulter un juriste spécialisé en droit du travail pour valider les clauses contractuelles avant signature.",no,invented_article+wrong_figure,"Art. 33, 34, 37, 38; décret exécutif 13-03; Conseil d'État 2009","Says 3 months (6 for managers); art. 18 says max 6 months, 12 for high qualification, set by collective negotiation. Wrong articles, invented decree and ruling."
 Q04,directe,Quelle est la durée légale du travail par semaine ?,"En droit algérien, quelle est la durée légale du travail par semaine ?",openai/gpt-oss-120b,22;24,"**Durée légale du travail en Algérie (Code du travail)**  
 
 | Texte législatif | Article | Disposition principale |
@@ -269,7 +269,7 @@ Q04,directe,Quelle est la durée légale du travail par semaine ?,"En droit alg�
 
 ---
 
-**En résumé** : La loi algérienne fixe la durée légale du travail à **40 heures par semaine** (8 h/jour, 5 jours). Des heures supplémentaires sont possibles jusqu’à 48 h/semaine, avec des majorations de salaire, et certaines activités peuvent bénéficier d’un aménagement à 44 h/semaine sous conditions d’accords ou de dispositions spécifiques.",,,,
+**En résumé** : La loi algérienne fixe la durée légale du travail à **40 heures par semaine** (8 h/jour, 5 jours). Des heures supplémentaires sont possibles jusqu’à 48 h/semaine, avec des majorations de salaire, et certaines activités peuvent bénéficier d’un aménagement à 44 h/semaine sous conditions d’accords ou de dispositions spécifiques.",partial,invented_article+no_version,"""Ordonnance 90-08 portant Code du travail"" art. 57-63; décret 96-01","40 h/week: art. 22 (1990 text) says 44 h; 40 h likely the rule after ord. 97-03, but no version or real source given. Invented ordinance."
 Q05,directe,Comment sont calculés les congés annuels ?,"En droit algérien, comment sont calculés les congés annuels ?",openai/gpt-oss-120b,39;40;41;42,"**Les congés annuels en Algérie – principe de calcul**  
 
 Le régime des congés payés est régi par le **Code du travail algérien** (notamment les articles 120 à 134) et, pour la fonction publique, par les textes spécifiques (décrets exécutifs, statut des fonctionnaires, etc.).  
@@ -350,7 +350,7 @@ Le régime des congés payés est régi par le **Code du travail algérien** (no
 - Le salarié peut **reporter** les jours non pris, sous réserve de l’accord de l’employeur, et ils doivent être pris dans l’année suivante au plus tard.  
 - L’indemnité de congé correspond au **salaire habituel** (calculé sur la moyenne des 30 derniers jours ouvrables).  
 
-En suivant ces règles, le calcul des congés annuels en droit algérien reste relativement simple : il suffit de compter les mois (ou les jours ouvrables) travaillés, d’appliquer le taux de 2,5 jours par mois, et de tenir compte des éventuels reports ou conventions collectives plus favorables.",,,,
+En suivant ces règles, le calcul des congés annuels en droit algérien reste relativement simple : il suffit de compter les mois (ou les jours ouvrables) travaillés, d’appliquer le taux de 2,5 jours par mois, et de tenir compte des éventuels reports ou conventions collectives plus favorables.",partial,invented_article,"Art. 120-134 (""décret exécutif 90-11 du 22/07/1990""); décret exécutif 88-03","2.5 days/month and 30 days match art. 41, but says working days (law: calendar), wrong reference period (art. 40: 1 July-30 June), misses South extra leave (art. 42); wrong articles."
 Q06,combinee,Comment sont payées les heures supplémentaires ?,"En droit algérien, comment sont payées les heures supplémentaires ?",openai/gpt-oss-120b,31;32,"**Les heures supplémentaires en droit algérien : principe général, taux d’indemnisation et modalités de calcul**
 
 > **Avertissement** – Les renseignements qui suivent sont de nature informative et ne constituent pas un avis juridique personnalisé. Pour une situation précise, il est recommandé de consulter un avocat spécialisé en droit du travail ou le service juridique de votre entreprise.
@@ -455,7 +455,7 @@ Il faut donc toujours **vérifier la convention collective applicable** à l’e
 
 ---
 
-> **En pratique** : si vous êtes salarié, conservez vos feuilles de temps et comparez le montant affiché sur votre bulletin de paie avec le calcul ci‑dessus. Si vous êtes employeur, assurez‑vous que votre service paie applique correctement les taux légaux et que le registre du personnel est à jour. En cas de doute, un conseil juridique spécialisé vous aidera à éviter les sanctions.",,,,
+> **En pratique** : si vous êtes salarié, conservez vos feuilles de temps et comparez le montant affiché sur votre bulletin de paie avec le calcul ci‑dessus. Si vous êtes employeur, assurez‑vous que votre service paie applique correctement les taux légaux et que le registre du personnel est à jour. En cas de doute, un conseil juridique spécialisé vous aidera à éviter les sanctions.",no,invented_article+wrong_figure,"Art. 99, 106, 108, 110, 112, 115; loi 19-07; décret présidentiel 85-09","Gives +25/50/100 % tiers and 48 h cap; art. 32 sets a minimum of +50 %, art. 31 caps overtime at 20 % of legal time. Wrong articles, invented law."
 Q07,combinee,Quelles règles faut-il respecter pour licencier un salarié ?,"En droit algérien, quelles règles faut-il respecter pour licencier un salarié ?",openai/gpt-oss-120b,73;74,"**Le cadre légal du licenciement en Algérie**  
 
 En Algérie, le licenciement d’un salarié est régi principalement par le **Code du travail algérien (CTA)**, notamment les articles 12 à 17 et les dispositions relatives aux contrats à durée déterminée (CDD) et indéterminée (CDI). Voici les grandes règles à observer :
@@ -541,7 +541,7 @@ Les informations fournies ci‑dessus sont d’ordre **général** et ne constit
 
 --- 
 
-*En suivant ces principes, l’employeur se conforme aux exigences du droit algérien et limite les risques de contentieux.*",,,,
+*En suivant ces principes, l’employeur se conforme aux exigences du droit algérien et limite les risques de contentieux.*",no,foreign_law+invented_article,"Art. 12-17 (CDD articles); ""décret présidentiel 90-11 du 21/01/1990""","Uses French concepts (cause réelle et sérieuse, works council); invents procedure, indemnity and 60-day deadline. Art. 73 = serious misconduct per internal rules. Ref 74 (change of employer) does not fit; procedure is in 73-1..73-6 (loi 91-29), not in corpus."
 Q08,cas_pratique,Un salarié licencié sans raison peut-il contester ?,"En droit algérien, un salarié licencié sans raison peut-il contester ?",openai/gpt-oss-120b,73;74;75,"### Oui : le salarié licencié « sans raison » peut tout à fait contester son licenciement en Algérie.  
 
 Le droit du travail algérien impose à l’employeur de justifier le licenciement par une **cause réelle et sérieuse** (article 34 du Code du travail). Si cette cause n’est pas invoquée ou si elle est manifestement insuffisante, le licenciement est considéré comme **abusif** ou **nul**, et le salarié dispose de plusieurs voies de recours.
@@ -656,7 +656,7 @@ Dans tous ces cas, le licenciement peut être attaqué comme **abusif**.
 
 ---  
 
-*Ce texte est fourni à titre d’information générale et ne remplace pas une consultation juridique personnalisée.*",,,,
+*Ce texte est fourni à titre d’information générale et ne remplace pas une consultation juridique personnalisée.*",no,foreign_law+invented_article,"Art. 34, 35, 42, 59, 71, 135, 148","Yes-can-contest is plausible, but every specific is invented (cause réelle et sérieuse, 6 months minimum indemnity, 2-month deadline). Refs 74-75 weak; real rule likely 73-4 (loi 91-29), not in corpus."
 Q09,datee,Quelles étaient les règles du CDD en 1997 ?,"En droit algérien, quelles étaient les règles du CDD en 1997 ?",openai/gpt-oss-120b,12;13,"**Le cadre légal du contrat à durée déterminée (CDD) en Algérie en 1997**  
 
 > **Source principale** : *Ordonnance n° 66‑03 du 23 juillet 1966* (Code du travail algérien), telle qu’elle était en vigueur à la fin de l’année 1997, avec les modifications introduites notamment par les lois n° 90‑11 du 15 juillet 1990 et n° 92‑05 du 28 septembre 1992.  
@@ -766,7 +766,7 @@ Q09,datee,Quelles étaient les règles du CDD en 1997 ?,"En droit algérien, que
 
 En 1997, le **CDD** était strictement encadré par le **Code du travail** (ordonnance 66‑03) et les lois de réformes de 1990‑1992. Il ne pouvait être utilisé que pour des missions temporaires clairement définies, pour le remplacement d’un salarié ou en cas d’accroissement ponctuel d’activité. La durée maximale était généralement de **12 mois** (ou 24 mois pour les remplacements), le contrat devait être **écrit**, et ne pouvait être renouvelé qu’une seule fois, sous peine de requalification en **CDI**. À la fin du contrat, le salarié percevait une **indemnité de fin de contrat** et conservait l’ensemble de ses droits sociaux (congés, couverture CNAS, etc.). Le non‑respect de ces règles entraînait des sanctions administratives, voire la requalification du contrat et le paiement de dommages‑intérêts.
 
-> **À retenir** : les règles de 1997 étaient très protectrices pour le salarié, mais la complexité de la législation (interactions entre le Code du travail, les lois de réforme et les conventions collectives) rendait indispensable une vérification minutieuse de chaque point contractuel avant de conclure un CDD.",,,,
+> **À retenir** : les règles de 1997 étaient très protectrices pour le salarié, mais la complexité de la législation (interactions entre le Code du travail, les lois de réforme et les conventions collectives) rendait indispensable une vérification minutieuse de chaque point contractuel avant de conclure un CDD.",no,wrong_version+invented_article,"""Ordonnance 66-03 (1966)"" as Code du travail; ""loi 90-11 du 15/07/1990""; loi 92-05; 1996 ruling",Wrong base text and wrong date for 90-11 (21 April 1990); invents 12/24-month limits and fines; misses ord. 96-21 which completed art. 12 and added 12 bis in 1996.
 Q10,hors_perimetre,Quel est le préavis de démission en France ?,Quel est le préavis de démission en France ?,openai/gpt-oss-120b,,"**Quel est le préavis (délai de préavis) à respecter lorsqu’on démissionne en France ?**  
 
 Le délai de préavis dépend de plusieurs facteurs :
@@ -856,4 +856,4 @@ N’hésitez pas à consulter le service RH de votre entreprise ou le représent
 
 ---  
 
-*Sources : Code du travail (articles L1237‑1 à L1237‑4), Décret n° 2005‑1655, conventions collectives (ex. : Syntec, métallurgie, BTP, etc.), jurisprudence de la Cour de cassation (arrêt du 9 février 2020 – préavis et dispense).*",,,,
+*Sources : Code du travail (articles L1237‑1 à L1237‑4), Décret n° 2005‑1655, conventions collectives (ex. : Syntec, métallurgie, BTP, etc.), jurisprudence de la Cour de cassation (arrêt du 9 février 2020 – préavis et dispense).*",no,out_of_scope_answered,"French Code du travail L1237-1, L1237-2, L1243-1, L6222-18; décret 2005-1655",Out of scope: should refuse; gives a full French-law answer and a model resignation letter.
