@@ -1,815 +1,859 @@
-question_id,category,question,reference_articles,llm_alone_answer,is_correct,error_type,cited_article,notes
-Q01,directe,Un contrat de travail peut-il être oral ?,8;9,"### Oui, un contrat de travail peut être conclu oralement  
-En droit français, le contrat de travail **n’exige pas, en principe, la forme écrite** pour être valable. Il suffit que les parties se soient **accordées** sur les éléments essentiels du lien de travail : le **salarié**, l’**employeur**, la **prestation de travail** et la **rémunération**. Cette règle découle de l’article **L1221‑1 du Code du travail**, qui dispose :
-
-> « Le contrat de travail peut être conclu oralement ou par écrit. »
-
-#### 1. Quand la forme écrite devient obligatoire ou fortement recommandée ?
-
-| Situation | Obligation ou recommandation d’écrit | Référence légale | Pourquoi ? |
-|-----------|--------------------------------------|------------------|------------|
-| **Contrat à durée déterminée (CDD)** | **Obligatoire** (forme écrite) | L1242‑1 | Preuve de la durée, du motif, du renouvellement, etc. |
-| **Contrat à durée indéterminée (CDI) de plus de 3 mois** | Recommandée (écrit) pour éviter les litiges | L1221‑2 (mention du délai de prévenance) | Facilite la preuve du contenu du contrat. |
-| **Travail temporaire (intérim)** | Forme écrite exigée | L1251‑2 | Garantit la transparence des conditions. |
-| **Travail à temps partiel** | Écrit obligatoire (mention du nombre d’heures) | L3123‑1 | Permet le contrôle du respect du temps de travail. |
-| **Mise à disposition d’un salarié (portage, détachement)** | Écrit obligatoire (accords de mise à disposition) | L8243‑6 | Sécurise les relations tripartites. |
-| **Salariés étrangers (titre de séjour)** | Écrit recommandé (preuve de l’emploi) | L1221‑5 | Facilite les démarches administratives. |
-| **Clause de non-concurrence, de mobilité, etc.** | Écrit indispensable | L1221‑1 (principe de la forme écrite pour les clauses particulières) | Valeur juridique et opposabilité. |
-
-#### 2. Les conséquences pratiques d’un contrat oral
-
-| Aspect | Conséquence d’un contrat oral |
-|--------|-------------------------------|
-| **Preuve** | Plus difficile : il faut recourir à des témoignages, des échanges de mails, SMS, fiches de pointage, bulletins de paie, etc. |
-| **Formalités obligatoires** | Même si le contrat est oral, l’employeur doit déposer une **déclaration préalable à l’embauche (DPAE)** et remettre au salarié un **reçu de salaire**, un **bulletin de paie**, un **reglement intérieur** le cas échéant. |
-| **Rupture du contrat** | La période d’essai, le préavis, les indemnités de licenciement ou de rupture conventionnelle restent applicables, mais leur calcul peut être contesté si les conditions (durée, salaire) ne sont pas clairement établies par écrit. |
-| **Régularité du temps de travail** | Les heures de travail doivent être consignées (pointage, relevés) ; sans écrit, l’employeur peut être tenu de les reconstituer à partir d’autres éléments de preuve. |
-| **Sanctions** | En cas de contrôle (inspection du travail, URSSAF), l’absence d’écrit ne constitue pas une infraction en soi, mais l’employeur risque des pénalités s’il ne peut justifier les conditions de travail (temps de travail, rémunération, etc.). |
-
-#### 3. Comment se protéger lorsqu’on accepte ou propose un contrat oral ?
-
-1. **Demander un écrit rapidement** : même une simple lettre ou un email récapitulant les points essentiels (poste, date d’entrée, durée, salaire, horaires) a une forte valeur probante.
-2. **Conserver les échanges** : mails, SMS, comptes‑rendus de réunions, fiches de pointage, relevés de salaire.
-3. **Faire signer un reçu de salaire** : le bulletin de paie constitue une preuve écrite de la rémunération et du temps de travail.
-4. **Obtenir le DPAE** : l’employeur doit vous remettre une copie de la déclaration ou au moins vous en informer (cela prouve l’existence du lien de travail aux yeux de l’URSSAF).
-5. **Consulter un représentant du personnel** (CSE, délégué syndical) ou un avocat en droit du travail si vous avez des doutes sur les conditions proposées.
-
-#### 4. Jurisprudence illustrant la validité d’un contrat oral
-
-| Décision | Principe retenu |
-|----------|-----------------|
-| **Cour de cassation, 1ʳᵉ civ., 18 mai 2002, n°00‑45 123** | Le contrat de travail peut être conclu oralement ; l’absence d’écrit ne rend pas le contrat nul. |
-| **Conseil d’État, 19 février 2001, n°2000019** | Même sans écrit, le salarié bénéficie des protections prévues par le Code du travail (exemple : paiement du salaire, respect du temps de travail). |
-| **Cour de cassation, 3ᵉ civ., 12 janvier 2014, n°13‑12 123** | En l’absence d’écrit, la charge de la preuve incombe à l’employeur qui doit démontrer l’existence et le contenu du contrat. |
-
-#### 5. Synthèse pratique
-
-| Situation | Contrat oral ? | Risques majeurs | Recommandation |
-|----------|----------------|----------------|----------------|
-| **CDI classique** | Possible | Preuve du salaire, des horaires, du préavis | Obtenir un écrit (mail, lettre) dès les premiers jours. |
-| **CDD** | **Non** (exigé écrit) | Sanction pénale (article L1242‑12) | Rédiger un contrat écrit signé par les deux parties. |
-| **Temps partiel** | **Non** (écrit obligatoire) | Amende, requalification du contrat | Formaliser immédiatement les heures de travail. |
-| **Stage ou alternance** | Souvent écrit (convention) | Risque de requalification en emploi salarié | Toujours signer une convention. |
-| **Mission freelance / auto‑entrepreneur** | Possible, mais différent (contrat de prestation) | Confusion entre salariat et prestation de services | Clarifier le statut dès le départ. |
-
-#### 6. Points d’attention pour l’employeur
-
-- **Déclaration préalable à l’embauche (DPAE)** : obligatoire dès le premier jour de travail, même si le contrat est oral.
-- **Bulletin de paie** : remise obligatoire chaque mois ; il constitue une preuve écrite du salaire et du temps de travail.
-- **Registre unique du personnel** : doit contenir les informations essentielles du salarié, même sans contrat écrit.
-- **Visite médicale** : l’employeur doit organiser la visite d’embauche (médecin du travail) dans les trois mois suivant l’embauche, que le contrat soit écrit ou oral.
-
-#### 7. Conclusion
-
-- **Oui**, un contrat de travail peut être conclu oralement, **sauf** pour les CDD, les temps partiels, le travail intérimaire et d’autres cas où la loi impose explicitement la forme écrite.
-- **Cependant**, l’absence d’écrit rend la preuve du contenu du contrat plus délicate et expose les deux parties à des litiges.
-- **Il est donc fortement recommandé** de formaliser, dès que possible, les conditions essentielles par écrit (mail, lettre, avenant) afin de sécuriser la relation de travail et de faciliter le respect des obligations légales.
-
-> *En pratique, même lorsqu’un contrat oral est légalement valable, le « bon sens » veut qu’on mette par écrit les points clés : poste, date d’entrée, durée (si CDD), salaire, horaires, délai de prévenance. Cela évite bien des malentendus et protège à la fois le salarié et l’employeur.*",no,foreign_law,L1221-1 Code du travail (FR),LLM applied French law instead of Algerian law
-Q02,directe,Dans quels cas peut-on utiliser un CDD ?,12;13,"## Quand peut‑on recourir à un **CDD** (Contrat à Durée Déterminée) ?  
-
-En droit du travail français, le **CDD** n’est autorisé que dans des cas très précis, afin d’éviter l’usage abusif de contrats précaires. Voici les situations prévues par le Code du travail (articles L1242‑1 à L1242‑13) ainsi que les principales conditions à respecter.
-
-| N° | Situation autorisée | Exemple concret | Conditions particulières |
-|----|----------------------|-----------------|---------------------------|
-| 1️⃣ | **Remplacement d’un salarié absent** | Remplacement d’un salarié en congé maternité, maladie, formation, ou mission de service civique. | Le CDD doit préciser le motif (ex. : “remplacement du salarié X en congé maternité du 01/04/2024 au 30/09/2024”). La durée maximale correspond à la durée de l’absence, avec un possible **supplément de 1 mois** (ou 15 jours selon la convention) pour les remplacements de longue durée. |
-| 2️⃣ | **Accroissement temporaire d’activité** | Surcharge de travail liée à une campagne de soldes, un pic de production, un projet événementiel. | La durée du CDD ne peut excéder **18 mois** (ou 24 mois si le contrat comprend plusieurs périodes successives). L’employeur doit justifier la nature temporaire de l’accroissement (ex. : “pic de ventes prévu du 01/11/2024 au 31/01/2025”). |
-| 3️⃣ | **Emploi à caractère saisonnier** | Travailleurs agricoles pendant la récolte, employés d’un parc d’attractions en été, personnel d’hôtellerie pendant la haute saison. | Le contrat doit être **lié à la saison** (ex. : “emploi saisonnier du 01/06/2024 au 30/09/2024”). La durée maximale est généralement de **8 mois** sur une même saison, mais peut être portée à 12 mois si la saison le justifie (ex. : saison de ski). |
-| 4️⃣ | **Exécution d’une tâche précise et non durable** | Réalisation d’un projet informatique, création d’un stand d’exposition, mission de conseil ponctuelle. | Le CDD doit mentionner la **définition précise de la tâche** et sa durée estimée. La durée maximale est de **18 mois** (ou 24 mois si le contrat prévoit plusieurs périodes successives). |
-| 5️⃣ | **Contrat de mission ou de professionnalisation** | Contrat de professionnalisation en alternance, contrat de mission d’intérim (via une agence). | Le CDD doit être conclu **exclusivement pour la durée de la formation ou de la mission**. La durée maximale est de **24 mois** (ou 36 mois pour les jeunes de moins de 26 ans en contrat de professionnalisation). |
-| 6️⃣ | **Remplacement d’un salarié dont le contrat est à durée indéterminée (CDD d’usage)** | Métiers où le CDD est la norme (ex. : personnel d’intérim dans le spectacle, le tourisme, l’hôtellerie‑restauration, les emplois d’été). | Le CDD d’usage doit être **précisé par la convention collective ou un accord de branche**. La durée habituelle varie (ex. : 2 mois, 3 mois, ou la saison). |
-| 7️⃣ | **Contrat à objet défini (CDD de projet)** | Participation à la mise en place d’un nouveau logiciel, organisation d’un salon professionnel. | Le contrat doit **décrire l’objet du projet** et indiquer que le contrat prend fin à la réalisation du projet. La durée maximale reste de **18 mois** (ou 24 mois en cas de reconduction). |
+﻿question_id,category,question,prompt_sent,model,reference_articles,llm_alone_answer,is_correct,error_type,cited_article,notes
+Q01,directe,Un contrat de travail peut-il être oral ?,"En droit algérien, un contrat de travail peut-il être oral ?",openai/gpt-oss-120b,8;9,"**Oui, un contrat de travail peut être conclu oralement en droit algérien, mais la forme écrite est fortement recommandée et, dans plusieurs cas, obligatoire.**  
 
 ---
 
-### Points essentiels à retenir
+## 1. Principe général : liberté de la forme
 
-1. **Motif écrit** : Le CDD doit obligatoirement mentionner le motif de recours (remplacement, saisonnalité, accroissement d’activité, etc.) dans l’acte d’embauche.
-2. **Durée maximale** : En général **18 mois** (ou **24 mois** pour les contrats à objet défini ou les renouvellements). Certaines exceptions (CDD saisonniers, CDD d’usage) peuvent avoir des durées spécifiques.
-3. **Renouvellement** : Un CDD peut être renouvelé **une fois** (ou deux fois pour les CDD à objet défini) tant que la durée totale n’excède pas le plafond légal.
-4. **Période d’essai** : Possible, mais elle ne peut excéder **5 jours ouvrables** pour un CDD de 6 mois ou moins, et **7 jours ouvrables** au-delà.
-5. **Dérogations** : Certaines conventions collectives ou accords de branche autorisent des **CDD d’usage** dans des secteurs où le recours au CDD est la règle de l’art (ex. : spectacles, hôtellerie, restauration). Dans ces cas, la convention précise les durées et les conditions.
-6. **Interdiction de recours abusif** : Un employeur ne peut pas recourir à un CDD pour un poste qui correspond à un emploi permanent. En cas de litige, le salarié peut demander la requalification du contrat en CDI.
-7. **Formalités d’embauche** : Le contrat doit être signé **avant le début du travail** et contenir les mentions obligatoires (identité des parties, poste, durée, motif, durée de la période d’essai, délai de préavis, etc.).
+- **Article 11 du Code du travail algérien** (Loi n° 90‑11 du 21 avril 1990, tel que modifié) dispose que le contrat de travail « est un accord de volontés entre un employeur et un salarié qui crée des obligations réciproques. »  
+- Le texte ne précise pas que le contrat doive être exclusivement écrit ; la **volonté des parties** suffit à créer le lien juridique. En théorie, donc, **un accord oral crée un contrat de travail valable**.
 
 ---
 
-## Synthèse rapide (check‑list)
+## 2. Quand la forme écrite devient obligatoire ?
 
-- **Quel est le motif ?**  
-  - Remplacement / saisonnalité / accroissement d’activité / projet / CDD d’usage / formation.  
+| Type de contrat / Situation | Exigence de forme écrite | Référence légale | Raison principale |
+|-----------------------------|--------------------------|------------------|-------------------|
+| **Contrat à durée indéterminée (CDI)** | **Oui** (au moins les mentions essentielles) | Art. 13 du Code du travail – « Tout contrat de travail doit être constaté par écrit… » | Garantir la preuve des conditions d’emploi (durée, fonction, rémunération, période d’essai, etc.). |
+| **Contrat à durée déterminée (CDD)** | **Oui** (forme écrite obligatoire) | Art. 12 et 13 du Code du travail | Éviter le recours abusif aux CDD et protéger le salarié. |
+| **Contrat d’apprentissage, de formation professionnelle** | **Oui** | Art. 69‑1 et suivants du Code du travail | Réglementation spécifique de la formation. |
+| **Travail à temps partiel** | **Oui** (écrit) | Art. 27 du Code du travail | Définir la répartition du temps de travail. |
+| **Emploi domestique (service à la personne)** | **Oui**, mais le texte prévoit un **contrat écrit simplifié** (modèle type) | Décret n° 13‑59 du 10 février 2013 | Protection du salarié et du particulier employeur. |
+| **Travail saisonnier, intérimaire, ou sous‑contrat** | **Oui** (écrit) | Art. 26‑1 et suivants du Code du travail | Encadrement du recours à la sous‑traitance et à l’intérim. |
+| **Stage ou travail non rémunéré (volontariat, mission de service civique)** | **Souvent recommandé** (écrit) | Pas d’obligation stricte, mais bonne pratique | Clarifier les missions et la responsabilité. |
 
-- **Durée prévue ?**  
-  - ≤ 18 mois (ou 24 mois selon le motif).  
-
-- **Mentions obligatoires ?**  
-  - Motif, durée, poste, période d’essai, préavis, conditions de renouvellement.  
-
-- **Convention collective ?**  
-  - Vérifier s’il existe un CDD d’usage ou des règles spécifiques à votre secteur.  
-
-- **Respect des plafonds de renouvellement**  
-  - 1 renouvellement (ou 2 pour CDD à objet défini) sans dépasser le plafond total.  
-
-- **Risque de requalification**  
-  - Si le poste n’est pas réellement temporaire → CDI possible.  
+> **En pratique**, la plupart des employeurs (publics comme privés) demandent un écrit dès le premier jour. L’absence d’un document écrit ne rend pas le contrat nul, mais il devient **difficile à prouver** en cas de litige (requalification, paiement des heures supplémentaires, indemnités de licenciement, etc.).
 
 ---
 
-### Sources légales (mise à jour 2024)
+## 3. Conséquences de l’absence d’écrit
 
-- **Code du travail**, articles L1242‑1 à L1242‑13.  
-- **Décret n° 2008‑1343 du 16 décembre 2008** (réglementation du CDD).  
-- **Conventions collectives** (ex. : HCR, Hôtellerie, Spectacle, BTP) – à consulter pour les CDD d’usage.  
-
----
-
-**En bref** : Vous pouvez employer un CDD uniquement lorsqu’un caractère temporaire, saisonnier, de remplacement ou de projet est clairement identifiable et justifiable. Toute dérogation doit être explicitée dans le contrat et respectée selon la législation ou la convention collective applicable.  
-
-N’hésitez pas à consulter un conseiller juridique ou un représentant du personnel pour vérifier la conformité de votre projet de recrutement à ces exigences.",no,foreign_law,L1242-1 Code du travail (FR),LLM applied French law instead of Algerian law
-Q03,directe,Quelles sont les règles de la période d’essai ?,18,"## Les règles générales de la période d’essai (France)
-
-> **Attention** : les informations ci‑dessous sont d’ordre **général**.  
-> Elles résument le droit du travail français tel qu’il s’applique en 2024, mais les conventions collectives, accords d’entreprise ou spécificités de certains secteurs peuvent modifier ou préciser ces règles. En cas de doute, consultez un juriste, le service RH de votre entreprise ou le texte officiel du **Code du travail** (articles L1221‑19 à L1221‑26).
+| Conséquence | Explication |
+|-------------|-------------|
+| **Charge de la preuve** | En cas de différends, le salarié devra apporter la preuve de l’existence du contrat et de ses clauses (témoignages, bulletins de salaire, courriels, relevés bancaires, etc.). La jurisprudence algérienne tend à appliquer le **principe du “onus probandi”** : la partie qui invoque le contrat doit le prouver. |
+| **Risque de requalification** | Sans écrit, le juge peut présumer que le salarié était en situation de **travail dissimulé** ou que les conditions n’étaient pas conformes aux exigences légales, ce qui peut entraîner des sanctions administratives pour l’employeur (amendes, redressements). |
+| **Sanctions administratives** | L’inspection du travail peut infliger des amendes pour **absence de contrat écrit** lorsqu’il s’agit d’un CDD, d’un travail à temps partiel ou d’un emploi domestique (voir Art. 98 du Code du travail). |
+| **Indemnités supplémentaires** | En cas de licenciement, si le contrat n’est pas écrit, le salarié peut obtenir des **indemnités de préavis** et de **congés payés** plus favorables, car le juge estime que les droits du salarié n’ont pas pu être clairement limités. |
 
 ---
 
-### 1. Définition et objectif
-| Élément | Description |
-|---------|-------------|
-| **Période d’essai** | Phase initiale du contrat pendant laquelle l’employeur (et le salarié) peuvent mettre fin à la relation de travail plus facilement, afin de vérifier les compétences, l’adaptation au poste et à l’équipe. |
-| **Contrat concerné** | CDI, CDD (hors mission courte) et contrat d’apprentissage. |
-| **Accord préalable** | Elle doit être mentionnée **explicitement** dans le contrat de travail ou la lettre d’engagement. Sans mention, il n’y a pas de période d’essai. |
+## 4. Jurisprudence illustrative (extraits)
+
+| Décision | Point clé |
+|----------|-----------|
+| **Arrêt du Conseil d’État du 12 janvier 2005** (n° 03/03) | Confirme que le contrat de travail peut être oral, mais que le juge doit apprécier la **preuve de la relation de travail** à partir de tous les éléments de fait. |
+| **Arrêt de la Cour d’appel d’Alger du 22 mai 2011** (n° 12/08) | En l’absence de contrat écrit pour un CDD, la Cour a requalifié le contrat en **CDI** et a condamné l’employeur à verser les indemnités de fin de contrat et de licenciement. |
+| **Arrêt du Tribunal de Première Instance d’Oran du 3 octobre 2018** (n° 2018/0045) | Reconnaît la validité d’un contrat oral dans le cadre d’une mission de courte durée, mais ordonne à l’employeur de produire les bulletins de salaire comme preuve du paiement. |
 
 ---
 
-### 2. Durées maximales (sans renouvellement)
+## 5. Bonnes pratiques pour éviter les problèmes
 
-| Type de contrat | Cadre | Non‑cadre (ou autre) |
-|-----------------|-------|----------------------|
-| **CDI** | 4 mois | 2 mois |
-| **CDD** (≤ 6 mois) | 1 mois | 1 mois |
-| **CDD** (> 6 mois) | 2 mois | 1 mois |
-| **Apprentissage** | 2 mois | 2 mois (ou 1 mois selon le niveau) |
-
-> **Note** : La durée peut être réduite d’un commun accord, mais jamais augmentée au-delà des plafonds légaux (sauf si la convention collective le prévoit expressément).
+1. **Faire un contrat écrit** dès le premier jour, même si la relation débute oralement.  
+2. **Mentionner les éléments obligatoires** (identité des parties, fonction, lieu de travail, durée du travail, rémunération, date d’entrée, période d’essai, durée du contrat si CDD).  
+3. **Faire signer** le salarié et **en remettre un exemplaire**.  
+4. **Conserver les preuves complémentaires** : courriels de confirmation, fiches de paie, relevés de présence, attestations de témoins.  
+5. **Déposer le contrat auprès de l’Inspection du travail** (facultatif, mais recommandé pour les CDD et les emplois domestiques).  
 
 ---
 
-### 3. Renouvellement (ou prolongation)
+## 6. Résumé
 
-| Condition | Détails |
-|-----------|---------|
-| **Possibilité** | Le contrat doit prévoir explicitement la possibilité de renouveler la période d’essai. |
-| **Durée du renouvellement** | Le renouvellement ne peut pas dépasser **la moitié** de la durée initiale (ex. : 2 mois → prolongation de 1 mois). |
-| **Formalités** | Un **avenant écrit** signé par les deux parties est obligatoire **avant** la fin de la période initiale. |
-| **Limite** | En pratique, la période d’essai ne peut pas dépasser **6 mois** pour les cadres et **4 mois** pour les non‑cadres, même avec renouvellement. |
+- **Oui**, le contrat de travail peut être oral en droit algérien ; la loi ne l’interdit pas formellement.  
+- **Toutefois**, la plupart des catégories de contrat (CDI, CDD, temps partiel, emploi domestique, etc.) **exigent un écrit** pour être conformes aux exigences légales et pour garantir la preuve des droits et obligations.  
+- En l’absence d’écrit, le contrat reste valable mais **difficile à prouver** et expose l’employeur à des risques de sanctions et de requalification.  
 
----
+**Conclusion :** il est fortement conseillé à toutes les parties d’établir un contrat de travail **écrit**, même si l’accord initial a été conclu oralement, afin de sécuriser leurs intérêts et de respecter les exigences du Code du travail algérien.",partial,invented_article,"Art. 11 (as ""Loi 90-11""), 12, 13, 26, 27, 69, 98; décret 13-59; 3 invented rulings","Says yes, oral contract valid (matches art. 8-9), but grounds it on art. 11 with invented content; claims CDI/part-time must be written; invents rulings."
+Q02,directe,Dans quels cas peut-on utiliser un CDD ?,"En droit algérien, dans quels cas peut-on utiliser un CDD ?",openai/gpt-oss-120b,12;13,"## Le CDD dans le droit du travail algérien  
+*(Code du Travail algérien – Décret n° 85‑11 du 19 janvier 1985, tel que modifié et complété)*  
 
-### 4. Modalités de rupture pendant la période d’essai
-
-| Qui rompt | Délai de prévenance (notice) |
-|-----------|------------------------------|
-| **Employeur** | - ≤ 8 jours d’ancienneté : 24 h <br> - 8 jours à 1 mois : 48 h <br> - 1 mois à 3 mois : 2 semaines <br> - > 3 mois (cadres) : 1 mois |
-| **Salarié** | Même délai que l’employeur (sauf disposition plus favorable prévue par la convention). |
-| **Motif** | Aucun motif justifié n’est exigé pendant la période d’essai, **sous réserve** du respect du principe de non‑discrimination (âge, sexe, origine, etc.) et de la bonne foi. |
-| **Indemnités** | Aucun **indemnité de rupture** (sauf si prévue par la convention collective). Le salarié perçoit toutefois le salaire dû jusqu’au jour de la rupture et le paiement des congés payés acquis. |
+En Algérie, le **contrat à durée déterminée (CDD)** n’est autorisé que dans des cas strictement définis par la loi. L’article **12** du Code du Travail (et ses articles d’application : 13, 14, 15…) énumère les situations où le recours à un CDD est licite. Tout contrat qui ne répond pas à ces critères doit être conclu sous forme de **contrat à durée indéterminée (CDI)** sous peine de requalification.
 
 ---
 
-### 5. Effets de la période d’essai
+## 1. Situations où le CDD est autorisé  
 
-| Aspect | Conséquence pendant la période d’essai |
-|--------|----------------------------------------|
-| **Rémunération** | Identique à celle prévue pour le poste (salaire de base + éventuelles primes). |
-| **Congés payés** | Acquisition au prorata du temps travaillé (1 jour ouvrable de congé pour 22 jours ouvrés travaillés). |
-| **Protection sociale** | Couverture santé, retraite, chômage identiques à un salarié en CDI. |
-| **Ancienneté** | Le temps de présence compte pour la durée d’ancienneté (ex. : pour le calcul du préavis, du droit aux congés, etc.). |
-| **Droits à la formation** | Le salarié en période d’essai a droit aux mêmes actions de formation que les autres salariés, si elles sont prévues dans le plan de formation. |
+| N° | Situation reconnue par la loi | Conditions spécifiques (extraits législatifs) |
+|----|------------------------------|-----------------------------------------------|
+| **1** | **Remplacement d’un salarié absent** (congé maladie, maternité, congé parental, suspension de contrat, etc.) | Le CDD doit préciser le nom du salarié remplacé, la nature du motif d’absence et la durée estimée de l’absence. |
+| **2** | **Accroissement temporaire d’activité** | Nécessité de justifier l’augmentation d’activité (ex. pic de production, campagne commerciale). La durée du CDD ne doit pas dépasser **12 mois**, sauf dérogation pour projets très longs (voir point 6). |
+| **3** | **Exécution d’une tâche ou d’un projet à caractère temporaire** | Le CDD doit indiquer clairement le travail à accomplir, le résultat attendu et la date de fin prévue. |
+| **4** | **Travail saisonnier** | Le contrat peut couvrir la période de la saison (ex. agriculture, tourisme, pêche). La durée maximale est généralement égale à la durée de la saison (souvent ≤ 6 mois). |
+| **5** | **Contrat d’apprentissage ou de formation professionnelle** | Le CDD peut être conclu pour la durée de la formation (souvent 2 ans maximum) et doit comporter un plan de formation détaillé. |
+| **6** | **Exécution d’un contrat de prestation de services** (ex. mission d’expertise, travaux de construction, projets informatiques) | Le CDD suit la durée du chantier ou de la prestation. Si le projet dépasse 12 mois, le contrat doit être renouvelé **au plus 2 fois**, chaque période n’excédant pas 12 mois, sous réserve de justification écrite. |
+| **7** | **Travail à l’étranger ou détachement temporaire** | Le CDD peut être utilisé pour la période du détachement, à condition que le salarié reste soumis aux dispositions du Code du Travail algérien. |
+| **8** | **Remplacement d’un chef d’établissement ou d’un cadre dirigeant pendant son absence** | Le CDD doit préciser le poste à pourvoir et la durée de l’absence du titulaire. |
 
----
-
-### 6. Cas particuliers
-
-| Situation | Règle spécifique |
-|-----------|-----------------|
-| **CDD très court (< 1 mois)** | La période d’essai n’est généralement pas appliquée (sauf disposition contractuelle expresse). |
-| **Contrat d’intérim** | Pas de période d’essai ; la mission peut être interrompue à tout moment selon les règles de l’intérim. |
-| **Stage** | Pas de période d’essai au sens du Code du travail (régime du stage). |
-| **Travail à distance / télétravail** | Les mêmes règles de durée et de préavis s’appliquent ; la forme du préavis (mail, lettre recommandée) doit être respectée. |
-| **Licenciement disciplinaire** | Impossible pendant la période d’essai ; seule la rupture simple (avec préavis) est permise. |
+> **Note** : Tout CDD doit être **formalisé par écrit** (contrat signé, mention de la cause, durée, poste, rémunération) et communiqué à l’inspection du travail dans les 8 jours suivant la signature (article 13 du Code du Travail).
 
 ---
 
-### 7. Bonnes pratiques pour les employeurs
+## 2. Limites et règles de forme
 
-1. **Inscrire clairement** la durée de la période d’essai et les conditions de renouvellement dans le contrat ou la lettre d’engagement.  
-2. **Faire signer** un avenant avant toute prolongation.  
-3. **Respecter les délais de prévenance** (envoi d’une lettre recommandée avec accusé de réception ou remise en mains propres contre décharge).  
-4. **Documenter** les évaluations de performance (entretiens, fiches d’évaluation) afin de justifier, le cas échéant, la décision de ne pas confirmer le salarié.  
-5. **Vérifier** que la rupture ne contrevient à aucune clause de non‑discrimination ou de protection particulière (ex. : salariés protégés, représentants du personnel, etc.).  
-
----
-
-### 8. Sources législatives (pour aller plus loin)
-
-| Référence | Contenu |
-|-----------|---------|
-| **Code du travail – L1221‑19 à L1221‑26** | Définition, durée maximale, renouvellement, préavis. |
-| **Décret n° 2008‑1332 du 17 novembre 2008** | Modalités de calcul du préavis en fonction de l’ancienneté. |
-| **Convention collective applicable** | Peut prévoir des durées différentes, des indemnités ou des procédures spécifiques. |
-| **Jurisprudence** (ex. : *Cass. soc., 21 janvier 2015*) | Précise la notion de « renouvellement valable » et l’obligation d’un avenant écrit. |
+| Aspect | Règle légale | Implication pratique |
+|--------|--------------|----------------------|
+| **Durée maximale** | En principe **12 mois**. Au delà, le CDD doit être justifié par un projet exceptionnel (ex. travaux publics) et être limité à **24 mois** au total (avec renouvellements). | Un CDD qui excède ces limites sans justification conduit à la **requalification en CDI** et à des indemnités de rupture. |
+| **Renouvellements** | Un CDD peut être renouvelé **au plus 2 fois**. Le nombre total de renouvellements + le contrat initial ne doit pas dépasser **12 mois** (ou 24 mois en cas de projet exceptionnel). | Chaque renouvellement doit être formalisé par écrit et signé par les deux parties. |
+| **Période d’essai** | Autorisée, mais limitée à **5 %** de la durée totale du CDD, sans dépasser **15 jours**. | La période d’essai doit être expressément mentionnée dans le contrat. |
+| **Motif du recours** | Doit être **précis** et **objectivement justifiable** (ex. nom du salarié absent, nature du projet, saisonnalité). | L’absence de mention ou la mention vague peut entraîner la nullité du CDD. |
+| **Indemnité de fin de contrat** | Le CDD donne droit à une **indemnité de fin de contrat** équivalente à **un mois de salaire** (ou 10 % de la rémunération totale perçue) lorsqu’il n’est pas transformé en CDI. | Cette indemnité est due à la fin du contrat, même en cas de rupture anticipée par l’employeur (sauf faute grave). |
+| **Motif de rupture anticipée** | L’employeur ne peut rompre le CDD avant terme que pour faute grave du salarié ou force majeure. Le salarié peut rompre avec préavis de **15 jours** et indemnité compensatrice. | Toute rupture non justifiée entraîne des dommages‑intérêts (indemnité équivalente au préavis et à la perte de salaire). |
 
 ---
 
-## En résumé
-- La période d’essai doit être **prévue par écrit**.  
-- Sa durée maximale dépend du type de contrat et du statut (cadre ou non‑cadre).  
-- Un **renouvellement** est possible uniquement si le contrat le stipule et uniquement avec un avenant signé.  
-- La rupture pendant l’essai ne nécessite pas de motif, mais **respecte des délais de prévenance** qui varient selon l’ancienneté.  
-- Le salarié conserve ses droits à la rémunération, aux congés payés et à la protection sociale, même pendant l’essai.  
+## 3. Cas de requalification (CDD illégal)
 
-> **Disclaimer** : Ces informations sont données à titre indicatif et ne constituent pas un conseil juridique personnalisé. Pour des situations spécifiques (ex. : convention collective particulière, contrat à durée déterminée très long, etc.), consultez un avocat spécialisé en droit du travail ou le service RH de votre entreprise.",no,foreign_law,Code du travail (FR),LLM applied French law instead of Algerian law
-Q04,directe,Quelle est la durée légale du travail par semaine ?,22;24,"En France, la durée légale du travail est **35 heures par semaine** pour les salariés à temps plein.  
+| Situation | Conséquence juridique |
+|-----------|------------------------|
+| Absence de motif légal (ex. CDD utilisé pour un poste permanent) | **Requalification en CDI** et paiement des indemnités de licenciement, de préavis, ainsi que d’une indemnité compensatrice de préavis. |
+| Durée du CDD > 12 mois sans justification | Requalification et sanctions administratives (amende) pour l’employeur. |
+| Non‑respect du formalisme écrit (absence de contrat signé) | Le contrat est considéré comme **précarité déguisée** → requalification en CDI. |
+| Renouvellement excessif ou non‑déclaré | Risque de requalification et de pénalités financières. |
+
+---
+
+## 4. Procédure de mise en place d’un CDD (check‑list pratique)
+
+1. **Identifier le motif légal** (remplacement, pic d’activité, saisonnalité, projet, etc.).
+2. **Rédiger le contrat écrit** :
+   - Parties (employeur, salarié)
+   - Poste, fonctions détaillées
+   - Motif du recours au CDD (préciser le nom du salarié remplacé, la nature du projet, la saison, etc.)
+   - Durée déterminée (date de début, date de fin ou durée)
+   - Rémunération et avantages
+   - Clause de période d’essai (si prévue)
+   - Indemnité de fin de contrat
+   - Conditions de renouvellement (le cas échéant)
+3. **Faire signer le contrat par les deux parties** avant le démarrage du travail.
+4. **Déposer le contrat à l’inspection du travail** dans les 8 jours suivant la signature (ou le remettre à la direction du travail selon la pratique locale).
+5. **Tenir à jour le registre du personnel** en indiquant la nature du contrat (CDD) et sa durée.
+6. **Respecter les obligations de fin de contrat** (paiement de l’indemnité de fin, remise du certificat de travail, etc.).
+
+---
+
+## 5. Références légales (extraits)
+
+| Référence | Contenu principal |
+|-----------|-------------------|
+| **Art. 12 du Code du Travail** | Énumère les cas de recours au CDD (remplacement, accroissement temporaire d’activité, projet, saisonnalité, formation). |
+| **Art. 13** | Obligation de forme écrite et dépôt à l’inspection du travail. |
+| **Art. 14** | Durée maximale du CDD (12 mois) et conditions de renouvellement. |
+| **Art. 15** | Indemnité de fin de contrat (un mois de salaire ou 10 % de la rémunération totale). |
+| **Art. 16** | Conditions de rupture anticipée (faute grave, force majeure). |
+| **Décret exécutif n° 87‑16 du 12 janvier 1987** | Précise les modalités de calcul de l’indemnité de fin de contrat et les sanctions en cas de non‑respect. |
+
+*(Ces références sont tirées de la version officielle du Code du Travail algérien disponible sur le site du Ministère du Travail, de l’Emploi et de la Sécurité Sociale.)*
+
+---
+
+## 6. Conclusion
+
+En droit algérien, le **CDD n’est autorisé que pour des besoins temporaires, clairement définis et limités dans le temps**. Les cas les plus fréquents sont :
+
+- **Remplacement d’un salarié absent**  
+- **Accroissement temporaire d’activité**  
+- **Exécution d’un projet ou d’une mission ponctuelle**  
+- **Travail saisonnier**  
+- **Contrat d’apprentissage ou de formation**  
+
+Le respect strict des **conditions de forme, de durée et de justification** est indispensable pour éviter la requalification en CDI et les sanctions qui en découlent. Tout employeur doit donc veiller à rédiger un contrat conforme aux articles 12‑16 du Code du Travail et à le déposer auprès de l’inspection du travail dans les délais légaux.  
+
+---  
+
+**Besoin d’un modèle de contrat ou d’une assistance pour la mise en conformité ?** N’hésitez pas à préciser votre secteur d’activité ou le type de besoin temporaire afin que je puisse vous fournir un exemple adapté.",partial,invented_article,"Art. 12-16; ""Décret 85-11 du 19/01/1985""; décret exécutif 87-16","Some cases match art. 12 (replacement, seasonal, extra workload, project); adds 12-month max, 2 renewals, end-of-contract indemnity not in 90-11; invented decrees. Ref 13 is about part-time, not CDD."
+Q03,directe,Quelles sont les règles de la période d’essai ?,"En droit algérien, quelles sont les règles de la période d’essai ?",openai/gpt-oss-120b,18,"### La période d’essai en droit du travail algérien  
+*(Code du travail algérien – texte consolidé à la date de rédaction – et jurisprudence associée)*  
+
+| Aspect | Disposition légale | Commentaire pratique |
+|--------|-------------------|----------------------|
+| **Définition** | Art. 33 du Code du travail : « La période d’essai est le temps pendant lequel l’employeur et le salarié évaluent la convenance du contrat de travail. » | Elle permet aux deux parties de vérifier la compatibilité du poste, des compétences et du comportement. |
+| **Contrat concerné** | La période d’essai ne peut être prévue que dans les contrats à durée indéterminée (CDI) et dans les contrats à durée déterminée (CDD) d’une durée supérieure à 3 mois. (Art. 34) | Pour les CDD de moins de 3 mois, la période d’essai n’est pas autorisée. |
+| **Durée maximale** | **CDI** :  - 3 mois pour les salariés non qualifiés.<br> - 6 mois pour les cadres ou postes nécessitant une qualification spécifique. (Art. 34, al. 1) <br>**CDD** : La durée maximale est proportionnelle à la durée du contrat, sans dépasser 1/3 de la durée totale du CDD, dans la limite de 3 mois pour les non‑cadres et de 6 mois pour les cadres. (Art. 34, al. 2) | La durée est **non‑renouvelable** sauf disposition contractuelle expresse prévoyant une **renouvellement unique** d’une durée égale ou inférieure à la première. Le total (première + renouvellement) ne doit pas dépasser les plafonds ci‑dessus. |
+| **Forme** | La période d’essai doit être **stipulée par écrit** dans le contrat de travail ou, à défaut, par un avenant. (Art. 33, al. 2) | L’absence de mention écrite rend la période d’essai nulle et le contrat est réputé conclu sans période probatoire. |
+| **Renouvellement** | Possible **uniquement** si le contrat le prévoit explicitement et **avant le terme de la période initiale**. (Art. 34, al. 3) <br> Le renouvellement ne peut excéder la durée de la période initiale. | Le salarié doit être informé **par écrit** (lettre ou avenant) au moins **15 jours** avant la fin de la période initiale. |
+| **Motif de rupture pendant la période d’essai** | L’employeur ou le salarié peut rompre le contrat **sans justification** pendant la période d’essai, sous réserve du respect d’un **préavis**. (Art. 37) | - **Préavis** : <br> • 24 h pour une période d’essai ≤ 1 mois. <br> • 48 h pour une période d’essai > 1 mois. <br> Ces délais sont **minimums** ; les conventions collectives ou usages peuvent les allonger. |
+| **Effets de la rupture** | Le salarié a droit aux **indemnités de fin de contrat** (indemnité de congés payés, solde de tout compte) mais **pas à l’indemnité de licenciement**. (Art. 38) | Le salaire correspondant aux jours réellement travaillés doit être versé. |
+| **Interdiction de clause abusive** | Toute clause qui supprime le préavis ou qui prolonge la période d’essai au-delà des plafonds légaux est nulle. (Jurisprudence du Conseil d’État, 2009) | Les employeurs doivent veiller à la conformité du contrat avec le Code. |
+| **Spécificités pour certains secteurs** | - **Fonction publique** : la période d’essai est fixée par décret (souvent 3 mois, renouvelable une fois). <br>- **Contrats d’apprentissage** : pas de période d’essai, sauf accord collectif le prévoyant. | Les conventions collectives de branche peuvent prévoir des durées légèrement différentes tant qu’elles respectent le plafond légal. |
+| **Sanctions en cas de non‑respect** | - Si l’employeur ne respecte pas le préavis : **indemnité compensatrice** égale au salaire qui aurait dû être versé pendant le préavis. <br>- Si la période d’essai n’est pas mentionnée par écrit : le contrat est réputé **sans période d’essai**, donc la rupture doit suivre les règles de licenciement ordinaire. | Les juges du travail appliquent généralement le principe de l’équité : la partie lésée peut demander réparation devant le tribunal du travail. |
+
+---
+
+## 1. Cadre juridique de référence  
+
+| Source | Référence | Contenu clé |
+|--------|-----------|-------------|
+| **Code du travail algérien** | Articles 33 à 38 (édition 2024) | Définition, durée, forme, renouvellement, rupture et effets de la période d’essai. |
+| **Décret exécutif n° 13-03 du 23 février 2013** | Fixe les modalités d’application des articles 33‑38 (notamment les délais de préavis). |
+| **Conventions collectives** | Exemple : Convention collective nationale du commerce (CCN 2008) – § 12.3 | Précisent parfois des durées de préavis plus favorables au salarié. |
+| **Jurisprudence** | Conseil d’État, 12 février 2009, n° 03/08 – « Clause limitative du préavis nulle » | Confirme l’invalidité des clauses qui suppriment le préavis obligatoire. |
+| **Doctrine** | *Droit du travail en Algérie* (M. Boudiaf, 2022) – Chap. 5 | Analyse détaillée des pratiques et des limites du renouvellement. |
+
+---
+
+## 2. Mise en pratique (check‑list pour l’employeur)
+
+| Étape | Action | Délai / Formalité |
+|-------|--------|-------------------|
+| **1. Rédaction du contrat** | Mentionner explicitement la période d’essai (durée, poste, cadre ou non‑cadre). | Avant la prise de fonction. |
+| **2. Information du salarié** | Fournir le détail du préavis applicable et les conditions de renouvellement (le cas échéant). | Au moment de la signature du contrat. |
+| **3. Suivi de la période** | Évaluer le salarié (fiche d’évaluation, entretien). | Au cours de la période d’essai. |
+| **4. Décision de renouvellement** | Envoyer un avenant signé 15 jours avant la fin de la période initiale, si le renouvellement est prévu. | Minimum 15 jours avant la fin. |
+| **5. Rupture éventuelle** | Respecter le préavis (24 h ou 48 h) et remettre le solde de tout compte. | Immédiat, après le préavis. |
+| **6. Archivage** | Conserver le contrat, l’avenant et les évaluations pendant au moins 5 ans. | Obligatoire pour l’inspection du travail. |
+
+---
+
+## 3. Points de vigilance fréquents
+
+| Risque | Conséquence | Solution |
+|--------|-------------|----------|
+| **Absence de mention écrite** | Nullité de la période d’essai → rupture soumise aux règles du licenciement ordinaire. | Toujours inscrire la période d’essai dans le contrat ou un avenant. |
+| **Durée excédant le plafond** | Clause abusive → possible requalification en CDI sans période d’essai. | Respecter les plafonds de 3 ou 6 mois selon le statut du salarié. |
+| **Renouvellement non prévu** | Rupture sans préavis ou indemnité compensatrice. | Prévoir le renouvellement dans le contrat et obtenir l’accord écrit du salarié. |
+| **Non‑respect du préavis** | Indemnité compensatrice à verser. | Planifier la rupture en respectant les délais de 24 h / 48 h. |
+| **Utilisation de la période d’essai pour « contourner le licenciement »** | Action en justice pour licenciement déguisé. | Utiliser la période d’essai uniquement à des fins d’évaluation réelle et objective. |
+
+---
+
+## 4. Exemple type de clause de période d’essai (modèle)
+
+> **Article X – Période d’essai**  
+> 1. Le présent contrat est conclu avec une période d’essai d’une durée de **[3 mois / 6 mois]** à compter de la date d’entrée en fonction.  
+> 2. Cette période d’essai pourra être renouvelée **une seule fois** pour une durée identique, à condition que cette possibilité soit expressément mentionnée dans le présent contrat et acceptée par le salarié au plus tard **15 jours** avant l’échéance de la période initiale.  
+> 3. Pendant la période d’essai, chaque partie pourra mettre fin au contrat sans motif, sous réserve du respect d’un préavis de **[24 h / 48 h]**.  
+> 4. En cas de rupture pendant la période d’essai, le salarié percevra le salaire correspondant aux jours effectivement travaillés ainsi que les indemnités légales de congés payés, mais aucune indemnité de licenciement ne sera due.  
+> 5. Au terme de la période d’essai, le contrat deviendra définitivement à durée indéterminée (ou à durée déterminée, selon le cas), sauf dénonciation dans le respect des dispositions légales.
+
+---
+
+## 5. Bibliographie rapide (pour approfondir)
+
+1. **Code du travail algérien**, édition 2024 – Articles 33 à 38.  
+2. **Décret exécutif n° 13-03 du 23 février 2013** – Application des articles 33‑38.  
+3. **M. Boudiaf**, *Droit du travail en Algérie*, 2ᵉ éd., Algiers, 2022.  
+4. **Jurisprudence du Conseil d’État algérien**, 2009‑2022 – Cas de la période d’essai et du préavis.  
+5. **Conventions collectives nationales**, notamment la CCN 2008 du commerce et la CCN 2015 de l’industrie.
+
+---
+
+### Conclusion
+En Algérie, la période d’essai est strictement encadrée par le Code du travail : elle doit être prévue par écrit, respecter des durées maximales (3 mois pour les salariés non‑cadres, 6 mois pour les cadres), peut être renouvelée une seule fois si le contrat le prévoit, et toute rupture pendant la période doit être précédée d’un préavis (24 h ou 48 h selon la durée). Le non‑respect de ces règles expose l’employeur à des sanctions financières et à la requalification du contrat.  
+
+N’hésitez pas à vous référer aux conventions collectives applicables à votre secteur, qui peuvent améliorer les dispositions légales, et à consulter un juriste spécialisé en droit du travail pour valider les clauses contractuelles avant signature.",no,invented_article+wrong_figure,"Art. 33, 34, 37, 38; décret exécutif 13-03; Conseil d'État 2009","Says 3 months (6 for managers); art. 18 says max 6 months, 12 for high qualification, set by collective negotiation. Wrong articles, invented decree and ruling."
+Q04,directe,Quelle est la durée légale du travail par semaine ?,"En droit algérien, quelle est la durée légale du travail par semaine ?",openai/gpt-oss-120b,22;24,"**Durée légale du travail en Algérie (Code du travail)**  
+
+| Texte législatif | Article | Disposition principale |
+|------------------|---------|------------------------|
+| **Ordonnance n° 90‑08 du 21 avril 1990 portant Code du travail** | **Art. 57** | La durée normale du travail est **de 40 heures par semaine**, réparties en **8 heures par jour** sur **5 jours** (généralement du lundi au vendredi). |
+| | **Art. 58** | La durée maximale quotidienne, heures supplémentaires comprises, ne peut dépasser **10 heures** (soit 8 heures normales + 2 heures supplémentaires). |
+| | **Art. 60** | La durée maximale hebdomadaire, heures supplémentaires comprises, ne doit pas excéder **48 heures** (40 heures normales + **8 heures** d’heures supplémentaires). |
+| | **Art. 61** | Dans certains secteurs (ex. : établissements de santé, hôtellerie, restauration, etc.) une **semaine de 44 heures** peut être autorisée, sous réserve d’accords collectifs ou de dispositions spécifiques. |
+| | **Art. 62** | Le dépassement de la durée normale (heures supplémentaires) doit être rémunéré avec une majoration d’au moins **25 %** (ou 50 % selon le jour et le type d’activité). |
 
 ### Points clés à retenir
-| Sujet | Détails |
-|-------|---------|
-| **Base légale** | Article L3121‑10 du Code du travail : 35 h « hebdomadaires » (hors heures complémentaires ou supplémentaires). |
-| **Calcul** | La semaine de travail est généralement considérée du lundi au dimanche, mais l’employeur peut définir un autre « période de référence » (ex. : du mercredi au mardi). |
-| **Heures complémentaires** | Pour les salariés à temps partiel : jusqu’à 10 % de la durée contractuelle (max. 1 h par jour) sans majoration particulière. |
-| **Heures supplémentaires** | Au‑delà des 35 h, elles sont limitées à 48 h par semaine (ou 44 h en moyenne sur 12 mois) et doivent être majorées (25 % à 50 % selon le nombre d’heures). |
-| **Dérogations** | - **Secteurs** où des accords collectifs prévoient d’autres durées (ex. : hôtellerie‑restauration, transports).<br>- **Travail de nuit** ou **travail post‑déploiement** (ex. : postes d’encadrement, cadres dirigeants) qui peuvent être soumis à d’autres règles. |
-| **Temps de travail effectif** | Inclut les heures réellement effectuées, les heures d’attente (si elles sont imposées), les temps d’interruption (ex. : pause déjeuner non rémunérée) ne sont pas comptés. |
-| **Repos quotidien** | Minimum 11 heures consécutives entre deux journées de travail. |
-| **Repos hebdomadaire** | Minimum 24 heures consécutives (ou 24 h + 11 h de repos quotidien = 35 h) chaque semaine. |
 
-### Exceptions fréquentes
-- **Cadres au forfait jours** : ils ne sont pas soumis à la règle des 35 h, mais à un nombre maximum de jours travaillés (généralement 218 jours/an).  
-- **Accords d’entreprise** : certains accords peuvent réduire la durée (ex. : 32 h) ou instaurer une modulation (ex. : 35 h sur 4 semaines, 140 h).  
-- **Travail à temps partiel** : la durée contractuelle est proportionnelle à la durée légale (ex. : 0,5 ETP = 17,5 h/semaine).
+1. **Durée normale** : 40 h/semaine (8 h/jour, 5 jours).  
+2. **Heures supplémentaires** :  
+   - Autorisées jusqu’à **48 h/semaine** au total.  
+   - Majorées d’au moins 25 % (ou 50 % selon les cas).  
+3. **Dérogations sectorielles** : Certaines activités peuvent travailler 44 h/semaine (ex. : hôtellerie, restauration, santé) lorsqu’un accord collectif ou une réglementation sectorielle le prévoit.  
+4. **Repos quotidien** : Minimum **11 heures consécutives** de repos entre deux journées de travail (Art. 59).  
+5. **Repos hebdomadaire** : Minimum **24 heures** consécutives (souvent le dimanche) en plus du repos quotidien (Art. 63).  
 
-### Sources officielles
-- Code du travail – Article L3121‑10  
-- Convention collective nationale applicable (souvent précisée dans les accords d’entreprise)  
-- Ministère du Travail, site officiel : [travail-emploi.gouv.fr](https://travail-emploi.gouv.fr)
+### Références utiles
 
-**En résumé :** la règle générale en France est une durée légale de **35 heures hebdomadaires**, avec de nombreuses possibilités de modulation ou de dérogation selon les secteurs, les conventions collectives et les accords d’entreprise.",no,foreign_law,L3121-10 Code du travail (FR),LLM applied French law instead of Algerian law
-Q05,directe,Comment sont calculés les congés annuels ?,39;40;41;42,"### Comment sont calculés les congés annuels ?
-
-Le calcul des congés annuels dépend du **pays**, du **secteur d’activité**, de la **convention collective** applicable et parfois du **contrat de travail** (CDD, CDI, temps plein ou partiel).  
-Voici les principes généraux, illustrés par l’exemple du droit du travail français, qui est parmi les plus détaillés ; les mêmes bases s’appliquent dans de nombreux autres pays, avec des variantes.
+- **Ordonnance n° 90‑08 du 21 avril 1990** (Code du travail algérien) – Articles 57 à 63.  
+- **Décret d’application n° 96‑01 du 14 janvier 1996** qui précise les modalités de calcul et de paiement des heures supplémentaires.  
+- **Conventions collectives** propres à chaque secteur (ex. : conventions du secteur du bâtiment, de la santé, de l’hôtellerie) qui peuvent ajuster la durée hebdomadaire dans les limites fixées par la loi.
 
 ---
 
-## 1. Cadre légal de base (exemple : France)
+**En résumé** : La loi algérienne fixe la durée légale du travail à **40 heures par semaine** (8 h/jour, 5 jours). Des heures supplémentaires sont possibles jusqu’à 48 h/semaine, avec des majorations de salaire, et certaines activités peuvent bénéficier d’un aménagement à 44 h/semaine sous conditions d’accords ou de dispositions spécifiques.",partial,invented_article+no_version,"""Ordonnance 90-08 portant Code du travail"" art. 57-63; décret 96-01","40 h/week: art. 22 (1990 text) says 44 h; 40 h likely the rule after ord. 97-03, but no version or real source given. Invented ordinance."
+Q05,directe,Comment sont calculés les congés annuels ?,"En droit algérien, comment sont calculés les congés annuels ?",openai/gpt-oss-120b,39;40;41;42,"**Les congés annuels en Algérie – principe de calcul**  
 
-| Élément | Valeur légale (minimum) |
-|---------|------------------------|
-| **Durée du travail** | 35 h/semaine (temps plein) |
-| **Acquisition du droit à congés** | 2,5 jours ouvrables par mois de travail effectif (soit 30 jours ouvrables, ou 5 semaines, pour une année complète) |
-| **Période de référence** | Du 1er janvier au 31 décembre (ou, selon l’accord, du 1er juin au 31 mai) |
-| **Report** | Maximum 10 jours ouvrables d’une année à l’autre (sous conditions) |
-| **Proratisation** | En cas d’entrée ou de sortie en cours d’année, le droit est calculé au prorata du nombre de mois travaillés |
-
-> **Remarque** : les conventions collectives, accords d’entreprise ou contrats individuels peuvent augmenter ce minimum (ex. : 6 semaines, 8 semaines, jours supplémentaires pour ancienneté, etc.).
+Le régime des congés payés est régi par le **Code du travail algérien** (notamment les articles 120 à 134) et, pour la fonction publique, par les textes spécifiques (décrets exécutifs, statut des fonctionnaires, etc.).  
 
 ---
 
-## 2. Formule de base (temps plein)
+## 1. Principes généraux (secteur privé)
 
-1. **Déterminer le nombre de mois complets de travail effectif** pendant la période de référence.  
-   - Un « mois complet » = au moins 15 jours ouvrés travaillés dans le mois (souvent le cas).
-2. **Appliquer le taux d’acquisition** : 2,5 jours ouvrables/mois.  
+| Point | Disposition légale | Détail du calcul |
+|-------|--------------------|-------------------|
+| **Durée minimale** | Art. 124 du Code du travail | **30 jours ouvrables** (ou 2 ½ jours ouvrables par mois de travail effectif). |
+| **Ancienneté requise** | Art. 121 | Le droit à ces 30 jours s’acquiert après **un an complet de service continu** chez le même employeur. |
+| **Acquisition progressive** | Art. 122 | En pratique, la plupart des employeurs appliquent la règle de **2 ½ jours ouvrables par mois** (soit 30 jours pour 12 mois). |
+| **Proportionnalité pour les salariés entrés en cours d'année** | Art. 123 | Si le salarié n’a pas encore accompli un an, il cumule **les jours réellement travaillés** au prorata : <br>  `(Nombre de jours ouvrables travaillés / 30) × 30` <br>ou plus simplement : `2 ½ jours × nombre de mois complets travaillés`. |
+| **Report** | Art. 124‑2 | Les congés non pris dans l’année de référence **peuvent être reportés d’une année sur l’autre**, à condition d’en faire la demande avant la fin de la période de référence et que l’employeur accepte. Le report ne peut excéder **un an**. |
+| **Indemnité de congé** | Art. 125 | Pendant les congés, le salarié perçoit **son salaire habituel** (base de calcul = salaire moyen des 30 derniers jours ouvrables). |
+| **Période de prise** | Art. 126 | L’employeur fixe les dates en concertation avec le salarié, mais doit respecter le **délai de préavis d’au moins 15 jours**. |
 
-\[
-\text{Congés acquis (jours ouvrables)} = \text{Nb mois complets} \times 2,5
-\]
+### Exemple de calcul
 
-### Exemple pratique
-- **Entrée le 15 mars** → mois complets travaillés : mars (à partir du 15 = 15 jours ouvrés) = compté, puis avril, mai, …, décembre → **10 mois**.  
-- Congés = 10 × 2,5 = 25 jours ouvrables (5 semaines).
-
----
-
-## 3. Cas du temps partiel
-
-Le droit aux congés est **proportionnel** à la durée du travail.
-
-\[
-\text{Congés (jours ouvrables)} = \frac{\text{Durée hebdomadaire du salarié}}{35 h} \times \text{Congés légaux (30 jours ouvrables)}
-\]
-
-### Exemple
-- Temps partiel de 20 h/semaine (≈ 57 % d’un plein temps).  
-- Congés = 0,57 × 30 ≈ 17,1 jours ouvrables → généralement arrondi à **17 jours** (ou 2 semaines + 2 jours).
+- **Salarié A** a commencé le 1er mars 2025. Au 31 décembre 2025, il a travaillé 10 mois complets.  
+  - Jours acquis = 2 ½ jours × 10 = **25 jours ouvrables**.  
+- **Salarié B** a été embauché le 15 juin 2025 et travaille jusqu’au 31 décembre 2025 (6 mois + ½ mois).  
+  - Jours travaillés = 197 jours ouvrables sur 365 (≈ 0,54 a).  
+  - Jours acquis = 30 × 0,54 ≈ **16,2 ≈ 16 jours** (arrondi à l’entier inférieur, sauf convention plus favorable).  
 
 ---
 
-## 4. Proratisation à la sortie (départ, fin de CDD)
+## 2. Particularités selon les catégories de travailleurs
 
-- **Congés non pris** sont **indemnisés** (indemnité compensatrice de congés payés).  
-- Calcul :
-
-\[
-\text{Indemnité} = \frac{\text{Salaire brut mensuel}}{30} \times \text{Nombre de jours de congés non pris}
-\]
-
-*(30 = nombre moyen de jours calendaires par mois, méthode la plus courante en France).*
-
-### Exemple
-- Salarié avec salaire brut de 2 500 € / mois, 5 jours de congés non pris.  
-- Indemnité = 2 500 / 30 × 5 ≈ 416,67 €.
+| Catégorie | Particularités du calcul ou de la durée |
+|-----------|----------------------------------------|
+| **Ouvriers** | Même règle de base : 30 jours après 1 an. Certains accords collectifs peuvent prévoir **un jour supplémentaire** après 5 ans d’ancienneté. |
+| **Employés & cadres** | La règle de 30 jours s’applique également. Les cadres peuvent bénéficier d’un **régime de « congés à la carte »** négocié par contrat, mais le minimum légal reste 30 jours. |
+| **Fonctionnaires (statut)** | Le décret exécutif n° 88‑03 du 21 janvier 1988 fixe **30 jours ouvrables** après 1 an de service. Les agents en période d’essai (maximum 3 mois) n’acquièrent aucun droit; après la période probatoire, le calcul suit le même principe de proportionnalité. |
+| **Travailleurs saisonniers** | La loi prévoit un **droit à congé proportionnel** à la durée effective du contrat (ex. : 2 ½ jours par mois réellement travaillé). Aucun report n’est possible si le contrat se termine. |
+| **Travailleurs à temps partiel** | Le nombre de jours de congé est calculé **au prorata‑temps** : `30 jours × (heures de travail réelles / heures du temps plein)`. |
 
 ---
 
-## 5. Facteurs qui peuvent **modifier** le calcul
+## 3. Calcul pratique – Méthode pas à pas
 
-| Facteur | Impact sur le nombre de jours |
-|--------|-------------------------------|
-| **Ancienneté** | Certaines conventions offrent +1 jour après 5 ans, +2 jours après 10 ans, etc. |
-| **Accord d’entreprise** | Peut instaurer un forfait de jours (ex. : 30 jours calendaires au lieu de 25 ouvrables). |
-| **Périodes d’absence non rémunérées** (congé sans solde, maladie longue, etc.) | Elles ne comptent pas comme « travail effectif » et réduisent le nombre de mois acquis. |
-| **Travail en jours de repos** (ex. : travail le dimanche) | Certaines conventions accordent des jours supplémentaires. |
-| **Congés supplémentaires** (maternité/paternité, mariage, décès…) | Ce ne sont pas des « congés annuels », mais viennent s’ajouter au total de jours d’absence autorisée. |
-
----
-
-## 6. Récapitulatif étape par étape (modèle générique)
-
-1. **Identifier la période de référence** (souvent une année civile).  
-2. **Compter les mois complets** (ou les jours ouvrés) effectivement travaillés pendant cette période.  
-3. **Appliquer le taux d’acquisition** (ex. : 2,5 jours/mois pour le plein temps).  
-4. **Ajuster selon le temps de travail** (temps partiel) et les éventuelles majorations (ancienneté, accords).  
-5. **Vérifier les reports** autorisés d’une année sur l’autre.  
-6. **Déduire les jours déjà pris** au cours de l’année pour obtenir le solde restant.  
-7. **En cas de départ** : calculer l’indemnité compensatrice si des jours restent non pris.
+1. **Déterminer la période de référence** (généralement du 1er janvier au 31 décembre ou la période de 12 mois consécutifs à compter de la date d’entrée).  
+2. **Compter les jours ouvrables réellement travaillés** pendant cette période (hors week‑ends, jours fériés, absences non justifiées).  
+3. **Appliquer le taux d’accumulation** :  
+   - 2 ½ jours ouvrables par mois complet, **ou**  
+   - `(Nombre de jours ouvrables travaillés / 30) × 30` (formule de proportionnalité).  
+4. **Arrondir** : la pratique courante est d’arrondir à l’entier inférieur, sauf convention plus favorable.  
+5. **Vérifier les éventuels reports** : si le salarié a des jours non pris l’an précédent et que l’employeur accepte le report, ils s’ajoutent au total de l’année en cours.  
+6. **Calcul de l’indemnité** : prendre le salaire moyen des 30 derniers jours ouvrables (ou le salaire de base si le contrat le prévoit) et le multiplier par le nombre de jours de congé pris.
 
 ---
 
-## 7. Outils pratiques
+## 4. Points de vigilance pour les employeurs
 
-- **Tableau Excel** simple :  
-  - Colonnes : Mois, Jours ouvrés travaillés, Congés acquis (mois × 2,5).  
-  - Formules : `=NB.JOURS.OUVRES(DATE(année;mois;1);FIN.MOIS(DATE(année;mois;1);0))` pour le nombre de jours ouvrés, puis `=MOIS_COMPLETS*2,5`.  
-- **Calculateur en ligne** (souvent disponible sur les sites des syndicats ou des ministères du travail).  
-- **Logiciels de paie** : intègrent automatiquement le calcul en fonction du contrat et des paramètres de l’entreprise.
-
----
-
-## 8. Points de vigilance
-
-| Situation | Ce qu’il faut vérifier |
-|-----------|------------------------|
-| **Entrée en cours d’année** | Le mois d’entrée compte‑t‑il comme complet ? (vérifier la convention). |
-| **Temps partiel variable** | Recalculer le droit chaque fois que le nombre d’heures change. |
-| **Congés reportés** | Respecter la date limite de prise (souvent 31 mai de l’année suivante). |
-| **Accords spécifiques** | Certains secteurs (ex. : fonction publique, enseignement) ont leurs propres règles (jours ouvrés vs. jours calendaires). |
-| **Indemnité de congés payés** | S’assurer que le salaire de référence (base de calcul) inclut ou non les primes variables selon la législation locale. |
+- **Respect du préavis** : informer le salarié au moins 15 jours avant la date prévue du congé.  
+- **Documentation** : consigner les demandes de congé et les accords de report dans le registre du personnel.  
+- **Non‑cumul avec les jours fériés** : les jours fériés légaux qui tombent pendant la période de congé sont **déduits** du nombre de jours ouvrables de congé (sauf disposition conventionnelle plus favorable).  
+- **Sanctions** : le non‑respect du droit aux congés expose l’employeur à des pénalités administratives et à l’obligation de payer des indemnités supplémentaires.  
 
 ---
 
-## 9. En bref
+## 5. Références légales essentielles
 
-1. **Base légale** : 2,5 jours ouvrables par mois de travail effectif (30 jours ouvrables = 5 semaines).  
-2. **Proratisation** au départ ou à l’entrée en cours d’année.  
-3. **Temps partiel** : proportion du plein temps.  
-4. **Majoration** possible (ancienneté, conventions).  
-5. **Indemnisation** des jours non pris à la fin du contrat.  
-
-En appliquant ces règles à votre situation (type de contrat, durée du travail, convention collective), vous pouvez déterminer précisément le nombre de jours de congés annuels qui vous sont dus. Si vous avez des spécificités (ex. : secteur public, accord d’entreprise particulier), n’hésitez pas à les préciser ; je pourrai vous donner le calcul exact correspondant.",no,foreign_law,Code du travail (FR),LLM applied French law instead of Algerian law
-Q06,combinee,Comment sont payées les heures supplémentaires ?,31;32,"En France, les heures supplémentaires (ou **heures complémentaires** pour les salariés à temps partiel) sont encadrées par le Code du travail, mais leur rémunération peut varier selon la convention collective, l’accord d’entreprise ou le statut du salarié (cadre, non‑cadre, etc.). Voici les grandes lignes :
-
-| Type d’heures | Nombre d’heures concernées | Majoration légale du salaire de base* |
-|---------------|---------------------------|--------------------------------------|
-| **Heures supplémentaires** (hors cadre) | De la 36ᵉ à la 43ᵉ heure de travail hebdomadaire (soit les 8 premières heures au‑delà de la durée légale de 35 h) | **+ 25 %** du salaire horaire normal |
-| **Heures supplémentaires au‑delà de la 43ᵉ** | 44ᵉ h et suivantes | **+ 50 %** du salaire horaire normal |
-| **Heures complémentaires** (temps partiel) | Au‑delà de la durée contractuelle jusqu’à la durée légale (35 h) | **+ 10 %** (ou + 25 % si le contrat prévoit un taux plus élevé) |
-| **Repos compensateur** | En fonction du nombre d’heures effectuées et du plafond annuel (220 h) | Le salarié peut choisir le paiement ou un repos équivalent (souvent 1 h de repos pour 1 h d’heures sup. + majoration) |
-
-\* **Salaire horaire de base** = salaire mensuel brut divisé par le nombre d’heures contractuelles (35 h pour un temps plein).
-
-### Points à retenir
-
-1. **Plafond annuel**  
-   - Un salarié ne peut pas effectuer plus de **220 heures supplémentaires** par an (sauf dérogation très rare). Au‑delà, les heures sont considérées comme du **travail supplémentaire** et sont rémunérées au même taux que les 50 % de majoration, mais l’employeur doit alors justifier le dépassement.
-
-2. **Repos compensateur obligatoire**  
-   - Au‑delà de **10 heures supplémentaires** dans le même mois, l’employeur doit, **si le salarié le souhaite**, proposer un repos équivalent (repos compensateur) en plus de la majoration salariale.  
-   - Si l’employeur ne propose pas ce repos, il doit payer **une majoration de 10 % supplémentaire** sur le salaire de ces heures (en pratique, on parle souvent de “repos compensateur payé”).
-
-3. **Conventions collectives & accords d’entreprise**  
-   - La plupart des branches professionnelles (ex. : bâtiment, transport, santé) prévoient des majorations plus favorables : 30 % pour les 8 premières heures, 40 % au‑delà, voire des repos plus généreux.  
-   - Il faut donc toujours vérifier la convention collective applicable à votre secteur ; les dispositions légales ne sont que le **plancher**.
-
-4. **Cadres**  
-   - Les cadres (sous convention “cadre au forfait jours”) ne sont généralement **pas soumis aux heures supplémentaires** ; leur rémunération est censée couvrir l’ensemble de leurs missions.  
-   - S’ils sont « cadres au forfait heures », les mêmes règles de majoration s’appliquent, mais les plafonds peuvent différer.
-
-5. **Calcul pratique**  
-   - Exemple : salaire brut mensuel de 2 400 €, temps plein 35 h → salaire horaire = 2 400 / 151,67 ≈ 15,81 € brut.  
-     - 1 h supplémentaire (25 % de majoration) = 15,81 × 1,25 ≈ 19,76 € brut.  
-     - 1 h supplémentaire au‑delà de la 43ᵉ (50 % de majoration) = 15,81 × 1,50 ≈ 23,71 € brut.
-
-6. **Déclaration et paie**  
-   - Les heures supplémentaires doivent être **explicitement mentionnées sur le bulletin de paie** (nombre d’heures, taux de majoration, éventuel repos compensateur).  
-   - Elles sont soumises aux cotisations sociales comme le salaire normal, mais la majoration bénéficie d’un **abattement de 5 %** sur le salaire brut supplémentaire (sous conditions de plafonnement).
-
-### Quelques questions fréquentes
-
-| Question | Réponse courte |
-|----------|----------------|
-| **Peut‑on être payé au lieu du repos ?** | Oui. Si le salarié préfère le paiement, l’employeur doit appliquer la majoration légale + 10 % de repos compensateur (sauf disposition plus favorable dans la convention). |
-| **Que faire si l’employeur ne paie pas les heures sup.** | Vérifier le contrat, la convention collective, puis rappeler à l’employeur ses obligations. En cas de litige, le salarié peut saisir l’inspection du travail ou le conseil de prud’hommes. |
-| **Les heures supplémentaires sont‑elles imposables ?** | Elles sont intégrées au revenu imposable, mais la majoration bénéficie de l’abattement de 5 % sur le **salaire supplémentaire** (pas sur le salaire de base). |
-| **Quel est le délai de paiement ?** | Elles doivent être réglées **au plus tard à la date de paie** du mois où elles ont été effectuées. |
+| Texte | Article | Contenu clé |
+|-------|---------|-------------|
+| **Code du travail algérien** (décret exécutif n° 90‑11 du 22 juillet 1990) | Art. 120‑134 | Réglementation générale des congés payés, durée, acquisition, report, indemnisation. |
+| **Décret exécutif n° 88‑03 du 21 janvier 1988** (fonction publique) | Art. 1‑5 | Congés annuels des fonctionnaires, 30 jours ouvrables après 1 an. |
+| **Convention collective nationale du secteur** (si applicable) | – | Peut prévoir des jours supplémentaires ou des conditions de report plus souples. |
 
 ---
 
-#### En résumé
-- **Premières 8 h** : + 25 % (ou taux plus favorable selon la convention).  
-- **Heures au‑delà de la 43ᵉ** : + 50 % (ou taux conventionnel).  
-- **Repos compensateur** obligatoire à partir de 10 h supplémentaires mensuelles, sauf accord de paiement.  
-- **Plafond** de 220 h/an (sauf exception).  
+### Résumé succinct
 
-> **Conseil pratique** : consultez toujours votre convention collective (ou votre accord d’entreprise) ; elle définit souvent les taux exacts et les éventuels repos supplémentaires. Si vous avez besoin d’un exemple de calcul adapté à votre secteur ou d’une vérification de votre bulletin de paie, n’hésitez pas à me le transmettre (en masquant les informations sensibles).",no,foreign_law,Code du travail (FR),LLM applied French law instead of Algerian law
-Q07,combinee,Quelles règles faut-il respecter pour licencier un salarié ?,73;74,"**Les grandes étapes à respecter pour procéder à un licenciement (régime français)**  
+- **30 jours ouvrables** après **un an complet** de service.  
+- **2 ½ jours ouvrables** sont acquis chaque mois travaillé.  
+- Si la période de travail est inférieure à un an, le droit est **proportionnel** au nombre de jours/mois effectivement travaillés.  
+- Le salarié peut **reporter** les jours non pris, sous réserve de l’accord de l’employeur, et ils doivent être pris dans l’année suivante au plus tard.  
+- L’indemnité de congé correspond au **salaire habituel** (calculé sur la moyenne des 30 derniers jours ouvrables).  
 
-> **Avertissement**  
-> Les informations ci‑dessous sont de nature générale et ne constituent pas un avis juridique personnalisé. Elles sont présentées à titre indicatif et ne remplacent pas la consultation d’un·e avocat·e ou d’un·e juriste spécialisé·e en droit du travail. La législation évolue régulièrement ; assurez‑vous de vérifier que les règles applicables à votre situation sont toujours d’actualité.
+En suivant ces règles, le calcul des congés annuels en droit algérien reste relativement simple : il suffit de compter les mois (ou les jours ouvrables) travaillés, d’appliquer le taux de 2,5 jours par mois, et de tenir compte des éventuels reports ou conventions collectives plus favorables.",partial,invented_article,"Art. 120-134 (""décret exécutif 90-11 du 22/07/1990""); décret exécutif 88-03","2.5 days/month and 30 days match art. 41, but says working days (law: calendar), wrong reference period (art. 40: 1 July-30 June), misses South extra leave (art. 42); wrong articles."
+Q06,combinee,Comment sont payées les heures supplémentaires ?,"En droit algérien, comment sont payées les heures supplémentaires ?",openai/gpt-oss-120b,31;32,"**Les heures supplémentaires en droit algérien : principe général, taux d’indemnisation et modalités de calcul**
 
----
-
-## 1. Le fondement du licenciement  
-### a) Motif réel et sérieux  
-- **Cause réelle** : un fait objectif (ex. insuffisance professionnelle, faute, inaptitude médicale, raisons économiques).  
-- **Cause sérieuse** : le fait doit être de nature à justifier la rupture du contrat.  
-
-> **Note** : un licenciement sans cause réelle et sérieuse expose l’employeur à des dommages‑et‑intérêts pour licenciement abusif.
-
-### b) Types de licenciement
-| Type de licenciement | Conditions principales |
-|----------------------|------------------------|
-| **Licenciement pour motif personnel** | Faute du salarié (simple, lourde, grave) ou insuffisance professionnelle, inaptitude médicale. |
-| **Licenciement pour motif économique** | Suppression ou transformation d’emploi, difficultés économiques, mutation technologique. |
-| **Licenciement pour inaptitude** | Décision médicale d’inaptitude après examen par le médecin du travail. |
+> **Avertissement** – Les renseignements qui suivent sont de nature informative et ne constituent pas un avis juridique personnalisé. Pour une situation précise, il est recommandé de consulter un avocat spécialisé en droit du travail ou le service juridique de votre entreprise.
 
 ---
 
-## 2. Le respect de la procédure (licenciement individuel)  
-| Étape | Description | Délai / Formalité |
-|-------|--------------|-------------------|
-| **1️⃣ Convocation à un entretien préalable** | Lettre recommandée avec AR ou remise en main propre contre récépissé, mentionnant l’objet de l’entretien. | Minimum **5 jours ouvrables** avant l’entretien. |
-| **2️⃣ Entretien préalable** | Le salarié peut se faire assister (ex. représentant du personnel, conseiller du salarié, autre salarié). L’employeur expose les motifs envisagés. | Aucun délai obligatoire après l’entretien, mais la décision doit intervenir rapidement. |
-| **3️⃣ Notification du licenciement** | Lettre de licenciement signée, précisant les motifs, la date de fin du contrat, le préavis et les droits à indemnités. | Doit être remise **dans les deux jours ouvrables** suivant la décision. |
-| **4️⃣ Préavis** | Le salarié continue de travailler ou, avec l’accord de l’employeur, est dispensé d’exécuter son préavis (tout ou partie) avec maintien de la rémunération. | Durée dépend de l’ancienneté : 1 mois (≤ 6 mois d’ancienneté), 2 mois (> 6 mois) ou convention collective plus favorable. |
-| **5️⃣ Indemnités** | - Indemnité légale de licenciement (sauf faute grave ou lourde). <br>- Indemnité compensatrice de congés payés (si congés non pris). <br>- éventuelle indemnité compensatrice de préavis (si préavis non effectué). | Calculées selon le Code du travail et la convention collective applicable. |
-| **6️⃣ Documents de fin de contrat** | - Certificat de travail <br>- Attestation Pôle emploi <br>- Reçu pour solde de tout compte | Doivent être remis le jour de la rupture ou au plus tard **dans les 24 h** si le salarié quitte les lieux immédiatement. |
+## 1. Cadre légal de base
+
+| Source | Article(s) clé(s) du Code du travail algérien |
+|--------|----------------------------------------------|
+| Durée légale du travail | **Art. 99** – 40 heures par semaine (8 h/jour, 5 j/sem.) |
+| Autorisation des heures supplémentaires | **Art. 106** – Nécessité d’une décision de l’employeur (ou d’une convention collective) |
+| Limite maximale des heures supplémentaires | **Art. 108** – 48 h/semaine (c’est‑à‑dire 8 h supplémentaires au‑delà de la durée légale) |
+| Rémunération des heures supplémentaires | **Art. 110** – Taux de majoration selon le nombre d’heures réalisées |
+| Enregistrement et suivi | **Art. 115** – Obligation de consigner les heures sur le registre du personnel |
+
+> **Note** : le texte du Code du travail a été modifié par la loi n° 19‑07 du 13 janvier 2019 (et ses décrets d’application). Les articles cités sont ceux en vigueur à la date de rédaction (2024).  
 
 ---
 
-## 3. Cas particuliers à ne pas négliger  
+## 2. Les taux de majoration prévus par la loi
 
-| Situation | Particularités |
-|-----------|----------------|
-| **Licenciement économique** | Nécessite l’élaboration d’un plan de sauvegarde de l’emploi (PSE) pour les entreprises de ≥ 50 salariés, ou, à défaut, la mise en place d’un protocole d’accord collectif (PAC) et l’information/consultation du CSE. |
-| **Inaptitude médicale** | Obligation de rechercher un reclassement approprié (poste compatible avec l’état de santé). Si aucun reclassement possible, le licenciement peut intervenir après avis du médecin du travail. |
-| **Licenciement d’un salarié protégé** (député, représentant du personnel, etc.) | Nécessite l’autorisation préalable de l’inspection du travail. Le non‑respect de cette règle entraîne la nullité du licenciement. |
-| **Licenciement durant la période d’essai** | Procédure allégée : respect du délai de prévenance (dégressif selon l’ancienneté) mais pas d’obligation de motif réel et sérieux. |
-| **Licenciement d’un salarié en CDD** | En principe, le CDD ne peut être rompu que pour faute grave, force majeure ou accord des parties. Le recours au licenciement (rupture anticipée) doit être expressément prévu dans le contrat. |
+| Tranche d’heures supplémentaires | Majoration sur le salaire horaire de base |
+|-----------------------------------|--------------------------------------------|
+| **1 à 8 h** au‑delà de la durée légale (c’est‑à‑dire de la 40ᵉ à la 48ᵉ h) | **+ 25 %** |
+| **9 à 20 h** au‑delà de la durée légale (si l’employeur accepte de dépasser 48 h, ce qui doit rester exceptionnel) | **+ 50 %** |
+| **Au‑delà de 20 h** supplémentaires (cas très rare, uniquement avec accord de l’inspection du travail) | **+ 100 %** |
 
----
-
-## 4. Risques et sanctions en cas de non‑respect  
-
-| Manquement | Conséquence possible |
-|------------|----------------------|
-| Absence de cause réelle et sérieuse | Dommages‑et‑intérêts pour licenciement abusif (jusqu’à 6 mois de salaire, voire plus selon la jurisprudence). |
-| Défaut de convocation ou d’entretien | Annulation du licenciement, paiement d’indemnités supplémentaires. |
-| Non‑respect du préavis ou de l’indemnité légale | Obligation de verser le préavis et/ou l’indemnité correspondante, majorée d’éventuels dommages‑intérêts. |
-| Licenciement d’un salarié protégé sans autorisation | Nullité du licenciement, réintégration possible, paiement d’indemnités (jusqu’à 12 mois de salaire). |
-| Omission des documents de fin de contrat | Sanction financière (amende administrative) et risque de contentieux. |
+*Ces taux sont les **minimums légaux** ; une convention collective, un accord d’entreprise ou une décision de l’employeur peut prévoir des majorations plus favorables aux salariés.*
 
 ---
 
-## 5. Bonnes pratiques à mettre en place  
+## 3. Modalités pratiques de calcul
 
-1. **Documenter chaque étape** (rapports d’entretien, courriers, comptes‑rendus).  
-2. **Vérifier la convention collective** applicable ; elle peut prévoir des délais ou des indemnités plus favorables que le droit légal.  
-3. **Consulter le service juridique ou un·e avocat·e** avant d’engager la procédure, surtout pour les licenciements économiques ou les salariés protégés.  
-4. **Informer le CSE** (Comité Social et Économique) dès que le nombre de licenciements envisagés dépasse le seuil légal (10 salariés sur 30 jours dans les entreprises de ≥ 50 salariés).  
-5. **Assurer la traçabilité des tentatives de reclassement** (notamment en cas d’inaptitude).  
+1. **Déterminer le salaire horaire de base**  
+   - Si le salarié est payé mensuellement :  
+     \[
+     \text{Salaire horaire de base} = \frac{\text{Salaire mensuel brut}}{(\text{Durée légale mensuelle})}
+     \]  
+   - La durée légale mensuelle s’obtient en multipliant 40 h × 4,33 semaines ≈ 173,2 h (ou en se référant au nombre d’heures contractuelles prévues dans le contrat).
+
+2. **Appliquer la majoration correspondante**  
+   - **Exemple** : un salarié perçoit 100 000 DZD brut mensuel.  
+     - Salaire horaire de base ≈ 100 000 ÷ 173,2 ≈ 577 DZD/h.  
+     - 5 h supplémentaires (dans la tranche 1‑8 h) :  
+       \[
+       5 \times 577 \times (1 + 0,25) = 5 \times 577 \times 1,25 \approx 3 606 \text{DZD}
+       \]
+
+3. **Ajouter le résultat au salaire mensuel**  
+   - Le montant des heures supplémentaires est versé **en même temps que le salaire normal**, généralement sur le bulletin de paie avec la mention « heures supplémentaires ».
 
 ---
 
-## 6. Ressources utiles  
+## 4. Points à retenir pour l’employeur
 
-| Ressource | Description |
+| Obligation | Détail |
+|------------|--------|
+| **Autorisation écrite** | Toute mise en place d’heures supplémentaires doit être décidée par l’employeur (ou prévue dans une convention collective) et mentionnée sur le registre du personnel. |
+| **Limite de 48 h/semaine** | Au‑delà de cette limite, l’employeur doit obtenir l’autorisation de l’inspection du travail et les majorations passent à 50 % puis 100 %. |
+| **Temps de travail de nuit** | Les heures de nuit (22 h–05 h) sont en plus de la majoration des heures supplémentaires ; le taux de nuit (au moins 25 % supplémentaire) s’ajoute à la majoration habituelle. |
+| **Repos compensateur** | Au lieu d’une rémunération, l’employeur peut, avec l’accord du salarié, proposer un repos compensateur équivalent (dans les mêmes proportions que la majoration). |
+| **Non‑cumul avec les congés** | Les heures supplémentaires ne peuvent pas être “transformées” en congés payés, sauf disposition conventionnelle contraire. |
+
+---
+
+## 5. Ce que prévoient les conventions collectives
+
+- **Certaines branches (ex. : bâtiment, transport, santé)** fixent des plafonds plus bas (par ex. 30 h supplémentaires par mois) et des taux de majoration plus élevés (40 % ou 75 %).  
+- **Le secteur public** applique généralement des taux de 25 % pour les 8 h supplémentaires, puis 50 % au‑delà, conformément au décret présidentiel n° 85‑09 du 25 février 1985.  
+
+Il faut donc toujours **vérifier la convention collective applicable** à l’entreprise ou le contrat de travail individuel.
+
+---
+
+## 6. Sanctions en cas de non‑respect
+
+| Manquement | Conséquence prévue par le Code du travail |
+|------------|-------------------------------------------|
+| Non‑paiement ou sous‑paiement des heures supplémentaires | **Pénalités civiles** : l’employeur doit verser le montant dû avec les intérêts légaux. |
+| Dépassement du plafond sans autorisation | **Amende administrative** et, en cas de récidive, **sanctions pénales** (article 112). |
+| Absence de registre ou de mention sur le bulletin de paie | **Amende** et possibilité de **rejet du contrat** par l’inspection du travail. |
+
+---
+
+## 7. Résumé en 5 points clés
+
+1. **Durée légale** : 40 h/semaine. Tout ce qui dépasse est considéré comme heures supplémentaires.  
+2. **Majoration** : + 25 % pour les 1‑8 h, + 50 % pour les 9‑20 h, + 100 % au‑delà de 20 h supplémentaires.  
+3. **Limite hebdomadaire** : 48 h (8 h supplémentaires) sauf autorisation exceptionnelle.  
+4. **Calcul** : salaire horaire de base × (1 + taux de majoration) × nombre d’heures.  
+5. **Vérifier** : convention collective ou accord d’entreprise, qui peuvent améliorer les conditions légales.
+
+---
+
+### Bibliographie rapide (pour aller plus loin)
+
+- **Code du travail algérien**, articles 99, 106‑110, 115 (édition officielle 2023).  
+- **Loi n° 19‑07 du 13 janvier 2019** portant modification du Code du travail.  
+- **Décret présidentiel n° 85‑09 du 25 février 1985** (réglementation du temps de travail dans le secteur public).  
+- **Conventions collectives sectorielles** (ex. : BTP, transport routier, santé).  
+
+---
+
+> **En pratique** : si vous êtes salarié, conservez vos feuilles de temps et comparez le montant affiché sur votre bulletin de paie avec le calcul ci‑dessus. Si vous êtes employeur, assurez‑vous que votre service paie applique correctement les taux légaux et que le registre du personnel est à jour. En cas de doute, un conseil juridique spécialisé vous aidera à éviter les sanctions.",no,invented_article+wrong_figure,"Art. 99, 106, 108, 110, 112, 115; loi 19-07; décret présidentiel 85-09","Gives +25/50/100 % tiers and 48 h cap; art. 32 sets a minimum of +50 %, art. 31 caps overtime at 20 % of legal time. Wrong articles, invented law."
+Q07,combinee,Quelles règles faut-il respecter pour licencier un salarié ?,"En droit algérien, quelles règles faut-il respecter pour licencier un salarié ?",openai/gpt-oss-120b,73;74,"**Le cadre légal du licenciement en Algérie**  
+
+En Algérie, le licenciement d’un salarié est régi principalement par le **Code du travail algérien (CTA)**, notamment les articles 12 à 17 et les dispositions relatives aux contrats à durée déterminée (CDD) et indéterminée (CDI). Voici les grandes règles à observer :
+
+---
+
+## 1. Les motifs légitimes de licenciement  
+
+### a) Licenciement pour cause réelle et sérieuse  
+- **Insuffisance professionnelle** (non‑atteinte des objectifs, négligence répétée).  
+- **Faute** : fautes simples, graves ou lourdes (vol, harcèlement, insubordination).  
+- **Inaptitude médicale** constatée par le médecin du travail.  
+- **Motifs économiques** : restructuration, baisse d’activité, cessation d’exploitation, etc. (art. 13 CTA).  
+
+### b) Licenciement sans cause réelle et sérieuse  
+- Possible uniquement dans le cadre d’un **contrat à durée déterminée** arrivant à son terme, ou d’un **contrat à durée indéterminée** à l’initiative de l’employeur, **à condition de respecter la procédure** et les indemnités prévues (art. 16 CTA).  
+
+> **À retenir** : le licenciement doit toujours être motivé par un motif prévu par la loi. Un licenciement arbitraire expose l’employeur à des sanctions (reprise du salarié, dommages‑intérêts, paiement des salaires dus, etc.).
+
+---
+
+## 2. La procédure à respecter  
+
+| Étape | Description | Références légales |
+|-------|-------------|-------------------|
+| **2.1 Notification écrite** | L’employeur doit remettre **un courrier recommandé avec accusé de réception** ou une remise en main propre contre décharge. La lettre doit exposer **le motif** du licenciement et **la date de fin du contrat**. | Art. 12‑1 CTA |
+| **2.2 Délai de préavis** | - **CDI** : le préavis dépend de l’ancienneté (ex. 1 mois après 6 mois d’ancienneté, 2 mois après 2 ans, etc.).<br>- **CDD** : le préavis s’applique uniquement si le contrat le prévoit ou en cas de rupture anticipée pour faute grave. | Art. 12‑2, 12‑3 CTA |
+| **2.3 Consultation du comité d’entreprise / délégué du personnel** (le cas échéant) | Si l’entreprise possède un **comité d’entreprise (CE)** ou un **délégué du personnel**, l’employeur doit les informer **avant** la décision et recueillir leurs observations. | Art. 14 CTA |
+| **2.4 Indemnités** | - **Indemnité de licenciement** : au moins 1 mois de salaire par année de service (sous réserve de conventions collectives plus favorables).<br>- **Indemnité de préavis** : si l’employeur dispense le salarié d’exécuter le préavis, il doit payer l’équivalent. | Art. 15 CTA |
+| **2.5 Certificat de travail & solde de tout compte** | Remise du **certificat de travail**, du **relevé des heures de congés payés** et du **solde de tout compte** (salaires, primes, indemnités). | Art. 16 CTA |
+| **2.6 Recours du salarié** | Le salarié dispose de **60 jours** à compter de la notification pour saisir le tribunal du travail s’il conteste le motif ou la procédure. | Art. 17 CTA |
+
+---
+
+## 3. Protection spéciale de certains salariés  
+
+| Catégorie | Protection supplémentaire |
+|-----------|---------------------------|
+| **Femmes enceintes** | Licenciement interdit pendant la grossesse et jusqu’à 4 mois après l’accouchement, sauf faute grave avérée. |
+| **Représentants syndicaux** | Licenciement interdit pendant la durée du mandat et 12 mois après, sauf faute lourde. |
+| **Salariés victimes d’accident du travail ou maladie professionnelle** | Licenciement interdit pendant la période d’incapacité de travail, sauf faute lourde. |
+| **Travailleurs handicapés** | Licenciement soumis à l’autorisation préalable de l’Office National de l’Emploi (ONE). |
+
+---
+
+## 4. Particularités du contrat à durée déterminée (CDD)  
+
+- Le **CDD ne peut être rompu** avant son terme que pour **faute grave**, **accord des parties**, **force majeure**, ou **inaptitude médicale**.  
+- En cas de rupture anticipée, le salarié a droit à **une indemnité équivalente à la rémunération qu’il aurait perçue jusqu’au terme du contrat**, sauf faute lourde.  
+- La **non‑renouvellement** du CDD à son terme ne constitue pas un licenciement, mais l’employeur doit néanmoins remettre un **certificat de travail** et le **solde de tout compte**.
+
+---
+
+## 5. Sanctions en cas de non‑respect de la procédure  
+
+- **Reprise du salarié** (si le licenciement est jugé nul).  
+- **Paiement d’indemnités supplémentaires** (droit à une indemnité de licenciement doublée, dommages‑intérêts pour préjudice moral).  
+- **Amendes administratives** infligées à l’employeur par l’inspection du travail.  
+
+---
+
+## 6. Bonnes pratiques pour l’employeur  
+
+1. **Documenter** tous les faits (rapports d’évaluation, avertissements écrits, comptes‑rendus de réunions).  
+2. **Vérifier la convention collective** applicable : certaines branches prévoient des délais ou des indemnités plus favorables que le CTA.  
+3. **Consulter un juriste** ou un avocat spécialisé avant d’engager la procédure, afin d’éviter les contestations.  
+4. **Assurer la traçabilité** de la notification (recommandé avec AR ou remise contre décharge).  
+5. **Respecter les délais** (préavis, 60 jours de contestation) pour limiter les risques de contentieux.
+
+---
+
+## 7. Ressources utiles  
+
+- **Code du travail algérien** (décret présidentiel n° 90‑11 du 21 janvier 1990) – articles 12 à 17.  
+- **Conventions collectives** (ex. : CNP, HCA, etc.) – à consulter selon le secteur d’activité.  
+- **Site officiel du Ministère du Travail, de l’Emploi et de la Sécurité Sociale** – guides pratiques et modèles de lettres.  
+- **Inspection du travail** – service de médiation et de contrôle du respect du droit du travail.
+
+---
+
+### ⚠️ Avis de non‑responsabilité  
+Les informations fournies ci‑dessus sont d’ordre **général** et ne constituent pas un conseil juridique personnalisé. Les règles peuvent varier selon la **convention collective** applicable, les **accords d’entreprise** ou les **situations particulières** (par exemple, un licenciement économique collectif). Il est fortement recommandé de **consulter un avocat** ou un **juriste spécialisé en droit du travail algérien** avant d’engager toute procédure de licenciement.  
+
+--- 
+
+*En suivant ces principes, l’employeur se conforme aux exigences du droit algérien et limite les risques de contentieux.*",no,foreign_law+invented_article,"Art. 12-17 (CDD articles); ""décret présidentiel 90-11 du 21/01/1990""","Uses French concepts (cause réelle et sérieuse, works council); invents procedure, indemnity and 60-day deadline. Art. 73 = serious misconduct per internal rules. Ref 74 (change of employer) does not fit; procedure is in 73-1..73-6 (loi 91-29), not in corpus."
+Q08,cas_pratique,Un salarié licencié sans raison peut-il contester ?,"En droit algérien, un salarié licencié sans raison peut-il contester ?",openai/gpt-oss-120b,73;74;75,"### Oui : le salarié licencié « sans raison » peut tout à fait contester son licenciement en Algérie.  
+
+Le droit du travail algérien impose à l’employeur de justifier le licenciement par une **cause réelle et sérieuse** (article 34 du Code du travail). Si cette cause n’est pas invoquée ou si elle est manifestement insuffisante, le licenciement est considéré comme **abusif** ou **nul**, et le salarié dispose de plusieurs voies de recours.
+
+---
+
+## 1. Principes généraux du licenciement en Algérie  
+
+| Élément | Ce que prévoit le Code du travail |
+|---------|-----------------------------------|
+| **Motif** | Un licenciement doit être motivé par une cause réelle et sérieuse (article 34). L’employeur doit la mentionner dans la lettre de licenciement. |
+| **Forme** | La notification doit être écrite, datée, signée et remise en main propre ou par lettre recommandée avec accusé de réception. |
+| **Préavis** | Selon l’ancienneté, le salarié a droit à un préavis (article 42) sauf en cas de faute grave. |
+| **Indemnités** | En cas de licenciement sans cause réelle et sérieuse, le salarié a droit à une indemnité de rupture (minimum 6 mois de salaire, article 59) et, le cas échéant, à la remise du solde de tout compte. |
+
+---
+
+## 2. Quand le licenciement est « sans raison » ?  
+
+- **Absence de motivation écrite** (lettre de licenciement vierge ou qui ne cite aucun motif).  
+- **Motif vague ou manifestement insuffisant** (ex. : « réorganisation » sans justification, « performance insuffisante » sans preuve).  
+- **Violation des procédures légales** (pas de respect du préavis, absence d’avertissements préalables, etc.).  
+
+Dans tous ces cas, le licenciement peut être attaqué comme **abusif**.
+
+---
+
+## 3. Les voies de contestation  
+
+### 3.1. Contestation amiable – Inspection du Travail  
+
+1. **Saisir l’inspection du travail** (article 148).  
+2. L’inspecteur tente une conciliation entre le salarié et l’employeur.  
+3. Si la conciliation échoue, l’inspecteur rédige un rapport qui servira de base à la procédure judiciaire.
+
+*Cette étape est gratuite et peut parfois aboutir à un accord à l’amiable (reprise du poste, indemnités, etc.).*
+
+---
+
+### 3.2. Action judiciaire – Tribunal du Travail  
+
+| Étape | Délai / Formalité | Description |
+|------|-------------------|-------------|
+| **Déposer la requête** | **Dans les 2 mois** suivant la notification du licenciement (article 135 du Code du travail) | Le salarié saisit le tribunal du travail compétent (lieu du travail). |
+| **Mise en demeure** (facultative) | Immédiate | Lettre recommandée à l’employeur demandant la réintégration ou le paiement des indemnités, en précisant que l’action judiciaire sera engagée. |
+| **Audience de conciliation** | Organisée par le tribunal dès le dépôt | Tentative de règlement à l’amiable sous l’égide du juge. |
+| **Jugement** | Après l’audience de conciliation (si aucune entente) | Le juge statue sur la légalité du licenciement et fixe, le cas échéant, les indemnités (reprise du poste, indemnité de licenciement, dommages‑intérêts). |
+| **Recours** | **30 jours** contre le jugement (appel) | Possibilité de porter l’affaire devant la Cour d’appel du travail. |
+
+> **Note de délai** : le **délai de prescription de l’action en paiement d’indemnités** (si le salarié n’a pas saisi le tribunal dans les 2 mois) est de **2 ans** à compter du jour où le salarié aurait dû être réintégré (article 135). Passé ce délai, l’action devient prescrite.
+
+---
+
+## 4. Quels dommages‑et‑intérêts le salarié peut‑il obtenir ?  
+
+1. **Indemnité de licenciement abusif** : minimum 6 mois de salaire (article 59). Le juge peut la majorer en fonction de l’ancienneté, du préjudice subi, et du comportement de l’employeur.  
+2. **Salaire du préavis** (si le préavis n’a pas été exécuté).  
+3. **Indemnité de congés payés** non pris.  
+4. **Domages‑et‑intérêts pour trouble anormal de la vie professionnelle** (article 71) : compensation pour le préjudice moral, généralement entre 1 et 3 mois de salaire, voire plus en cas de mauvaise foi manifeste.  
+5. **Remboursement des frais de justice** (avocat, frais de procédure) si le salarié obtient gain de cause.  
+
+---
+
+## 5. Exemple de procédure type  
+
+1. **Réception de la lettre de licenciement** (sans motif).  
+2. **Vérification du respect du préavis** et des formalités (lettre recommandée, date, signature).  
+3. **Envoi d’une lettre de mise en demeure** à l’employeur (courrier recommandé) demandant :  
+   - La justification du licenciement,  
+   - Le paiement du préavis et des indemnités,  
+   - La réintégration ou le versement d’une indemnité au moins égale à 6 mois de salaire.  
+4. **Saisir l’inspection du travail** (facultatif mais conseillé) pour tenter une conciliation.  
+5. **Déposer la requête devant le tribunal du travail** (dans les 2 mois).  
+6. **Participer à l’audience de conciliation**.  
+7. **Obtenir le jugement** : si le juge déclare le licenciement nul, il ordonne la réintégration ou, si la réintégration est impossible, le versement de l’indemnité de 6 mois + dommages‑intérêts.  
+8. **Faire appel** (dans les 30 jours) si le jugement est défavorable ou insuffisant.  
+
+---
+
+## 6. Points pratiques à retenir pour le salarié  
+
+| Action | Pourquoi c’est important |
+|--------|--------------------------|
+| **Conserver toutes les pièces** (contrat, bulletins de paie, correspondances, courriers recommandés, attestations de présence) | Elles constituent la preuve de la relation de travail et du non‑respect des obligations de l’employeur. |
+| **Faire un relevé de la date de réception de la notification** | La date de réception déclenche le délai de 2 mois pour saisir le tribunal. |
+| **Consulter rapidement un avocat spécialisé en droit du travail** | Le respect strict des délais et la rédaction d’actes judiciaires pertinents sont cruciaux. |
+| **Ne pas accepter les indemnités proposées sans avis juridique** | Certaines offres « à l’amiable » peuvent renoncer à des droits (ex. : droit à la réintégration). |
+| **Informer le syndicat (si vous êtes adhérent)** | Le syndicat peut intervenir, apporter un soutien juridique et parfois obtenir une résolution plus rapide. |
+
+---
+
+## 7. Références législatives (Code du travail algérien – 2015)  
+
+- **Art. 34** – Motifs légitimes du licenciement.  
+- **Art. 35** – Formalités de notification.  
+- **Art. 42** – Durée du préavis.  
+- **Art. 59** – Indemnité minimale en cas de licenciement sans cause réelle et sérieuse.  
+- **Art. 71** – Dommages‑et‑intérêts pour licenciement abusif.  
+- **Art. 135** – Délai de deux mois pour saisir le tribunal du travail.  
+- **Art. 148** – Compétence de l’inspection du travail.  
+
+---
+
+### En résumé  
+
+- **Oui**, un salarié licencié sans raison valable peut contester le licenciement.  
+- Il dispose d’un **délai de 2 mois** pour saisir le tribunal du travail (et, le cas échéant, un délai de 2 ans pour réclamer les indemnités).  
+- La procédure débute souvent par une **mise en demeure** et/ou la **saisine de l’inspection du travail**, suivie d’une **action judiciaire** devant le tribunal du travail.  
+- En cas de décision favorable, le salarié peut obtenir **la réintégration**, **l’indemnité de 6 mois de salaire minimum**, **les arriérés de salaire et de congés**, ainsi que **des dommages‑et‑intérêts** pour le préjudice moral.  
+
+> **Conseil pratique** : dès la réception d’une lettre de licenciement qui ne précise aucun motif, contactez sans délai un avocat ou votre syndicat afin de sécuriser les délais et préparer la contestation.  
+
+---  
+
+*Ce texte est fourni à titre d’information générale et ne remplace pas une consultation juridique personnalisée.*",no,foreign_law+invented_article,"Art. 34, 35, 42, 59, 71, 135, 148","Yes-can-contest is plausible, but every specific is invented (cause réelle et sérieuse, 6 months minimum indemnity, 2-month deadline). Refs 74-75 weak; real rule likely 73-4 (loi 91-29), not in corpus."
+Q09,datee,Quelles étaient les règles du CDD en 1997 ?,"En droit algérien, quelles étaient les règles du CDD en 1997 ?",openai/gpt-oss-120b,12;13,"**Le cadre légal du contrat à durée déterminée (CDD) en Algérie en 1997**  
+
+> **Source principale** : *Ordonnance n° 66‑03 du 23 juillet 1966* (Code du travail algérien), telle qu’elle était en vigueur à la fin de l’année 1997, avec les modifications introduites notamment par les lois n° 90‑11 du 15 juillet 1990 et n° 92‑05 du 28 septembre 1992.  
+> (Les références exactes proviennent des recueils officiels : **J.O. du 31/12/1997**, **J.O. du 15/01/1998**, etc.)
+
+---
+
+## 1. Principes généraux
+
+| Point | Disposition du Code du travail (1997) |
+|-------|----------------------------------------|
+| **Nature du contrat** | Le CDD était un contrat de travail à durée **déterminée**, conclu pour l’exécution d’une tâche précise ou pour le remplacement d’un salarié absent. |
+| **Objet** | Il pouvait être utilisé uniquement lorsqu’une tâche était **déterminée dans le temps** ou lorsqu’il existait un **remplacement** (congé, maladie, maternité, etc.). |
+| **Forme** | Le contrat devait être **rédigé par écrit** (article 13 du Code du travail). L’absence d’un écrit était considérée comme une preuve d’un contrat à durée indéterminée (CDI). |
+| **Mention obligatoire** | Le document devait comporter : <br>• L’identité des parties <br>• La désignation précise du poste <br>• La durée du contrat (date de début et de fin) <br>• Le motif justifiant le recours au CDD <br>• La rémunération et les conditions de travail <br>• La clause de **renouvellement éventuel** (le cas échéant) |
+| **Durée maximale** | Le CDD ne pouvait excéder **12 mois** pour la plupart des postes, **24 mois** lorsqu’il s’agissait d’un remplacement de personnel (ex. : remplacement d’un agent en congé maternité). Toute durée supérieure devait être justifiée par une convention collective ou une décision administrative spécifique. |
+| **Renouvellement** | Le contrat pouvait être **renouvelé une seule fois**. La durée totale (premier contrat + renouvellement) ne devait pas dépasser les plafonds de durée mentionnés ci‑dessus. Le renouvellement devait également être constaté par écrit, au plus tard **15 jours avant l’échéance** du contrat initial. |
+| **Période d’essai** | Autorisée, mais limitée à **5 jours** pour les ouvriers, **10 jours** pour les employés et **15 jours** pour les cadres, sauf disposition plus favorable prévue par la convention collective. |
+
+---
+
+## 2. Conditions de recours au CDD
+
+1. **Motif d’exécution d’une tâche précise**  
+   - Travaux saisonniers (ex. : récoltes, tourisme)  
+   - Missions ponctuelles (ex. : projets de courte durée, études)  
+
+2. **Remplacement d’un salarié**  
+   - Congé de maternité, paternité, maladie, accident du travail, etc.  
+   - Absence temporaire pour formation ou mission officielle.  
+
+3. **Accroissement temporaire d’activité**  
+   - Pic d’activité justifiable (ex. : lancement d’un nouveau produit).  
+
+> **Interdiction** : Le recours au CDD était prohibé pour pourvoir durablement un poste permanent ou lorsqu’il n’existait aucun élément de temporalité (ex. : fonctions de direction permanente).
+
+---
+
+## 3. Fin du contrat
+
+| Modalité | Conditions (1997) |
+|----------|-------------------|
+| **Échéance du terme** | Le contrat se terminait automatiquement à la date prévue. Aucun préavis n’était exigé. |
+| **Accord mutuel** | Les parties pouvaient mettre fin au contrat d’un commun accord, sous forme écrite. |
+| **Rupture anticipée** | Possible uniquement dans les cas suivants : <br>• Faute grave du salarié <br>• Force majeure <br>• Décision de l’employeur motivée par la suppression du poste (doit être justifiée et notifiée) |
+| **Indemnité de fin de contrat** | À l’échéance, le salarié percevait une **indemnité de fin de contrat** égale à **un mois de salaire** (ou 10 % de la rémunération totale perçue, selon la pratique). Cette indemnité était distincte de l’indemnité de congés payés. |
+| **Droit au chômage** | Le salarié en CDD pouvait, sous conditions d’affiliation à la CNAS (Caisse Nationale des Assurances Sociales), prétendre aux allocations chômage dès la fin du contrat. |
+
+---
+
+## 4. Conversion en CDI
+
+- **Durée cumulative** : Si le salarié occupait le même poste, avec des CDD successifs, **et que la durée totale dépassait 12 mois (ou 24 mois pour les remplacements)**, le contrat était réputé être à **durée indéterminée**.  
+- **Clause de conversion** : Certaines conventions collectives prévoient une **conversion automatique** du CDD en CDI après un certain nombre de renouvellements ou une durée cumulée.  
+- **Jurisprudence** : La jurisprudence algérienne (ex. : décision du **Tribunal du travail d’Alger, 12/08/1996**) confirmait que le non‑respect du plafond de durée entraînait la requalification en CDI, avec toutes les protections afférentes (préavis, indemnité de licenciement, etc.).
+
+---
+
+## 5. Protection sociale et droits du salarié en CDD
+
+| Droit | Application en 1997 |
+|-------|---------------------|
+| **Congés payés** | Identiques à ceux du CDI (2,5 jours ouvrables par mois de travail effectif). |
+| **Assurance maladie & maternité** | Couverture par la CNAS à condition d’être affilié depuis au moins 6 mois. |
+| **Retraite** | Cotisations obligatoires prélevées par l’employeur, mêmes que pour les CDI. |
+| **Formation professionnelle** | Le salarié en CDD pouvait bénéficier des actions de formation prévues par le **Plan de formation** de l’entreprise, proportionnellement à son temps de présence. |
+| **Accès aux représentants du personnel** | Le salarié pouvait être élue ou désignée comme délégué du personnel, sans distinction de type de contrat. |
+
+---
+
+## 6. Sanctions en cas de non‑respect des règles
+
+- **Contrat considéré comme CDI** : Si le CDD était conclu en l’absence de motif valable ou au‑delà des durées légales, il était requalifié en CDI avec paiement rétroactif des droits afférents.  
+- **Amende administrative** : L’employeur s’exposait à une amende pouvant aller jusqu’à **200 000 DZD** (selon l’article 25 du Code du travail).  
+- **Responsabilité civile** : Le salarié pouvait réclamer des dommages‑intérêts pour le préjudice subi (ex. : perte de stabilité d’emploi).  
+
+---
+
+## 7. Points de vigilance spécifiques à 1997
+
+1. **Période transitoire des réformes de 1990‑1992**  
+   - Les lois n° 90‑11 et n° 92‑05 avaient introduit des **améliorations** (notamment la limitation stricte de la durée des CDD et la reconnaissance de l’indemnité de fin de contrat).  
+   - Certains employeurs, habitués aux pratiques antérieures, n’avaient pas encore intégré ces changements, ce qui a donné lieu à de nombreux contentieux devant les tribunaux du travail.
+
+2. **Rôle des conventions collectives**  
+   - Dans plusieurs branches (construction, textile, services publics), les conventions collectives prévoyaient des **durées maximales plus courtes** (ex. : 6 mois dans le secteur du BTP) et des **modalités de renouvellement plus contraignantes**.  
+   - Il était donc indispensable de vérifier la convention applicable à l’entreprise concernée.
+
+3. **Documentation et preuve**  
+   - L’obligation d’un **document écrit signé** était strictement appliquée. Les juges refusaient de reconnaître un CDD oral, le requalifiant automatiquement en CDI.
+
+---
+
+## 8. Bibliographie succincte (pour approfondir)
+
+| Référence | Description |
 |-----------|-------------|
-| **Code du travail – articles L1232‑1 à L1232‑6** | Texte législatif relatif au licenciement pour motif personnel. |
-| **Code du travail – articles L1233‑1 à L1233‑44** | Texte législatif relatif au licenciement économique. |
-| **Service-Public.fr** | Fiches pratiques sur le licenciement, modèles de lettres de convocation et de notification. |
-| **Inspection du travail** | Conseil gratuit et vérification de conformité (notamment pour les salariés protégés). |
-| **Caisse des Dépôts – Guide du licenciement économique** | Détails sur le plan de sauvegarde de l’emploi (PSE) et les obligations de l’employeur. |
+| **Ordonnance n° 66‑03 du 23 juillet 1966** (Code du travail) – texte tel qu’amendé par les lois 90‑11 et 92‑05. | Fondement juridique principal. |
+| **Loi n° 90‑11 du 15 juillet 1990** – réformes du droit du travail, art. 15 à 23. | Introduction de la limitation stricte des CDD. |
+| **Loi n° 92‑05 du 28 septembre 1992** – renforcement des garanties sociales pour les salariés en CDD. | Précisions sur l’indemnité de fin de contrat. |
+| **Jurisprudence : Tribunal du travail d’Alger, 12/08/1996** – requalification d’un CDD en CDI. | Exemple d’application judiciaire. |
+| **« Le contrat à durée déterminée en Algérie »**, M. Benabderrahmane, *Revue Algérienne de Droit Social*, 1998, vol. 12, p. 45‑68. | Analyse doctrinale des pratiques de 1997. |
 
 ---
 
-### En résumé
-1. **Identifier le motif** (personnel, économique, inaptitude) et vérifier qu’il est réel et sérieux.  
-2. **Respecter la procédure** : convocation, entretien, notification, préavis et remise des documents de fin de contrat.  
-3. **Calculer et verser les indemnités** légales ou conventionnelles.  
-4. **Éviter les sanctions** en s’assurant du respect des règles spécifiques (salariés protégés, CDD, CSE, etc.) et en se faisant accompagner juridiquement si besoin.
+### Résumé
 
-N’hésitez pas à consulter un professionnel du droit du travail pour valider votre démarche au regard de votre situation précise et de la convention collective applicable. Bonne continuation.",no,foreign_law,L1232-1 Code du travail (FR),LLM applied French law instead of Algerian law
-Q08,cas_pratique,Un salarié licencié sans raison peut-il contester ?,73;74;75,"**Oui, un salarié licencié « sans raison » (c’est‑à‑dire sans motif réel et sérieux) peut tout à fait contester son licenciement.**  
-En droit français, le principe du **contrat de travail à durée indéterminée (CDI)** impose à l’employeur de justifier toute rupture du contrat par un motif réel et sérieux, qu’il soit d’ordre personnel ou économique, et de respecter une procédure précise. L’absence de motif ou un motif insuffisant constitue un **licenciement abusif** (licenciement sans cause réelle et sérieuse) ou, dans certains cas, un **licenciement nul**.
+En 1997, le **CDD** était strictement encadré par le **Code du travail** (ordonnance 66‑03) et les lois de réformes de 1990‑1992. Il ne pouvait être utilisé que pour des missions temporaires clairement définies, pour le remplacement d’un salarié ou en cas d’accroissement ponctuel d’activité. La durée maximale était généralement de **12 mois** (ou 24 mois pour les remplacements), le contrat devait être **écrit**, et ne pouvait être renouvelé qu’une seule fois, sous peine de requalification en **CDI**. À la fin du contrat, le salarié percevait une **indemnité de fin de contrat** et conservait l’ensemble de ses droits sociaux (congés, couverture CNAS, etc.). Le non‑respect de ces règles entraînait des sanctions administratives, voire la requalification du contrat et le paiement de dommages‑intérêts.
 
----
+> **À retenir** : les règles de 1997 étaient très protectrices pour le salarié, mais la complexité de la législation (interactions entre le Code du travail, les lois de réforme et les conventions collectives) rendait indispensable une vérification minutieuse de chaque point contractuel avant de conclure un CDD.",no,wrong_version+invented_article,"""Ordonnance 66-03 (1966)"" as Code du travail; ""loi 90-11 du 15/07/1990""; loi 92-05; 1996 ruling",Wrong base text and wrong date for 90-11 (21 April 1990); invents 12/24-month limits and fines; misses ord. 96-21 which completed art. 12 and added 12 bis in 1996.
+Q10,hors_perimetre,Quel est le préavis de démission en France ?,Quel est le préavis de démission en France ?,openai/gpt-oss-120b,,"**Quel est le préavis (délai de préavis) à respecter lorsqu’on démissionne en France ?**  
 
-## 1. Les deux grands types de contestation
+Le délai de préavis dépend de plusieurs facteurs :
 
-| Type de contestation | Conditions | Délai de recours | Conséquence principale |
-|----------------------|------------|------------------|------------------------|
-| **Licenciement sans cause réelle et sérieuse (LRCRS)** | L’employeur ne justifie pas le licenciement ou ne respecte pas les exigences de la procédure (entretien préalable, notification, respect du préavis, etc.). | 12 mois à compter de la notification du licenciement (article L1235‑3 du Code du travail). | Le juge peut ordonner **la réintégration** (ou, à défaut, une indemnité de licenciement) et accorder **des dommages‑intérêts** (souvent 6 mois de salaire, voire plus selon la jurisprudence). |
-| **Licenciement nul** | Violation d’une liberté ou d’un droit du salarié protégé (discrimination, exercice d’un droit (représentation syndicale, action en justice, etc.), violation du droit à la santé et à la sécurité, etc.). | 2 mois à compter de la notification (article L1235‑4 du Code du travail). | Le contrat est réputé **n’avoir jamais existé** : le salarié doit être **réintégré** et percevoir tous les salaires et avantages non perçus depuis la date du licenciement, plus éventuellement des dommages‑intérêts. |
-
----
-
-## 2. Les étapes concrètes pour contester
-
-1. **Vérifier la lettre de licenciement**  
-   - La lettre doit mentionner le ou les motifs du licenciement et rappeler la procédure (date de l’entretien préalable, etc.).  
-   - Si aucun motif n’est indiqué ou s’il est vague/incohérent, il y a un premier indice d’irrégularité.
-
-2. **Rassembler les pièces**  
-   - Contrat de travail, avenants, bulletins de salaire, courriers échangés, compte‑rendu de l’entretien préalable (si vous en avez un), notes de service, témoignages éventuels.  
-   - Tout document qui montre que le motif invoqué n’est pas réel ou qu’il y a eu une irrégularité de procédure.
-
-3. **Envoyer une **lettre de mise en demeure** (ou lettre de contestation) à l’employeur**  
-   - Objectif : demander le **rétablissement** ou, à défaut, une **indemnisation**.  
-   - Cette lettre n’est pas obligatoire, mais elle montre votre volonté de régler le litige à l’amiable et constitue une preuve de bonne foi devant le conseil de prud’hommes.
-
-4. **Saisir le Conseil de prud’hommes**  
-   - Vous devez déposer une **requête** (formulaire de saisine) auprès du bureau de la section « Salariés ».  
-   - La saisie peut se faire **en ligne** via le site du service public (justice.fr) ou **physiquement** au greffe du conseil.  
-   - Vous devez indiquer la nature du litige (licenciement abusif ou nul) et les prétentions (réintégration, indemnités, etc.).
-
-5. **Phase de conciliation** (obligatoire)  
-   - Le bureau de conciliation et de règlement amiable (BCR) tente de rapprocher les parties.  
-   - Si la conciliation échoue, le litige passe en **phase de jugement**.
-
-6. **Jugement**  
-   - Le juge prud’homal apprécie les preuves, la conformité du licenciement au droit du travail et rend une décision.  
-   - En cas de succès, le jugement fixe les modalités de réintégration ou le montant des indemnités (licenciement, préavis, congés payés, dommages‑intérêts, etc.).
+| Situation | Durée légale du préavis (minimum) | Référence légale / conventionnelle | Observations |
+|-----------|-----------------------------------|-----------------------------------|--------------|
+| **Salarié en CDI (hors fonction de cadre)** | • 1 mois si l’ancienneté est **inférieure à 6 mois**  <br>• 2 mois si l’ancienneté est **égale ou supérieure à 6 mois** | Code du travail, art. L1237‑1 (le texte donne seulement le principe : « préavis » ; la durée est fixée par les conventions collectives ou les usages) | La plupart des conventions collectives prévoient **1 mois** quel que soit le niveau d’ancienneté pour les employés non‑cadres. |
+| **Cadre (incluant les cadres dirigeants et les cadres supérieurs)** | • 1 mois (souvent) ou **3 mois** selon la convention collective ou le contrat de travail. | Convention collective (ex. : Syntec : 3 mois), accords d’entreprise, contrat de travail. | Le **cadre** bénéficie généralement d’un préavis plus long : 3 mois est la norme dans plusieurs branches (informatique, ingénierie, finance, etc.). |
+| **CDD (contrat à durée déterminée)** | **Pas de préavis** sauf disposition contractuelle ou accord de branche ; si le salarié veut rompre avant terme, il doit **rembourser le préavis** (sauf dispense). | Art. L1243‑1 du Code du travail. | La rupture anticipée d’un CDD n’est possible qu’en cas accord mutuel, faute grave, force majeure ou motif légitime (ex.. : embauche en CDI). |
+| **Fonction publique (Etat, territoriale, hospitalière)** | • **1 mois** pour les fonctionnaires titulaires (sauf dispositions plus favorables). <br>• **3 mois** pour les fonctionnaires de catégorie A (cadres). | Décret n° 2005‑1655 du 30 octobre 2005 (fonction publique d’État) ; textes analogues pour les fonctionnaires territoriaux et hospitaliers. | Le fonctionnaire peut demander à être dispensé du préavis, auquel cas l’administration lui verse une indemnité compensatrice. |
+| **Apprentis et salariés en contrat d’apprentissage** | **Pas de préavis** (lors de la rupture à l’initiative du salarié). | Code du travail, art. L6222‑18. | Si la rupture intervient pendant la période d’essai, aucun préavis n’est exigé. |
+| **Travailleur détaché à l’étranger** | Dépend du pays d’accueil et du contrat; généralement **conformité au droit français** ou au droit local du pays d’accueil. | Accord de détachement, conventions bilatérales. | Vérifier le contrat et la législation du pays d’accueil. |
 
 ---
 
-## 3. Quels sont les montants d’indemnisation ?
+### 1.  Principes généraux (Code du travail)
 
-- **Indemnité de licenciement** : au minimum légale (1/4 de mois de salaire par année d’ancienneté jusqu’à 10 ans, puis 1/3 de mois au-delà).  
-- **Indemnité compensatrice de préavis** : si le préavis n’a pas été effectué.  
-- **Indemnité compensatrice de congés payés** : pour les congés acquis mais non pris.  
-- **Dom­mages‑intérêts pour licenciement sans cause réelle et sérieuse** : la jurisprudence (Cass. soc., 15 févr. 2022, n° 20‑14 023) fixe généralement **6 mois de salaire** comme référence, pouvant être majorés (jusqu’à 12 mois) si le salarié a subi un préjudice particulier (atteinte à la dignité, harcèlement, etc.).  
-- **Dom­mages‑intérêts pour licenciement nul** : en plus de la réintégration, le juge peut octroyer des dommages‑intérêts « pour le préjudice moral et matériel subi », sans plafond légal.
+- **Article L1237‑1** : « Le salarié qui veut mettre fin à son contrat de travail à durée indéterminée doit respecter un préavis, dont la durée est fixée par la convention ou l’accord collectif de travail, à défaut par le contrat de travail ou à défaut par les usages. »  
+- **Article L1237‑2** : le salarié peut demander à être dispensé du préavis. L’employeur peut accepter ou refuser ; s’il accepte, il doit verser une indemnité compensatrice de préavis équivalente à la rémunération que le salarié aurait perçue pendant le préavis.
 
----
+### 2.  Comment calculer le préavis ?
 
-## 4. Points de vigilance
+1. **Vérifier la convention collective** applicable (ex. : Syntec, métallurgie, bâtiment, etc.).  
+2. **Consulter le contrat de travail** : il peut contenir une clause spécifique (ex. : « préavis de 2 mois quel que soit le statut »).  
+3. **Prendre en compte l’ancienneté** : certaines branches prévoient un préavis progressif (ex. : 1 mois jusqu’à 2 ans d’ancienneté, 2 mois au‑delà).  
+4. **Regarder le statut** : cadre ou non‑cadre, fonction publique, etc.  
+5. **Éventuelles dispositions spécifiques** : travaux de nuit, postes à haute responsabilité, etc., peuvent entraîner des préavis plus longs.
 
-| Risque | Conseils |
-|--------|----------|
-| **Délais de prescription** | Ne tardez pas : 12 mois (LRCRS) ou 2 mois (licenciement nul). Une fois le délai écoulé, le droit à contester est perdu. |
-| **Absence de preuve du motif** | Même si l’employeur indique un motif, il doit être **réel et sérieux**. Vous pouvez contester la réalité du motif (ex. : prétendue insuffisance professionnelle non justifiée). |
-| **Clause de non‑concurrence ou de mobilité** | Vérifiez que le licenciement ne viole pas une clause contractuelle (ex. : licenciement pendant une période de mobilité prévue). |
-| **Protection particulière** | Si vous êtes représentant du personnel, enceinte, victime d’accident du travail, etc., le licenciement est nul de plein droit (article L2411‑1 du Code du travail). |
-| **Coût et durée du litige** | Le processus prud’homal peut durer 12–24 mois. Certaines entreprises proposent une transaction amiable (règlement à l’amiable) avant le jugement. |
+### 3.  Possibilité de dispense du préavis
 
----
+- **Demande du salarié** : il suffit d’écrire à l’employeur (lettre recommandée avec accusé de réception) en précisant la date de départ souhaitée.  
+- **Accord de l’employeur** : l’employeur peut accepter la dispense. Dans ce cas, il doit verser **une indemnité compensatrice de préavis** correspondant à la rémunération (salaire de base + primes habituelles) que le salarié aurait perçue pendant le préavis.  
+- **Refus de l’employeur** : le salarié doit alors travailler le préavis complet (ou, s’il ne le fait pas, l’employeur peut retenir le salaire correspondant à la période non travaillée).  
 
-## 5. Que faire concrètement dès maintenant ?
+### 4.  Particularités à connaître
 
-1. **Faire un point juridique** : prenez rendez‑vous avec un avocat spécialisé en droit du travail (ou un conseil juridique gratuit des syndicats, des maisons de justice & du droit, ou de la Mairie). La plupart offrent une première consultation gratuite.  
-2. **Établir un dossier complet** : commencez à rassembler toutes les pièces listées ci‑dessus.  
-3. **Envoyer rapidement la lettre de contestation** : même si vous allez saisir le conseil de prud’hommes, cette démarche montre votre volonté de régler le différend à l’amiable et peut inciter l’employeur à proposer une transaction.  
-4. **Respecter les délais** : notez la date de réception de votre lettre de licenciement; calculez le dernier jour du délai de 12 mois (ou 2 mois selon votre situation).  
+| Situation | Point clé |
+|-----------|-----------|
+| **Période d’essai** (CDI) | Le préavis est fixé à **48 h** (pour un salarié à temps complet) si la rupture intervient pendant l’essai, sauf disposition plus favorable prévue par la convention ou le contrat. |
+| **Licenciement pendant le préavis** | Si l’employeur licencie pendant le préavis, le salarié perçoit **l’indemnité de préavis** en plus de l’indemnité de licenciement. |
+| **Démission pendant maladie** | Le préavis continue de courir même si le salarié est en arrêt maladie, sauf dispense accordée. |
+| **Heures de travail atypiques (temps partiel, forfait jours)** | Le préavis est calculé en jours ouvrables ; pour le forfait jours, il se compte en **jours calendaires** (ex. : 30 jours = 1 mois). |
+| **Accord d’entreprise** | Certaines entreprises ont négocié des préavis plus courts ou plus longs que la convention collective ; le contrat de travail prime sur la convention, à condition que cela ne porte pas atteinte aux minima légaux. |
 
----
+### 5.  Modèle de lettre de démission (avec préavis)
 
-## 6. Résumé en 3 points clés
-
-1. **Oui, vous pouvez contester** : tout licenciement doit être motivé et respecter une procédure. L’absence de motif réel constitue un licenciement abusif.  
-2. **Agissez rapidement** : le délai de recours est de **12 mois** (licenciement sans cause réelle et sérieuse) ou **2 mois** (licenciement nul).  
-3. **Le conseil de prud’hommes est la juridiction compétente** : il pourra ordonner votre réintégration ou vous accorder des indemnités (souvent plusieurs mois de salaire).  
-
----
-
-### Exemple de lettre de contestation (modèle)
-
-```
-[Nom, prénom]
-[Adresse]
-[Téléphone – e‑mail]
-
-[Nom de l’employeur / société]
-[Adresse de l’entreprise]
-
-Le [date de réception de la lettre de licenciement]
-
-Objet : Contestation du licenciement du [date du licenciement] – demande de réintégration/indemnisation
-
-Madame, Monsieur,
-
-Par courrier recommandé en date du [date], vous m’avez informé(e) de la rupture de mon contrat de travail à compter du [date de fin du contrat], sans toutefois préciser de motif réel et sérieux justifiant cette décision.
-
-Conformément aux articles L1232‑1 et L1235‑3 du Code du travail, tout licenciement doit être motivé par une cause réelle et sérieuse et être précédé d’un entretien préalable. Aucun motif valable ne m’a été communiqué, ni aucune procédure régulière n’a été respectée (absence d’entretien préalable, absence de notification du motif, etc.).
-
-En conséquence, je vous mets en demeure, sous quinzaine, de :
-
-1. Reconsidérer votre décision et procéder à ma réintégration dans mon poste antérieur, ou à défaut,
-2. Me verser l’ensemble des indemnités légales et conventionnelles (licenciement, préavis, congés payés) ainsi que des dommages‑intérêts pour licenciement abusif, à hauteur de [montant estimé] euros.
-
-À défaut de réponse favorable, je me verrai contraint(e) de saisir le Conseil de prud’hommes compétent afin de faire valoir mes droits.
-
-Je vous prie d’agréer, Madame, Monsieur, l’expression de mes salutations distinguées.
-
-[Signature]
-```
+> **[Nom – Prénom]**  
+> **[Adresse]**  
+> **[Code postal – Ville]**  
+> **[Téléphone]**  
+> **[E‑mail]**  
+>   
+> **[Nom de l’entreprise]**  
+> **[Service RH / Nom du supérieur]**  
+> **[Adresse de l’entreprise]**  
+> **[Code postal – Ville]**  
+>   
+> **Le [date]**  
+>   
+> **Objet : Démission et préavis**  
+>   
+> Madame, Monsieur,  
+>   
+> Par la présente, je vous informe de ma décision de démissionner de mon poste de **[intitulé du poste]**, au sein de **[nom de l’entreprise]**, à compter du **[date de prise d’effet]**. Conformément à mon contrat de travail et à la convention collective **[nom de la convention]**, je respecterai le préavis de **[durée du préavis]** (du **[date de début]** au **[date de fin]**).  
+>   
+> Je reste à votre disposition pour assurer la transmission de mes dossiers et faciliter la continuité du service.  
+>   
+> Je vous remercie pour la confiance que vous m’avez accordée et vous prie d’agréer, Madame, Monsieur, l’expression de mes salutations distinguées.  
+>   
+> **Signature**  
 
 ---
 
-### En conclusion
+## Résumé rapide
 
-Un salarié licencié « sans raison » dispose d’un **remède juridique** solide : il peut saisir le conseil de prud’hommes dans les délais prévus et, selon les circonstances, obtenir **la réintégration** ou **une indemnisation conséquente**. La clé réside dans la **rapidité**, la **rigueur de la constitution du dossier** et l’**accompagnement d’un professionnel du droit du travail**.  
+| Statut | Préavis (minimum légal) | Source |
+|--------|------------------------|--------|
+| **Employé non‑cadre CDI** | 1 mois (ou 2 mois si ancienneté ≥ 6 mois) | Convention collective ou usage |
+| **Cadre CDI** | 1 mois à 3 mois (souvent 3 mois) | Convention collective / contrat |
+| **Fonctionnaire** | 1 mois (3 mois catégorie A) | Décret 2005‑1655 |
+| **CDD** | Aucun (sauf clause) | Art. L1243‑1 C. Trav. |
+| **Apprenti** | Aucun | Art. L6222‑18 C. Trav. |
 
-N’hésitez pas à prendre contact avec un avocat ou un représentant syndical dès aujourd’hui pour sécuriser vos démarches.",no,foreign_law,Code du travail (FR),LLM applied French law instead of Algerian law
-Q09,datee,Quelles étaient les règles du CDD en 1997 ?,12;13,"**Règles du Contrat à Durée Déterminée (CDD) en France – 1997**  
-*(Sources : Code du travail tel qu’il était en vigueur en 1997, jurisprudence et doctrine de l’époque)*  
+> **À retenir** : le préavis n’est pas fixé par le Code du travail lui‑même, mais par les conventions collectives, les accords d’entreprise ou le contrat de travail. Il faut donc toujours vérifier la convention applicable à votre secteur et le texte de votre contrat pour connaître la durée exacte.  
 
----
+N’hésitez pas à consulter le service RH de votre entreprise ou le représentant du personnel (ou un juriste spécialisé) pour confirmer la durée qui vous concerne.  
 
-## 1. Cadre juridique
-- **Code du travail – Articles L.1242‑1 à L.1242‑12** (édition 1997).  
-- **Ordonnances de 1993** qui avaient déjà modernisé le recours au CDD, puis **décrets d’application de 1995‑1997** (notamment le décret n° 95‑115 du 24 février 1995 relatif à la forme du contrat).
+---  
 
-## 2. Principaux objectifs du CDD
-- **Remplacement d’un salarié absent** (maladie, maternité, congé sabbatique, etc.).  
-- **Accroissement temporaire d’activité** (pic d’activité saisonnier, projet ponctuel).  
-- **Contrat de chantier** (exécution d’un chantier ou d’une tâche précise, finissant à la réalisation du travail).  
-
-> **Interdiction de recours abusif** : le CDD ne pouvait être utilisé pour pourvoir durablement un poste qui aurait dû être pourvu par un CDI.
-
-## 3. Forme et mentions obligatoires
-Le contrat devait être **rédigé par écrit** et comporter, sous peine de requalification en CDI :
-
-| Mention obligatoire | Exemple de rédaction |
-|---------------------|----------------------|
-| Identité des parties (employeur, salarié) | « M. X, employeur, représente la SARL Y » |
-| Motif du recours au CDD (article L.1242‑2) | « Remplacement de M. Z en congé maternité » |
-| Poste occupé et fonctions | « Agent de production – ligne A » |
-| Durée du contrat (date de début et date de fin) | « Du 01/03/1997 au 30/09/1997 » |
-| Période d’essai (si prévue) | « Essai de 2 semaines, renouvelable 1 fois » |
-| Rémunération (salaire de base, primes éventuelles) | « 1 500 € brut mensuel + prime de fin de contrat » |
-| Durée de la période d’essai et conditions de renouvellement | — |
-| Convention collective applicable | — |
-| Clause de renouvellement (le cas échéant) | « Renouvelable une fois, pour une durée maximale de 6 mois » |
-
-## 4. Durée maximale et renouvellements
-| Type de CDD | Durée maximale (sans renouvellement) | Nombre maximal de renouvellements |
-|-------------|--------------------------------------|-----------------------------------|
-| Remplacement d’un salarié | 18 mois (incluant les renouvellements) | 2 renouvellements possibles, **mais le total n’excédait pas 18 mois** |
-| Accroissement temporaire d’activité | 12 mois | 1 renouvellement (maximum 24 mois au total) |
-| CDD de chantier (ou tâche précise) | 24 mois | 1 renouvellement (maximum 36 mois) |
-
-> **Note** : les durées pouvaient être réduites par accord de branche ou convention collective plus favorable.
-
-## 5. Conditions de renouvellement
-- Le **renouvellement devait faire l’objet d’un avenant écrit** signé par les deux parties avant l’échéance du contrat initial.  
-- Le **nouvel avenant devait préciser la nouvelle durée** et les mêmes mentions que le contrat de base.  
-- **Interdiction de cumuler plusieurs renouvellements** qui porteraient la durée totale au‑delà du plafond prévu par la loi.
-
-## 6. Fin du contrat
-- **Échéance prévue** : le contrat se terminait automatiquement à la date prévue.  
-- **Rupture anticipée** : possible uniquement dans les cas suivants (article L.1243‑1) :
-
-  1. **Accord mutuel** des parties.  
-  2. **Faute grave** du salarié (ou de l’employeur).  
-  3. **Force majeure** (événement imprévisible et insurmontable).  
-  4. **Inaptitude médicale** du salarié constatée par le médecin du travail.  
-
-- **Indemnité de fin de contrat (ou « prime de précarité ») :**  
-  - **10 % de la rémunération totale brute** perçue pendant le CDD (ou 12 % depuis 2008, mais en 1997 c’était 10 %).  
-  - Cette indemnité était due **sauf** en cas de démission, de faute grave du salarié ou de rupture pour inaptitude.
-
-## 7. Droits du salarié en CDD (1997)
-- **Droit aux congés payés** au même titre que les CDI (calcul au prorata du temps de travail).  
-- **Droit à la formation** via le plan de formation de l’entreprise ou le CIF (Compte Personnel de Formation).  
-- **Protection contre la discrimination** (article L.1132‑1 du Code du travail).  
-- **Accès à la mutuelle d’entreprise** et aux mêmes avantages collectifs que les salariés en CDI, lorsque le CDD dépasse 12 mois (ou selon la convention collective).
-
-## 8. Sanctions en cas de non‑respect
-- **Requalification en CDI** (jurisprudence constante) si le CDD était conclu en violation des conditions légales.  
-- **Amendes** pour l’employeur (article L.1242‑12) : 10 % du salaire brut total dû au salarié, avec un minimum fixé à 750 € (aujourd’hui plus élevé).  
-- **Rappel de salaire et indemnités** en cas de non‑paiement de la prime de fin de contrat.
-
-## 9. Évolutions post‑1997 (pour mettre en perspective)
-| Année | Modification principale |
-|-------|--------------------------|
-| 2001 | Allongement du plafond de la prime de précarité à 12 % (décret du 19/12/2008). |
-| 2008 | Création du **CDD à objet défini** (art. L.1242‑12‑1) et clarification des durées maximales. |
-| 2017 | Renforcement du contrôle (article L.1243‑13) et introduction du **« CDD d’usage »** très encadré. |
-
-Ces changements n’étaient pas en vigueur en 1997, mais ils montrent comment le cadre juridique a évolué depuis.
-
----
-
-## 📌 Points clés à retenir (1997)
-
-1. **Motif légitime** obligatoire (remplacement, accroissement temporaire, chantier).  
-2. **Durée maximale** limitée à 12‑24 mois selon le motif, avec **renouvellement limité** (souvent 1‑2 fois).  
-3. **Formalisme écrit** indispensable ; tout manquement pouvait entraîner la **requalification du CDD en CDI**.  
-4. **Indemnité de fin de contrat** de **10 %** du salaire brut total, sauf cas de rupture justifiée.  
-5. **Droits identiques** aux CDI (congés, formation, protection sociale) pendant la durée du contrat.
-
----
-
-### ⚠️ Disclaimer
-Ces informations sont présentées à titre **historique et informatif**. Elles ne constituent pas un conseil juridique personnalisé. Pour une application précise à une situation concrète (par exemple, la requalification d’un CDD de 1997 dans le cadre d’un litige actuel), il est recommandé de consulter un avocat spécialisé en droit du travail ou les services juridiques compétents.",no,foreign_law,Code du travail (FR) 1997,LLM applied French law instead of Algerian law
-Q10,hors_perimetre,Quel est le préavis de démission en France ?,,"**Le préavis de démission en France dépend de plusieurs facteurs : le type de contrat, la convention collective applicable, l’ancienneté du salarié et, le cas échéant, les accords d’entreprise.**  
-
----
-
-## 1. Cadre légal général  
-
-| Situation | Durée du préavis (sauf disposition conventionnelle ou accord) | Remarques |
-|-----------|---------------------------------------------------------------|-----------|
-| **CDI (contrat à durée indéterminée)** – salarié en **période d’essai** | 24 h à 48 h (selon la durée de l’essai) | Le préavis peut être réduit ou supprimé d’un commun accord. |
-| **CDI – salarié en poste** | Aucun préavis légal fixé par le Code du travail. La durée est déterminée par la **convention collective**, le **contrat de travail** ou les **usages** de l’entreprise. | En pratique, la plupart des conventions prévoient 1 mois pour les cadres et 1 mois ou 15 jours pour les non‑cadres. |
-| **CDD (contrat à durée déterminée)** | En principe **impossible de démissionner** avant le terme, sauf cas de force majeure, faute grave de l’employeur, accord des parties ou **décès du salarié**. | Le salarié peut demander la rupture anticipée (article L1243‑1 du Code du travail) mais doit justifier le motif. |
-| **CDD – période d’essai** | Même règle que pour le CDI (24 h à 48 h). |  |
-
-> **Source juridique** : Code du travail, articles L1237‑1 à L1237‑5 (rupture du CDI), L1243‑1 (rupture anticipée du CDD), L1225‑66 (préavis en période d’essai).
-
----
-
-## 2. Convention collective ou accord d’entreprise  
-
-- **Convention collective** : La plupart des conventions prévoient un préavis de **1 mois** pour les cadres et **15 jours** pour les salariés non cadres, mais certaines prévoient des durées plus longues (ex. : 2 mois pour les ingénieurs, 3 mois pour les chefs de service).  
-- **Accord d’entreprise** : Certaines entreprises ont négocié des préavis plus courts (ex. : 10 jours) ou plus longs selon l’ancienneté.  
-- **Usages** : En l’absence de texte écrit, les usages de la profession ou de l’entreprise peuvent être invoqués (ex. : 1 mois pour les salariés de plus de 5 ans d’ancienneté).
-
-**Conseil pratique** : Consultez votre convention collective (disponible sur le site [Légifrance](https://www.legifrance.gouv.fr)) ou votre contrat de travail. Si aucune mention n’est faite, le préavis est librement négociable, mais l’employeur peut refuser un préavis « excessivement court ».
-
----
-
-## 3. Possibilité de réduire ou supprimer le préavis  
-
-1. **Accord mutuel** : L’employeur et le salarié peuvent convenir d’un **renoncement total ou partiel** au préavis.  
-2. **Exécution du préavis pendant le congé** : Le salarié peut demander à **prendre le préavis sous forme de congés payés** (si l’entreprise accepte).  
-3. **Motifs légitimes** : En cas de **mutation**, de **déménagement** pour suivre le conjoint, ou de **motif de santé**, le salarié peut demander la dispense du préavis (souvent à l’initiative de l’employeur).  
-
----
-
-## 4. Exemple de calcul (cas le plus fréquent)
-
-- **Cadre, convention collective du BTP** : préavis de **1 mois** (déclenché à la date de remise de la lettre de démission).  
-- **Employé administratif, convention collective du commerce** : préavis de **15 jours** (ou 1 mois selon l’ancienneté).  
-
-**Date de fin du contrat** = Date de remise de la lettre + durée du préavis (excluant les week‑ends et jours fériés, sauf disposition contraire).
-
----
-
-## 5. Formalités de la démission  
-
-| Étape | Détail |
-|------|--------|
-| **Lettre recommandée avec AR** ou remise en main propre contre récépissé. |
-| **Mentionner clairement** : intention de démissionner, date de remise, durée du préavis (si vous en respectez une), et éventuellement votre disponibilité pour le transfert des dossiers. |
-| **Conserver les preuves** (courrier, AR, email). |
-| **Demander le solde de tout compte** (congés payés non pris, prime éventuelle, etc.) avant la fin du préavis. |
-
----
-
-## 6. Points d’attention spécifiques  
-
-| Situation | Particularité du préavis |
-|-----------|--------------------------|
-| **Licenciement économique** | Le préavis est fixé par la loi (généralement 2 mois) – pas concerné par la démission. |
-| **Départ volontaire d’un salarié en CDD à terme** | Aucun préavis requis ; le contrat se termine à la date prévue. |
-| **Départ pendant une période de mobilité interne** | Le préavis peut être ajusté selon l’accord de mobilité. |
-| **Départ d’un salarié expatrié** | Le préavis dépend du contrat local et de la convention collective internationale. |
-
----
-
-## 7. Résumé rapide pour un salarié :
-
-1. **Vérifiez votre contrat et votre convention collective**.  
-2. **Calculez la durée du préavis** (souvent 1 mois pour les cadres, 15 jours pour les non‑cadres).  
-3. **Rédigez une lettre de démission** (recommandée avec accusé de réception).  
-4. **Proposez, si vous le souhaitez, de réduire ou de prendre le préavis en congés** – à négocier avec votre employeur.  
-5. **Préparez votre solde de tout compte** et la remise de vos documents (certificat de travail, attestation Pôle Emploi, etc.).  
-
----
-
-### Besoin d’un modèle de lettre ou d’une vérification de votre convention collective ?  
-N’hésitez pas à me le demander !",no,out_of_scope_answered,Code du travail (FR),LLM applied French law instead of Algerian law
+*Sources : Code du travail (articles L1237‑1 à L1237‑4), Décret n° 2005‑1655, conventions collectives (ex. : Syntec, métallurgie, BTP, etc.), jurisprudence de la Cour de cassation (arrêt du 9 février 2020 – préavis et dispense).*",no,out_of_scope_answered,"French Code du travail L1237-1, L1237-2, L1243-1, L6222-18; décret 2005-1655",Out of scope: should refuse; gives a full French-law answer and a model resignation letter.

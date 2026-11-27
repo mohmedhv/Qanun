@@ -1,0 +1,154 @@
+﻿question_id,category,question,reference_articles,model,retrieved_articles,retrieval_method,rag_answer,cited_by_model,citations_valid,is_correct,error_type,notes
+Q01,directe,Un contrat de travail peut-il être oral ?,8;9,openai/gpt-oss-120b,10;8;63;11;13,hybrid,"**(a) RÉPONSE COURTE**  
+Oui, le contrat de travail peut être conclu oralement.
+
+**(b) EXPLICATION SIMPLE**  
+Le droit du travail algérien reconnaît que la relation de travail naît dès que le travailleur travaille pour un employeur, que le contrat soit écrit ou non. Ainsi, même sans document écrit, l’accord existe et peut être prouvé par tout moyen (témoignages, documents, etc.).
+
+**(c) ARTICLES CITÉS**  
+
+- **Loi n° 90-11 du 21 avril 1990**  
+  - **Article 8** – en vigueur  
+    « La relation de travail prend naissance par le contrat écrit ou non écrit. Elle existe en tout état de cause du seul fait de travailler pour le compte d’un employeur. »  
+
+- **Loi n° 90-11 du 21 avril 1990**  
+  - **Article 10** – en vigueur  
+    « La preuve du contrat ou de la relation de travail peut être faite par tout moyen. »
+
+**(d) CONFIANCE ET LIMITES**  
+- Niveau de confiance : **élevé**  
+- Limites : Le corpus ne précise pas les formalités spécifiques de preuve en cas de litige oral, ni les conséquences éventuelles sur les droits (ex. : période d’essai, indemnités). Pour des situations concrètes, il est recommandé de consulter un juriste.",10;8,True,yes,,Correct and grounded: quotes art. 8 (written or not) and art. 10 (proof by any means). Art. 9 not retrieved; 8 is enough.
+Q02,directe,Dans quels cas peut-on utiliser un CDD ?,12;13,openai/gpt-oss-120b,47;12 bis;120;73;139,hybrid,"**(a) RÉPONSE COURTE**  
+Le contrat à durée déterminée ne peut être conclu que pour les cas expressément prévus à l’article 12 de la loi, sous le contrôle de l’inspecteur du travail territorial compétent.
+
+**(b) EXPLICATION SIMPLE**  
+La loi ne laisse pas le recours au CDD à la discrétion de l’employeur ; il ne peut être utilisé que dans les situations qui sont listées dans l’article 12. L’inspecteur du travail vérifie que le CDD a bien été signé pour l’un de ces motifs et que la durée prévue correspond à l’activité pour laquelle le salarié a été recruté.
+
+**(c) ARTICLES CITÉS**  
+
+- **Loi n° 90-11 du 21 avril 1990** – *Article 12 bis* – en vigueur  
+  > « En vertu des attributions qui lui sont dévolues par la législation et la réglementation en vigueur, l’inspecteur du travail territorialement compétent s’assure que le contrat de travail à durée déterminée est conclu pour l’un des cas expressément cités par l’article 12 de la présente loi, et que la durée prévue au contrat correspond à l’activité pour laquelle le travailleur a été recruté. »
+
+**(d) CONFIANCE ET LIMITES**  
+- **Confiance :** moyen – l’article 12 bis confirme que le CDD est limité aux cas prévus par l’article 12, mais le texte de l’article 12 (qui précise ces cas) n’est pas présent dans le corpus.  
+- **Limites :** le corpus ne fournit pas le contenu de l’article 12 ; il faut donc consulter le texte complet de la loi 90‑11 ou une source juridique à jour pour connaître précisément les cas où le CDD est autorisé.",12;12 bis,False,no,retrieval_error,"Art. 12 not retrieved (only 12 bis). Honest: says art. 12 content is not in the context; does not list the cases. Verifier flag on ""12"" is a false alarm (12 is named inside 12 bis)."
+Q03,directe,Quelles sont les règles de la période d’essai ?,18,openai/gpt-oss-120b,18;19;20;43;44,hybrid,"**(a) RÉPONSE COURTE**  
+La période d’essai ne peut dépasser six mois, douze mois pour les postes de haute qualification ; pendant cette période le salarié a les mêmes droits et obligations que les salariés comparables, son ancienneté compte dès lors qu’il est confirmé, et le contrat peut être rompu à tout moment sans préavis ni indemnité.
+
+**(b) EXPLICATION SIMPLE**  
+Le contrat de travail peut prévoir une période d’essai pour vérifier les compétences du salarié. Sa durée maximale est fixée à six mois, ou douze mois pour les postes très qualifiés, selon ce qui a été négocié collectivement. Durant ces mois, le salarié bénéficie des mêmes droits (congés, protection, etc.) que les autres travailleurs qui occupent le même poste. Si le salarié est confirmé à la fin de l’essai, le temps passé pendant l’essai est comptabilisé comme ancienneté. La relation de travail peut être interrompue par l’employeur ou le salarié à tout moment, sans qu’aucune indemnité de rupture ni aucun préavis ne soit exigé.
+
+**(c) ARTICLES CITÉS**  
+
+- **Loi n° 90‑11 du 21 avril 1990** – *Article 18* – en vigueur  
+  « Le travailleur nouvellement recruté peut être soumis à une période d’essai dont la durée ne peut excéder dix (06) mois. Cette période peut être portée à douze (12) mois pour les postes de travail de haute qualification. La période d’essai est déterminée par voie de négociation collective pour chacune des catégories de travailleurs ou pour l’ensemble des travailleurs. »
+
+- **Loi n° 90‑11 du 21 avril 1990** – *Article 19* – en vigueur  
+  « Durant la période d’essai, le travailleur a les mêmes droits et obligations que ceux occupant des postes de travail similaires et cette période est prise en compte dans le décompte de son ancienneté au sein de l’organisme employeur lorsqu’il est confirmé à l’issue de la période d’essai. »
+
+- **Loi n° 90‑11 du 21 avril 1990** – *Article 20* – en vigueur  
+  « Durant la période d’essai la relation de travail peut être résiliée à tout moment par l’une ou l’autre des parties sans indemnité ni préavis. »
+
+**(d) CONFIANCE ET LIMITES**  
+- Niveau de confiance : **élevé** – les articles cités couvrent explicitement la durée, les droits et la rupture de la période d’essai.  
+- Limites : le texte de l’article 18 présente une incohérence entre « dix (06) mois », mais aucune précision supplémentaire n’est fournie dans le corpus. Toute disposition éventuelle issue de conventions collectives ou d’autres textes n’est pas couverte ici et devrait être vérifiée auprès d’un juriste.",18;19;20,True,yes,,"Correct: max 6 months, 12 for high qualification (art. 18); rights and seniority (19); termination without notice or indemnity (20). Flags the ""dix (06)"" typo."
+Q04,directe,Quelle est la durée légale du travail par semaine ?,22;24,openai/gpt-oss-120b,22;33;24;23;43,hybrid,"**(a) RÉPONSE COURTE**  
+La durée légale du travail est de quarante‑quatre (44) heures par semaine, réparties au minimum sur cinq jours ouvrables.
+
+**(b) EXPLICATION SIMPLE**  
+En règle générale, le Code du travail algérien fixe la durée de travail à 44 h chaque semaine. Cette durée doit être distribuée sur au moins cinq jours de travail. Des ajustements (réduction ou majoration) peuvent être prévus par des accords collectifs pour certains postes, mais la référence légale reste 44 h/semaine.
+
+**(c) ARTICLES CITÉS**  
+
+- **Loi n° 90-11 du 21 avril 1990**  
+  - **Article 22** – En vigueur.  
+  - *« La durée légale de travail est fixée à quarante‑quatre (44) heures par semaine dans les conditions normales de travail. Elle est répartie au minimum sur cinq (5) jours ouvrables. »*
+
+**(d) CONFIANCE ET LIMITES**  
+- Niveau de confiance : **élevé**.  
+- Limites : Le corpus ne précise pas les modalités d’application concrète (heures supplémentaires, amplitude horaire, etc.) qui relèvent d’autres dispositions du droit du travail ou de conventions collectives. Pour des cas spécifiques, il convient de consulter un professionnel du droit.",22,True,no,wrong_version,"Says 44 h ""en vigueur"" from art. 22; search marked art. 22 historical_repeal_documented but the pipeline does not pass version status to the model."
+Q05,directe,Comment sont calculés les congés annuels ?,39;40;41;42,openai/gpt-oss-120b,157;64;94;41;40,hybrid,"**(a) RÉPONSE COURTE**  
+Le congé annuel se calcule à raison de 2 jours et ½ par mois de travail effectué pendant la période de référence (du 1 juillet au 30 juin), sans pouvoir dépasser 30 jours calendaires par année.
+
+**(b) EXPLICATION SIMPLE**  
+Chaque mois travaillé pendant la période de référence donne droit à deux jours et demi de congé payé. On additionne ces jours pour l’ensemble des mois travaillés entre le 1 juillet de l’année précédente et le 30 juin de l’année du congé. Le total obtenu ne peut jamais être supérieur à trente jours calendaires, même si le calcul mensuel le dépasserait. Pour les salariés embauchés en cours d’année, le calcul commence à la date d’entrée dans l’entreprise.
+
+**(c) ARTICLES CITÉS**  
+
+| Texte de loi | Article | Version | Texte exact |
+|--------------|---------|---------|-------------|
+| Loi n° 90‑11 du 21 avril 1990 | Article 40 | en vigueur | « Le droit à congé annuel repose sur le travail effectué au cours d’une période annuelle de référence qui s’étend du 1er juillet de l’année précédent le congé au 30 juin de l’année du congé. Pour les travailleurs nouvellement recrutés, le point de départ de la période de référence est la date de recrutement. » |
+| Loi n° 90‑11 du 21 avril 1990 | Article 41 | en vigueur | « Le congé rémunéré est calculé à raison de deux jours et demi par mois de travail sans que la durée globale ne puisse excéder trente jours calendaires par année de travail. » |
+
+**(d) CONFIANCE ET LIMITES**  
+- Niveau de confiance : **élevé** (les articles 40 et 41 couvrent précisément le mode de calcul).  
+- Limites : le corpus ne précise pas les modalités de prise du congé (dates, procédure de demande, éventuelles majorations). Pour ces points, il conviendra de se référer à d’autres dispositions légales ou à un conseiller juridique.",40;41,True,partial,retrieval_error,"Correct calculation (2.5 days/month, 1 July-30 June, max 30 calendar days; arts. 40-41). Misses art. 42 (South extra leave), not retrieved."
+Q06,combinee,Comment sont payées les heures supplémentaires ?,31;32,openai/gpt-oss-120b,31;32;36;106;89,hybrid,"**(a) RÉPONSE COURTE**  
+Les heures supplémentaires sont rémunérées avec une majoration d’au moins 50 % du salaire horaire normal.
+
+**(b) EXPLICATION SIMPLE**  
+Lorsqu’un salarié effectue des heures au‑delà de la durée légale (dans la limite de 20 % prévue par l’article 31), l’employeur doit les payer en appliquant une majoration qui ne peut jamais être inférieure à la moitié du taux horaire habituel. Cette majoration s’ajoute donc au salaire de base pour chaque heure supplémentaire réalisée.
+
+**(c) ARTICLES CITÉS**  
+
+- **Loi n° 90‑11 du 21 avril 1990** – *Article 32* – en vigueur  
+  « Les heures supplémentaires effectuées donnent lieu au paiement d’une majoration qui ne peut en aucun cas être inférieure à 50 % du salaire horaire normal. »
+
+- **Loi n° 90‑11 du 21 avril 1990** – *Article 31* – en vigueur (contexte de la limitation)  
+  « Le recours aux heures supplémentaires doit répondre à une nécessité absolue de service et revêtir un caractère exceptionnel. Dans ce cas, l’employeur peut requérir tout travailleur pour effectuer des heures supplémentaires au-delà de la durée légale de travail sans que ces heures n’excèdent 20 % de ladite durée légale… »
+
+**(d) CONFIANCE ET LIMITES**  
+- **Confiance** : élevée – la règle de majoration à 50 % provient directement de l’article 32 de la loi 90‑11.  
+- **Limites** : le corpus ne précise pas le calcul exact du salaire horaire normal (bases de calcul, primes éventuelles) ni les éventuelles dispositions conventionnelles ou contractuelles plus favorables qui pourraient s’appliquer. Il convient de vérifier ces aspects auprès d’un professionnel du droit du travail.",31;32,True,yes,,"Correct: at least +50 % (art. 32), within the 20 % limit (art. 31). Fixes the baseline +25 %."
+Q07,combinee,Quelles règles faut-il respecter pour licencier un salarié ?,73;74,openai/gpt-oss-120b,77;62;27;82;81,hybrid,"**(a) RÉPONSE COURTE**  
+Je ne trouve pas de règle dans le corpus.
+
+**(b) EXPLICATION SIMPLE**  
+Aucun des articles fournis ne précise les conditions ou la procédure de licenciement d’un salarié. L’article 77 parle seulement du contenu du règlement intérieur (qualification des fautes et sanctions), mais il ne décrit pas les étapes légales du licenciement.
+
+**(c) ARTICLES CITÉS**  
+- **Loi n° 90-11 du 21 avril 1990**, Article 77, en vigueur :  
+  « Le règlement intérieur est un document par lequel l’employeur fixe obligatoirement les règles relatives à l’organisation technique du travail, à l’hygiène, à la sécurité et à la discipline. Dans le domaine disciplinaire, le règlement intérieur fixe la qualification des fautes professionnelles, les degrés des sanctions correspondantes et les procédures de mise en oeuvre. »
+
+**(d) CONFIANCE ET LIMITES**  
+- Niveau de confiance : **élevé** (les articles fournis ne contiennent aucune disposition sur le licenciement).  
+- Limites : Le corpus ne couvre pas les articles du Code du travail algérien relatifs au licenciement (motifs, préavis, indemnités, procédure judiciaire, etc.). Il convient de consulter la législation complète ou un juriste spécialisé pour obtenir les règles applicables.",77,True,no,retrieval_error,"Art. 73 not retrieved; honest refusal (""Je ne trouve pas de règle dans le corpus""), nothing invented."
+Q08,cas_pratique,Un salarié licencié sans raison peut-il contester ?,73;74;75,openai/gpt-oss-120b,81;41;83;73-4;73,hybrid,"**(a) RÉPONSE COURTE**  
+Oui, un salarié licencié sans motif valable peut contester le licenciement ; le tribunal peut le qualifier d’abusif et le condamner à une indemnité d’au moins six mois de salaire, voire à la réintégration.
+
+**(b) EXPLICATION SIMPLE**  
+Le droit du travail algérien prévoit que le licenciement ne peut intervenir que pour une faute grave prévue à l’article 73. Si le licenciement n’est pas fondé sur une de ces fautes ou s’il ne respecte pas les procédures légales, le juge le considère comme abusif (article 73‑4). Dans ce cas, le salarié peut saisir le tribunal, qui pourra ordonner sa réintégration ou, si l’une des parties refuse, lui verser une indemnité d’au moins six mois de salaire, en plus d’éventuels dommages‑intérêts.
+
+**(c) ARTICLES CITÉS**  
+
+- **Loi n° 90‑11 du 21 avril 1990**  
+  - **Article 73** – « Le licenciement à caractère disciplinaire intervient dans les cas de fautes graves… » (en vigueur).  
+  - **Article 73‑4** – « Si le licenciement d’un travailleur survient en violation des procédures légales… il est présumé abusif. Le tribunal… prononce soit la réintégration… soit, en cas de refus, l’octroi d’une compensation pécuniaire qui ne peut être inférieure à six (6) mois de salaire… » (en vigueur).
+
+**(d) CONFIANCE ET LIMITES**  
+- **Niveau de confiance** : élevé.  
+- **Limites** : le corpus ne précise pas les procédures détaillées de saisine du tribunal ni les éventuelles particularités sectorielles ou conventionnelles qui pourraient s’appliquer. Il convient de vérifier auprès d’un juriste la marche à suivre concrète (délais, forme de la plainte, etc.).",73,True,partial,wrong_quote,"Conclusion right (can contest; at least 6 months salary when abusive, 73-4), but the quote joins two paragraphs of 73-4: it ties ""présumé abusif"" to a breach of procedure, while the law ties it to a dismissal outside art. 73 (procedure breach = annulment + compensation). Flagged by the stricter verifier."
+Q09,datee,Quelles étaient les règles du CDD en 1997 ?,12;13,openai/gpt-oss-120b,27;77;62;96;97,hybrid,"**(a) RÉPONSE COURTE**  
+Je ne trouve pas de règle dans le corpus.  
+
+**(b) EXPLICATION SIMPLE**  
+Les articles fournis portent sur le travail de nuit, le règlement intérieur, la modification du contrat de travail, les délégués du personnel, etc. Aucun d’eux ne traite du contrat à durée déterminée (CDD) et donc aucune règle sur le CDD ne peut être extraite de ce corpus.  
+
+**(c) ARTICLES CITÉS**  
+Aucun article pertinent n’est disponible dans le corpus pour répondre à la question.  
+
+**(d) CONFIANCE ET LIMITES**  
+- Niveau de confiance : élevé (le corpus ne contient effectivement aucune disposition sur le CDD).  
+- Limites : pour connaître les règles du CDD en 1997, il faut se référer à la législation en vigueur à cette époque (notamment la loi n° 90‑11 du 21 avril 1990 et ses textes d’application) ou consulter un juriste spécialisé.",,False,no,retrieval_error,"No CDD article retrieved (run undated); honest refusal, nothing invented."
+Q10,hors_perimetre,Quel est le préavis de démission en France ?,,openai/gpt-oss-120b,68;20;66;120;51,hybrid,"**(a) RÉPONSE COURTE**  
+Je ne trouve pas de règle dans le corpus.
+
+**(b) EXPLICATION SIMPLE**  
+Le texte fourni ne comporte que des dispositions relatives au droit du travail algérien. Aucune des dispositions ne traite du préavis de démission en France, il n’est donc pas possible de répondre à cette question avec les éléments à disposition.
+
+**(c) ARTICLES CITÉS**  
+Aucun article ne s’applique à la question posée.
+
+**(d) CONFIANCE ET LIMITES**  
+- Niveau de confiance : élevé (le corpus ne contient effectivement aucune règle concernant le préavis de démission en France).  
+- Limites : le corpus se limite aux articles de la loi algérienne n° 90‑11. Pour connaître le préavis de démission en droit français, il faut consulter le Code du travail français ou d’autres sources juridiques françaises.",,False,yes,,"Correct refusal of an out-of-scope question. Verifier False only because it treats ""no citation"" as a failure."

@@ -1,0 +1,218 @@
+﻿group_id,rule_modifying_text_id,rule_amending_article,rule_targets,target_article,action,modifying_text_type,modifying_text_number,amending_article,partial,uncertain,evidence,evidence_in_passage,passage,extraction_method,status,model,error
+G1,loi-91-29,Art. 3,73-4,73,complete,,,Art. 3,True,True,"Art. 3.- L’article 73 de la loi n° 90-11 du 21 avril 1990 susvisée est complété par les articles 73-1, 73-2, 73-3, 73-4, 73-5, 73-6",True,"– participe à un arrêt collectif et concerté de travail en violation des dispositions législatives en vigueur en la matière;
+– commet des actes de violence;
+– cause intentionnellement des dégâts matériels aux édifices, ouvrages, machines, instruments, matières premières et autres
+objets en rapport avec le travail;
+– refuse d’exécuter un ordre de réquisition notifié conformément aux dispositions de la législation en vigueur;
+– consomme de l’alcool ou de la drogue à l’intérieur des lieux de travail « .
+Art. 3.- L’article 73 de la loi n° 90-11 du 21 avril 1990 susvisée est complété par les articles 73-1, 73-2, 73-3, 73-4, 73-5, 73-6
+suivants :
+» Art 73- 1- Dans la détermination et la qualification de la faute grave commise par le travailleur, l’employeur devra tenir compte,
+notamment des circonstances dans lesquelles la faute s’est produite, de son étendue et de son degré de gravité, du préjudice
+causé, ainsi que de la conduite que le travailleur adoptait, jusqu’à la date de sa faute envers le patrimoine de son organisme
+employeur « .
+Art. 3.- L’article 73 de la loi n° 90-11 du 21 avril 1990 susvisée est complété par les articles 73-1, 73-2, 73-3, 73-4, 73-5, 73-6
+suivants :
+… … …
+",llm,à vérifier,openai/gpt-oss-120b,
+G2,ordonnance-96-21,Art. 18,"115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132, 133",115,term_substitution,Ordonnance,96-21,Art. 18,True,False,"Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133",True,"Evolution
+Ordonnance n° 96-21 du 23 Safar 1417 correspondant au 9 juillet 1996 modifiant et complétant la loi n° 90-11 du 21 avril 1990
+relative aux relations de travail. (page 6) (Publié dans JO n°43 du 10/07/1996)
+Art. 18.- Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118,
+119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133 de la présente loi.",llm,à vérifier,openai/gpt-oss-120b,
+G2,ordonnance-96-21,Art. 18,"115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132, 133",116,term_substitution,Ordonnance,96-21,Art. 18,True,False,"Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133",True,"Evolution
+Ordonnance n° 96-21 du 23 Safar 1417 correspondant au 9 juillet 1996 modifiant et complétant la loi n° 90-11 du 21 avril 1990
+relative aux relations de travail. (page 6) (Publié dans JO n°43 du 10/07/1996)
+Art. 18.- Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118,
+119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133 de la présente loi.",llm,à vérifier,openai/gpt-oss-120b,
+G2,ordonnance-96-21,Art. 18,"115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132, 133",117,term_substitution,Ordonnance,96-21,Art. 18,True,False,"Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133",True,"Evolution
+Ordonnance n° 96-21 du 23 Safar 1417 correspondant au 9 juillet 1996 modifiant et complétant la loi n° 90-11 du 21 avril 1990
+relative aux relations de travail. (page 6) (Publié dans JO n°43 du 10/07/1996)
+Art. 18.- Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118,
+119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133 de la présente loi.",llm,à vérifier,openai/gpt-oss-120b,
+G2,ordonnance-96-21,Art. 18,"115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132, 133",118,term_substitution,Ordonnance,96-21,Art. 18,True,False,"Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133",True,"Evolution
+Ordonnance n° 96-21 du 23 Safar 1417 correspondant au 9 juillet 1996 modifiant et complétant la loi n° 90-11 du 21 avril 1990
+relative aux relations de travail. (page 6) (Publié dans JO n°43 du 10/07/1996)
+Art. 18.- Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118,
+119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133 de la présente loi.",llm,à vérifier,openai/gpt-oss-120b,
+G2,ordonnance-96-21,Art. 18,"115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132, 133",119,term_substitution,Ordonnance,96-21,Art. 18,True,False,"Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133",True,"Evolution
+Ordonnance n° 96-21 du 23 Safar 1417 correspondant au 9 juillet 1996 modifiant et complétant la loi n° 90-11 du 21 avril 1990
+relative aux relations de travail. (page 6) (Publié dans JO n°43 du 10/07/1996)
+Art. 18.- Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118,
+119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133 de la présente loi.",llm,à vérifier,openai/gpt-oss-120b,
+G2,ordonnance-96-21,Art. 18,"115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132, 133",121,term_substitution,Ordonnance,96-21,Art. 18,True,False,"Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133",True,"Evolution
+Ordonnance n° 96-21 du 23 Safar 1417 correspondant au 9 juillet 1996 modifiant et complétant la loi n° 90-11 du 21 avril 1990
+relative aux relations de travail. (page 6) (Publié dans JO n°43 du 10/07/1996)
+Art. 18.- Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118,
+119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133 de la présente loi.",llm,à vérifier,openai/gpt-oss-120b,
+G2,ordonnance-96-21,Art. 18,"115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132, 133",122,term_substitution,Ordonnance,96-21,Art. 18,True,False,"Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133",True,"Evolution
+Ordonnance n° 96-21 du 23 Safar 1417 correspondant au 9 juillet 1996 modifiant et complétant la loi n° 90-11 du 21 avril 1990
+relative aux relations de travail. (page 6) (Publié dans JO n°43 du 10/07/1996)
+Art. 18.- Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118,
+119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133 de la présente loi.",llm,à vérifier,openai/gpt-oss-120b,
+G2,ordonnance-96-21,Art. 18,"115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132, 133",123,term_substitution,Ordonnance,96-21,Art. 18,True,False,"Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133",True,"Evolution
+Ordonnance n° 96-21 du 23 Safar 1417 correspondant au 9 juillet 1996 modifiant et complétant la loi n° 90-11 du 21 avril 1990
+relative aux relations de travail. (page 6) (Publié dans JO n°43 du 10/07/1996)
+Art. 18.- Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118,
+119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133 de la présente loi.",llm,à vérifier,openai/gpt-oss-120b,
+G2,ordonnance-96-21,Art. 18,"115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132, 133",124,term_substitution,Ordonnance,96-21,Art. 18,True,False,"Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133",True,"Evolution
+Ordonnance n° 96-21 du 23 Safar 1417 correspondant au 9 juillet 1996 modifiant et complétant la loi n° 90-11 du 21 avril 1990
+relative aux relations de travail. (page 6) (Publié dans JO n°43 du 10/07/1996)
+Art. 18.- Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118,
+119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133 de la présente loi.",llm,à vérifier,openai/gpt-oss-120b,
+G2,ordonnance-96-21,Art. 18,"115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132, 133",126,term_substitution,Ordonnance,96-21,Art. 18,True,False,"Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133",True,"Evolution
+Ordonnance n° 96-21 du 23 Safar 1417 correspondant au 9 juillet 1996 modifiant et complétant la loi n° 90-11 du 21 avril 1990
+relative aux relations de travail. (page 6) (Publié dans JO n°43 du 10/07/1996)
+Art. 18.- Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118,
+119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133 de la présente loi.",llm,à vérifier,openai/gpt-oss-120b,
+G2,ordonnance-96-21,Art. 18,"115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132, 133",127,term_substitution,Ordonnance,96-21,Art. 18,True,False,"Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133",True,"Evolution
+Ordonnance n° 96-21 du 23 Safar 1417 correspondant au 9 juillet 1996 modifiant et complétant la loi n° 90-11 du 21 avril 1990
+relative aux relations de travail. (page 6) (Publié dans JO n°43 du 10/07/1996)
+Art. 18.- Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118,
+119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133 de la présente loi.",llm,à vérifier,openai/gpt-oss-120b,
+G2,ordonnance-96-21,Art. 18,"115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132, 133",128,term_substitution,Ordonnance,96-21,Art. 18,True,False,"Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133",True,"Evolution
+Ordonnance n° 96-21 du 23 Safar 1417 correspondant au 9 juillet 1996 modifiant et complétant la loi n° 90-11 du 21 avril 1990
+relative aux relations de travail. (page 6) (Publié dans JO n°43 du 10/07/1996)
+Art. 18.- Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118,
+119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133 de la présente loi.",llm,à vérifier,openai/gpt-oss-120b,
+G2,ordonnance-96-21,Art. 18,"115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132, 133",129,term_substitution,Ordonnance,96-21,Art. 18,True,False,"Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133",True,"Evolution
+Ordonnance n° 96-21 du 23 Safar 1417 correspondant au 9 juillet 1996 modifiant et complétant la loi n° 90-11 du 21 avril 1990
+relative aux relations de travail. (page 6) (Publié dans JO n°43 du 10/07/1996)
+Art. 18.- Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118,
+119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133 de la présente loi.",llm,à vérifier,openai/gpt-oss-120b,
+G2,ordonnance-96-21,Art. 18,"115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132, 133",130,term_substitution,Ordonnance,96-21,Art. 18,True,False,"Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133",True,"Evolution
+Ordonnance n° 96-21 du 23 Safar 1417 correspondant au 9 juillet 1996 modifiant et complétant la loi n° 90-11 du 21 avril 1990
+relative aux relations de travail. (page 6) (Publié dans JO n°43 du 10/07/1996)
+Art. 18.- Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118,
+119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133 de la présente loi.",llm,à vérifier,openai/gpt-oss-120b,
+G2,ordonnance-96-21,Art. 18,"115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132, 133",131,term_substitution,Ordonnance,96-21,Art. 18,True,False,"Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133",True,"Evolution
+Ordonnance n° 96-21 du 23 Safar 1417 correspondant au 9 juillet 1996 modifiant et complétant la loi n° 90-11 du 21 avril 1990
+relative aux relations de travail. (page 6) (Publié dans JO n°43 du 10/07/1996)
+Art. 18.- Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118,
+119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133 de la présente loi.",llm,à vérifier,openai/gpt-oss-120b,
+G2,ordonnance-96-21,Art. 18,"115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132, 133",132,term_substitution,Ordonnance,96-21,Art. 18,True,False,"Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133",True,"Evolution
+Ordonnance n° 96-21 du 23 Safar 1417 correspondant au 9 juillet 1996 modifiant et complétant la loi n° 90-11 du 21 avril 1990
+relative aux relations de travail. (page 6) (Publié dans JO n°43 du 10/07/1996)
+Art. 18.- Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118,
+119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133 de la présente loi.",llm,à vérifier,openai/gpt-oss-120b,
+G2,ordonnance-96-21,Art. 18,"115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132, 133",133,term_substitution,Ordonnance,96-21,Art. 18,True,False,"Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118, 119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133",True,"Evolution
+Ordonnance n° 96-21 du 23 Safar 1417 correspondant au 9 juillet 1996 modifiant et complétant la loi n° 90-11 du 21 avril 1990
+relative aux relations de travail. (page 6) (Publié dans JO n°43 du 10/07/1996)
+Art. 18.- Il est ajouté chaque fois après le terme convention collective, le terme accord collectif aux articles 115, 116, 117, 118,
+119, 121, 122, 123, 124, 126, 127, 128, 129, 130, 131, 132 et 133 de la présente loi.",llm,à vérifier,openai/gpt-oss-120b,
+G3,ordonnance-96-21,Art. 2,12,12,complete,Ordonnance,96-21,Art. 2,True,False,"Art. 2.- L’article 12 de la loi n° 90-11 du 21 avril 1990 susvisée, est complété par un 5ème paragraphe rédigé comme suit",True,"Evolution
+Ordonnance n° 96-21 du 23 Safar 1417 correspondant au 9 juillet 1996 modifiant et complétant la loi n° 90-11 du 21 avril 1990
+relative aux relations de travail. (page 6) (Publié dans JO n°43 du 10/07/1996)
+Art. 2.- L’article 12 de la loi n° 90-11 du 21 avril 1990 susvisée, est complété par un 5ème paragraphe rédigé comme suit :
+» Art. 12.- ……………………………………………………………….
+– Lorsqu’il s’agit d’activités ou d’emplois à durée limitée ou qui sont par nature temporaires « .
+Art. 3.- Les dispositions de la loi n° 90-11 du 21 avril 1990 susvisée sont complétées par un article 12 bis rédigé comme suit :
+» Art. 12 bis.- En vertu de",llm,à vérifier,openai/gpt-oss-120b,
+G3,ordonnance-96-21,Art. 2,12,12 bis,insert,Ordonnance,96-21,Art. 3,True,False,Art. 3.- Les dispositions de la loi n° 90-11 du 21 avril 1990 susvisée sont complétées par un article 12 bis rédigé comme suit,True,"Evolution
+Ordonnance n° 96-21 du 23 Safar 1417 correspondant au 9 juillet 1996 modifiant et complétant la loi n° 90-11 du 21 avril 1990
+relative aux relations de travail. (page 6) (Publié dans JO n°43 du 10/07/1996)
+Art. 2.- L’article 12 de la loi n° 90-11 du 21 avril 1990 susvisée, est complété par un 5ème paragraphe rédigé comme suit :
+» Art. 12.- ……………………………………………………………….
+– Lorsqu’il s’agit d’activités ou d’emplois à durée limitée ou qui sont par nature temporaires « .
+Art. 3.- Les dispositions de la loi n° 90-11 du 21 avril 1990 susvisée sont complétées par un article 12 bis rédigé comme suit :
+» Art. 12 bis.- En vertu de",llm,à vérifier,openai/gpt-oss-120b,
+G4,ordonnance-96-21,Art. 4,13,13,complete,Ordonnance,96-21,Art. 4,True,False,"Art. 4.- L’article 13 de la loi n° 90-11 du 21 avril 1990 susvisée est complété par un alinéa 2, rédigé comme suit :",True,"Evolution Textes
+d’application
+Ordonnance n° 96-21 du 23 Safar 1417 correspondant au 9 juillet 1996 modifiant et complétant la loi n° 90-11 du 21 avril 1990
+relative aux relations de travail. (page 6) (Publié dans JO n°43 du 10/07/1996)
+Art. 4.- L’article 13 de la loi n° 90-11 du 21 avril 1990 susvisée est complété par un alinéa 2, rédigé comme suit :
+» Art. 13.- ……………………………………………………………………….
+Les modalités d’application du présent article sont fixées par voie réglementaire « .
+Décret exécutif n° 97-473 du 8 Chaâbane 1418 correspondant au 8 décembre 1997 relatif au travail à temps partiel. (page 14)
+(Publié dans JO n°82 du 14/12",llm,à vérifier,openai/gpt-oss-120b,
+G5,ordonnance-96-21,Art. 5,31,31,complete,Ordonnance,96-21,Art. 5,True,False,Art. 5.- L’article 31 de la loi n° 90-11 du 21 avril 1990 susvisée est complété par deux alinéas...,True,"Evolution
+Ordonnance n° 96-21 du 23 Safar 1417 correspondant au 9 juillet 1996 modifiant et complétant la loi n° 90-11 du 21 avril 1990
+relative aux relations de travail. (page 6) (Publié dans JO n°43 du 10/07/1996)
+Art. 5.- L’article 31 de la loi n° 90-11 du 21 avril 1990 susvisée est complété par deux alinéas rédigés comme suit :
+» Art. 31.- ……………………………………………………………………….
+Toutefois et dans les cas expressément prévus ci-après, il peut être dérogé aux limites fixées à l’alinéa 2 du présent article dans
+les conditions déterminées dans les conventions et accords collectifs, à savoir :
+– prévenir des accidents imminents ou réparer les dommages résultant d’accidents;
+– achever des travaux dont l’interruption risque, du fait de leur nature, d’engendrer des dommages.
+Dans ces cas, les représentants des travailleurs sont obligatoirement consultés et l’inspecteur du travail territorialement
+compétent tenu informé « .",llm,à vérifier,openai/gpt-oss-120b,
+G6,ordonnance-96-21,Art. 8,54,54,modify,Ordonnance,96-21,Art. 8,True,False,"L’article 54, 3ème paragraphe de l’alinéa 1er de la loi n° 90-11 du 21 avril 1990 susvisée est modifié, complété et rédigé comme suit",True,"Evolution
+Ordonnance n° 96-21 du 23 Safar 1417 correspondant au 9 juillet 1996 modifiant et complétant la loi n° 90-11 du 21 avril 1990
+relative aux relations de travail. (page 6) (Publié dans JO n°43 du 10/07/1996)
+Art. 8.- L’article 54, 3ème paragraphe de l’alinéa 1er de la loi n° 90-11 du 21 avril 1990 susvisée est modifié, complété et rédigé
+comme suit :
+» Art. 54.- …………………………………………………………………
+– A l’occasion de chacun des événements familiaux suivants : mariage du travailleur, naissance d’un enfant du travailleur,
+mariage de l’un des descendants du travailleur, décès d’ascendant, descendant et collatéral au 1er degré du travailleur ou de son
+conjoint, décès du conjoint du travailleur, circoncision d’un enfant du travailleur, le travailleur bénéficie dans ces cas de trois (3)
+jours ouvrables rémunérés.
+Toutefois, dans les cas de naissance ou de décès, la justification intervient ultérieurement « .",llm,à vérifier,openai/gpt-oss-120b,
+G7,ordonnance-96-21,Art. 13,97,97,modify,Ordonnance,96-21,Art. 13,True,False,Art. 13.- L’article 97 de la loi n° 90-11 du 21 avril 1990 susvisée est complété et rédigé comme suit : … La condition d’ancienneté prévue à l’alinéa 3 ci-dessus n’est pas requise pour l’organisme employeur créé depuis moins d’une année,True,"Evolution
+Ordonnance n° 96-21 du 23 Safar 1417 correspondant au 9 juillet 1996 modifiant et complétant la loi n° 90-11 du 21 avril 1990
+relative aux relations de travail. (page 6) (Publié dans JO n°43 du 10/07/1996)
+Art. 13.- L’article 97 de la loi n° 90-11 du 21 avril 1990 susvisée est complété et rédigé comme suit :
+» Art. 97.- …………………………………………………………………………….
+La condition d’ancienneté prévue à l’alinéa 3 ci-dessus n’est pas requise pour l’organisme employeur créé depuis moins d’une
+année « .",llm,à vérifier,openai/gpt-oss-120b,
+G8,loi-17-11,Art. 99,"142, 143, 146, 147, 148, 150, 151, 152, 154",141,modify,,,99,True,True,"Art. 99. — Les dispositions des articles 141 ... de la loi n° 90-11 ... sont modifiées, complétées et rédigées comme suit.",True,"Art. 99. — Les dispositions des articles 141, 142, 143, 143 bis, 144, 145, 146, 146 bis, 147, 148, 150, 151, 152 et 154 de la loi n° 90-11 du 21 avril 1990 relative aux relations de travail, sont modifiées, complétées et rédigées comme suit.",llm,à vérifier,openai/gpt-oss-120b,
+G8,loi-17-11,Art. 99,"142, 143, 146, 147, 148, 150, 151, 152, 154",142,modify,,,99,True,True,"Art. 99. — Les dispositions des articles 142 ... de la loi n° 90-11 ... sont modifiées, complétées et rédigées comme suit.",False,"Art. 99. — Les dispositions des articles 141, 142, 143, 143 bis, 144, 145, 146, 146 bis, 147, 148, 150, 151, 152 et 154 de la loi n° 90-11 du 21 avril 1990 relative aux relations de travail, sont modifiées, complétées et rédigées comme suit.",llm,à vérifier,openai/gpt-oss-120b,
+G8,loi-17-11,Art. 99,"142, 143, 146, 147, 148, 150, 151, 152, 154",143,modify,,,99,True,True,"Art. 99. — Les dispositions des articles 143 ... de la loi n° 90-11 ... sont modifiées, complétées et rédigées comme suit.",False,"Art. 99. — Les dispositions des articles 141, 142, 143, 143 bis, 144, 145, 146, 146 bis, 147, 148, 150, 151, 152 et 154 de la loi n° 90-11 du 21 avril 1990 relative aux relations de travail, sont modifiées, complétées et rédigées comme suit.",llm,à vérifier,openai/gpt-oss-120b,
+G8,loi-17-11,Art. 99,"142, 143, 146, 147, 148, 150, 151, 152, 154",143 bis,modify,,,99,True,True,"Art. 99. — Les dispositions des articles 143 bis ... de la loi n° 90-11 ... sont modifiées, complétées et rédigées comme suit.",False,"Art. 99. — Les dispositions des articles 141, 142, 143, 143 bis, 144, 145, 146, 146 bis, 147, 148, 150, 151, 152 et 154 de la loi n° 90-11 du 21 avril 1990 relative aux relations de travail, sont modifiées, complétées et rédigées comme suit.",llm,à vérifier,openai/gpt-oss-120b,
+G8,loi-17-11,Art. 99,"142, 143, 146, 147, 148, 150, 151, 152, 154",144,modify,,,99,True,True,"Art. 99. — Les dispositions des articles 144 ... de la loi n° 90-11 ... sont modifiées, complétées et rédigées comme suit.",False,"Art. 99. — Les dispositions des articles 141, 142, 143, 143 bis, 144, 145, 146, 146 bis, 147, 148, 150, 151, 152 et 154 de la loi n° 90-11 du 21 avril 1990 relative aux relations de travail, sont modifiées, complétées et rédigées comme suit.",llm,à vérifier,openai/gpt-oss-120b,
+G8,loi-17-11,Art. 99,"142, 143, 146, 147, 148, 150, 151, 152, 154",145,modify,,,99,True,True,"Art. 99. — Les dispositions des articles 145 ... de la loi n° 90-11 ... sont modifiées, complétées et rédigées comme suit.",False,"Art. 99. — Les dispositions des articles 141, 142, 143, 143 bis, 144, 145, 146, 146 bis, 147, 148, 150, 151, 152 et 154 de la loi n° 90-11 du 21 avril 1990 relative aux relations de travail, sont modifiées, complétées et rédigées comme suit.",llm,à vérifier,openai/gpt-oss-120b,
+G8,loi-17-11,Art. 99,"142, 143, 146, 147, 148, 150, 151, 152, 154",146,modify,,,99,True,True,"Art. 99. — Les dispositions des articles 146 ... de la loi n° 90-11 ... sont modifiées, complétées et rédigées comme suit.",False,"Art. 99. — Les dispositions des articles 141, 142, 143, 143 bis, 144, 145, 146, 146 bis, 147, 148, 150, 151, 152 et 154 de la loi n° 90-11 du 21 avril 1990 relative aux relations de travail, sont modifiées, complétées et rédigées comme suit.",llm,à vérifier,openai/gpt-oss-120b,
+G8,loi-17-11,Art. 99,"142, 143, 146, 147, 148, 150, 151, 152, 154",146 bis,modify,,,99,True,True,"Art. 99. — Les dispositions des articles 146 bis ... de la loi n° 90-11 ... sont modifiées, complétées et rédigées comme suit.",False,"Art. 99. — Les dispositions des articles 141, 142, 143, 143 bis, 144, 145, 146, 146 bis, 147, 148, 150, 151, 152 et 154 de la loi n° 90-11 du 21 avril 1990 relative aux relations de travail, sont modifiées, complétées et rédigées comme suit.",llm,à vérifier,openai/gpt-oss-120b,
+G8,loi-17-11,Art. 99,"142, 143, 146, 147, 148, 150, 151, 152, 154",147,modify,,,99,True,True,"Art. 99. — Les dispositions des articles 147 ... de la loi n° 90-11 ... sont modifiées, complétées et rédigées comme suit.",False,"Art. 99. — Les dispositions des articles 141, 142, 143, 143 bis, 144, 145, 146, 146 bis, 147, 148, 150, 151, 152 et 154 de la loi n° 90-11 du 21 avril 1990 relative aux relations de travail, sont modifiées, complétées et rédigées comme suit.",llm,à vérifier,openai/gpt-oss-120b,
+G8,loi-17-11,Art. 99,"142, 143, 146, 147, 148, 150, 151, 152, 154",148,modify,,,99,True,True,"Art. 99. — Les dispositions des articles 148 ... de la loi n° 90-11 ... sont modifiées, complétées et rédigées comme suit.",False,"Art. 99. — Les dispositions des articles 141, 142, 143, 143 bis, 144, 145, 146, 146 bis, 147, 148, 150, 151, 152 et 154 de la loi n° 90-11 du 21 avril 1990 relative aux relations de travail, sont modifiées, complétées et rédigées comme suit.",llm,à vérifier,openai/gpt-oss-120b,
+G8,loi-17-11,Art. 99,"142, 143, 146, 147, 148, 150, 151, 152, 154",150,modify,,,99,True,True,"Art. 99. — Les dispositions des articles 150 ... de la loi n° 90-11 ... sont modifiées, complétées et rédigées comme suit.",False,"Art. 99. — Les dispositions des articles 141, 142, 143, 143 bis, 144, 145, 146, 146 bis, 147, 148, 150, 151, 152 et 154 de la loi n° 90-11 du 21 avril 1990 relative aux relations de travail, sont modifiées, complétées et rédigées comme suit.",llm,à vérifier,openai/gpt-oss-120b,
+G8,loi-17-11,Art. 99,"142, 143, 146, 147, 148, 150, 151, 152, 154",151,modify,,,99,True,True,"Art. 99. — Les dispositions des articles 151 ... de la loi n° 90-11 ... sont modifiées, complétées et rédigées comme suite.",False,"Art. 99. — Les dispositions des articles 141, 142, 143, 143 bis, 144, 145, 146, 146 bis, 147, 148, 150, 151, 152 et 154 de la loi n° 90-11 du 21 avril 1990 relative aux relations de travail, sont modifiées, complétées et rédigées comme suit.",llm,à vérifier,openai/gpt-oss-120b,
+G8,loi-17-11,Art. 99,"142, 143, 146, 147, 148, 150, 151, 152, 154",152,modify,,,99,True,True,"Art. 99. — Les dispositions des articles 152 ... de la loi n° 90-11 ... sont modifiées, complétées et rédigées comme suit.",False,"Art. 99. — Les dispositions des articles 141, 142, 143, 143 bis, 144, 145, 146, 146 bis, 147, 148, 150, 151, 152 et 154 de la loi n° 90-11 du 21 avril 1990 relative aux relations de travail, sont modifiées, complétées et rédigées comme suit.",llm,à vérifier,openai/gpt-oss-120b,
+G8,loi-17-11,Art. 99,"142, 143, 146, 147, 148, 150, 151, 152, 154",154,modify,,,99,True,True,"Art. 99. — Les dispositions des articles 154 ... de la loi n° 90-11 ... sont modifiées, complétées et rédigées comme suite.",False,"Art. 99. — Les dispositions des articles 141, 142, 143, 143 bis, 144, 145, 146, 146 bis, 147, 148, 150, 151, 152 et 154 de la loi n° 90-11 du 21 avril 1990 relative aux relations de travail, sont modifiées, complétées et rédigées comme suit.",llm,à vérifier,openai/gpt-oss-120b,
+G9,loi-17-11,Art. 99,143 bis,143 bis,insert,,,Art. 20,False,True,Art. 20.- Les dispositions de la loi n° 90-11 du 21 avril 1990 susvisée sont complétées par un article 143 bis rédigé comme suit,True,"Art. 20.- Les dispositions de la loi n° 90-11 du 21 avril 1990 susvisée sont complétées par un article 143 bis rédigé comme suit :
+» Art. 143 bis.- Tout contrevenant aux dispositions de la présente loi relative au dépassement dérogatoire en matière d’heures
+supplémentaires tel que précisé par l’article 31 ci-dessus, est puni d’une amende de 1.000 à 2.000 DA appliquée autant de fois
+qu’il y a de travailleurs concernés « .
+Art 99 de la loi n° 17-11 du 8 Rabie Ethani 1439 correspondant au 27 décembre 2017 portant loi de finances pour 2018. JORA n°
+76 du 28/12/2017. P 03.
+Les dispositions de 143 bis de la loi n° 90-11 du 21 avril 1990 relative aux relations de travail, sont modifiées, complétées et
+rédigées comme suit :
+« Art. 143 bis. — Tout contrevenant aux dispositions de la présente loi relative au dépassement dérogatoire en matière d’heures
+supplémentaires ……….. (sans changement jusqu’à), est puni d’une amende de 10.000 DA à 20.000 DA appliquée autant de fois
+qu’il y a de travailleurs concernés.
+En cas de récidive, la peine est de 40.000 DA à 50.000 DA multipliée par autant de fois qu’il y a de travailleurs concernés ».",llm,à vérifier,openai/gpt-oss-120b,
+G9,loi-17-11,Art. 99,143 bis,143 bis,modify,,,non spécifié,False,True,"Les dispositions de 143 bis de la loi n° 90-11 du 21 avril 1990 relative aux relations de travail, sont modifiées, complétées et rédigées comme suit",True,"Art. 20.- Les dispositions de la loi n° 90-11 du 21 avril 1990 susvisée sont complétées par un article 143 bis rédigé comme suit :
+» Art. 143 bis.- Tout contrevenant aux dispositions de la présente loi relative au dépassement dérogatoire en matière d’heures
+supplémentaires tel que précisé par l’article 31 ci-dessus, est puni d’une amende de 1.000 à 2.000 DA appliquée autant de fois
+qu’il y a de travailleurs concernés « .
+Art 99 de la loi n° 17-11 du 8 Rabie Ethani 1439 correspondant au 27 décembre 2017 portant loi de finances pour 2018. JORA n°
+76 du 28/12/2017. P 03.
+Les dispositions de 143 bis de la loi n° 90-11 du 21 avril 1990 relative aux relations de travail, sont modifiées, complétées et
+rédigées comme suit :
+« Art. 143 bis. — Tout contrevenant aux dispositions de la présente loi relative au dépassement dérogatoire en matière d’heures
+supplémentaires ……….. (sans changement jusqu’à), est puni d’une amende de 10.000 DA à 20.000 DA appliquée autant de fois
+qu’il y a de travailleurs concernés.
+En cas de récidive, la peine est de 40.000 DA à 50.000 DA multipliée par autant de fois qu’il y a de travailleurs concernés ».",llm,à vérifier,openai/gpt-oss-120b,
+G10,loi-17-11,Art. 99,146 bis,146 bis,insert,Loi,17-11,Art. 99,False,False,Les dispositions de la loi n° 90-11 du 21 avril 1990 susvisée sont complétées par un article 146 bis rédigé comme suit : « Art. 146 bis.- Toute infraction aux dispositions de la présente loi ... est punie d’une amende de 1.000 à 2.000 DA appliquée autant de fois qu’il y a infractions ».,True,"Art. 21.- Les dispositions de la loi n° 90-11 du 21 avril 1990 susvisée sont complétées par un article 146 bis rédigé comme suit :
+» Art. 146 bis.- Toute infraction aux dispositions de la présente loi relative au recours au contrat à durée déterminée en dehors
+des cas et des conditions expressément prévus à l’article 12 et 12 bis de la présente loi, est punie d’une amende de 1.000 à
+2.000 DA appliquée autant de fois qu’il y a infractions « .
+Art 99 de la loi n° 17-11 du 8 Rabie Ethani 1439 correspondant au 27 décembre 2017 portant loi de finances pour 2018. JORA n°
+76 du 28/12/2017. P 03.
+Les dispositions de l’article 146 bis de la loi n° 90-11 du 21 avril 1990 relative aux relations de travail, sont modifiées, complétées
+et rédigées comme suit :
+« Art. 146 bis. — Toute infraction aux dispositions de la présente loi relative au recours au contrat àn durée déterminée … … …
+(sans changement jusqu’à), est punie d’une amende de 10.000 DA à 20.000 DA appliquée autant de fois qu’il y a de travailleurs
+concernés.
+En cas de récidive, la peine est de 40.000 DA à 50.000 DA multipliée par autant de fois qu’il y a de travailleurs concernés ».",llm,à vérifier,openai/gpt-oss-120b,
+G10,loi-17-11,Art. 99,146 bis,146 bis,modify,Loi,17-11,Art. 99,False,False,"Les dispositions de l’article 146 bis de la loi n° 90-11 du 21 avril 1990 ... sont modifiées, complétées et rédigées comme suit : « Art. 146 bis. — Toute infraction ... est punie d’une amende de 10.000 DA à 20.000 DA ... En cas de récidive, la peine est de 40.000 DA à 50.000 DA multipliée par autant de fois qu’il y a de travailleurs concernés ».",True,"Art. 21.- Les dispositions de la loi n° 90-11 du 21 avril 1990 susvisée sont complétées par un article 146 bis rédigé comme suit :
+» Art. 146 bis.- Toute infraction aux dispositions de la présente loi relative au recours au contrat à durée déterminée en dehors
+des cas et des conditions expressément prévus à l’article 12 et 12 bis de la présente loi, est punie d’une amende de 1.000 à
+2.000 DA appliquée autant de fois qu’il y a infractions « .
+Art 99 de la loi n° 17-11 du 8 Rabie Ethani 1439 correspondant au 27 décembre 2017 portant loi de finances pour 2018. JORA n°
+76 du 28/12/2017. P 03.
+Les dispositions de l’article 146 bis de la loi n° 90-11 du 21 avril 1990 relative aux relations de travail, sont modifiées, complétées
+et rédigées comme suit :
+« Art. 146 bis. — Toute infraction aux dispositions de la présente loi relative au recours au contrat àn durée déterminée … … …
+(sans changement jusqu’à), est punie d’une amende de 10.000 DA à 20.000 DA appliquée autant de fois qu’il y a de travailleurs
+concernés.
+En cas de récidive, la peine est de 40.000 DA à 50.000 DA multipliée par autant de fois qu’il y a de travailleurs concernés ».",llm,à vérifier,openai/gpt-oss-120b,
