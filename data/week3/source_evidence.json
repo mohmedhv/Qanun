@@ -1,0 +1,58 @@
+[
+  {
+    "source_url": "https://www.joradp.dz/FTP/Jo-Francais/1990/F1990017.pdf",
+    "pages_inspected": "4 / printed 490",
+    "sha256": "b7c60b8cee3d5a6ca2ef1e3df2e0263d9da823196220ed8597da4e6132d101d1",
+    "review_date": "2026-11-27",
+    "method": "Individually opened official document; relevant page images rendered and visually read.",
+    "reviewer": "Codex — documentary review"
+  },
+  {
+    "source_url": "https://www.joradp.dz/FTP/Jo-Francais/1997/F1997003.pdf",
+    "pages_inspected": "5,6,7 / printed 5,6,7",
+    "sha256": "8fe254d8c46e81a57a1d3e7f07668019b1280a95edb1b802e4c619450dca0501",
+    "review_date": "2026-11-27",
+    "method": "Individually opened official document; relevant page images rendered and visually read.",
+    "reviewer": "Codex — documentary review"
+  },
+  {
+    "source_url": "https://www.joradp.dz/FTP/jo-francais/2017/F2017076.pdf",
+    "pages_inspected": "44,45,46 / printed 44,45,46",
+    "sha256": "471a94f917d04764b6b8b29bc11750eb29469caf09e79c36a00b78029585b7cd",
+    "review_date": "2026-11-27",
+    "method": "Individually opened official document; relevant page images rendered and visually read.",
+    "reviewer": "Codex — documentary review"
+  },
+  {
+    "source_url": "https://www.joradp.dz/FTP/Jo-Francais/1994/F1994020.pdf",
+    "pages_inspected": "5 / printed 5",
+    "sha256": "dd42ae5f66c4c7a4b2ce2ed621cad2f363f3e129d107f343fe3eae8062431eea",
+    "review_date": "2026-11-27",
+    "method": "Opened individually; official relevant page rendered and read visually.",
+    "reviewer": "Codex — documentary review"
+  },
+  {
+    "source_url": "https://www.joradp.dz/FTP/Jo-Francais/1994/F1994034.pdf",
+    "pages_inspected": "6 / printed 6",
+    "sha256": "c3915cdc1e8eb4e2d72cc509f7d4c074e91669787e592394647283ac32ba2e3c",
+    "review_date": "2026-11-27",
+    "method": "Opened individually; official relevant page rendered and read visually.",
+    "reviewer": "Codex — documentary review"
+  },
+  {
+    "source_url": "https://www.joradp.dz/FTP/jo-francais/2014/F2014078.pdf",
+    "pages_inspected": "32 / printed 32",
+    "sha256": "2176bf2c02b022324e51ead8980fd838b1c078e710656405e5765e2aee51fcf4",
+    "review_date": "2026-11-27",
+    "method": "Opened individually; official relevant page rendered and read visually.",
+    "reviewer": "Codex — documentary review"
+  },
+  {
+    "source_url": "https://www.joradp.dz/FTP/Jo-Francais/2015/F2015040.pdf",
+    "pages_inspected": "16 / printed 16",
+    "sha256": "d98988809298e8ff4051d90bfd3460d2686cfb6657ed88925e095b252789063b",
+    "review_date": "2026-11-27",
+    "method": "Opened individually; official relevant page rendered and read visually.",
+    "reviewer": "Codex — documentary review"
+  }
+]

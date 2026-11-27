@@ -1,0 +1,80 @@
+﻿modifying_text_id,target_article,provision,action,category,reference_text_id,reason
+ordonnance-96-21,12,Art. 2,complete,changed,ordonnance-96-21,needs_review
+ordonnance-96-21,12 bis,Art. 3,insert,matching,ordonnance-96-21,
+ordonnance-96-21,13,Art. 4,complete,matching,ordonnance-96-21,
+ordonnance-97-03,22,Art. 8,repeal,matching,ordonnance-97-03,
+ordonnance-97-03,23,Art. 8,repeal,matching,ordonnance-97-03,
+ordonnance-97-03,24,Art. 8,repeal,matching,ordonnance-97-03,
+ordonnance-97-03,25,Art. 8,repeal,matching,ordonnance-97-03,
+ordonnance-97-03,26,Art. 8,repeal,matching,ordonnance-97-03,
+ordonnance-96-21,31,Art. 5,complete,matching,ordonnance-96-21,
+ordonnance-96-21,42,Art. 6,modify,matching,ordonnance-96-21,
+ordonnance-96-21,44,Art. 7,modify,matching,ordonnance-96-21,
+ordonnance-97-02,52 bis,Art. 2,insert,matching,ordonnance-97-02,
+ordonnance-97-02,52 quater,Art. 4,insert,matching,ordonnance-97-02,
+ordonnance-97-02,52 ter,Art. 3,insert,matching,ordonnance-97-02,
+ordonnance-96-21,54,Art. 8,modify,matching,ordonnance-96-21,
+decret-legislatif-94-09,72,Art. 35,repeal,matching,decret-legislatif-94-09,
+loi-91-29,73,Art. 2,modify,matching,loi-91-29,
+loi-91-29,73-1,Art. 3,insert,matching,loi-91-29,
+loi-91-29,73-2,Art. 3,insert,matching,loi-91-29,
+loi-91-29,73-3,Art. 3,insert,matching,loi-91-29,
+loi-91-29,73-4,Art. 3,insert,changed,loi-91-29,"partial, needs_review"
+loi-91-29,73-5,Art. 3,insert,matching,loi-91-29,
+loi-91-29,73-6,Art. 3,insert,matching,loi-91-29,
+ordonnance-96-21,73-4,Art. 9,modify,matching,ordonnance-96-21,
+decret-legislatif-94-03,87 bis,Art. 1er,insert,matching,decret-legislatif-94-03,
+loi-14-10,87,Art. 89,modify,matching,loi-14-10,
+decret-executif-15-107,87 bis,Art. 90,repeal,changed,loi-14-10,Different legal text/provision attribution; candidate matched by target and action.
+ordonnance-96-21,91,Art. 10,modify,matching,ordonnance-96-21,
+ordonnance-96-21,93,Art. 11,modify,matching,ordonnance-96-21,
+ordonnance-96-21,93 bis,Art. 12,insert,matching,ordonnance-96-21,
+ordonnance-96-21,97,Art. 13,complete,matching,ordonnance-96-21,
+ordonnance-96-21,98,Art. 14,modify,matching,ordonnance-96-21,
+ordonnance-96-21,100,Art. 15,modify,matching,ordonnance-96-21,
+ordonnance-96-21,102,Art. 16,modify,matching,ordonnance-96-21,
+ordonnance-96-21,114,Art. 17,modify,matching,ordonnance-96-21,
+ordonnance-96-21,115,Art. 18,term_substitution,matching,ordonnance-96-21,
+ordonnance-96-21,116,Art. 18,term_substitution,matching,ordonnance-96-21,
+ordonnance-96-21,117,Art. 18,term_substitution,matching,ordonnance-96-21,
+ordonnance-96-21,118,Art. 18,term_substitution,matching,ordonnance-96-21,
+ordonnance-96-21,119,Art. 18,term_substitution,matching,ordonnance-96-21,
+ordonnance-96-21,121,Art. 18,term_substitution,matching,ordonnance-96-21,
+ordonnance-96-21,122,Art. 18,term_substitution,matching,ordonnance-96-21,
+ordonnance-96-21,123,Art. 18,term_substitution,matching,ordonnance-96-21,
+ordonnance-96-21,124,Art. 18,term_substitution,matching,ordonnance-96-21,
+ordonnance-96-21,126,Art. 18,term_substitution,matching,ordonnance-96-21,
+ordonnance-96-21,127,Art. 18,term_substitution,matching,ordonnance-96-21,
+ordonnance-96-21,128,Art. 18,term_substitution,matching,ordonnance-96-21,
+ordonnance-96-21,129,Art. 18,term_substitution,matching,ordonnance-96-21,
+ordonnance-96-21,130,Art. 18,term_substitution,matching,ordonnance-96-21,
+ordonnance-96-21,131,Art. 18,term_substitution,matching,ordonnance-96-21,
+ordonnance-96-21,132,Art. 18,term_substitution,matching,ordonnance-96-21,
+ordonnance-96-21,133,Art. 18,term_substitution,matching,ordonnance-96-21,
+ordonnance-96-21,134,Art. 19,modify,matching,ordonnance-96-21,
+ordonnance-15-01,140,Art. 54,modify,matching,ordonnance-15-01,
+loi-17-11,141,Art. 99,modify,changed,loi-17-11,new_content
+loi-17-11,142,Art. 99,modify,changed,loi-17-11,new_content
+ordonnance-96-21,143 bis,Art. 20,insert,matching,ordonnance-96-21,
+loi-17-11,143,Art. 99,modify,changed,loi-17-11,"new_content, partial, needs_review"
+loi-17-11,143 bis,Art. 99,modify,matching,loi-17-11,
+loi-17-11,144,Art. 99,modify,changed,loi-17-11,new_content
+loi-17-11,145,Art. 99,modify,changed,loi-17-11,new_content
+ordonnance-96-21,146 bis,Art. 21,insert,matching,ordonnance-96-21,
+loi-17-11,146,Art. 99,modify,changed,loi-17-11,new_content
+loi-17-11,146 bis,Art. 99,modify,matching,loi-17-11,
+loi-17-11,147,Art. 99,modify,changed,loi-17-11,new_content
+loi-17-11,148,Art. 99,modify,changed,loi-17-11,new_content
+ordonnance-15-01,149,Art. 54,modify,matching,ordonnance-15-01,
+loi-17-11,150,Art. 99,modify,changed,loi-17-11,new_content
+loi-17-11,151,Art. 99,modify,changed,loi-17-11,new_content
+loi-17-11,152,Art. 99,modify,changed,loi-17-11,new_content
+loi-17-11,154,Art. 99,modify,changed,loi-17-11,new_content
+loi-22-16,56 bis,Art. 2,insert,missing,loi-22-16,Absent from parser output; retain P3 record.
+loi-22-16,56 bis 1,Art. 2,insert,missing,loi-22-16,Absent from parser output; retain P3 record.
+loi-22-16,56 bis 2,Art. 2,insert,missing,loi-22-16,Absent from parser output; retain P3 record.
+loi-22-16,56 bis 3,Art. 2,insert,missing,loi-22-16,Absent from parser output; retain P3 record.
+loi-22-16,56 bis 4,Art. 2,insert,missing,loi-22-16,Absent from parser output; retain P3 record.
+loi-22-16,56 bis 5,Art. 2,insert,missing,loi-22-16,Absent from parser output; retain P3 record.
+loi-22-16,56 bis 6,Art. 2,insert,missing,loi-22-16,Absent from parser output; retain P3 record.
+loi-22-16,64,Art. 3,complete,missing,loi-22-16,Absent from parser output; retain P3 record.

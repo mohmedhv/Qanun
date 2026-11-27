@@ -31,9 +31,13 @@ def test_search_public_api_returns_cite_id_and_score(monkeypatch):
     import src.search.search_service as svc
     monkeypatch.setenv('JURIDEAZOR_SEARCH_METHOD','bm25')
     svc._DOCS = svc._BM25 = None
-    results=svc.search('duree legale hebdomadaire travail',k=5)
+    # Article 22 is now tracked by P3 and was repealed on 1997-03-12.
+    # Check its citation at a historical date, not as a current source.
+    results=svc.search('duree legale hebdomadaire travail',date='1996-01-01',k=5)
     assert results and {'cite_id','score','number','text'} <= set(results[0])
     assert 'loi-90-11-art-22' in [r['cite_id'] for r in results]
+    current=svc.search('duree legale hebdomadaire travail',k=30)
+    assert 'loi-90-11-art-22' not in [r['cite_id'] for r in current]
 
 def test_p3_version_valid_to_boundary_is_inclusive():
     from src.versions.versions import get_version

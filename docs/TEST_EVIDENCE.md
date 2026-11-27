@@ -1,3 +1,5 @@
+> Historical validation notes. Current P3 counts, source corrections and Week 3 checks: [P3_WEEK3_DELIVERY.md](P3_WEEK3_DELIVERY.md). The historical 19 wording flags are now 16; this differs from the 28 original source flags.
+
 État P3 Week 2 au 26 novembre 2026: module, base et chargeur intégrés. Résultats courants dans docs/P3_WEEK2_DELIVERY.md. Les observations antérieures ci-dessous sont historiques.
 
 # Integrated P2/P3/P4 test evidence
