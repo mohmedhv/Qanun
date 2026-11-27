@@ -1,11 +1,13 @@
-"""P3 vocabulary and endpoint contract; graph construction remains with P2.
+"""P3 graph vocabulary and endpoint contract used by the graph builder.
 
-Endpoint directions follow the shared graph contract. For example, the wording
-introduced in inventory row 9 (article 87 bis) cites article 87. Decree 15-59
-implements article 87, the target of row 54. See docs/ontology.md for sources.
+Endpoint directions follow the shared graph contract. This contract describes
+permitted graph structure, not independent legal verification. For example,
+the wording introduced in inventory row 9 (article 87 bis) cites article 87.
+Decree 15-59 implements article 87, the target of row 54. See docs/ontology.md
+for sources.
 """
 ENTITIES = ("Text", "Article", "Version", "Concept")
-RELATIONS = ("belongs_to", "modifies", "repeals", "applies", "adds", "cites")
+RELATIONS = ("belongs_to", "modifies", "repeals", "applies", "adds", "cites", "mentions")
 
 ACTION_RELATIONS = {
     "modify": "modifies", "complete": "modifies",
@@ -20,6 +22,7 @@ ENDPOINTS = {
     "repeals": (("Text", "Article"), ("Article", "Article")),
     "applies": (("Text", "Article"),),
     "cites": (("Text", "Text"), ("Article", "Text"), ("Article", "Article")),
+    "mentions": (("Article", "Concept"), ("Version", "Concept")),
 }
 
 

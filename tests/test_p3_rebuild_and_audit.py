@@ -25,9 +25,8 @@ class RebuildAndAuditTests(unittest.TestCase):
             self.assertEqual(con.execute('select count(*) from articles').fetchone()[0],158)
             self.assertEqual(con.execute('select count(*) from texts').fetchone()[0],11)
             self.assertEqual(con.execute('select count(*) from relations').fetchone()[0],89)
-            evidence = json.loads((Path(__file__).resolve().parents[1] / 'data/version_seed/p3_week3_evidence.json').read_text())
-            self.assertEqual(con.execute('select count(*) from versions').fetchone()[0],
-                             10 + sum(not r.get('correction', False) for r in evidence))
+            seed = json.loads((Path(__file__).resolve().parents[1] / 'data/version_seed/p3_seed.json').read_text(encoding='utf-8'))
+            self.assertEqual(con.execute('select count(*) from versions').fetchone()[0], len(seed['versions']))
             self.assertEqual(con.execute('select count(*) from versions where article_number = ? and valid_to IS NULL',('72',)).fetchone()[0],0)
             self.assertEqual(con.execute('select count(*) from versions where article_number = ? and valid_to IS NULL',('87 bis',)).fetchone()[0],0)
             con.close()
@@ -35,8 +34,8 @@ class RebuildAndAuditTests(unittest.TestCase):
     def test_audit_has_79_entries_with_visible_pending(self):
         result = audit()
         self.assertEqual(len(result),79)
-        self.assertEqual(sum(x['needs_review'] for x in result),16)
-        self.assertEqual(sum(x['official_full_wording_checked'] for x in result),3)
+        self.assertEqual(sum(x['needs_review'] for x in result),0)
+        self.assertEqual(sum(x['official_full_wording_checked'] for x in result),19)
         self.assertTrue(all(x['source_reference_url'] for x in result))
         self.assertEqual(len([x for x in result if x['modifying_text']=='loi-17-11']),14)
 

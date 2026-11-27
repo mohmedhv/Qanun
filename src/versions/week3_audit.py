@@ -114,6 +114,9 @@ def generate(root=ROOT):
     out = root / "data/week3"
     out.mkdir(exist_ok=True)
     reference = read_json(root / "data/interim/amendments.json")
+    wording_reviews = read_csv(out / "full_wording_review.csv") if (out / "full_wording_review.csv").exists() else []
+    wording_index = {(r["modifying_text_id"], r["target_article"], provision(r["provision"])): r
+                     for r in wording_reviews}
     old = read_json(out / "baselines/p2_59.json")
     parsed = run_parser(root)
     source = read_csv(root / "P3_Modified_Articles.csv")
@@ -147,7 +150,11 @@ def generate(root=ROOT):
                            p2_8_target_action_flag=(identity[1], amendment["action"]) in old_flags,
                            historical_19_reconstructed=historical_19,
                            historical_19_evidence="docs/P3_WEEK2_DELIVERY.md; original flag snapshot needed",
-                           needs_textual_review=bool(amendment["needs_review"]), in_gold_51=index in gold_indices))
+                           needs_textual_review=bool(amendment["needs_review"]),
+                           full_wording_checked=bool(wording_index.get(identity, {}).get("full_wording_status")),
+                           consolidated_version_ids=wording_index.get(identity, {}).get("version_ids", ""),
+                           independent_review_status=wording_index.get(identity, {}).get("independent_review_status", "pending"),
+                           in_gold_51=index in gold_indices))
         if index in gold_indices:
             recoverable = identity[0] in headers
             gold.append(dict(reference_row=index + 1, modifying_text_id=identity[0], target_article=identity[1],
@@ -169,6 +176,8 @@ def generate(root=ROOT):
     summary = dict(reference_rows=len(reference), p2_baseline_rows=len(old), p2_baseline_flags=sum(r["needs_review"] for r in old),
                    original_28=sum(r["original_28"] for r in ledger), historical_19_reconstructed=sum(r["historical_19_reconstructed"] for r in ledger),
                    textual_review_current=sum(r["needs_textual_review"] for r in ledger),
+                   full_wording_checked=sum(r["full_wording_checked"] for r in ledger),
+                   independent_review_pending=sum(r["independent_review_status"] == "pending" for r in ledger),
                    current_parser_rows=len(parsed), current_parser_flags=sum(r["needs_review"] for r in parsed),
                    gold_rows=len(gold), gold_recoverable=len(eligible), gold_missing_source=len(gold)-len(eligible),
                    all_inventory_operation_score=score(reference, parsed), gold_51_score=score(gold_records, predictions),

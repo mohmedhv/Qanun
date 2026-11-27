@@ -62,6 +62,7 @@ article:loi-90-11-art-145,text:loi-90-11,belongs_to,structural,https://joradp.dz
 article:loi-90-11-art-146,text:loi-90-11,belongs_to,structural,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,,db
 article:loi-90-11-art-147,text:loi-90-11,belongs_to,structural,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,,db
 article:loi-90-11-art-148,text:loi-90-11,belongs_to,structural,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,,db
+article:loi-90-11-art-149,concept:snmg,mentions,lexical_match_unreviewed,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,,article content
 article:loi-90-11-art-149,text:loi-90-11,belongs_to,structural,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,,db
 article:loi-90-11-art-15,text:loi-90-11,belongs_to,structural,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,,db
 article:loi-90-11-art-150,text:loi-90-11,belongs_to,structural,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,,db
@@ -157,6 +158,7 @@ article:loi-90-11-art-83,text:loi-90-11,belongs_to,structural,https://joradp.dz/
 article:loi-90-11-art-84,text:loi-90-11,belongs_to,structural,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,,db
 article:loi-90-11-art-85,text:loi-90-11,belongs_to,structural,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,,db
 article:loi-90-11-art-86,text:loi-90-11,belongs_to,structural,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,,db
+article:loi-90-11-art-87,concept:snmg,mentions,lexical_match_unreviewed,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,,article content
 article:loi-90-11-art-87,text:loi-90-11,belongs_to,structural,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,,db
 article:loi-90-11-art-88,text:loi-90-11,belongs_to,structural,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,,db
 article:loi-90-11-art-89,text:loi-90-11,belongs_to,structural,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,,db
@@ -289,14 +291,56 @@ text:ordonnance-97-03,article:loi-90-11-art-26,repeals,verifie_jo_officiel,https
 text:ordonnance-97-03,text:loi-90-11,modifies,summary_link,https://www.joradp.dz/FTP/Jo-Francais/1997/F1997003.pdf,,relations
 version:1,article:loi-90-11-art-73,belongs_to,structural,https://www.joradp.dz/FTP/Jo-Francais/1990/F1990017.pdf#page=7,,db
 version:10,article:loi-90-11-art-12,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/Jo-Francais/1996/F1996043.pdf#page=6,,db
+version:11,article:loi-90-11-art-12-bis,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/Jo-Francais/1996/F1996043.pdf#page=6,,db
+version:12,article:loi-90-11-art-73-4,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/Jo-Francais/1996/F1996043.pdf#page=7,,db
 version:13,article:loi-90-11-art-22,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/Jo-Francais/1990/F1990017.pdf#page=4,,db
 version:14,article:loi-90-11-art-23,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/Jo-Francais/1990/F1990017.pdf#page=4,,db
 version:15,article:loi-90-11-art-24,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/Jo-Francais/1990/F1990017.pdf#page=4,,db
 version:16,article:loi-90-11-art-25,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/Jo-Francais/1990/F1990017.pdf#page=4,,db
 version:17,article:loi-90-11-art-26,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/Jo-Francais/1990/F1990017.pdf#page=4,,db
+version:18,article:loi-90-11-art-73-4,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/Jo-Francais/1991/F1991068.pdf#page=4,,db
+version:19,article:loi-90-11-art-13,belongs_to,structural,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf#page=3,,db
 version:2,article:loi-90-11-art-73,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/Jo-Francais/1991/F1991068.pdf#page=3,,db
+version:20,article:loi-90-11-art-13,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/Jo-Francais/1996/F1996043.pdf#page=7,,db
+version:21,article:loi-90-11-art-31,belongs_to,structural,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf#page=5,,db
+version:22,article:loi-90-11-art-31,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/Jo-Francais/1996/F1996043.pdf#page=7,,db
+version:23,article:loi-90-11-art-54,belongs_to,structural,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf#page=6,,db
+version:24,article:loi-90-11-art-54,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/Jo-Francais/1996/F1996043.pdf#page=7,,db
+version:25,article:loi-90-11-art-97,belongs_to,structural,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf#page=9,,db
+version:26,article:loi-90-11-art-97,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/Jo-Francais/1996/F1996043.pdf#page=8,,db
+version:27,article:loi-90-11-art-141,belongs_to,structural,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,,db
+version:28,article:loi-90-11-art-141,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/jo-francais/2017/F2017076.pdf#page=44,,db
+version:29,article:loi-90-11-art-142,belongs_to,structural,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,,db
 version:3,article:loi-90-11-art-72,belongs_to,structural,https://www.joradp.dz/FTP/Jo-Francais/1990/F1990017.pdf#page=7,,db
+version:30,article:loi-90-11-art-142,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/jo-francais/2017/F2017076.pdf#page=45,,db
+version:31,article:loi-90-11-art-143,belongs_to,structural,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,,db
+version:32,article:loi-90-11-art-143,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/jo-francais/2017/F2017076.pdf#page=45,,db
+version:33,article:loi-90-11-art-143-bis,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/Jo-Francais/1996/F1996043.pdf#page=8,,db
+version:34,article:loi-90-11-art-143-bis,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/jo-francais/2017/F2017076.pdf#page=45,,db
+version:35,article:loi-90-11-art-144,belongs_to,structural,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,,db
+version:36,article:loi-90-11-art-144,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/jo-francais/2017/F2017076.pdf#page=45,,db
+version:37,article:loi-90-11-art-145,belongs_to,structural,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,,db
+version:38,article:loi-90-11-art-145,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/jo-francais/2017/F2017076.pdf#page=45,,db
+version:39,article:loi-90-11-art-146,belongs_to,structural,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,,db
 version:4,article:loi-90-11-art-87,belongs_to,structural,https://www.joradp.dz/FTP/Jo-Francais/1990/F1990017.pdf#page=8,,db
+version:4,concept:snmg,mentions,lexical_match_unreviewed,https://www.joradp.dz/FTP/Jo-Francais/1990/F1990017.pdf#page=8,,version content
+version:40,article:loi-90-11-art-146,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/jo-francais/2017/F2017076.pdf#page=45,,db
+version:41,article:loi-90-11-art-146-bis,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/Jo-Francais/1996/F1996043.pdf#page=8,,db
+version:42,article:loi-90-11-art-146-bis,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/jo-francais/2017/F2017076.pdf#page=45,,db
+version:43,article:loi-90-11-art-147,belongs_to,structural,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,,db
+version:44,article:loi-90-11-art-147,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/jo-francais/2017/F2017076.pdf#page=45,,db
+version:45,article:loi-90-11-art-148,belongs_to,structural,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,,db
+version:46,article:loi-90-11-art-148,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/jo-francais/2017/F2017076.pdf#page=45,,db
+version:47,article:loi-90-11-art-150,belongs_to,structural,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,,db
+version:48,article:loi-90-11-art-150,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/jo-francais/2017/F2017076.pdf#page=46,,db
+version:49,article:loi-90-11-art-151,belongs_to,structural,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,,db
 version:5,article:loi-90-11-art-87,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/jo-francais/2014/F2014078.pdf#page=32,,db
-version:6,article:loi-90-11-art-87-bis,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/Jo-Francais/1994/F1994020.pdf#page=3,,db
+version:5,concept:snmg,mentions,lexical_match_unreviewed,https://www.joradp.dz/FTP/jo-francais/2014/F2014078.pdf#page=32,,version content
+version:50,article:loi-90-11-art-151,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/jo-francais/2017/F2017076.pdf#page=46,,db
+version:51,article:loi-90-11-art-152,belongs_to,structural,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,,db
+version:52,article:loi-90-11-art-152,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/jo-francais/2017/F2017076.pdf#page=46,,db
+version:53,article:loi-90-11-art-154,belongs_to,structural,https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf,,db
+version:54,article:loi-90-11-art-154,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/jo-francais/2017/F2017076.pdf#page=46,,db
+version:6,article:loi-90-11-art-87-bis,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/Jo-Francais/1994/F1994020.pdf#page=5,,db
+version:6,concept:snmg,mentions,lexical_match_unreviewed,https://www.joradp.dz/FTP/Jo-Francais/1994/F1994020.pdf#page=5,,version content
 version:9,article:loi-90-11-art-12,belongs_to,structural,https://www.joradp.dz/FTP/Jo-Francais/1990/F1990017.pdf#page=4,,db

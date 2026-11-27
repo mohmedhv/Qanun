@@ -85,6 +85,8 @@ def test_ontology_rejects_reversed_amendment_and_unknown_action():
     assert relation_for_action("insert") == "adds"
     assert relation_for_action("complete") == "modifies"
     assert validate_edge("Text", "repeals", "Article") == []
+    assert validate_edge("Article", "mentions", "Concept") == []
+    assert validate_edge("Concept", "mentions", "Article")
     assert validate_edge("Concept", "repeals", "Text")
     with pytest.raises(KeyError):
         relation_for_action("unidentified")

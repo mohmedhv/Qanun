@@ -3,7 +3,7 @@
 Base: splitter `63c6900`; Ikram's `p2/week3-graph-build`, commit `a621355`
 (27 November 2026 inspection). Endpoint directions follow her new graph contract.
 The vocabulary follows the shared data contract and the 79-row P3 reference list.
-Graph construction and export remain Ikram's responsibility.
+Current graph construction and export are implemented in `src/graph/build_graph.py`.
 
 ## Entities
 
@@ -32,6 +32,7 @@ No missing historical wording should be created from a partial amendment.
 | repeals | Repealing Text → affected Article | `ordonnance-97-03` → article 22, row 49; art.8, JO 3/1997 p.7; effect delayed by art.9 |
 | applies | Application Text → implemented Article | Row 54 modifies article 87 and provides for a decree on the SNMG. Article 1 of décret exécutif 15-59 explicitly implements that provision. The decree is supplementary evidence for this existing graph edge. [JO 8/2015, p.11](https://www.joradp.dz/FTP/jo-francais/2015/F2015008.pdf#page=11) |
 | cites | Citing Text/Article → cited Text/Article | The wording of 87 bis in insertion row 9 explicitly refers to article 87. The citation is historical and belongs to the inserted wording. [JO 20/1994, p.5](https://www.joradp.dz/FTP/Jo-Francais/1994/F1994020.pdf#page=5) |
+| mentions | Article/Version → Concept | A literal vocabulary match links wording that names a candidate topic; this edge is lexical evidence, not a legal classification. |
 
 Existing SQLite relations also contain ten Text → Text `modifies` summaries.
 Do not count those ten as additional amendment rows. Keep the provision (`Art. 2`,
@@ -45,11 +46,14 @@ An added paragraph (`complete`) does not create an Article node.
 `relation_for_action` and `validate_edge`. Endpoint validation does not certify
 legal accuracy. No Graph implementation or separate CSV graph format is imposed.
 
-Ikram's a621355 builder creates 21 typed Article nodes absent from the 158-row
-P2 baseline, using canonical IDs. It also creates Version nodes. Concept remains
-vocabulary only; no Concept nodes are exported. The independent six-edge sample
-is recorded in `data/week3/graph_edge_review.csv`. Export findings are documented
-in `docs/P3_GRAPH_REVIEW.md`; graph implementation was preserved unchanged.
+The builder creates typed Article and Version nodes from the integrated database.
+It also exports explicit `version_id`, `article_id`, `content`, validity and
+repeal fields. A small seeded lexical vocabulary currently recognizes the
+documented “salaire national minimum garanti” / “SNMG” wording as `concept:snmg`.
+Matching Article and Version nodes point to that Concept with `mentions` edges
+marked `lexical_match_unreviewed`. This is a starter extraction, not a complete
+legal-topic taxonomy; a human should review the seed and add other concepts.
+The independent six-edge sample is recorded in `data/week3/graph_edge_review.csv`.
 
 ## Evidence rules
 

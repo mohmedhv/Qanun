@@ -5,17 +5,19 @@ Reads : data/db/qanun.db  (tables texts, articles, relations, versions, amendmen
         data/interim/evolution_blocks.json  ("Textes d'application" lines -> `applies` edges)
 Writes: data/graph/nodes.csv, data/graph/edges.csv   (same input -> same files, byte for byte)
 
-Nodes  : Text, Article, Version
+Nodes  : Text, Article, Version, Concept (lexical candidates)
 Edges  : belongs_to (Article->Text, Version->Article)
          modifies / repeals / adds   (Text->Article, from `relations`; plus the Text->Text summary links)
          applies                     (decree -> article, from the portal's "Textes d'application" lists)
          cites                       (Article->Article, regex on the article content)
+         mentions                    (Article/Version->Concept, seeded literal vocabulary match)
 """
 import argparse
 import csv
 import json
 import re
 import sqlite3
+import unicodedata
 from pathlib import Path
 
 import networkx as nx
@@ -87,6 +89,27 @@ ART_REF = re.compile(
 EXTERNAL = re.compile(r"^\W{0,3}(?:de|du|des)\s+(?:la\s+loi|l[’']ordonnance|l[’']ordonnance|code|décret|constitution)\b"
                       r"(?!\s+présente)", re.I)
 
+# A deliberately small seed vocabulary. A lexical match is a candidate mention,
+# not a claim that the article defines or legally classifies the concept.
+CONCEPT_LEXICON = {
+    "snmg": {
+        "label": "Salaire national minimum garanti",
+        "patterns": (re.compile(r"\bsalaire\s+national\s+minimum\s+garanti\b"), re.compile(r"\bsnmg\b")),
+    },
+}
+
+
+def normalize_lexical_text(value: str) -> str:
+    decomposed = unicodedata.normalize("NFKD", value.casefold())
+    return " ".join("".join(ch for ch in decomposed if not unicodedata.combining(ch)).split())
+
+
+def extract_concepts(content: str) -> list[str]:
+    """Return seeded concept IDs found literally in wording (not semantic inference)."""
+    normalized = normalize_lexical_text(content or "")
+    return [concept_id for concept_id, spec in CONCEPT_LEXICON.items()
+            if any(pattern.search(normalized) for pattern in spec["patterns"])]
+
 
 def article_id(number: str) -> str:
     return f"{LAW}-art-{'-'.join(number.split())}"
@@ -137,13 +160,15 @@ def build_graph(db_path=DB_PATH, evolution_path=EVOLUTION_PATH, report=None) -> 
     # Article nodes + belongs_to
     for a in articles:
         g.add_node(f"article:{a['article_id']}", entity="Article", label=f"art. {a['number']}", type="article",
-                   number=a["number"], status=a["status"], source_url=a["source_url"], origin="db")
+                   number=a["number"], status=a["status"], content=a["content"],
+                   source_url=a["source_url"], origin="db")
         g.add_edge(f"article:{a['article_id']}", f"text:{a['text_id']}", relation="belongs_to",
                    source_url=a["source_url"], status="structural", origin="db")
     # Version nodes (the belongs_to edge is added at the end, when every Article node exists)
     for v in versions:
         g.add_node(f"version:{v['version_id']}", entity="Version", label=f"art. {v['article_number']} v{v['version_number']}",
-                   type="version", number=v["version_number"], status=v["status"], valid_from=v["valid_from"],
+                   type="version", number=v["version_number"], version_id=v["version_id"],
+                   article_id=v["article_id"], content=v["content"], status=v["status"], valid_from=v["valid_from"],
                    valid_to=v["valid_to"], repeal_date=v["repeal_date"], repealing_text_id=v["repealing_text_id"],
                    modifying_text_id=v["modifying_text_id"], source_url=v["source_url"],
                    verification_status=v["verification_status"], origin="db")
@@ -200,6 +225,19 @@ def build_graph(db_path=DB_PATH, evolution_path=EVOLUTION_PATH, report=None) -> 
                        status="created_by_amendment", source_url=None, origin="versions (not in the 158-article base)")
         g.add_edge(f"version:{v['version_id']}", target, relation="belongs_to", source_url=v["source_url"],
                    status=v["verification_status"] or "structural", origin="db")
+
+    # Lexical candidate mentions. Keep the evidence source and unreviewed status
+    # visible so downstream users do not mistake these for curated legal topics.
+    for node, attrs in list(g.nodes(data=True)):
+        if attrs.get("entity") not in ("Article", "Version"):
+            continue
+        for concept_id in extract_concepts(attrs.get("content", "")):
+            spec = CONCEPT_LEXICON[concept_id]
+            concept_node = f"concept:{concept_id}"
+            g.add_node(concept_node, entity="Concept", concept_id=concept_id, label=spec["label"],
+                       type="lexical_candidate", status="lexical_match_unreviewed", origin="seed vocabulary")
+            g.add_edge(node, concept_node, relation="mentions", source_url=attrs.get("source_url"),
+                       status="lexical_match_unreviewed", origin=f"{attrs['entity'].lower()} content")
     if report is not None:
         report.update(cites=cites, rejected=rejected)
     con.close()
@@ -222,12 +260,16 @@ def check(g: nx.MultiDiGraph) -> list[str]:
     for n, d in g.nodes(data=True):
         if "entity" not in d:
             problems.append(f"node without entity (created by an edge): {n}")
+        if d.get("entity") == "Version":
+            owners = [v for _, v, edge in g.out_edges(n, data=True) if edge.get("relation") == "belongs_to"]
+            if len(owners) != 1 or (owners and g.nodes[owners[0]].get("entity") != "Article"):
+                problems.append(f"Version must belong to exactly one Article: {n}")
     return problems
 
 
 NODE_COLS = ["node_id", "entity", "label", "type", "number", "status", "date_signed", "jo_number", "jo_date",
-             "valid_from", "valid_to", "repeal_date", "repealing_text_id", "modifying_text_id", "verification_status",
-             "source_url", "origin"]
+             "version_id", "article_id", "content", "valid_from", "valid_to", "repeal_date", "repealing_text_id",
+             "modifying_text_id", "verification_status", "source_url", "origin"]
 EDGE_COLS = ["source", "target", "relation", "status", "source_url", "provision", "origin"]
 
 

@@ -1,5 +1,20 @@
 # P3 review of Ikram's Week 3 graph
 
+## Follow-up on main — 27 November 2026
+
+The findings below describe the first P3 export. The follow-up graph builder now
+adds exactly one `belongs_to` edge for every Version, checks that invariant, and
+exports `version_id`, `article_id`, `content`, `valid_from`, `valid_to`,
+`repeal_date` and verification metadata. It also creates a small lexical
+`concept:snmg` candidate with `mentions` edges marked
+`lexical_match_unreviewed`. The regenerated graph has 226 nodes and 308 edges,
+including all 15 Version ownership edges and five lexical mention edges. The
+focused graph tests pass (8/8). The six-edge documentary sample remains the
+same; full wording review and human concept-vocabulary review are still open.
+
+The original graph implementation and CSV counts below are preserved as the
+historical inspection record, not as the current export status.
+
 **P3 owner:** FOUGHALI Housseine  
 **Documentary review tool:** Codex
 
@@ -30,7 +45,7 @@ Individual links, pages and review scope are in `data/week3/graph_edge_review.cs
 This is Codex documentary checking, not a claimed independent human signature
 or exhaustive verification of every graph edge.
 
-## Findings to return to Ikram
+## Findings from the original export
 
 1. **Three missing ownership edges:** `version:6`, `version:11`, `version:12`
    have no outgoing `belongs_to`. Their Articles (87 bis, 12 bis, 73-4) are
@@ -47,11 +62,11 @@ or exhaustive verification of every graph edge.
    [ontology.md](ontology.md) for evidence. Other candidate edges retain their
    existing review status.
 
-Builder integrity check passed. Its three tests passed as part of the **59-test**
-full suite. These tests do not certify temporal CSV completeness; the two findings
-above remain open for the graph owner. P3 made no changes to her graph code.
+At the original inspection, the builder integrity check and three graph tests
+passed as part of the **59-test** full suite. Those checks did not certify
+temporal CSV completeness; the two findings above were then open.
 
-Suggested handoff:
+Historical suggested handoff (the export fixes above have since been applied):
 
 > I checked a621355. Six sampled modifies/adds/repeals edges match the official
 > JO. All 59 combined tests pass. Please add the missing belongs_to edges for

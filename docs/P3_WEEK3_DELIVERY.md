@@ -1,5 +1,52 @@
 # P3 Week 3 — P3 delivery
 
+## Current follow-up — 27 November 2026
+
+This section supersedes the wording and version counts in the dated delivery
+record below where they differ.
+
+- Reconstructed the full consolidated wording for the 16 previously flagged
+  entries, using the existing article baseline plus the exact amended clauses
+  in the official JO. The 1991 wording of article 73-4 is now stored separately
+  from its 1996 replacement. The 1996 articles 13, 31, 54 and 97 are also
+  versioned; the 2017 timelines cover all fourteen articles in Article 99,
+  including the 1996 insertions of articles 143 bis and 146 bis.
+- `data/interim/amendments.json` retains the original operation excerpts and
+  parser metadata. It now has **0 open full-wording flags** and **19 entries
+  marked as consolidated and checked**. `data/week3/full_wording_review.csv`
+  records each reconstructed timeline and provenance. Independent legal
+  second review remains pending for those 19 wordings.
+- The version seed now contains **52 versions across 30 articles**. The
+  effective dates use the project's Alger convention: 1991-12-27,
+  1996-07-12 and 2017-12-30. The 2017 date follows publication in JO 76 on
+  28 December and one clear day under Civil Code article 4.
+- The graph builder and CSVs are regenerated from the extended database. The
+  concept seed remains a lexical SNMG candidate; an owner still needs to review
+  the vocabulary. Weeks 1 and 2 have a separate status audit in
+  `docs/WEEKS_1_2_STATUS.md`.
+
+The phrase “full wording checked” here means a documentary reconstruction from
+the available baseline and official amendment text. It is not an independent
+human legal review or proof that every inherited baseline transcription is free
+of OCR errors.
+
+## Follow-up on local main — 27 November 2026
+
+Historical status at the initial graph follow-up; see the current follow-up
+above for the later wording and version work.
+
+The original delivery record below predates the graph-export follow-up. The
+builder now validates one Article ownership edge per Version, exports version
+identity, wording and temporal fields, and emits the documented SNMG term as a
+lexical Concept candidate. The graph review note records the changes. This
+closes the graph implementation gaps in the Week 3 task. Regenerated output has
+226 nodes and 308 edges, including 15 Version ownership edges and five SNMG
+mentions. All eight focused graph tests pass on the local Windows environment.
+
+At that point, human review of 16 consolidated wordings and approval of the
+lexical Concept vocabulary were still open. The wording reconstructions are now
+recorded above; independent legal review and vocabulary approval remain open.
+
 **P3 owner:** FOUGHALI Housseine  
 **Documentary review tool:** Codex
 
@@ -147,13 +194,12 @@ it writes 71 raw records and reintroduces the wrong 87 bis attribution.
 ## Remaining requirements and what to obtain
 
 1. **Original snapshot underlying the historical 19 flags**, if P4 still has it.
-   Existing docs prove the count, while row membership is reconstructed.
-2. **Ikram's follow-up graph fix:** versions 6, 11 and 12 lack belongs_to edges;
-   the export omits validity/repeal fields and writes valid_from into date_signed.
-   Her algorithm was not rewritten by P3. See P3_GRAPH_REVIEW.md for the message.
-3. **Human sign-off / full-wording review:** the owner confirmed the 28 reference and six edge checks;
-   the 16 existing wording-review flags remain. No new files are needed merely
-   to access the official sources already listed in the project.
+   Existing docs prove the count, while row membership is reconstructed. This is
+   historical evidence and does not block the current graph implementation.
+2. **Human sign-off / full-wording review:** the 16 current wording-review flags
+   remain. The owner has confirmed the 28 reference and six sampled edge checks.
+3. **Concept vocabulary review:** SNMG is currently a literal-match candidate;
+   an owner should confirm that seed and decide whether to add other topics.
 
 | Requirement | Status |
 |---|---|
@@ -161,9 +207,12 @@ it writes 71 raw records and reintroduces the wrong 87 bis attribution.
 | Count ledger / Gold / parser scoring | COMPLETED for inspected snapshots; original 19-membership evidence pending |
 | Additional official verification | COMPLETED — 28/28 rechecked, page references recorded; 0 pending for these source-operation checks |
 | Verified version extension / integrated database | COMPLETED — five additions and one evidenced date correction |
-| Sample of Ikram's graph edges | COMPLETED — six documentary checks; export defects reported separately |
-| Tests and validators | COMPLETED — 59 tests, three validators, SQLite checks |
-| Temporal completeness of graph CSV | PARTIALLY COMPLETED — two fixes needed from graph owner |
-| Remaining consolidated wording and human sign-off | NOT COMPLETED — 16 wording flags remain outside the confirmed reference and edge checks |
+| Sample of Ikram's graph edges | COMPLETED — six documentary checks; graph-export follow-up implemented |
+| Tests and validators | Original integration: 59 Linux tests, three validators and SQLite checks; graph follow-up: 8 focused tests passed; full suite not rerun |
+| Temporal completeness of graph CSV | COMPLETED — identity, wording, validity and repeal fields are exported; each Version ownership edge is checked |
+| Concept extraction | STARTER IMPLEMENTED — SNMG lexical candidates and mentions are exported; owner review and vocabulary expansion remain |
+| Remaining consolidated wording and human sign-off | Initial status on 27 November — wording reconstruction is described above; independent human review remains open |
 
-Test runtime: Python 3.12.14, pytest 8.3.3, NetworkX 3.3 (project pin). Linux full suite: 59 passed. Windows was not tested in this run.
+Original full-suite run: Python 3.12.14, pytest 8.3.3 and NetworkX 3.3 on Linux;
+59 passed. The focused graph follow-up was tested separately on Windows as noted
+above; the full suite was not rerun after that change.

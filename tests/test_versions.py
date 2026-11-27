@@ -337,6 +337,15 @@ class TestVersionsEtHierarchie(unittest.TestCase):
         # Loi 91-29 publiée le 25/12/1991 : le 26/12 est le jour franc, version nouvelle le 27/12.
         self.assertEqual(get_version("loi-90-11", "73", "1991-12-26")["version_number"], 1)
         self.assertEqual(get_version("loi-90-11", "73", "1991-12-27")["version_number"], 2)
+        # Article 73-4 was inserted in 1991 and modified in 1996.
+        self.assertIsNone(get_version("loi-90-11", "73-4", "1991-12-26"))
+        self.assertEqual(get_version("loi-90-11", "73-4", "1991-12-27")["version_number"], 1)
+        self.assertEqual(get_version("loi-90-11", "73-4", "1996-07-11")["version_number"], 1)
+        self.assertEqual(get_version("loi-90-11", "73-4", "1996-07-12")["version_number"], 2)
+        # Week 3 penalty texts take effect after one clear day from JO 76/2017.
+        self.assertEqual(get_version("loi-90-11", "142", "2017-12-29")["version_number"], 1)
+        self.assertEqual(get_version("loi-90-11", "142", "2017-12-30")["version_number"], 2)
+        self.assertIn("100.000 DA à 200.000 DA", get_version("loi-90-11", "142", "2017-12-30")["content"])
         # Loi 14-10 publiée le 31/12/2014 : le 01/01/2015 est le jour franc, effet obligatoire le 02/01.
         self.assertEqual(get_version("loi-90-11", "87", "2015-01-01")["version_number"], 1)
         self.assertEqual(get_version("loi-90-11", "87", "2015-01-02")["version_number"], 2)
@@ -347,7 +356,7 @@ class TestVersionsEtHierarchie(unittest.TestCase):
         import json
         amendments = json.loads((Path(__file__).resolve().parents[1] / "data/interim/amendments.json").read_text(encoding="utf-8"))
         self.assertEqual(len(amendments), 79)
-        self.assertEqual(sum(bool(a.get("needs_review")) for a in amendments), 16)
+        self.assertEqual(sum(bool(a.get("needs_review")) for a in amendments), 0)
         self.assertFalse(any(a.get("modifying_text_id") == "decret-executif-15-107" and a.get("target_article") == "87 bis" for a in amendments))
         self.assertTrue(any(a.get("modifying_text_id") == "loi-14-10" and a.get("target_article") == "87 bis" and a.get("action") == "repeal" for a in amendments))
         # Tous les articles 56 bis à 56 bis 6 et l'article 64 sont reliés à la Loi 22-16.

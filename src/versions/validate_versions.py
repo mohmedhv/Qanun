@@ -168,13 +168,21 @@ def validate_versions() -> int:
         "87 bis": [("1994-04-15", "2015-01-01")],
         "12": [("1990-04-27", "1996-07-11"), ("1996-07-12", None)],
         "12 bis": [("1996-07-12", None)],
-        "73-4": [("1996-07-12", None)],
+        "73-4": [("1991-12-27", "1996-07-11"), ("1996-07-12", None)],
+        "13": [("1990-04-27", "1996-07-11"), ("1996-07-12", None)],
+        "31": [("1990-04-27", "1996-07-11"), ("1996-07-12", None)],
+        "54": [("1990-04-27", "1996-07-11"), ("1996-07-12", None)],
+        "97": [("1990-04-27", "1996-07-11"), ("1996-07-12", None)],
+        "143 bis": [("1996-07-12", "2017-12-29"), ("2017-12-30", None)],
+        "146 bis": [("1996-07-12", "2017-12-29"), ("2017-12-30", None)],
         "22": [("1990-04-27", "1997-03-11")],
         "23": [("1990-04-27", "1997-03-11")],
         "24": [("1990-04-27", "1997-03-11")],
         "25": [("1990-04-27", "1997-03-11")],
         "26": [("1990-04-27", "1997-03-11")],
     }
+    for article in ("141", "142", "143", "144", "145", "146", "147", "148", "150", "151", "152", "154"):
+        expected_timeline[article] = [("1990-04-27", "2017-12-29"), ("2017-12-30", None)]
     for article, expected_rows in expected_timeline.items():
         actual_rows = cur.execute(
             "SELECT valid_from, valid_to FROM versions WHERE article_number = ? ORDER BY version_number",
@@ -212,9 +220,14 @@ def validate_versions() -> int:
             json_normalized.append(tuple(str(item.get(k) or "") for k in compare_fields))
         csv_normalized = [tuple(str(row.get(k) or "") for k in compare_fields) for row in csv_rows]
         synchronized = json_normalized == csv_normalized
-        if len(json_rows) == 79 and len(csv_rows) == 79 and not false_repeal and synchronized:
+        wording_review = PROJECT_ROOT / "data" / "week3" / "full_wording_review.csv"
+        with wording_review.open("r", encoding="utf-8-sig", newline="") as f:
+            wording_rows = list(csv.DictReader(f))
+        full_checked = sum(bool(a.get("official_full_wording_checked")) for a in json_rows)
+        if (len(json_rows) == 79 and len(csv_rows) == 79 and not false_repeal and synchronized
+                and full_checked == 19 and len(wording_rows) == 19):
             review_count = sum(bool(a.get("needs_review")) for a in json_rows)
-            print(f"OK      Inventaire amendments.json/amendments.csv synchronisé (79 entrées) ; abrogation 87 bis correctement attribuée ; {review_count} entrée(s) marquée(s) needs_review.")
+            print(f"OK      Inventaire JSON/CSV synchronisé (79 entrées) ; 19 consolidations documentées ; {review_count} entrée(s) needs_review ; revue humaine indépendante encore distincte.")
         else:
             problems.append("amendment_inventory_mismatch")
             print(f"ANOMALY Inventaire amendements : JSON={len(json_rows)}, CSV={len(csv_rows)}, fausse attribution={false_repeal}, synchronisé={synchronized}")

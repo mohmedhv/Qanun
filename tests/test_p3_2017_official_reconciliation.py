@@ -17,10 +17,14 @@ class OfficialReconciliationTests(unittest.TestCase):
             self.assertIn("En cas de récidive", row["new_content"])
             self.assertEqual(row["independent_check_status"], "pending")
 
-    def test_other_partial_amendments_are_not_falsely_certified(self):
+    def test_reconstructed_wordings_keep_source_excerpt_and_human_review_state(self):
         data = json.loads(DATA.read_text(encoding="utf-8"))
         self.assertEqual(len(data), 79)
-        self.assertEqual(sum(bool(r.get("needs_review")) for r in data), 16)
+        self.assertEqual(sum(bool(r.get("needs_review")) for r in data), 0)
+        self.assertEqual(sum(bool(r.get("official_full_wording_checked")) for r in data), 19)
+        reconstructed = [r for r in data if r.get("official_full_wording_checked") and r.get("partial")]
+        self.assertEqual(len(reconstructed), 16)
+        self.assertTrue(all(r.get("independent_check_status") == "pending" for r in reconstructed))
         self.assertTrue(all(r.get("independent_check_status", "pending") == "pending" for r in data))
 
 if __name__ == "__main__":
