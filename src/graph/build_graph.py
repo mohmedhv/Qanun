@@ -31,6 +31,11 @@ MONTH_NUM = {m: i for i, m in enumerate(MONTHS.split("|"), 1)}
 STATUS_ORDER = ["a_verifier", "verifie_copie_publiee", "verifie_jo_officiel"]   # worst first
 
 
+def worst_first(status):
+    """Sort key: unknown or empty statuses count as the worst, so a new P3 status never crashes the build."""
+    return STATUS_ORDER.index(status) if status in STATUS_ORDER else -1
+
+
 # ---------------------------------------------------------------- applies (decrees)
 ENTRY = re.compile(
     r"(?P<type>Décret (?:exécutif|présidentiel|législatif)|Décret|Arrêté(?: interministériel| ministériel)?)\s+"
@@ -135,15 +140,13 @@ def build_graph(db_path=DB_PATH, evolution_path=EVOLUTION_PATH, report=None) -> 
                    number=a["number"], status=a["status"], source_url=a["source_url"], origin="db")
         g.add_edge(f"article:{a['article_id']}", f"text:{a['text_id']}", relation="belongs_to",
                    source_url=a["source_url"], status="structural", origin="db")
-    # Version nodes + belongs_to (version -> its article)
+    # Version nodes (the belongs_to edge is added at the end, when every Article node exists)
     for v in versions:
-        node = f"version:{v['version_id']}"
-        g.add_node(node, entity="Version", label=f"art. {v['article_number']} v{v['version_number']}", type="version",
-                   number=v["version_number"], status=v["status"], date_signed=v["valid_from"],
-                   source_url=v["source_url"], origin="db")
-        if v["article_id"] in article_ids:
-            g.add_edge(node, f"article:{v['article_id']}", relation="belongs_to",
-                       source_url=v["source_url"], status=v["verification_status"] or "structural", origin="db")
+        g.add_node(f"version:{v['version_id']}", entity="Version", label=f"art. {v['article_number']} v{v['version_number']}",
+                   type="version", number=v["version_number"], status=v["status"], valid_from=v["valid_from"],
+                   valid_to=v["valid_to"], repeal_date=v["repeal_date"], repealing_text_id=v["repealing_text_id"],
+                   modifying_text_id=v["modifying_text_id"], source_url=v["source_url"],
+                   verification_status=v["verification_status"], origin="db")
 
     # modifies / repeals / adds, read from `relations`; source + status come from amendment_verification
     by_pair = {}
@@ -160,7 +163,7 @@ def build_graph(db_path=DB_PATH, evolution_path=EVOLUTION_PATH, report=None) -> 
                 g.add_node(f"article:{dst}", entity="Article", label=f"art. {number}", type="article", number=number,
                            status="created_by_amendment", source_url=None, origin="relations (not in the 158-article base)")
             rows = by_pair.get((src, number), [])
-            status = min((x["verification_status"] for x in rows), key=STATUS_ORDER.index) if rows else "no_verification_row"
+            status = min((x["verification_status"] for x in rows), key=worst_first) if rows else "no_verification_row"
             source = rows[0]["source_url"] if rows else None
             g.add_edge(f"text:{src}", f"article:{dst}", relation=r["type"], source_url=source, status=status,
                        provision=" + ".join(x["provision"] for x in rows), origin="relations")
@@ -188,6 +191,15 @@ def build_graph(db_path=DB_PATH, evolution_path=EVOLUTION_PATH, report=None) -> 
         g.add_edge(f"article:{article_id(c['source'])}", f"article:{article_id(c['target'])}", relation="cites",
                    source_url=g.nodes[f"article:{article_id(c['source'])}"]["source_url"],
                    status="regex_to_check", origin="article content")
+    # Version -> Article (done last: some articles, e.g. 87 bis, only exist because an amendment created them)
+    for v in versions:
+        target = f"article:{v['article_id']}"
+        if target not in g:
+            number = re.sub(r"-(?=[a-z])|(?<=[a-z])-", " ", v["article_id"][len(f"{LAW}-art-"):])
+            g.add_node(target, entity="Article", label=f"art. {number}", type="article", number=number,
+                       status="created_by_amendment", source_url=None, origin="versions (not in the 158-article base)")
+        g.add_edge(f"version:{v['version_id']}", target, relation="belongs_to", source_url=v["source_url"],
+                   status=v["verification_status"] or "structural", origin="db")
     if report is not None:
         report.update(cites=cites, rejected=rejected)
     con.close()
@@ -213,7 +225,9 @@ def check(g: nx.MultiDiGraph) -> list[str]:
     return problems
 
 
-NODE_COLS = ["node_id", "entity", "label", "type", "number", "status", "date_signed", "jo_number", "jo_date", "source_url", "origin"]
+NODE_COLS = ["node_id", "entity", "label", "type", "number", "status", "date_signed", "jo_number", "jo_date",
+             "valid_from", "valid_to", "repeal_date", "repealing_text_id", "modifying_text_id", "verification_status",
+             "source_url", "origin"]
 EDGE_COLS = ["source", "target", "relation", "status", "source_url", "provision", "origin"]
 
 

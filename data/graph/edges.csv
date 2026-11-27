@@ -289,8 +289,11 @@ text:ordonnance-97-03,article:loi-90-11-art-26,repeals,verifie_jo_officiel,https
 text:ordonnance-97-03,text:loi-90-11,modifies,summary_link,https://www.joradp.dz/FTP/Jo-Francais/1997/F1997003.pdf,,relations
 version:1,article:loi-90-11-art-73,belongs_to,structural,https://www.joradp.dz/FTP/Jo-Francais/1990/F1990017.pdf#page=7,,db
 version:10,article:loi-90-11-art-12,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/Jo-Francais/1996/F1996043.pdf#page=6,,db
+version:11,article:loi-90-11-art-12-bis,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/Jo-Francais/1996/F1996043.pdf#page=6,,db
+version:12,article:loi-90-11-art-73-4,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/Jo-Francais/1996/F1996043.pdf#page=7,,db
 version:2,article:loi-90-11-art-73,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/Jo-Francais/1991/F1991068.pdf#page=3,,db
 version:3,article:loi-90-11-art-72,belongs_to,structural,https://www.joradp.dz/FTP/Jo-Francais/1990/F1990017.pdf#page=7,,db
 version:4,article:loi-90-11-art-87,belongs_to,structural,https://www.joradp.dz/FTP/Jo-Francais/1990/F1990017.pdf#page=8,,db
 version:5,article:loi-90-11-art-87,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/jo-francais/2014/F2014078.pdf#page=32,,db
+version:6,article:loi-90-11-art-87-bis,belongs_to,verifie_jo_officiel,https://www.joradp.dz/FTP/Jo-Francais/1994/F1994020.pdf#page=3,,db
 version:9,article:loi-90-11-art-12,belongs_to,structural,https://www.joradp.dz/FTP/Jo-Francais/1990/F1990017.pdf#page=4,,db

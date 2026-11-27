@@ -110,7 +110,7 @@ La commande d'ensemble est `python -m src.common.build_all`. Elle sauvegarde d'a
 
 **Décision du 27/11/2026 avec P3 (Mohcen) :** le graphe est stocké dans des fichiers séparés, `data/graph/nodes.csv` et `data/graph/edges.csv`, construits par `python -m src.graph.build_graph` à partir de `data/db/qanun.db` (tables `texts`, `articles`, `relations`, `versions`, `amendment_verification`) et de `data/interim/evolution_blocks.json`. La table `relations` n'est pas modifiée. Le résultat est identique à chaque exécution.
 
-**Nœuds** (`nodes.csv` : node_id, entity, label, type, number, status, date_signed, jo_number, jo_date, source_url, origin) : `Text` (`text:<text_id>`), `Article` (`article:<article_id>`), `Version` (`version:<version_id>`).
+**Nœuds** (`nodes.csv` : node_id, entity, label, type, number, status, date_signed, jo_number, jo_date, valid_from, valid_to, repeal_date, repealing_text_id, modifying_text_id, verification_status, source_url, origin) : `Text` (`text:<text_id>`), `Article` (`article:<article_id>`), `Version` (`version:<version_id>`). Les colonnes `date_signed`, `jo_number` et `jo_date` concernent les nœuds Text ; les colonnes `valid_from`, `valid_to`, `repeal_date`, `repealing_text_id`, `modifying_text_id` et `verification_status` concernent les nœuds Version et conservent les dates juridiques réelles de la table `versions`.
 
 **Arêtes** (`edges.csv` : source, target, relation, status, source_url, provision, origin) :
 
@@ -123,7 +123,7 @@ La commande d'ensemble est `python -m src.common.build_all`. Elle sauvegarde d'a
 
 **Contrôles d'intégrité** (affichés à chaque exécution) : aucune arête ne pointe vers un nœud absent ; chaque arête `modifies`, `repeals` ou `adds` a une source et un statut ; décompte par type de nœud et d'arête.
 
-**Résultat au 27/11/2026 :** 220 nœuds (179 Article, 31 Text, 10 Version), 295 arêtes (165 belongs_to, 61 modifies, 21 adds, 7 repeals, 21 applies, 20 cites).
+**Résultat au 27/11/2026 :** 220 nœuds (179 Article, 31 Text, 10 Version), 298 arêtes (168 belongs_to, 61 modifies, 21 adds, 7 repeals, 21 applies, 20 cites).
 
 **Limites connues :**
 - 21 nœuds Article (par exemple 87 bis, 56 bis 1) n'existent pas dans les 158 articles de base : ils sont créés par des textes modificatifs, statut `created_by_amendment`.
