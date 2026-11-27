@@ -60,41 +60,42 @@ def main() -> None:
             (art(row["law_90_11_article"]), p3_action(row["operation_type"]), group[0]))
     all_verified = set().union(*gold_by_group.values())
 
-    def group_of(text_id: str, amending_article: str) -> tuple:
-        return (text_number(text_id), art(amending_article))
-
-    groups = {group_of(t, a) for t, a in zip(rules["modifying_text_id"], rules["amending_article"])}
-    scored = {g for g in groups if g in gold_by_group}
-    gold = set().union(*(gold_by_group[g] for g in scored)) if scored else set()
+    # Scope = the hard records themselves: (article, amending text) pairs from the rules.
+    hard_pairs = {(art(r.target_article), text_number(r.modifying_text_id)) for r in rules.itertuples()}
+    gold = {k for k in all_verified if (k[0], k[2]) in hard_pairs}
+    scorable = {(k[0], k[2]) for k in gold}
+    unscorable_rules = sorted(f"{a} ({t})" for a, t in hard_pairs - scorable)
 
     rule_keys = {(art(r.target_article), r.action, text_number(r.modifying_text_id))
-                 for r in rules.itertuples() if group_of(r.modifying_text_id, r.amending_article) in scored}
+                 for r in rules.itertuples() if (art(r.target_article), text_number(r.modifying_text_id)) in scorable}
 
-    llm["group"] = [group_of(t, a) for t, a in zip(llm["rule_modifying_text_id"], llm["rule_amending_article"])]
+    # Each LLM row belongs to the prompt built for one rule group; the hard targets of that
+    # prompt are the articles it is scored on. Rows about other articles are "extra".
     llm["key"] = [(art(r.target_article), r.action, text_number(r.modifying_text_number)) for r in llm.itertuples()]
-    llm["own_group"] = [(text_number(r.modifying_text_number), art(r.amending_article)) for r in llm.itertuples()]
-    in_scored = llm[llm["group"].isin(scored)]
-    # Records about a different amending article than the one asked (e.g. 12 bis, Art. 3)
-    # are kept apart: they are outside the hard case, not errors of it.
-    on_target = in_scored[[own == grp for own, grp in zip(in_scored["own_group"], in_scored["group"])]]
-    off_target = in_scored.drop(on_target.index)
+    llm["rule_pair_text"] = [text_number(t) for t in llm["rule_modifying_text_id"]]
+    targets_of = {g: {art(x) for x in s.split(",")} for g, s in zip(llm["group_id"], llm["rule_targets"])}
+    in_scope_mask = [art(r.target_article) in targets_of[r.group_id]
+                     and (art(r.target_article), r.rule_pair_text) in scorable for r in llm.itertuples()]
+    on_target = llm[in_scope_mask]
+    off_target = llm[[not m for m in in_scope_mask]]
     llm_keys = set(on_target["key"])
+    missing_text = int((on_target["modifying_text_number"] == "").sum())
 
     def loose(keys: set) -> set:  # ignore the action label
         return {(a, t) for a, _, t in keys}
 
-    inventions = []
+    inventions, edited_quotes = [], []
     for r in llm.itertuples():
         page = normalize(r.passage)
         reasons = []
-        if r.evidence_in_passage != "True":
-            reasons.append("evidence quote not in passage")
         if r.target_article and art(r.target_article) not in page:
             reasons.append("target article not in passage")
         if r.modifying_text_number and text_number(r.modifying_text_number) not in page:
             reasons.append("modifying text number not in passage")
         if reasons:
             inventions.append({"group": r.group_id, "target": r.target_article, "reasons": reasons})
+        elif r.evidence_in_passage != "True":
+            edited_quotes.append({"group": r.group_id, "target": r.target_article})
 
     def describe(rows: pd.DataFrame) -> list[dict]:
         return [{"group": r.group_id, "target_article": r.target_article, "action": r.action,
@@ -107,25 +108,26 @@ def main() -> None:
                 for r in rows.itertuples()]
 
     disagreements = sorted(
-        {"target_article": a, "llm_action": la, "gold_action": ga}
-        for a, la, t in llm_keys for ga_a, ga, gt in gold if a == ga_a and t == gt and la != ga
-    ) if llm_keys else []
+        ({"target_article": a, "llm_action": la, "gold_action": ga}
+         for a, la, t in llm_keys for ga_a, ga, gt in gold if a == ga_a and t == gt and la != ga),
+        key=lambda d: (d["target_article"], d["llm_action"], d["gold_action"]))
 
-    unscored = llm[~llm["group"].isin(scored)]
     report = {
         "model": ", ".join(sorted(set(llm["model"]))),
         "hard_rule_records": len(rules),
         "llm_records": len(llm),
-        "scored_groups": sorted(f"{t} {a}" for t, a in scored),
+        "gold_records_in_scope": len(gold),
+        "hard_records_without_verified_row": unscorable_rules,
         "strict": {"rules": prf(rule_keys, gold), "llm": prf(llm_keys, gold)},
         "ignoring_action_label": {"rules": prf(loose(rule_keys), loose(gold)),
                                   "llm": prf(loose(llm_keys), loose(gold))},
+        "llm_in_scope_records_without_text_number": missing_text,
         "action_disagreements_llm_vs_p3": [dict(d) for d in disagreements],
         "llm_invention": {"records_checked": len(llm), "invented": len(inventions),
                           "rate": round(len(inventions) / len(llm), 3) if len(llm) else None,
                           "details": inventions},
+        "llm_edited_quotes": {"count": len(edited_quotes), "details": edited_quotes},
         "llm_extra_records_outside_hard_case": describe(off_target),
-        "unscored_a_verifier": describe(unscored),
     }
     RESULT.parent.mkdir(parents=True, exist_ok=True)
     RESULT.write_text(json.dumps(report, ensure_ascii=False, indent=2, default=str), encoding="utf-8")

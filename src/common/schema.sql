@@ -59,4 +59,36 @@ CREATE INDEX IF NOT EXISTS idx_articles_sort_key ON articles(text_id, sort_key);
 CREATE INDEX IF NOT EXISTS idx_articles_validity ON articles(valid_from, valid_to);
 CREATE INDEX IF NOT EXISTS idx_relations_target ON relations(target_id);
 
--- The P3 versions DDL is pending its actual schema; see docs/contract_open_questions.md.
+CREATE TABLE IF NOT EXISTS versions (
+    version_id        INTEGER PRIMARY KEY AUTOINCREMENT,
+    text_id           TEXT NOT NULL REFERENCES texts(text_id),
+    article_number    TEXT NOT NULL,
+    article_id        TEXT NOT NULL,
+    version_number    INTEGER NOT NULL,
+    content           TEXT NOT NULL,
+    paragraphs        TEXT,
+    valid_from        TEXT NOT NULL,
+    valid_to          TEXT,
+    status            TEXT NOT NULL DEFAULT 'in_force',
+    repeal_date       TEXT,
+    repealing_text_id TEXT REFERENCES texts(text_id),
+    modifying_text_id TEXT REFERENCES texts(text_id),
+    source_url        TEXT,
+    verification_status TEXT CHECK (verification_status IN ('verifie_jo_officiel','verifie_copie_publiee','a_verifier')),
+    UNIQUE (text_id, article_number, version_number)
+);
+
+CREATE TABLE IF NOT EXISTS amendment_verification (
+    modifying_text_id TEXT NOT NULL REFERENCES texts(text_id),
+    target_article TEXT NOT NULL,
+    provision TEXT NOT NULL,
+    csv_row INTEGER NOT NULL UNIQUE,
+    original_status TEXT NOT NULL,
+    csv_status TEXT NOT NULL,
+    verification_status TEXT NOT NULL CHECK (verification_status IN ('verifie_jo_officiel','verifie_copie_publiee','a_verifier')),
+    source_url TEXT NOT NULL,
+    source_page TEXT NOT NULL,
+    verification_note TEXT NOT NULL,
+    needs_textual_review INTEGER NOT NULL CHECK(needs_textual_review IN (0,1)),
+    PRIMARY KEY (modifying_text_id, target_article, provision)
+);

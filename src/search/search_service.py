@@ -97,10 +97,10 @@ def _version_module():
 def _tracked_numbers(text_id='loi-90-11'):
     if not DB.exists():
         return set()
-    raise RuntimeError(
-        "P3 versions lookup cannot query the database until its actual schema/API is supplied; "
-        "see docs/contract_open_questions.md."
-    )
+    with sqlite3.connect(DB) as connection:
+        return {row[0] for row in connection.execute(
+            "SELECT DISTINCT article_number FROM versions WHERE text_id = ?", (text_id,)
+        )}
 
 
 def _paragraphs(content, raw_paragraphs):
@@ -128,7 +128,16 @@ def _versioned_documents(base_docs, date=None):
     # Preserve the P2 provisional corpus for undated queries, except that
     # articles tracked by P3 are replaced by their latest/current P3 wording.
     if requested_date is None:
-        output.extend(d for d in base_docs if d['number'] not in tracked)
+        with sqlite3.connect(DB) as con:
+            historic_sources = {row[0] for row in con.execute(
+                "SELECT r.target_id FROM relations r JOIN texts t ON t.text_id = r.source_id "
+                "WHERE r.type = 'repeals' AND t.jo_date < date('now')"
+            )}
+        for doc in base_docs:
+            if doc["number"] not in tracked:
+                if doc["article_id"] in historic_sources:
+                    doc = dict(doc, version_status="historical_repeal_documented")
+                output.append(doc)
 
     for number in sorted(tracked, key=lambda x: (int(''.join(ch for ch in x if ch.isdigit()) or 0), x)):
         version = get_version('loi-90-11', number, requested_date)

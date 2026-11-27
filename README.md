@@ -48,7 +48,7 @@ Set your own Groq API key and the teacher-approved model name in the ignored `co
 
 ### Construction de la base
 
-Depuis la racine du dépôt, exécuter `python -m src.common.build_all`. La commande suit l'ordre du contrat et sauvegarde d'abord une base existante dans `data/db/qanun.db.bak`. Le chargeur de versions P3 n'est pas encore présent dans ce dépôt; jusqu'à sa livraison, cette étape sera signalée `FAILED` (voir `docs/contract_open_questions.md`).
+Depuis la racine du dépôt, exécuter `python -m src.common.build_all`. La commande suit l'ordre du contrat et sauvegarde d'abord une base existante dans `data/db/qanun.db.bak`. Le chargeur P3 Week 2 est intégré: `src.versions.load_versions`. Voir [le rapport P3 Week 2](docs/P3_WEEK2_DELIVERY.md).
 
 ```powershell
 streamlit run src/ui/app.py

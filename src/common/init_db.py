@@ -1,6 +1,7 @@
 """Initialize the local SQLite database from schema.sql."""
 from pathlib import Path
 import sqlite3
+from contextlib import closing
 
 from src.common.config import ROOT
 
@@ -10,8 +11,14 @@ def init_db(db_path: str | Path | None = None) -> Path:
     destination = Path(db_path) if db_path else ROOT / "data/db/qanun.db"
     destination.parent.mkdir(parents=True, exist_ok=True)
     schema = Path(__file__).with_name("schema.sql").read_text(encoding="utf-8")
-    with sqlite3.connect(destination) as connection:
+    with closing(sqlite3.connect(destination)) as connection, connection:
         connection.executescript(schema)
+        version_columns = {row[1] for row in connection.execute("PRAGMA table_info(versions)")}
+        if "verification_status" not in version_columns:
+            connection.execute(
+                "ALTER TABLE versions ADD COLUMN verification_status TEXT "
+                "CHECK (verification_status IN ('verifie_jo_officiel', 'verifie_copie_publiee', 'a_verifier'))"
+            )
         text_columns = {row[1] for row in connection.execute("PRAGMA table_info(texts)")}
         if "rank_level" not in text_columns:
             connection.execute(

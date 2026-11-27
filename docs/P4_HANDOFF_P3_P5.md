@@ -1,3 +1,5 @@
+État P3 Week 2 au 26 novembre 2026: module, base et chargeur intégrés. Résultats courants dans docs/P3_WEEK2_DELIVERY.md. Les observations antérieures ci-dessous sont historiques.
+
 # Relais P4, P3 et P5 — état du dépôt
 
 Mis à jour le 25 novembre 2026 après adoption du contrat P2 d'Ikram.

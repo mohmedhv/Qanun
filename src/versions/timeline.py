@@ -1,11 +1,6 @@
-"""Article version lookup interface."""
+"""Legacy Law 90-11 entry point."""
+from .versions import get_version as lookup
 
 
 def get_version(number: str, date: str | None = None):
-    """Return the version in force at the given ISO date; current if date is None.
-
-    TODO: implement a database-backed query using valid_from and valid_to.
-    Returns None until the lookup is implemented.
-    """
-    return None
-
+    return lookup("loi-90-11", number, date)

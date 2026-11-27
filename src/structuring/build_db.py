@@ -18,11 +18,11 @@ TEXT_ID = "loi-90-11"
 SOURCE_URL = "https://joradp.dz/FTP/jo-francais/1990/F1990017.pdf"
 
 
-def main():
+def main(db_path=DB):
     articles = json.loads(ARTICLES.read_text(encoding="utf-8"))
-    DB.parent.mkdir(parents=True, exist_ok=True)
-    DB.unlink(missing_ok=True)
-    con = sqlite3.connect(DB)
+    db_path.parent.mkdir(parents=True, exist_ok=True)
+    db_path.unlink(missing_ok=True)
+    con = sqlite3.connect(db_path)
     con.executescript(SCHEMA.read_text(encoding="utf-8"))
     con.execute(
         "INSERT INTO texts "
@@ -42,7 +42,7 @@ def main():
         )
     con.commit()
     count = con.execute("SELECT COUNT(*) FROM articles").fetchone()[0]
-    print(f"Loaded {count} articles into {DB}")
+    print(f"Loaded {count} articles into {db_path}")
     con.close()
 
 

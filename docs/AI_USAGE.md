@@ -8,4 +8,6 @@ Project LLM: Groq, model `openai/gpt-oss-120b`. The teacher's written return dat
 | Maram | Groq (`openai/gpt-oss-120b`) | RAG pipeline test on 1 question (1 call) | 2026-11-21 |
 | Maram | Groq (`openai/gpt-oss-120b`) | LLM-alone baseline rerun with "En droit algérien" (10 calls); answers scored by hand | 2026-11-26 |
 | Maram | Groq (`openai/gpt-oss-120b`) | Extraction of hard amendment cases (9 calls); output labelled `extraction_method = llm`, `à vérifier`. See `docs/llm_extraction.md` | 2026-11-26 |
+| Maram | Groq (`openai/gpt-oss-120b`) | Extraction rerun on P3's new data (2 calls; 8 from the cache) | 2026-11-27 |
+| Maram | Groq (`openai/gpt-oss-120b`) | RAG run on the 10 questions (10 calls); answers scored by hand | 2026-11-27 |
 | Maram | Claude Code (coding assistant) | Help writing and checking the P5 scripts (rag_pipeline fixes, baseline, extraction, scoring) and these docs; every result was reviewed by Maram | 2026-11-26 |

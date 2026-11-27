@@ -130,7 +130,7 @@ def validate(db_path: Path, text_id: str | None, expect: int | None) -> tuple[li
                     _check_dates(errors, tag, row, ("valid_from", "valid_to"))
                     if "content" in row and not (row["content"] or "").strip():
                         errors.append(f"{tag}: empty content")
-                    if "status" in row and row["status"] not in ("in_force", "repealed"):
+                    if "status" in row and row["status"] not in ("in_force", "replaced", "repealed"):
                         errors.append(f"{tag}: bad status {row['status']!r}")
                     by_article.setdefault(row["article_id"], []).append(row)
                 for article_id, versions in by_article.items():

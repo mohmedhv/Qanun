@@ -4,7 +4,7 @@
 
 La base SQLite partagée est `data/db/qanun.db`. Le DDL commun est `src/common/schema.sql`. Les tables sont `texts`, `articles`, `relations`, `chunks` et `versions`.
 
-> Le DDL réel de P3, son chargeur et sa base ne sont pas présents dans le dépôt ni dans les branches P3/P5 inspectées. Les quatre premières tables sont définies dans `schema.sql`. La définition SQL de `versions` reste suspendue jusqu'à réception du DDL P3; aucune colonne existante n'est devinée. Voir `docs/contract_open_questions.md`.
+> P3 Week 2 intégré. Le DDL est dans src/common/schema.sql. Les statuts et le lien CSV–base sont décrits dans [P3_WEEK2_DELIVERY.md](P3_WEEK2_DELIVERY.md).
 
 ## Conventions communes
 
@@ -86,7 +86,7 @@ Le constructeur met à jour la table SQLite et préserve les JSON d'équipe sous
 
 ## Table `versions`
 
-`versions` porte les rédactions successives et leurs périodes de validité. L'identifiant d'article est lié au contrat P2; `content`, `valid_from` et `valid_to` décrivent la rédaction et sa période. Les autres noms/types de colonnes doivent être repris du schéma P3 réellement utilisé dès qu'il est fourni; ils ne sont pas fixés par une supposition dans ce document.
+`versions` porte les rédactions successives et leurs périodes de validité. L'identifiant d'article est lié au contrat P2; `content`, `valid_from` et `valid_to` décrivent la rédaction et sa période. Le schéma partagé définit les colonnes réellement chargées.
 
 La colonne additionnelle `verification_status` est nullable et, lorsqu'elle est renseignée, accepte uniquement :
 
@@ -94,7 +94,7 @@ La colonne additionnelle `verification_status` est nullable et, lorsqu'elle est 
 - `verifie_copie_publiee`
 - `a_verifier`
 
-Les lignes P3 déjà enregistrées ne doivent pas être réécrites pour appliquer cette liste. La correspondance des anciennes valeurs CSV est en attente de confirmation P3.
+Les lignes P3 déjà enregistrées ne doivent pas être réécrites pour appliquer cette liste. amendment_verification conserve le statut CSV original et actuel, le statut contractuel et la clé de chaque opération.
 
 ## Ordre de construction
 
