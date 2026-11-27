@@ -37,6 +37,10 @@ def main() -> int:
         print(f"{len(label_map)} labeled, 20 needed")
         return 1
     data = {p.stem: json.loads(p.read_text(encoding="utf-8")) for p in TEXT_DIR.glob("*.json")}
+    missing = [text_id for text_id in label_map if text_id not in data]
+    if missing:
+        print(f"{len(missing)} labeled ids not found among the texts: {missing[:10]}")
+        return 1
     evaluated = []
     for text_id, actual in label_map.items():
         item = data.get(text_id)

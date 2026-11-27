@@ -18,7 +18,7 @@ Inventaire établi le 25 novembre 2026 après fusion de `origin/main` dans la br
 | `src/search/smoke_test.py`, `tests/test_search_p4.py`, `tests/test_search_p4_integration.py`, `eval/run_eval.py`, `docs/P4_HANDOFF_P3_P5.md` | À l'inventaire, les tests et le relais P4/P5 exposaient `article_number`. Étape 4 : les tests, l'évaluation et le relais ont été alignés sur la clé de sortie `number`. |
 | `src/rag/prompts.py` | `article_number` reste un champ du JSON de réponse destiné à l'utilisateur; ce n'est pas une colonne SQLite. |
 | `src/versions/timeline.py` | Le paramètre de recherche est nommé `article_number`; le fichier ne contient qu'une interface provisoire. |
-| `src/collect/split_issue.py`, `tests/test_collect.py` | Le producteur et son test attendent des `text_id` en majuscules (`LOI-90-11`) au lieu de l'identifiant canonique minuscule. |
+| `src/collect/split_issue.py`, `tests/test_collect.py` | Corrigé le 26/11/2026 : le producteur et son test utilisent des `text_id` en minuscules à préfixe complet (`loi-90-11`, `ordonnance-26-01`, `decret-executif-26-253`, `arrete-2026-05-07-1`) et le type `decret` ; la distinction décret exécutif / présidentiel n'est que dans l'identifiant. |
 
 ## Éléments déjà alignés sur P2
 

@@ -1,7 +1,10 @@
 import sys
 import os
 
-from citation_verifier import verify_citations
+try:
+    from eval.citation_verifier import verify_citations  # python -m eval.rag_pipeline
+except ImportError:
+    from citation_verifier import verify_citations  # python eval/rag_pipeline.py
 
 # 1. Add root folder to path FIRST (before any src imports!)
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -30,7 +33,7 @@ def rag_answer(question: str, date: str = None):
     
     context = ""
     for art in retrieved_articles:
-        art_num = art.get('article_number', 'Inconnu')
+        art_num = art.get('number') or art.get('article_number') or 'Inconnu'
         text = art.get('text', '')
         context += f"--- Article {art_num} ---\n{text}\n\n"
         
