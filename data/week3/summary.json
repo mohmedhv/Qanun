@@ -1,0 +1,35 @@
+{
+  "reference_rows": 79,
+  "p2_baseline_rows": 59,
+  "p2_baseline_flags": 8,
+  "original_28": 28,
+  "historical_19_reconstructed": 19,
+  "textual_review_current": 16,
+  "current_parser_rows": 71,
+  "current_parser_flags": 16,
+  "gold_rows": 51,
+  "gold_recoverable": 43,
+  "gold_missing_source": 8,
+  "all_inventory_operation_score": {
+    "tp": 70,
+    "fp": 1,
+    "fn": 9,
+    "precision": 0.9859154929577465,
+    "recall": 0.8860759493670886
+  },
+  "gold_51_score": {
+    "tp": 43,
+    "fp": 0,
+    "fn": 8,
+    "precision": 1.0,
+    "recall": 0.8431372549019608
+  },
+  "gold_recoverable_score": {
+    "tp": 43,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  "interpretation": "Operation identity score only. Source and full wording checks are separate; not legal accuracy or graph quality."
+}

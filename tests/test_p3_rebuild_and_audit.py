@@ -25,7 +25,9 @@ class RebuildAndAuditTests(unittest.TestCase):
             self.assertEqual(con.execute('select count(*) from articles').fetchone()[0],158)
             self.assertEqual(con.execute('select count(*) from texts').fetchone()[0],11)
             self.assertEqual(con.execute('select count(*) from relations').fetchone()[0],89)
-            self.assertEqual(con.execute('select count(*) from versions').fetchone()[0],10)
+            evidence = json.loads((Path(__file__).resolve().parents[1] / 'data/version_seed/p3_week3_evidence.json').read_text())
+            self.assertEqual(con.execute('select count(*) from versions').fetchone()[0],
+                             10 + sum(not r.get('correction', False) for r in evidence))
             self.assertEqual(con.execute('select count(*) from versions where article_number = ? and valid_to IS NULL',('72',)).fetchone()[0],0)
             self.assertEqual(con.execute('select count(*) from versions where article_number = ? and valid_to IS NULL',('87 bis',)).fetchone()[0],0)
             con.close()

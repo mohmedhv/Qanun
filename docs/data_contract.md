@@ -129,3 +129,5 @@ La commande d'ensemble est `python -m src.common.build_all`. Elle sauvegarde d'a
 - 21 nœuds Article (par exemple 87 bis, 56 bis 1) n'existent pas dans les 158 articles de base : ils sont créés par des textes modificatifs, statut `created_by_amendment`.
 - 20 décrets d'application sont ajoutés comme nœuds Text à partir des listes du portail (date et numéro du JO lus dans la source) ; l'URL du JO est dérivée du numéro, non ouverte ; les arêtes `applies` ne sont pas vérifiées.
 - `cites` : 20 arêtes, lues en contexte ; trois vérifiées à la main (art. 93, 142, 145). « articles 38 à 52 » (art. 145) n'enregistre que les deux extrémités. Les renvois vers une autre loi (par exemple « articles 1 à 179 … de la loi n° 78-12 » dans l'art. 157) sont écartés.
+
+P3 Week 3 local integration (27/11/2026): five additional historical versions produce 15 Version nodes and 225 total nodes / 300 edges when rebuilt. CSV temporal-field omissions and three missing Version ownership edges remain recorded in [P3_GRAPH_REVIEW.md](P3_GRAPH_REVIEW.md). SQLite and the P3 temporal API retain the complete version fields.

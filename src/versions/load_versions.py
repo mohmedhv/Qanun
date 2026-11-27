@@ -69,7 +69,8 @@ def load(db=DEFAULT_DB_PATH):
     records = verification_rows()
     statuses = {(r["modifying_text_id"], r["target_article"]): r["verification_status"] for r in records}
     for v in seed["versions"]:
-        v["verification_status"] = statuses.get((v["modifying_text_id"], v["article_number"]))
+        v["verification_status"] = statuses.get(
+            (v["modifying_text_id"], v["article_number"]), v.get("verification_status"))
     texts = [dict(t, rank_level=LEGAL_HIERARCHY[t["type"]]) for t in seed["texts"] if t["text_id"] != "loi-90-11"]
     if not Path(db).is_file():
         raise FileNotFoundError("Build the article database before running the P3 loader")

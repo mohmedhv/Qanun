@@ -165,10 +165,15 @@ def validate_versions() -> int:
         "73": [("1990-04-27", "1991-12-26"), ("1991-12-27", None)],
         "72": [("1990-04-27", "1994-06-02")],
         "87": [("1990-04-27", "2015-01-01"), ("2015-01-02", None)],
-        "87 bis": [("1994-01-01", "2015-01-01")],
+        "87 bis": [("1994-04-15", "2015-01-01")],
         "12": [("1990-04-27", "1996-07-11"), ("1996-07-12", None)],
         "12 bis": [("1996-07-12", None)],
         "73-4": [("1996-07-12", None)],
+        "22": [("1990-04-27", "1997-03-11")],
+        "23": [("1990-04-27", "1997-03-11")],
+        "24": [("1990-04-27", "1997-03-11")],
+        "25": [("1990-04-27", "1997-03-11")],
+        "26": [("1990-04-27", "1997-03-11")],
     }
     for article, expected_rows in expected_timeline.items():
         actual_rows = cur.execute(
@@ -221,14 +226,28 @@ def validate_versions() -> int:
     try:
         expected_reviews = verification_rows()
         actual_reviews = [dict(row) for row in con.execute("SELECT * FROM amendment_verification ORDER BY csv_row")]
-        status_mismatch = con.execute("""
-            SELECT v.version_id FROM versions v
-            LEFT JOIN amendment_verification a ON a.modifying_text_id = v.modifying_text_id
-                AND a.target_article = v.article_number
-            WHERE v.verification_status IS NOT a.verification_status
-        """).fetchall()
+        source_status = {(r['modifying_text_id'], r['target_article']): r['verification_status']
+                         for r in expected_reviews}
+        seed_versions = {r['version_id']: r for r in read(SEED)['versions']}
+        evidence_path = PROJECT_ROOT / 'data/version_seed/p3_week3_evidence.json'
+        evidence = {r['version_id']: r for r in read(evidence_path)}
+        status_mismatch = []
+        for row in con.execute('SELECT * FROM versions'):
+            expected_status = source_status.get((row['modifying_text_id'], row['article_number']))
+            if expected_status is None and row['verification_status'] is not None:
+                proof = evidence.get(row['version_id'], {})
+                seed_version = seed_versions.get(row['version_id'], {})
+                if (proof.get('article_number') == row['article_number']
+                        and proof.get('content_source_url') == row['source_url']
+                        and proof.get('content_printed_page')
+                        and proof.get('repeal_source_url') and proof.get('repeal_printed_page')
+                        and seed_version.get('content') == row['content']):
+                    expected_status = seed_version.get('verification_status')
+            if row['verification_status'] != expected_status:
+                status_mismatch.append(row['version_id'])
         if status_mismatch:
             problems.append("version_source_status_mismatch")
+            print(f'ANOMALY Statuts de version sans preuve cohérente : {status_mismatch}')
         if actual_reviews != expected_reviews:
             problems.append("verification_csv_database_mismatch")
         else:

@@ -1,3 +1,5 @@
+> Historical validation notes. Current P3 counts, source corrections and Week 3 checks: [P3_WEEK3_DELIVERY.md](P3_WEEK3_DELIVERY.md). The historical 19 wording flags are now 16; this differs from the 28 original source flags.
+
 # P4 week 2 — Integrated submission checklist
 
 > Note du 25 novembre 2026 : ce compte rendu concerne un paquet antérieur. Le dépôt courant ne contient pas la base P3 ni son code de versions; voir `docs/P4_HANDOFF_P3_P5.md` pour l'état vérifié actuel.

@@ -1,7 +1,10 @@
 # Amendments of law 90-11: handoff from P2 to P3 (week 2)
 
 Files (in `data/interim/`): `amendments.json` (complete) and `amendments.csv` (same, open it in Excel).
-Produced by `python src/structuring/parse_amendments.py` from `evolution_blocks.json`. Re-run it any time, the result is identical.
+Historical P2 parser handoff. The current 79-row P3 reference includes reviewed
+corrections and 2022 additions. Do not rerun the parser at its default output
+paths over that reference. Use `python -m src.versions.week3_audit`, which runs it
+in temporary outputs. Current comparison: [P3_WEEK3_DELIVERY.md](P3_WEEK3_DELIVERY.md).
 
 ## What one record contains
 | field | meaning |
