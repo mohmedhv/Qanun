@@ -127,7 +127,7 @@ Le droit du travail algérien prévoit que le licenciement ne peut intervenir qu
 
 **(d) CONFIANCE ET LIMITES**  
 - **Niveau de confiance** : élevé.  
-- **Limites** : le corpus ne précise pas les procédures détaillées de saisine du tribunal ni les éventuelles particularités sectorielles ou conventionnelles qui pourraient s’appliquer. Il convient de vérifier auprès d’un juriste la marche à suivre concrète (délais, forme de la plainte, etc.).",73,True,yes,,Correct: dismissal violating procedure presumed abusive (73-4): reinstatement or at least 6 months salary. Quotes checked against the context sent.
+- **Limites** : le corpus ne précise pas les procédures détaillées de saisine du tribunal ni les éventuelles particularités sectorielles ou conventionnelles qui pourraient s’appliquer. Il convient de vérifier auprès d’un juriste la marche à suivre concrète (délais, forme de la plainte, etc.).",73,True,partial,wrong_quote,"Conclusion right (can contest; at least 6 months salary when abusive, 73-4), but the quote joins two paragraphs of 73-4: it ties ""présumé abusif"" to a breach of procedure, while the law ties it to a dismissal outside art. 73 (procedure breach = annulment + compensation). Flagged by the stricter verifier."
 Q09,datee,Quelles étaient les règles du CDD en 1997 ?,12;13,openai/gpt-oss-120b,27;77;62;96;97,hybrid,"**(a) RÉPONSE COURTE**  
 Je ne trouve pas de règle dans le corpus.  
 

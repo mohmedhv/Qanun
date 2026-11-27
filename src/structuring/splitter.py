@@ -34,7 +34,7 @@ PROFILES = {
         "section": re.compile(r"^\s*Section\s+(?P<n>\d+)\s*:?\s*(?P<t>.*)$"),
         "labels": ("TITRE", "Chapitre", "Section"),
         # buttons of the annotated site that close an article's text
-        "marker": re.compile(r"\b(Evolution|Textes d’application|Consulter aussi|Version consolidée|Rectificatif)\b"),
+        "marker": re.compile(r"\b(Evolution|Textes d’application|Consulter aussi|Version consolidée|Rectificatif)\b|^\s*Art\.?\s*\d+\s+de la loi n°\s*\d+-\d+"),
         "noise": None,
         "has_case": True,
     },
