@@ -1,0 +1,26 @@
+{
+  "graph_commit": "a6213554c75aea09b169427e3652fe579f12bfc3",
+  "sampled_operations": 6,
+  "sample_results": "6/6 documentary operation matches, two per required relation type",
+  "builder_integrity": [],
+  "unlinked_version_nodes": [
+    "version:6",
+    "version:11",
+    "version:12"
+  ],
+  "version_fields_missing_from_export": [
+    "valid_from",
+    "valid_to",
+    "repeal_date",
+    "verification_status",
+    "article_id",
+    "content"
+  ],
+  "version_field_warning": "Builder puts valid_from into date_signed. It omits temporal validity fields, so CSV alone cannot support correct date-based version selection. Use P3 SQLite/API.",
+  "original_branch_nodes": 220,
+  "original_branch_edges": 295,
+  "rebuilt_with_p3_week3_nodes": 225,
+  "rebuilt_with_p3_week3_edges": 300,
+  "graph_implementation_changed_by_p3": false,
+  "scope": "Review and export regeneration only. No graph algorithm rewrite."
+}

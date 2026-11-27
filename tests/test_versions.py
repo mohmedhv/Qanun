@@ -41,9 +41,11 @@ class TestVersionsEtHierarchie(unittest.TestCase):
         v_1990_early = get_version("loi-90-11", "73", "1990-04-25")
         self.assertIsNone(v_1990_early, "La veille de l'entrée en vigueur (25/04/1990) doit retourner None.")
 
-        # Article 87 bis créé avec effet rétroactif au 01/01/1994
+        # DL94-03 has no 1 January clause; the adjacent DL94-04 does.
         v_87bis_1993 = get_version("loi-90-11", "87 bis", "1993-12-31")
-        self.assertIsNone(v_87bis_1993, "L'art. 87 bis n'existait pas avant le 01/01/1994, doit retourner None.")
+        self.assertIsNone(v_87bis_1993)
+        self.assertIsNone(get_version("loi-90-11", "87 bis", "1994-04-14"))
+        self.assertIsNotNone(get_version("loi-90-11", "87 bis", "1994-04-15"))
 
     # -------------------------------------------------------------------------
     # 2. CAS OBLIGATOIRE 2 : Entre deux versions (période historique)
@@ -114,7 +116,7 @@ class TestVersionsEtHierarchie(unittest.TestCase):
         # Test historique pendant validité (1994-2014)
         v87b_active = get_version("loi-90-11", "87 bis", "2005-01-01")
         self.assertIsNotNone(v87b_active)
-        self.assertEqual(v87b_active["valid_from"], "1994-01-01")
+        self.assertEqual(v87b_active["valid_from"], "1994-04-15")
         self.assertEqual(v87b_active["valid_to"], "2015-01-01")
 
         # Test après abrogation

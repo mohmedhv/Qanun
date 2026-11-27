@@ -1,0 +1,7 @@
+{
+  "p2_59_commit": "bf8cd0eddce155ab29d6be460e9826214227e471",
+  "p2_59_path": "data/interim/amendments.json",
+  "base_commit": "63c6900843aa29e184b08a463fa6ffd0279bc7ea",
+  "main_commit": "250b577852a618b5c178465f420b0eff170fb307",
+  "historical_19_membership": "Reconstructed from docs/P3_WEEK2_DELIVERY.md (14 cases in 2017 and five partial cases in 1996); original 79-row JSON with exactly 19 flags has not been located."
+}

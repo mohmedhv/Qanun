@@ -1,3 +1,9 @@
+# Historical Week 2 report
+Current Week 3 additions and legal-source corrections are documented in
+[P3_WEEK3_DELIVERY.md](P3_WEEK3_DELIVERY.md). In particular, the 87 bis start date
+and the two 1994 page references below are superseded by the individually
+checked sources in `data/week3/corrections.csv`. Preserve this report as history.
+
 # P3 · Week 2 · Versions et hiérarchie
 
 Livraison du 26 novembre 2026 pour FOUGHALI HOUSSEINE. Base de travail: Qanun-main(3).zip fourni. Périmètre appliqué: consignes Week 2 et corrections P3 figurant dans la capture de l’enseignant.
